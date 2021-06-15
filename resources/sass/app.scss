@@ -1,3 +1,115 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+
+
+
+// Variables
+@import "1-variables/app";
+
+// Theme mixins
+@import "2-mixins/button";
+
+
+// Theme components
+@import "3-components/avatar";
+@import "3-components/buttons";
+@import "3-components/card";
+@import "3-components/chart";
+//@import "3-components/dropdown";
+@import "3-components/feather";
+
+@import "3-components/hamburger";
+@import "3-components/list-group";
+
+
+
+/*
+ * 레이아웃 처리 부분
+ */
+ .wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+    background: $sidebar-bg;
+}
+
+
+@import "~simplebar/dist/simplebar";
+@import "sidebar/app";
+
+.main1 {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    transition: $sidebar-transition;
+    background: $body-bg;
+    flex-direction: column;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.content {
+    padding: $content-padding-mobile;
+    flex: 1;
+    width: 100vw;
+    max-width: 100vw;
+    direction: ltr;
+
+    /*
+    @include media-breakpoint-up(md) {
+        width: auto;
+        max-width: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: $content-padding-desktop;
+    }
+    */
+}
+
+footer.footer {
+    padding: $spacer $spacer*0.875;
+    direction: ltr;
+    background: $footer-bg;
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    /*
+    @include media-breakpoint-down(md) {
+        width: 100vw;
+    }
+    */
+}
+
+
+
+
+
+@import "3-components/navbar";
+
+
+
+@import "3-components/reboot";
+@import "3-components/sizing";
+@import "3-components/stat";
+//@import "3-components/tables";
+@import "3-components/type";
+
+// Theme utilities
+@import "4-utilities/cursors";
+
+// 3rd party plugins
+// 3rd party plugin styles
+@import "5-vendor/flatpickr";
+
+
+
+/* jiny */
+
