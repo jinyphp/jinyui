@@ -14,10 +14,15 @@
         "@tailwindcss/typography": "^0.4.0",
         "alpinejs": "^2.7.3",
         "axios": "^0.21",
+        "browser-sync": "^2.26.14",
+        "browser-sync-webpack-plugin": "^2.3.0",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
+        "resolve-url-loader": "^3.1.2",
+        "sass": "^1.35.0",
+        "sass-loader": "^11.0.1",
         "tailwindcss": "^2.0.1"
     }
 }
