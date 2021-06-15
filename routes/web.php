@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+use App\Http\Livewire\Admin\AdminMain;
+Route::get('/admin',AdminMain::class);
