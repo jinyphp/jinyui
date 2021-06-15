@@ -26,7 +26,13 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Blade::directive('theme', function ($expression) {
-            $file = resource_path("theme").DIRECTORY_SEPARATOR.trim($expression,"\"").".blade.php";
+            $theme = "jiny";
+            if(isset($theme) && $theme) {
+                $file = resource_path("theme").DIRECTORY_SEPARATOR.$theme.DIRECTORY_SEPARATOR.trim($expression,"\"").".blade.php";
+            } else {
+                $file = resource_path("theme").DIRECTORY_SEPARATOR.trim($expression,"\"").".blade.php";
+            }
+            
             if (file_exists($file)) {
                 return file_get_contents($file);
             } else {

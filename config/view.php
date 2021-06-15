@@ -16,6 +16,7 @@ return [
     'paths' => [
         resource_path('views'),
         resource_path('theme'), // 테마 리소스 경로 추가
+        resource_path('jiny'),
     ],
 
     /*
