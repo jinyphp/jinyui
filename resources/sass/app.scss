@@ -113,3 +113,77 @@ footer.footer {
 
 /* jiny */
 
+
+
+/*폼요소 설계*/
+body {
+    position: relative;
+    background-color: #ebeef0;
+    font-size: 75%;
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    line-height: 1.4em;
+    color: #1f2c33;
+}
+
+.btn {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 1em;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0 11px;
+    min-height: 24px;
+    cursor: pointer;
+    outline: 0;
+    transition: border-color .2s ease-out, background-color .2s ease-out; 
+}
+
+.btn-primary {
+    background-color: #0275b8;
+    border: 1px solid #0275b8;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f; 
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f; 
+}
+    
+.btn-primary:active {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f; 
+}
+
+
+.btn-outline-primary {
+    color: #0275b8;
+    border-color: #0275b8;
+    /* background-color: transparent; */
+}
+
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f;
+}
+
+.btn-outline-primary:focus {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f;
+}
+
+.btn-outline-primary:active {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f;
+}
+

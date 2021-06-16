@@ -14,6 +14,10 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
+
+        borderRadius: {
+            '2': '0.2rem',
+        },
     },
 
     variants: {

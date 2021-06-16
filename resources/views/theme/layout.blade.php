@@ -4,7 +4,7 @@
 </x-layout-sidebar>
 
 {{-- content --}}
-<x-layout-content>
+<x-layout-content style="background-color: #ebeef0">
     <x-flex-item class="bg-white p-4 flex">
         {{-- Left --}}
         <x-sidebar-button />
@@ -14,8 +14,8 @@
             @include("theme.header")
         </div>
     </x-flex-item>
-
-    <x-flex-auto class="bg-gray-100 p-4">
+    
+    <x-flex-auto class="p-3">
         {{$slot}}
     </x-flex-item>
 
