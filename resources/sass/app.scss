@@ -2,120 +2,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
-
-
-
 // Variables
 @import "1-variables/app";
-
-// Theme mixins
-@import "2-mixins/button";
-
-
-// Theme components
-@import "3-components/avatar";
-@import "3-components/buttons";
-@import "3-components/card";
-@import "3-components/chart";
-//@import "3-components/dropdown";
-@import "3-components/feather";
-
-@import "3-components/hamburger";
-@import "3-components/list-group";
-
-
-
-/*
- * 레이아웃 처리 부분
- */
- .wrapper {
-    align-items: stretch;
-    display: flex;
-    width: 100%;
-    background: $sidebar-bg;
-}
-
-
 @import "~simplebar/dist/simplebar";
 @import "sidebar/app";
 
-.main1 {
-    display: flex;
-    width: 100%;
-    min-width: 0;
-    min-height: 100vh;
-    transition: $sidebar-transition;
-    background: $body-bg;
-    flex-direction: column;
-    overflow: hidden;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.content {
-    padding: $content-padding-mobile;
-    flex: 1;
-    width: 100vw;
-    max-width: 100vw;
-    direction: ltr;
-
-    /*
-    @include media-breakpoint-up(md) {
-        width: auto;
-        max-width: auto;
-    }
-
-    @include media-breakpoint-up(lg) {
-        padding: $content-padding-desktop;
-    }
-    */
-}
-
-footer.footer {
-    padding: $spacer $spacer*0.875;
-    direction: ltr;
-    background: $footer-bg;
-
-    ul {
-        margin-bottom: 0;
-    }
-
-    /*
-    @include media-breakpoint-down(md) {
-        width: 100vw;
-    }
-    */
-}
-
-
-
-
-
-@import "3-components/navbar";
-
-
-
-@import "3-components/reboot";
-@import "3-components/sizing";
-@import "3-components/stat";
-//@import "3-components/tables";
-@import "3-components/type";
-
-// Theme utilities
-@import "4-utilities/cursors";
-
-// 3rd party plugins
-// 3rd party plugin styles
-@import "5-vendor/flatpickr";
-
-
-
-/* jiny */
-
-
-
-/*폼요소 설계*/
 body {
     position: relative;
     background-color: #ebeef0;
@@ -123,6 +14,19 @@ body {
     font-family: Arial, Tahoma, Verdana, sans-serif;
     line-height: 1.4em;
     color: #1f2c33;
+}
+
+.wrapper {
+    align-items: stretch;
+    display: flex;
+    width: 100%;
+}
+
+button[disabled], button[disabled]:hover, button[disabled]:active {
+    color: #acbbc2;
+    background-color: #ebebeb;
+    border-color: #ccd5d9;
+    cursor: default; 
 }
 
 .btn {
@@ -134,56 +38,226 @@ body {
     min-height: 24px;
     cursor: pointer;
     outline: 0;
-    transition: border-color .2s ease-out, background-color .2s ease-out; 
+    transition: border-color .2s ease-out, background-color .2s ease-out;
 }
 
-.btn-primary {
-    background-color: #0275b8;
+.btn-blue {
+    color: #ffffff;
     border: 1px solid #0275b8;
-    color: #ffffff;
+    background-color: #0275b8;    
+
+    &:hover {
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f; 
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f; 
+    }
+
+    &:active {
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f; 
+    }
 }
 
-.btn-primary:hover {
-    color: #ffffff;
-    background-color: #02659f;
-    border-color: #02659f; 
-}
-
-.btn-primary:focus {
-    box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
-    color: #ffffff;
-    background-color: #02659f;
-    border-color: #02659f; 
-}
-    
-.btn-primary:active {
-    color: #ffffff;
-    background-color: #02659f;
-    border-color: #02659f; 
-}
-
-
-.btn-outline-primary {
+.btn-alt-blue {
     color: #0275b8;
-    border-color: #0275b8;
-    /* background-color: transparent; */
+    border: 1px solid #0275b8;
+    background-color: transparent; 
+
+    &:hover {
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f; 
+    }
+
+    &:focus {
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f; 
+    }
+  
+    &:active {
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f; 
+    }
 }
 
-.btn-outline-primary:hover {
-    color: #ffffff;
-    background-color: #02659f;
-    border-color: #02659f;
+
+
+    
+
+
+
+.btn-gray {
+    @apply border-gray-600 bg-gray-600 text-white
+    hover:border-gray-500 hover:bg-gray-500
+    focus:border-gray-600 focus:bg-gray-600
+    active:border-gray-600 active:bg-gray-600
 }
 
-.btn-outline-primary:focus {
-    color: #ffffff;
-    background-color: #02659f;
-    border-color: #02659f;
+.btn-outline-blue {
+    @apply border-blue-600 text-blue-600;
+    @apply hover:border-blue-500 hover:bg-blue-500 hover:text-white;
 }
 
-.btn-outline-primary:active {
+.btn-outline-gray {
+    @apply border-gray-600 text-gray-600;
+    @apply hover:border-gray-500 hover:bg-gray-500 hover:text-white;
+}
+
+
+
+// 데이터 테이블 
+.datatable {
+    @apply w-full bg-white border border-gray-200;
+
+    .check {
+        @apply w-4;
+
+        input[type=button] {
+            @apply border border-gray-300;
+            @apply  focus:border-gray-300 focus:bg-gray-300 focus:text-white;
+        }
+    }
+
+    th {
+        color: #768d99;
+
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 6px 5px;
+        vertical-align: bottom;
+        border-bottom: 2px solid #dce2e5;
+        text-align: left;
+    }
+
+    td {
+        padding: 6px 5px;
+        position: relative;
+        border-bottom: 1px solid #ebeef0;
+        line-height: 18px;
+        vertical-align: top;
+    }
+
+    .row-selected {
+        background-color: #fcf7c2;
+    }
+
+    tbody tr:hover {
+        background-color: #e8f5ff; 
+    }
+}
+
+/*
+.pagination {
+    a {
+        display: inline-block;
+        margin-left: -1px;
+        padding: 3px 11px;
+        background-color: #ffffff;
+        border: 1px solid #acbbc2 !important;
+        text-decoration: none;
+        color: #1f2c33;
+        outline: 0;
+        transition: background-color .2s ease-out;
+    }
+}
+.paging_selected {
     color: #ffffff;
-    background-color: #02659f;
-    border-color: #02659f;
+    background-color: #768d99;
+}
+*/
+
+
+.checkbox-radio {
+    position: absolute !important;
+    top: auto !important;
+    width: 16px !important;
+    height: 16px !important;
+    opacity: 0;
+    z-index: 1; }
+    .checkbox-radio:checked[readonly] + label span {
+      transition: none; }
+      .checkbox-radio:checked[readonly] + label span::after {
+        border-color: #acbbc2 !important; }
+    .checkbox-radio[readonly],
+    .checkbox-radio[readonly] + label {
+      pointer-events: none; }
+      .checkbox-radio[readonly] span,
+      .checkbox-radio[readonly] + label span {
+        transition: none; }
+    .checkbox-radio[type="checkbox"] + label span {
+      border-radius: 2px; }
+    .checkbox-radio[type="checkbox"]:checked + label span::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 7px;
+      height: 4px;
+      top: 6px;
+      left: 7px;
+      border-left: 2px solid #0275b8;
+      border-bottom: 2px solid #0275b8;
+      transform: translate(-50%, -50%) rotate(-45deg); }
+    .checkbox-radio[type="checkbox"]:checked[disabled] + label span::after {
+      border-color: #acbbc2 !important; }
+    .checkbox-radio[type="radio"] + label span {
+      border-radius: 50%; }
+    .checkbox-radio[type="radio"]:checked + label span::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 8px;
+      height: 8px;
+      top: 3px;
+      left: 3px;
+      background-color: #0275b8;
+      border-radius: 50%; }
+    .checkbox-radio[type="radio"]:checked[disabled] + label span::after {
+      background-color: #acbbc2 !important; }
+    .checkbox-radio + label span {
+      position: relative;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin: -4px 4px 0 0;
+      bottom: -3px;
+      border: 1px solid #acbbc2;
+      background-color: #ffffff; }
+      .checkbox-radio + label span:active {
+        border-color: #acbbc2; }
+    .checkbox-radio + label.label-pos-left span {
+      margin-left: 6px;
+      margin-right: 1px; }
+    .checkbox-radio:focus + label span {
+      border-color: #02659f; }
+    .checkbox-radio:checked:focus + label span {
+      border-color: #02659f; }
+    .checkbox-radio:checked[disabled] + label span {
+      transition: none; }
+      .checkbox-radio:checked[disabled] + label span::after {
+        border-color: #acbbc2 !important; }
+    .checkbox-radio[disabled] + label span {
+      transition: none; }
+  
+input[type="checkbox"], input[type="radio"] {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+    width: 13px;
+    height: 13px;
+    background: none; 
 }
 

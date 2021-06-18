@@ -1,8 +1,4 @@
-<div {{ $attributes->merge(['class' => '']) }} style="margin: 0 0 10px;
-    background-color: #ffffff;
-    border: 1px solid #dfe4e7;
-    padding: 10px;
-    text-align: left;">
+<div {{ $attributes->merge(['class' => 'border']) }}>
 
     @if (isset($header))
         {{$header}}

@@ -26,3 +26,6 @@ Route::get('/admin',AdminMain::class);
 
 
 Route::get('/admin/country',App\Http\Livewire\Admin\BasicCountry::class);
+Route::get('/admin/language',App\Http\Livewire\Admin\BasicLanguage::class);
+Route::get('/admin/menu',App\Http\Livewire\Admin\BasicMenu::class);
+Route::get('/admin/popup',App\Http\Livewire\Popup::class);

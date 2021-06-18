@@ -1,24 +1,26 @@
 {{-- sidebar --}}
-<x-layout-sidebar>
+<x-layout-sidebar class="overflow-x-hidden overflow-y-auto">
     @include("theme.sidebar")
 </x-layout-sidebar>
 
 {{-- content --}}
-<x-layout-content style="background-color: #ebeef0">
-    <x-flex-item class="bg-white p-4 flex">
+<x-layout-content class="relative">
+    <x-flex-item class="bg-white p-2 flex">
         {{-- Left --}}
         <x-sidebar-button />
-
+    
         {{-- right --}}
-        <div class="flex-grow">                    
-            @include("theme.header")
+        <div class="flex-grow">
+            {{$control}}
+            
+            {{-- @include("theme.header", ['title' => $title, 'control'=>$control]) --}}
         </div>
     </x-flex-item>
-    
-    <x-flex-auto class="p-3">
+        
+    <x-flex-auto>
         {{$slot}}
     </x-flex-item>
-
+    
     <x-flex-item>
         @include("theme.footer")
     </x-flex-item>
