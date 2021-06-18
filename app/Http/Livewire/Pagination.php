@@ -6,7 +6,7 @@ use Livewire\WithPagination;
 
 trait Pagination 
 {
-    use WithPagination;
+    
 
     public $totalPerPage;
 

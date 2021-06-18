@@ -8,16 +8,19 @@ use App\Models\SiteMenu as Model;
 use Illuminate\Support\Facades\DB;
 use App\Http\Livewire\CRUD;
 use App\Http\Livewire\Pagination;
+use Livewire\WithPagination;
 
 class BasicMenu extends Component
 {
     public $title = "Menu";
     private $table = "site_menus";
     
+    
 
     /**
      * CRUD, 페이지네이션
      */
+    use WithPagination;
     use CRUD, Pagination;
 
     /**
@@ -74,6 +77,13 @@ class BasicMenu extends Component
         //$this->_target = $data->target;
         $this->_description = $data->description;
     }
+
+    public $selected = [];
+    public function deleteSelect()
+    {
+        //dd($this->selected);
+    }
+
 
     private function tableTitle()
     {

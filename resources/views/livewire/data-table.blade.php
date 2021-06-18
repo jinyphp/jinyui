@@ -2,7 +2,7 @@
 <div x-data="datatables()">
     
     {{-- 테이블--}}
-    <table {{ $attributes->merge(['class' => 'datatable']) }}>
+    <table class="datatable">
         {{-- 해더타이틀 --}}
         <thead>
             <tr>
@@ -26,12 +26,12 @@
     
         {{-- 데이터 목록 --}}
         <tbody>
-            @if ($rows->count())
+            @if (isset($rows) && $rows->count())
                 @foreach ($rows as $item)
                     <tr>
                         <td class="check">
                             <input type="checkbox" id="ids_{{$item->id}}" name="ids" 
-                                {{--wire:model="selected"--}} 
+                                wire:model="selected" 
                                 value="{{$item->id}}"
                                     class="checkbox-radio rowCheckbox"
                                     @click="selectCheckbox($event, {{$item->id}})">
@@ -53,30 +53,39 @@
             @endif 
         </tbody>
     
+    
+    
     </table>
 
     {{-- 페이지네이션 --}}
     <div class="bg-white px-2 py-3">
-        <div >
-            {{ $rows->links('components.pagination') }}
-        </div>
-
         <x-flex-row class="justify-between">
-            <div>
+            <div class="flex items-center">
                 @if (isset($delButton))
                     <div class="mr-3">
                         {{$delButton}}
                     </div>
                 @endif
-            </div>
 
-            <div>    
+                <div >
+                    전체 {{$rows->total()}} : 
+                    {{ $rows->perPage() * ($rows->currentPage()-1) +1  }}
+                    ~ {{$rows->perPage() * ($rows->currentPage()-1) + $rows->count()}}
+                </div>
+            </div>
+            
+            <div class="flex justify-end items-center">
+                <nav class="flex justify-center">
+                    {{ $rows->links('components.pagination') }}
+                </nav>
+    
                 @if (isset($addButton))
                     <div class="ml-3">
                         {{$addButton}}
                     </div>
                 @endif
-            </div>            
+            </div>
+            
         </x-flex>
     </div>
     

@@ -2,12 +2,14 @@
     {{-- 타이틀 및 제어버튼 --}}
     <x-slot name="title"> 메뉴관리</x-slot>
     <x-slot name="control">
+        {{-- 
         <x-button class="mr-3 btn-blue" wire:click="create">추가(F3)</x-button>
         <x-button class="mr-3 btn-blue" id="btn-delete" disabled wire:click="delete">삭제(F4)</x-button>
         <x-button class="mr-3 btn-blue" wire:click="csvExport">엑셀(F7)</x-button>
         <x-button class="mr-3 btn-blue" wire:click="csvImport">가져오기(F8)</x-button>
         <x-button class="mr-3 btn-blue" wire:click="printOutput">인쇄(F9)</x-button>
         <x-button class="mr-3 btn-blue" wire:click="pdfOutput">PDF(F10)</x-button>
+        --}}
     </x-slot>
 
 
@@ -43,12 +45,17 @@
     </x-filter-box>
 
 
-    <x-button class="mr-3 btn-blue" wire:click="create">추가(F3)</x-button>
-
-
     {{-- 데이터 목록 --}}
     <x-table :data="$data" class="mt-2">
+        <x-slot name="delButton">
+            <x-button class="mr-3 btn-blue" id="btn-delete" disabled wire:click="deleteSelect">삭제(F4)</x-button>
+        </x-slot>
+        <x-slot name="addButton">
+            <x-button class="mr-3 btn-blue" wire:click="create">추가(F3)</x-button>
+        </x-slot>
     </x-table>
+
+  
 
     <div class="py-2">
         <x-button class="mr-1 btn-outline-gray" wire:click="csvExport">엑셀(F7)</x-button>
