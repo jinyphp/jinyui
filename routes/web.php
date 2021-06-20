@@ -29,3 +29,24 @@ Route::get('/admin/country',App\Http\Livewire\Admin\BasicCountry::class);
 Route::get('/admin/language',App\Http\Livewire\Admin\BasicLanguage::class);
 Route::get('/admin/menu',App\Http\Livewire\Admin\BasicMenu::class);
 Route::get('/admin/popup',App\Http\Livewire\Popup::class);
+
+use App\Http\Controllers\Company;
+//Route::get('/company', [Company::class,"index"]);
+Route::delete('/company', [Company::class,"delete"]);
+
+
+// 테이블에서 라우트 uri 정보를 조회
+use Illuminate\Support\Facades\DB;
+$r = DB::table('routings')->where('uri', "=", "/company")->first();
+if ($r) {
+    // 동적 라우트 설정
+    Route::get($r->uri, function () use ($r) {
+        $table = [
+            'name'=>$r->table, //"site_menus",
+            'rules'=>"jiny/menu.json"
+        ];
+        
+        return view('sales.company', ['table'=>$table]);
+    });
+}
+

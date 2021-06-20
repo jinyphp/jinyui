@@ -11,8 +11,6 @@
     
         {{-- right --}}
         <div class="flex-grow">
-            {{$control}}
-            
             {{-- @include("theme.header", ['title' => $title, 'control'=>$control]) --}}
         </div>
     </x-flex-item>

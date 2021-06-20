@@ -7,6 +7,9 @@
 @import "~simplebar/dist/simplebar";
 @import "sidebar/app";
 
+/**
+  * 레이아웃 관련 설정
+  */
 body {
     position: relative;
     background-color: #ebeef0;
@@ -17,11 +20,23 @@ body {
 }
 
 .wrapper {
-    align-items: stretch;
     display: flex;
     width: 100%;
+    @apply min-h-screen;
 }
 
+.content {
+    main {
+        @apply p-2;
+    }
+}
+
+
+
+
+/**
+  * 버튼 스타일
+  */
 button[disabled], button[disabled]:hover, button[disabled]:active {
     color: #acbbc2;
     background-color: #ebebeb;
@@ -35,6 +50,17 @@ button[disabled], button[disabled]:hover, button[disabled]:active {
     border-radius: 2px;
     margin: 0;
     padding: 0 11px;
+    min-height: 24px;
+    cursor: pointer;
+    outline: 0;
+    transition: border-color .2s ease-out, background-color .2s ease-out;
+}
+
+.btn-icon {
+    font-size: 1em;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0 6px;
     min-height: 24px;
     cursor: pointer;
     outline: 0;
@@ -63,6 +89,31 @@ button[disabled], button[disabled]:hover, button[disabled]:active {
         color: #ffffff;
         background-color: #02659f;
         border-color: #02659f; 
+    }
+}
+
+.btn-danger {
+    color: #ffffff;
+    border: 1px solid #e33734;
+    background-color: #e33734;    
+
+    &:hover {
+        color: #ffffff;
+        background-color: #ed9898;
+        border-color: #ed9898; 
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
+        color: #ffffff;
+        background-color: #ed9898;
+        border-color: #ed9898; 
+    }
+
+    &:active {
+        color: #ffffff;
+        background-color: #ed9898;
+        border-color: #ed9898; 
     }
 }
 
