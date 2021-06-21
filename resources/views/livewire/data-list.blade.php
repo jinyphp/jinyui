@@ -1,33 +1,63 @@
 <div x-data="datatables()">
-
+    
     {{-- 조건검색 필터 --}}
-    <x-filter-box class="mb-2">
-        @foreach ($filter as $key => $item)
-            {{$key}} {{$item}} <br>
+    <x-tab>
+        
+        @foreach ($filter_forms as $name => $tab)
+            
+            <x-tab-item :name="$name">
+                @if ($loop->first)
+                    <x-slot name="selected">checked</x-slot>
+                @endif
+                
+                @foreach ($tab as $key => $item)
+                    <x-forms.row>
+                        <x-forms.item-end class="w-1/3">
+                            <x-forms.label> {{$item['title']}}</x-forms.label>
+                        </x-forms.item-end>
+                        <x-forms.item class="w-2/3">
+                            <x-forms.text wire:model.defer="filter.{{$key}}"></x-forms.text>
+                        </x-forms.item>
+                    </x-forms.row>
+                @endforeach
+            </x-tab-item>
+
+            
+
         @endforeach
 
-        @foreach ($filter_forms as $key => $item)
+        <x-tab-item name="display">
             <x-forms.row>
                 <x-forms.item-end class="w-1/3">
-                    <x-forms.label> {{$item['title']}}</x-forms.label>
+                    <x-forms.label> 목록출력 </x-forms.label>
                 </x-forms.item-end>
                 <x-forms.item class="w-2/3">
-                    <x-forms.text wire:model.defer="filter.{{$key}}" 
-                                          
-                    ></x-forms.text>
+                    <select name="listnum" wire:model="listnum">
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="1000">1000</option>
+                    </select>
                 </x-forms.item>
             </x-forms.row>
-        @endforeach
+        </x-tab-item>
 
-        <div class="border-t pt-2 flex flex-row justify-center">
-            <div class="mr-1">
-                <x-button class="btn-blue" wire:click="search">{{ __('필터조건(F3)') }}</x-button>
+        <div class="flex-none w-full p-2">
+            <div class="border-t pt-2 flex flex-row justify-center">
+                <div class="mr-1">
+                    <x-button class="btn-blue" wire:click="search">{{ __('필터조건(F3)') }}</x-button>
+                </div>
+                <div class="ml-1">
+                    <x-button class="btn-alt-blue" wire:click="search_reset">{{ __('초기화(F5)') }}</x-button>
+                </div>
             </div>
-            <div class="ml-1">
-                <x-button class="btn-alt-blue" wire:click="search_reset">{{ __('초기화(F5)') }}</x-button>
-            </div>
-        </div>
-    </x-filter-box>
+        </div>        
+    </x-tab>
+
+    
+
    
 
     {{-- 테이블 --}}

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,18 +25,23 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 use App\Http\Livewire\Admin\AdminMain;
 Route::get('/admin',AdminMain::class);
 
-
+/*
 Route::get('/admin/country',App\Http\Livewire\Admin\BasicCountry::class);
 Route::get('/admin/language',App\Http\Livewire\Admin\BasicLanguage::class);
 Route::get('/admin/menu',App\Http\Livewire\Admin\BasicMenu::class);
 Route::get('/admin/popup',App\Http\Livewire\Popup::class);
+*/
+
 
 use App\Http\Controllers\Company;
-//Route::get('/company', [Company::class,"index"]);
+Route::get('/company', [Company::class,"index"]);
 Route::delete('/company', [Company::class,"delete"]);
 
 
+
+
 // 테이블에서 라우트 uri 정보를 조회
+/*
 use Illuminate\Support\Facades\DB;
 $r = DB::table('routings')->where('uri', "=", "/company")->first();
 if ($r) {
@@ -49,4 +55,5 @@ if ($r) {
         return view('sales.company', ['table'=>$table]);
     });
 }
+*/
 

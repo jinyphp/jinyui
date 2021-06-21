@@ -1,19 +1,25 @@
 {
+    "tablename":"site_menus",
+    "title":"메뉴관리",
     "filter":{
-        "code":{
-            "title":"메뉴코드",
-            "type":"input",
-            "description":"",
-            "placeholder":"aa",
-            "pos":1
-        },
-        "title":{
-            "title":"메뉴명",
-            "type":"input",
-            "description":"",
-            "placeholder":"",
-            "pos":3
+        "filter":{
+            "code":{
+                "title":"메뉴코드",
+                "type":"input",
+                "description":"",
+                "placeholder":"aa",
+                "pos":1
+            },
+            "title":{
+                "title":"메뉴명",
+                "type":"input",
+                "description":"",
+                "placeholder":"",
+                "pos":3
+            }
         }
+
+        
     },
     "forms":{
         "code":{
