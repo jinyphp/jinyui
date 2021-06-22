@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Jiny\Sales\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
+use \Jiny\Table\Http\Controllers\TableController;
 
 class Company extends TableController
 {

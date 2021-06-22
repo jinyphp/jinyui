@@ -161,7 +161,7 @@
     </div>
         
     {{-- 모달창 --}}
-    <x-modal-form wire:model="modalFormVisible">
+    <x-jinyui::modal-form wire:model="modalFormVisible">
 
         <x-slot name="title">
             {{ __($title) }}
@@ -237,7 +237,7 @@
         </x-slot>
 
         {{-- @livewire('data-new') --}}
-    </x-modal-form>
+    </x-jinyui::modal-form>
     
 </div>
 

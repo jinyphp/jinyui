@@ -1,6 +1,6 @@
 @props(['id' => null, 'maxWidth' => null])
 
-<x-modal :id="$id" :maxWidth="$maxWidth" {{ $attributes->merge(['class' => '']) }}>
+<x-jinyui::modal :id="$id" :maxWidth="$maxWidth" {{ $attributes->merge(['class' => '']) }}>
     <div class="flex flex-row justify-between items-center px-4 py-2 border-b">
         <div class="text-lg">
             @if (isset($title))
@@ -29,4 +29,4 @@
     </form>
 
     {{$slot}}
-</x-modal>
+</x-jinyui::modal>

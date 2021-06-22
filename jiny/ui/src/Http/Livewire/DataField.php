@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace Jiny\UI\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
@@ -41,6 +41,6 @@ class DataField extends Component
     public function render()
     {
         $this->fields = DB::table("jiny_fields")->where('uri', "/admin/menu")->get(); 
-        return view('livewire.data-field');
+        return view('jinyui::livewire.data-field');
     }
 }

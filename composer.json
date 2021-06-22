@@ -33,10 +33,14 @@
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/",
-            "Jiny\\UI\\": "jiny/ui/src"
+            "Jiny\\UI\\": "jiny/ui/src",
+            "Jiny\\Table\\": "jiny/table/src",
+            "Jiny\\Sales\\": "jiny/sales/src"
         },
         "files" : [
-            "jiny/ui/src/Helpers/Helper.php"
+            "jiny/ui/src/Helpers/Helper.php",
+            "jiny/table/src/Helpers/Helper.php",
+            "jiny/sales/src/Helpers/Helper.php"
         ]
     },
     "scripts": {

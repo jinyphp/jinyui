@@ -19,7 +19,5 @@
         @livewire('data-field')
     </div>
 
-    <x-jinyui::button2>aaaa</x-jinyui::button2>
-    <x-jui-button3>bbbb33</x-jui-button3>
     
 </x-app>

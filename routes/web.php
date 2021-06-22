@@ -33,10 +33,11 @@ Route::get('/admin/popup',App\Http\Livewire\Popup::class);
 */
 
 
-use App\Http\Controllers\Company;
+/*
+use Jiny\Sales\Http\Controllers\Company;
 Route::get('/company', [Company::class,"index"]);
 Route::delete('/company', [Company::class,"delete"]);
-
+*/
 
 
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace Jiny\UI\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 
 use Livewire\WithPagination;
-use App\Http\Livewire\Pagination;
+use Jiny\UI\Http\Livewire\Pagination;
 
 class DataList extends Component
 {
@@ -123,7 +123,7 @@ class DataList extends Component
 
         $rows = $db->orderBy('id',"desc")
             ->paginate($this->listnum); 
-        return view('livewire.data-list',compact("rows"));
+        return view('jinyui::livewire.data-list',compact("rows"));
     }
 
     /**

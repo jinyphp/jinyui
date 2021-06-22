@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace Jiny\UI\Http\Livewire;
 
 use Livewire\WithPagination;
 

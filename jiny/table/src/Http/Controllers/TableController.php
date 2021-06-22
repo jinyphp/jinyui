@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Jiny\Table\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -55,7 +56,7 @@ class TableController extends Controller
      */
     public function index(Request $request)
     {
-        return view('datatable',$this->rules());
+        return view('jinytable::datatable', $this->rules());
     }
 
         
