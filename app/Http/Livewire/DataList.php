@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
-use PDO;
 
 use Livewire\WithPagination;
 use App\Http\Livewire\Pagination;
@@ -33,6 +32,11 @@ class DataList extends Component
     public function mount()
     {
 
+    }
+
+    public function modalClose()
+    {
+        $this->modalFormVisible = false;
     }
     
     /**

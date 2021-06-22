@@ -1,0 +1,25 @@
+{
+    "name": "jinyerp/ui",
+    "description": "jinyERP ui components",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "hojinlee",
+            "email": "infohojin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiny\\UI":"src/"
+        },
+        "files" : [
+            "src/Helpers/Helper.php"
+        ]
+    }
+
+}

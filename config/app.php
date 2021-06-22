@@ -177,6 +177,9 @@ return [
         App\Providers\FortifyServiceProvider::class,
         App\Providers\JetstreamServiceProvider::class,
 
+        // 사용자 추가
+        Jiny\UI\JinyUIServiceProvider::class,
+
     ],
 
     /*
