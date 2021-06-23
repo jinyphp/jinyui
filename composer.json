@@ -35,11 +35,13 @@
             "Tests\\": "tests/",
             "Jiny\\UI\\": "jiny/ui/src",
             "Jiny\\Table\\": "jiny/table/src",
+            "Jiny\\Site\\": "jiny/site/src",
             "Jiny\\Sales\\": "jiny/sales/src"
         },
         "files" : [
             "jiny/ui/src/Helpers/Helper.php",
             "jiny/table/src/Helpers/Helper.php",
+            "jiny/site/src/Helpers/Helper.php",
             "jiny/sales/src/Helpers/Helper.php"
         ]
     },

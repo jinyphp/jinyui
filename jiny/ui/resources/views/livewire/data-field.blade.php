@@ -2,7 +2,7 @@
     {{-- The whole world belongs to you. --}}
     <button class="btn btn-blue" wire:click="fieldList">설정</button>
 
-
+    
 
     {{-- 모달창 --}}
     <x-jinyui::modal-form maxWidth="5xl" wire:model="modalEditVisible">

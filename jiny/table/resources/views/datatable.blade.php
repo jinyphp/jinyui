@@ -1,5 +1,5 @@
 <x-app>
-   
+ 
     <div class="text-xl bg-white px-4 py-2">
         {{$title}}
     </div>

@@ -180,6 +180,7 @@ return [
         // 사용자 추가
         Jiny\UI\JinyUIServiceProvider::class,
         Jiny\Table\TableServiceProvider::class,
+        Jiny\Site\SiteServiceProvider::class,
         Jiny\Sales\SalesServiceProvider::class,
 
     ],
