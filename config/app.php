@@ -178,6 +178,7 @@ return [
         App\Providers\JetstreamServiceProvider::class,
 
         // 사용자 추가
+        Jiny\Html\HtmlServiceProvider::class,
         Jiny\UI\JinyUIServiceProvider::class,
         Jiny\Table\TableServiceProvider::class,
         Jiny\Site\SiteServiceProvider::class,

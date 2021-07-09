@@ -15,14 +15,15 @@
 
 <body>
     
-    <x-layout>
+    <x-jiny-layout>
+
         {{--
             테마 레이아웃, config/view.php 경로추가
             custom directive, AppServiceProvider.php 추가
             @theme("layout")
         --}}
         @include("theme.layout")
-    </x-layout>
+    </x-jiny-layout>
     
     @livewireScripts
     <script src="{{ asset('js/app.js') }}"></script>

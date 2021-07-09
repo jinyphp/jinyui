@@ -1,0 +1,26 @@
+{
+    "name": "jinyerp/html",
+    "description": "jinyERP object html",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "hojinlee",
+            "email": "infohojin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiny\\Html":"src/"
+        },
+        "files" : [
+            "src/Helpers/Helper.php",
+            "src/Helpers/Factory.php"
+        ]
+    }
+
+}

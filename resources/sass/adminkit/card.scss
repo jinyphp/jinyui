@@ -1,0 +1,187 @@
+.bootstrap {
+    
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: initial;
+        border: 0 solid transparent;
+        border-radius: .25rem
+
+        
+    }
+
+    .card>hr {
+        margin-right: 0;
+        margin-left: 0
+    }
+
+    .card>.list-group {
+        border-top: inherit;
+        border-bottom: inherit
+    }
+
+    .card>.list-group:first-child {
+        border-top-width: 0;
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem
+    }
+
+    .card>.list-group:last-child {
+        border-bottom-width: 0;
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem
+    }
+
+    .card>.card-header+.list-group,
+    .card>.list-group+.card-footer {
+        border-top: 0
+    }
+
+    .card-body {
+        flex: 1 1 auto;
+        padding: 1.25rem
+    }
+
+    .card-title {
+        margin-bottom: .5rem
+    }
+
+    .card-subtitle {
+        margin-top: -.25rem
+    }
+
+    .card-subtitle,
+    .card-text:last-child {
+        margin-bottom: 0
+    }
+
+    .card-link:hover {
+        text-decoration: none
+    }
+
+    .card-link+.card-link {
+        margin-left: 1.25rem
+    }
+
+    .card-header {
+        padding: 1rem 1.25rem;
+        margin-bottom: 0;
+        background-color: #fff;
+        border-bottom: 0 solid transparent
+    }
+
+    .card-header:first-child {
+        border-radius: .25rem .25rem 0 0
+    }
+
+    .card-footer {
+        padding: 1rem 1.25rem;
+        background-color: #fff;
+        border-top: 0 solid transparent
+    }
+
+    .card-footer:last-child {
+        border-radius: 0 0 .25rem .25rem
+    }
+
+    .card-header-tabs {
+        margin-right: -.625rem;
+        margin-bottom: -1rem;
+        margin-left: -.625rem;
+        border-bottom: 0
+    }
+
+    .card-header-tabs .nav-link.active {
+        background-color: #fff;
+        border-bottom-color: #fff
+    }
+
+    .card-header-pills {
+        margin-right: -.625rem;
+        margin-left: -.625rem
+    }
+
+    .card-img-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 1rem;
+        border-radius: .25rem
+    }
+
+    .card-img,
+    .card-img-bottom,
+    .card-img-top {
+        width: 100%
+    }
+
+    .card-img,
+    .card-img-top {
+        border-top-left-radius: .25rem;
+        border-top-right-radius: .25rem
+    }
+
+    .card-img,
+    .card-img-bottom {
+        border-bottom-right-radius: .25rem;
+        border-bottom-left-radius: .25rem
+    }
+
+    .card-group>.card {
+        margin-bottom: 12px
+    }
+
+    @media (min-width:576px) {
+        .card-group {
+            display: flex;
+            flex-flow: row wrap
+        }
+
+        .card-group>.card {
+            flex: 1 0 0%;
+            margin-bottom: 0
+        }
+
+        .card-group>.card+.card {
+            margin-left: 0;
+            border-left: 0
+        }
+
+        .card-group>.card:not(:last-child) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0
+        }
+
+        .card-group>.card:not(:last-child) .card-header,
+        .card-group>.card:not(:last-child) .card-img-top {
+            border-top-right-radius: 0
+        }
+
+        .card-group>.card:not(:last-child) .card-footer,
+        .card-group>.card:not(:last-child) .card-img-bottom {
+            border-bottom-right-radius: 0
+        }
+
+        .card-group>.card:not(:first-child) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0
+        }
+
+        .card-group>.card:not(:first-child) .card-header,
+        .card-group>.card:not(:first-child) .card-img-top {
+            border-top-left-radius: 0
+        }
+
+        .card-group>.card:not(:first-child) .card-footer,
+        .card-group>.card:not(:first-child) .card-img-bottom {
+            border-bottom-left-radius: 0
+        }
+    }
+
+}

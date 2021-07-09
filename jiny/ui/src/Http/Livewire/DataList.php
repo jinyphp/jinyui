@@ -27,11 +27,41 @@ class DataList extends Component
 
     public $forms = [];
 
+    public $table_title = [];
  
-
+    public $conf = [];
     public function mount()
     {
+        $path = resource_path("rules/mmm.json");
+        $json = file_get_contents($path);
+        $this->conf = json_decode($json,true);
+        
+        // 목록 출력순으로 정렬
+        $this->listTitle(
+            arr_sort( $this->conf, '_list_pos' , 'asc' )
+        );
+        
 
+    }
+
+    
+
+
+
+    public function listTitle($conf)
+    {
+        foreach($conf as $item) {
+            array_push($this->table_title, [
+                'title'=>$item['_title'],
+                'list_pos' => $item['_list_pos'],
+                'list_sort' => $item['_list_sort']
+            ]);
+        }
+    }
+
+    public function editField()
+    {
+        $this->emit('displayField');
     }
 
     public function modalClose()
@@ -51,19 +81,7 @@ class DataList extends Component
         $this->data = []; // 데이터 초기화
     }
     
-    /**
-     * insert 새로운 데이터를 삽입합니다.
-     *
-     * @return void
-     */
-    public function insert()
-    {
-        // 데이터를 DB에 삽입합니다.
-        DB::table($this->table)->insert( $this->data );
-        
-        $this->modalFormVisible = false; //모달창을 제거 합니다.
-        $this->mode = "list";
-    }
+
 
     public function edit($id)
     {
@@ -129,9 +147,26 @@ class DataList extends Component
     /**
      * Event Refresh
      */
-    protected $listeners = ['refeshTable'];
+    protected $listeners = ['refeshTable', 'dialogClose'];
+
     public function refeshTable()
     {
 
     }
+
+    /**
+     * 모달 대화창 활성화
+     */
+    public $dialogVisible = false;
+    public function dialog()
+    {
+        $this->dialogVisible = true;
+    }
+
+    public function dialogClose()
+    {
+        $this->dialogVisible = false;
+    }
+
+
 }

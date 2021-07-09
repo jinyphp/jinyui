@@ -1,0 +1,64 @@
+.sidemenu {
+    .sidebar-header {
+        background: transparent;
+        padding: 1.5rem 1.5rem .375rem;
+        font-size: .75rem;
+        color: #ced4da
+    }
+
+    .sidebar-item {
+        display: block;
+        padding: .625rem 1.625rem;
+        font-weight: 400;
+        transition: background .1s ease-in-out;
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+        color: rgba(233, 236, 239, .5);
+        background: #222e3c;
+        border-left: 3px solid transparent;
+
+        &.is-selected {
+            color: #e9ecef;
+            background: linear-gradient(90deg, rgba(59, 125, 221, .1), rgba(59, 125, 221, .0875) 50%, transparent);
+            border-left-color: #3b7ddd
+        }
+    }
+
+    .sidebar-item:focus {
+        outline: 0
+    }
+
+    .sidebar-item:hover {
+        background: #222e3c;
+        border-left-color: transparent;
+        color: rgba(233, 236, 239, .75);
+    }
+
+    .submenu::after {
+        content: "\2039";
+        position: absolute;
+        right: 15px;
+        top: 14px;
+        transform: scale(1.5);
+    }
+
+    .active.submenu::after {
+        transform: scale(1.5) rotate(90deg);
+        transition: transform 0.5s;
+    }
+
+    .submenu {
+        .sidebar-item {
+            padding: .625rem;
+        }
+    }
+    
+    /*
+    .submenu:hover::after {
+        transform: scale(1.5) rotate(-90deg);
+        transition: transform 0.5s;
+    }
+    */
+}
+

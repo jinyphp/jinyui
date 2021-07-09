@@ -3,8 +3,7 @@
     {{-- 조건검색 필터 --}}
     <x-tab>
         
-        @foreach ($filter_forms as $name => $tab)
-            
+        @foreach ($filter_forms as $name => $tab)            
             <x-tab-item :name="$name">
                 @if ($loop->first)
                     <x-slot name="selected">checked</x-slot>
@@ -21,9 +20,6 @@
                     </x-forms.row>
                 @endforeach
             </x-tab-item>
-
-            
-
         @endforeach
 
         <x-tab-item name="display">
@@ -58,7 +54,7 @@
 
     
 
-   
+
 
     {{-- 테이블 --}}
     <div>
@@ -75,13 +71,22 @@
                         </label>
                     </th>
                             
-                    @foreach ($forms as $item)
-                        @if ($item['display_list'])
-                        <th>
+                    @foreach ($table_title as $item)
+                        <th pos="{{$item['list_pos']}}">
                             {{$item['title']}}
-                        </th> 
-                        @endif
+                            @if ($item['list_sort'])
+                                <svg class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+                                </svg>
+                            @endif                            
+                        </th>                         
                     @endforeach
+
+                    <th class="w-4">
+                        <button wire:click="editField">
+                            <x-icon-cog class="h-4 w-4" />
+                        </button>                        
+                    </th>
                 </tr>
             </thead>
 
@@ -114,7 +119,9 @@
                                         @endif
                                     </td>
                                 @endif
-                            @endforeach          
+                            @endforeach
+                            
+                            <td></td>
                         </tr>
                         @endforeach
                     @else
@@ -159,7 +166,31 @@
             </button>
         </div>
     </div>
-        
+    
+
+    <button wire:click="dialog">
+    newAdd
+    </button>
+    
+    <x-jinyui::dialog maxWidth="5xl" wire:model="dialogVisible">
+        @livewire('data-form',['table'=>$table, 'conf'=>$conf])
+    </x-jinyui::dialog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {{-- 모달창 --}}
     <x-jinyui::modal-form wire:model="modalFormVisible">
 

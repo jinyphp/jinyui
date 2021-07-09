@@ -17,6 +17,7 @@
         "browser-sync": "^2.26.14",
         "browser-sync-webpack-plugin": "^2.3.0",
         "laravel-mix": "^6.0.6",
+        "livewire-sortable": "^0.2.2",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",
         "postcss-import": "^14.0.1",
@@ -25,5 +26,8 @@
         "sass-loader": "^11.0.1",
         "simplebar": "^5.3.3",
         "tailwindcss": "^2.0.1"
+    },
+    "dependencies": {
+        "bootstrap": "^5.0.2"
     }
 }

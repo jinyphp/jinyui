@@ -3,9 +3,9 @@
 @import 'tailwindcss/utilities';
 
 // Variables
-@import "1-variables/app";
-@import "~simplebar/dist/simplebar";
-@import "sidebar/app";
+//@import "1-variables/app";
+//@import "~simplebar/dist/simplebar";
+//@import "sidebar/app";
 
 /**
   * 레이아웃 관련 설정
@@ -19,11 +19,7 @@ body {
     color: #1f2c33;
 }
 
-.wrapper {
-    display: flex;
-    width: 100%;
-    @apply min-h-screen;
-}
+
 
 .content {
     main {
@@ -31,6 +27,11 @@ body {
     }
 }
 
+
+/* Bootstrap AdminKit CSS*/
+@import "adminkit/app";
+//@import "adminkit/basic";
+@import "adminkit/card";
 
 
 
@@ -228,78 +229,28 @@ button[disabled], button[disabled]:hover, button[disabled]:active {
 */
 
 
-.checkbox-radio {
-    position: absolute !important;
-    top: auto !important;
-    width: 16px !important;
-    height: 16px !important;
-    opacity: 0;
-    z-index: 1; }
-    .checkbox-radio:checked[readonly] + label span {
-      transition: none; }
-      .checkbox-radio:checked[readonly] + label span::after {
-        border-color: #acbbc2 !important; }
-    .checkbox-radio[readonly],
-    .checkbox-radio[readonly] + label {
-      pointer-events: none; }
-      .checkbox-radio[readonly] span,
-      .checkbox-radio[readonly] + label span {
-        transition: none; }
-    .checkbox-radio[type="checkbox"] + label span {
-      border-radius: 2px; }
-    .checkbox-radio[type="checkbox"]:checked + label span::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 7px;
-      height: 4px;
-      top: 6px;
-      left: 7px;
-      border-left: 2px solid #0275b8;
-      border-bottom: 2px solid #0275b8;
-      transform: translate(-50%, -50%) rotate(-45deg); }
-    .checkbox-radio[type="checkbox"]:checked[disabled] + label span::after {
-      border-color: #acbbc2 !important; }
-    .checkbox-radio[type="radio"] + label span {
-      border-radius: 50%; }
-    .checkbox-radio[type="radio"]:checked + label span::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 8px;
-      height: 8px;
-      top: 3px;
-      left: 3px;
-      background-color: #0275b8;
-      border-radius: 50%; }
-    .checkbox-radio[type="radio"]:checked[disabled] + label span::after {
-      background-color: #acbbc2 !important; }
-    .checkbox-radio + label span {
-      position: relative;
-      display: inline-block;
-      width: 14px;
-      height: 14px;
-      margin: -4px 4px 0 0;
-      bottom: -3px;
-      border: 1px solid #acbbc2;
-      background-color: #ffffff; }
-      .checkbox-radio + label span:active {
-        border-color: #acbbc2; }
-    .checkbox-radio + label.label-pos-left span {
-      margin-left: 6px;
-      margin-right: 1px; }
-    .checkbox-radio:focus + label span {
-      border-color: #02659f; }
-    .checkbox-radio:checked:focus + label span {
-      border-color: #02659f; }
-    .checkbox-radio:checked[disabled] + label span {
-      transition: none; }
-      .checkbox-radio:checked[disabled] + label span::after {
-        border-color: #acbbc2 !important; }
-    .checkbox-radio[disabled] + label span {
-      transition: none; }
-  
-input[type="checkbox"], input[type="radio"] {
+
+
+
+/*zabbix ui style */
+
+input {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 1em;
+
+}
+
+
+input[type="file"] {
+    padding: 1px;
+}
+
+input[readonly] {
+    color: #1f2c33 !important;
+}
+
+
+input[type="radio"] {
     margin: 0;
     padding: 0;
     border: 0;
@@ -309,6 +260,242 @@ input[type="checkbox"], input[type="radio"] {
     overflow: hidden;
     width: 13px;
     height: 13px;
-    background: none; 
+    background: none;
 }
 
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="email"],
+input[type="time"] {
+    margin: 0;
+    padding: 0 5px;
+    min-height: 24px;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="email"],
+input[type="time"],
+input[type="file"] {
+    background-color: #ffffff;
+    border: 1px solid #acbbc2;
+    box-sizing: border-box;
+    color: #1f2c33;
+    outline: 0;
+    transition: border-color .2s ease-out, box-shadow .2s ease-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="time"]:focus,
+input[type="file"]:focus {
+    border-color: #02659f;
+}
+
+input[disabled],
+input[readonly] {
+    color: #acbbc2;
+    background-color: #ebebeb !important;
+    border-color: #ccd5d9;
+}
+
+
+
+
+// checkbox
+@import "form_checkbox";
+@import "form_select";
+@import "form_radio";
+@import "form_textarea";
+
+@import "ui_tab";
+@import "ui_filter";
+@import "ui_table";
+
+@import "jiny-sidebar";
+
+
+
+// ul 세로배치
+.hor-list {
+    li {
+        display: inline-block;
+        margin: 0 6px 0 0;
+    }
+
+    li:last-child {
+        margin: 0;
+    }
+
+    .object-group {
+        margin: 0;
+    }
+}
+
+
+
+
+
+
+label.form-label-asterisk::before {
+    color: #e33734;
+    display: inline-block;
+    content: '*';
+    margin-right: .3em;
+}
+
+
+
+
+// 테이블폼
+.table-forms {
+    display: table;
+    width: 100%;
+    color: #1f2c33;
+
+
+}
+
+.table-forms li {
+    display: table-row;
+}
+
+
+.table-forms .multiselect-suggest li,
+.table-forms .multiselect-matches li {
+    display: block;
+}
+
+.table-forms th {
+    color: #768d99;
+    padding: 0 5px 0 0;
+    text-align: left;
+}
+
+.table-forms th:last-child {
+    padding: 0;
+}
+
+.table-forms tfoot .table-forms-td-right,
+.table-forms .tfoot-buttons .table-forms-td-right {
+    padding-top: 5px;
+}
+
+.table-forms tfoot button,
+.table-forms .tfoot-buttons button {
+    margin: 0 10px 0 0;
+}
+
+.table-forms .table-forms-td-left {
+    display: table-cell;
+    padding: 5px 0;
+    text-align: right;
+    vertical-align: top;
+    width: 15%;
+    white-space: nowrap;
+}
+
+.table-forms .table-forms-td-left label {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+}
+
+.table-forms .table-forms-td-right {
+    display: table-cell;
+    padding: 5px 0 5px 10px;
+    vertical-align: middle;
+    width: 85%;
+    position: relative;
+}
+
+.table-forms .table-forms-td-right.has-before {
+    padding-top: 0;
+}
+
+.table-forms .table-forms-td-right td {
+    padding: 5px 5px 5px 0;
+    position: relative;
+}
+
+.table-forms .table-forms-td-right td.td-drag-icon {
+    padding: 0 11px 0 0;
+    vertical-align: middle;
+}
+
+.table-forms .table-forms-td-right td .drag-icon {
+    position: absolute;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.table-forms .table-forms-td-right td.center {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-forms .table-forms-td-right td.center .btn-grey {
+    margin: 3px 0;
+}
+
+.table-forms .table-forms-td-right td.overflow-break {
+    max-width: 150px;
+    overflow-wrap: break-word;
+    white-space: initial;
+    word-wrap: break-word;
+}
+
+.table-forms .table-forms-td-right td:last-child {
+    padding-right: 0;
+}
+
+.table-forms .table-forms-td-right .wrap-multiple-controls {
+    display: flex;
+}
+
+.table-forms .table-forms-td-right .table-forms-separator .radio-segmented+.multiselect-wrapper {
+    margin-top: 5px;
+}
+
+.table-forms .form-fields-inline label {
+    margin: 0 8px 0 3px;
+}
+
+.table-forms h4 {
+    margin-bottom: -5px;
+}
+
+.table-forms .hor-list li {
+    display: inline-block;
+}
+
+.table-forms .dynamic-row>td {
+    padding-top: 0;
+}
+
+.table-forms .dynamic-row-control>td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.table-forms li.display-none {
+    display: none;
+}
+
+.table-forms .tfoot-buttons {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}

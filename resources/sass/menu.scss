@@ -1,0 +1,222 @@
+menu {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+    display: block;
+}
+
+.menu-main>li {
+    line-height: 16px;
+}
+
+.menu-main .submenu {
+    position: relative;
+    padding-left: 24px;
+    overflow: hidden;
+    background: #051620;
+    transition: max-height 0.3s ease;
+    will-change: max-height;
+    transform: translate3d(0, 0, 0);
+}
+
+.menu-main .submenu a:hover,
+.menu-main .submenu a:focus {
+    background: #092637;
+    border-left-color: #ffffff;
+    color: #ffffff;
+}
+
+
+.menu-main>li.is-selected>a {
+    background: #0a3c5b;
+    border-left-color: #87d1ff;
+    color: #ffffff;
+}
+
+.menu-main>li.is-expanded>a,
+.menu-main>li.is-expanded>a:focus {
+    background: #092637;
+    border-left-color: transparent;
+    color: #ffffff;
+}
+
+.menu-main>li:not(.is-expanded) .submenu {
+    max-height: 0 !important;
+}
+
+.menu-main>li>a {
+    color: #ebeef0;
+}
+
+.menu-main>li>a::before {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+}
+
+.menu-main>li>a:hover,
+.menu-main>li>a:focus {
+    background: #092637;
+    border-left-color: #ffffff;
+    color: #ffffff;
+}
+
+.menu-main>li>a:hover::before,
+.menu-main>li>a:focus::before {
+    background-position-x: -570px;
+    opacity: 1;
+}
+
+.menu-main>li.has-submenu>a::after {
+    content: '';
+    position: absolute;
+    top: 19px;
+    right: 14px;
+    width: 6px;
+    height: 4px;
+    background: url("../img/icon-sprite.svg?20200407") no-repeat -606px -434px;
+    transform: rotate(0deg);
+    opacity: 0.75;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-main>li.has-submenu>a:hover::after,
+.menu-main>li.has-submenu>a:focus::after {
+    background-position: -606px -434px;
+    opacity: 1;
+}
+
+.menu-main>li.has-submenu.is-expanded>a::after {
+    background-position: -606px -434px;
+    transform: rotate(-180deg);
+}
+
+.menu-main>li.has-submenu.is-expanded>a::before,
+.menu-main>li.has-submenu.is-expanded>a::after {
+    opacity: 1;
+}
+
+.menu-main a {
+    position: relative;
+    display: block;
+    padding: 12px 34px 12px 44px;
+    font-size: 14px;
+    line-height: inherit;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+}
+
+.menu-main a:active,
+.menu-main a:hover,
+.menu-main a:link,
+.menu-main a:visited {
+    border-bottom: 0;
+}
+
+
+
+.menu-main .submenu li {
+    line-height: 14px;
+}
+
+.menu-main .submenu li.is-selected a {
+    background: #0b2d42;
+    border-left-color: #87d1ff;
+    color: #ffffff;
+}
+
+.menu-main .submenu li.is-selected a:hover,
+.menu-main .submenu li.is-selected a:focus {
+    background: #092637;
+    color: #ffffff;
+}
+
+.menu-main .submenu li:not(:last-child) {
+    border-bottom: 1px solid #051620;
+}
+
+.menu-main .submenu a {
+    padding: 8px 12px 8px 20px;
+    font-size: 12px;
+    background: #0e354d;
+    color: #ebeef0;
+}
+
+.menu-main .submenu a:hover,
+.menu-main .submenu a:focus {
+    background: #092637;
+    border-left-color: #ffffff;
+    color: #ffffff;
+}
+
+.menu-main .submenu::before,
+.menu-main .submenu::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.35);
+}
+
+.menu-main .submenu::before {
+    top: 0;
+}
+
+.menu-main .submenu::after {
+    bottom: 0;
+}
+
+
+.menu-user {
+    padding: 12px 0;
+}
+
+.menu-user li {
+    line-height: 16px;
+}
+
+.menu-user a,
+.menu-user span {
+    position: relative;
+    display: block;
+    padding: 12px 12px 12px 48px;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: color 0.3s ease-out;
+}
+
+.menu-user a::before,
+.menu-user span::before {
+    position: absolute;
+    top: 13px;
+    left: 18px;
+    opacity: .75;
+    transition: opacity 0.3s ease-out;
+}
+
+.menu-user a {
+    color: #cedae1;
+}
+
+.menu-user a:hover,
+.menu-user a:focus {
+    border-bottom: 0;
+    color: #ffffff;
+}
+
+.menu-user a:hover::before,
+.menu-user a:focus::before {
+    opacity: 1;
+}
+
+.menu-user span {
+    color: #768d99;
+}
+
+

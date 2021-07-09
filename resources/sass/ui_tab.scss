@@ -1,0 +1,193 @@
+/* tab 컨테이버 준비*/
+
+.table-forms-container {
+    margin: 0 0 10px; //하단여백
+    background-color: #ffffff;
+    border: 1px solid #dfe4e7;
+    padding: 10px;
+    text-align: left;
+}
+
+
+.table-forms-container > .ui-tabs-nav {
+    margin: -10px -10px 10px; // table-forms-container 의 padding 값만큼 반대로 배치, 좌측 상단으로 이동
+
+}
+
+/* tab 내부 디자인*/
+
+.ui-tabs-nav {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #ebeef0;
+
+    li {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        
+        a {
+            border: 0;
+            padding: 8px 10px;
+            transition: background-color .2s ease-out;
+
+            &:visited {
+                color: #0275b8;
+                text-decoration: none;
+            }
+
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: #e8f5ff;
+            }
+
+
+        }
+
+        &.ui-tabs-active {
+            a {
+                padding: 8px 10px 6px;
+                background-color: transparent;
+                color: #1f2c33;
+                text-decoration: none;
+                cursor: default;
+                border-bottom: 3px solid #0275b8;
+            }
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ui-tabs-nav {
+
+    li.ui-state-disabled a {
+        cursor: default;
+        color: #acbbc2;
+        background-color: transparent;
+        border: 0;
+    }
+
+
+    .btn-time,
+    
+
+    .btn-time::after {
+        content: '';
+        position: absolute;
+    }
+
+        
+
+    .btn-time:focus,
+    .btn-time:hover {
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f;
+        cursor: pointer;
+    }
+
+    .btn-time {
+        padding: 0 34px 0 10px;
+    }
+
+    .btn-time::after {
+        margin: 0 5px;
+        right: 0;
+        top: 0;
+        height: 24px;
+        width: 24px;
+        //background: url("../img/icon-sprite.svg?20200407") no-repeat -87px -583px;
+    }
+
+    
+
+
+
+    .ui-state-focus .btn-time,
+    .ui-state-focus .filter-trigger {
+        box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
+        color: #ffffff;
+        background-color: #02659f;
+        border-color: #02659f;
+    }
+
+    .ui-state-focus.ui-tabs-active .btn-time,
+    .ui-state-focus.ui-tabs-active .filter-trigger {
+        box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
+    }
+
+    .ui-tabs-active .btn-time {
+        color: #1f2c33;
+        background-color: #ffffff;
+        border: 1px solid #dfe4e7;
+        border-bottom: 0;
+        border-radius: 2px 2px 0 0;
+        margin: -1px 0 0 6px;
+        padding: 1px 34px 7px 10px;
+    }
+
+    .ui-tabs-active .btn-time::after {
+        background-position: -246px -583px;
+        top: 1px;
+    }
+
+    
+
+    .ui-state-hover.ui-tabs-active .btn-time,
+    .ui-state-hover.ui-tabs-active .filter-trigger {
+        background-color: #e8f5ff;
+    }
+
+
+}
+
+
+
+

@@ -1,6 +1,8 @@
-@props(['id' => null, 'maxWidth' => null])
+@props(['id' => null, 'maxWidth'=>null, 'zindex'=>null ])
 
-<x-jinyui::modal :id="$id" :maxWidth="$maxWidth" {{ $attributes->merge(['class' => '']) }}>
+<x-jinyui::modal :id="$id" :maxWidth="$maxWidth" :zindex="$zindex" 
+    {{ $attributes->merge(['class' => '']) }} >
+
     <div class="flex flex-row justify-between items-center px-4 py-2 border-b">
         <div class="text-lg">
             @if (isset($title))
@@ -8,11 +10,10 @@
             @endif
         </div>
         <div>
-            <button wire:click="modalClose">
-                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
+            @if (isset($close))
+                {{ $close }}
+            @endif
+            
         </div>
     </div>
 

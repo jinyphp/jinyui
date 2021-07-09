@@ -1,0 +1,74 @@
+textarea {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 1em;
+    padding: 4px 5px;
+    margin: 0;
+    overflow: auto;
+
+    background-color: #ffffff;
+    border: 1px solid #acbbc2;
+    box-sizing: border-box;
+    color: #1f2c33;
+    outline: 0;
+    transition: border-color .2s ease-out, box-shadow .2s ease-out;
+
+    &:focus {
+        border-color: #02659f;
+    }
+
+    &[readonly] {
+        color: #acbbc2;
+        background-color: #ebebeb !important;
+        border-color: #ccd5d9;
+
+        &:focus {
+            border-color: #02659f;
+        }
+    }
+
+    &[disabled] {
+        color: #acbbc2;
+        background-color: #ebebeb !important;
+        border-color: #ccd5d9;
+    }
+}
+
+textarea::-webkit-scrollbar {
+    width: 9px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background-color: rgba(172, 187, 194, 0.55);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgba(135, 135, 135, 0.85);
+    border: 1px solid rgba(122, 122, 122, 0.85);
+}
+
+
+
+
+
+.textarea-flexible {
+    display: block;
+    min-height: 24px;
+    overflow: hidden;
+    resize: none;
+    word-break: break-all;
+    height: 24px;
+    line-height: 14px;
+    white-space: break-spaces;
+}
+
+.textarea-flexible-container td {
+    line-height: 22px;
+}
+
+.textarea-flexible-container td.textarea-flexible-parent {
+    vertical-align: top;
+}
+
+.textarea-flexible-container td button {
+    line-height: normal;
+}

@@ -1,0 +1,67 @@
+[
+    {
+        "id":"1",
+        "ref":"0",
+        "level":"1",
+        "icon":"adjustments",
+        "title":"menu1",
+        "href":"",
+        "target":"",
+        "selected":"true"
+    },
+    {
+        "id":"2",
+        "ref":"0",
+        "level":"1",
+        "icon":"",
+        "title":"menu2",
+        "href":"",
+        "target":"",
+        "submenu":[
+            {
+                "id":"3",
+                "ref":"2",
+                "level":"2",
+                "icon":"",
+                "title":"menu 2-1",
+                "href":"",
+                "target":""
+            },
+            {
+                "id":"4",
+                "ref":"2",
+                "level":"2",
+                "icon":"",
+                "title":"menu 2-2",
+                "href":"",
+                "target":""
+            }
+        ]               
+    },
+    {
+        "id":"5",
+        "ref":"0",
+        "level":"1",
+        "icon":"",
+        "header":"메뉴2"
+    },               
+    {
+        "id":"6",
+        "ref":"0",
+        "level":"1",
+        "icon":"",
+        "title":"menu3",
+        "href":"",
+        "target":""
+    },
+    {
+        "id":"7",
+        "ref":"0",
+        "level":"1",
+        "icon":"",
+        "title":"menu4",
+        "href":"",
+        "target":""
+    }
+]
+    

@@ -1,253 +1,192 @@
 <div>
-    {{-- The whole world belongs to you. --}}
-    <button class="btn btn-blue" wire:click="fieldList">설정</button>
-
-    
 
     {{-- 모달창 --}}
-    <x-jinyui::modal-form maxWidth="5xl" wire:model="modalEditVisible">
+    <x-jinyui-modal-list maxWidth="5xl" zindex="10" wire:model="modalFieldVisible">
 
         <x-slot name="title">
+            <svg class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+            </svg>
             필드설정
         </x-slot>
+        <x-slot name="close">
+            <button wire:click="$toggle('modalFieldVisible')">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </x-slot>
 
         <x-slot name="content">
-            <table>
-                <tbody>
-                    @foreach ($fields as $key => $item)
-                        <tr>
-                            <td>{{$item->code}}</td>
-                            <td wire:click="fieldEdit">{{$item->title}}</td>
-                            <td>{{$item->filter}}</td>
-                            <td>{{$item->list}}</td>
-                            <td>{{$item->edit}}</td>
-                            <td>{{$item->form_type}}</td>
-                        </tr>
-                    @endforeach
+
+            <table class="datatable table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>활성화</th>
+                        <th>타이틀</th>
+                        <th>컬럼명</th>
+                        <th>정렬</th>
+                        <th>편집</th>
+                        <th>조건필터</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody drag-root="reorder" >
+                    @if (is_array($conf))
+                        @foreach ($conf as $key => $arr)
+                        <tr drag-item="{{$arr['_list_pos']}}" draggable="true" wire:key="{{$arr['_list_pos']}}">
+                            <td >{{$key+1}}</td>
+                            <td>
+                                @if ($arr['_list'])
+                                    <input type="checkbox" wire:model="conf.{{$key}}._list" value="true" checked>
+                                @else
+                                    <input type="checkbox" wire:model="conf.{{$key}}._list" value="false">
+                                @endif
+                                
+                            </td>
+                            <td>
+                                <input type="text" wire:model="conf.{{$key}}._title"
+                                class="px-2 py-1 text-xs">                                
+                            </td>
+                            <td>
+                                <input type="text" wire:model="conf.{{$key}}._code"
+                                class="px-2 py-1 text-xs">
+                            </td>
+                            <td>
+                                @if ($arr['_list_sort'])
+                                    <input type="checkbox" wire:model="conf.{{$key}}._list_sort" value="true" checked>
+                                @else
+                                    <input type="checkbox" wire:model="conf.{{$key}}._list_sort" value="false">
+                                @endif
+                                
+                            </td>
+                            <td>
+                                @if ($arr['_list_sort'])
+                                    <input type="checkbox" wire:model="conf.{{$key}}._edit" value="true" checked>
+                                @else
+                                    <input type="checkbox" wire:model="conf.{{$key}}._edit" value="false">
+                                @endif
+                                
+                            </td>
+                            <td>
+                                @if ($arr['_list_filter'])
+                                    <input type="checkbox" wire:model="conf.{{$key}}._list_filter" value="true" checked>
+                                @else
+                                    <input type="checkbox" wire:model="conf.{{$key}}._list_filter" value="false">
+                                @endif
+                                
+                            </td>
+                            <td>
+                                <button class="text-red-700 px-2"
+                                    wire:click.prevent="removeField({{$key}})">
+                                    <svg class="h-6 w-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </button>                                
+                            </td>
+                        </tr>    
+                        @endforeach
+                    @endif
+                    
                 </tbody>
             </table>
+
+
+            
         </x-slot>
 
         <x-slot name="footer">
-            <x-button class="ml-2 btn-blue" wire:click="FieldInsert" wire:loading.attr="disabled">
-                {{ __('추가') }}
-            </x-jet-danger-button>
-                
+            <div class="flex flex-row justify-between">
+                <x-button class="ml-2 btn-blue" wire:click="newField" wire:loading.attr="disabled">
+                    <svg class="h-4 w-4 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+
+                    {{ __('필드추가') }}
+                </x-jet-danger-button>
+
+                <x-button class="ml-2 btn-blue" wire:click="save" wire:loading.attr="disabled">
+                    {{ __('적용') }}
+                </x-jet-danger-button>
+            </div>           
         </x-slot>
-
         
-    </x-modal-form>
-
-    
-    <x-jinyui::modal-list maxWidth="7xl" wire:model="modalFieldEditVisible">
-        <x-slot name="title">
-            필드수정
-        </x-slot>
-        <x-slot name="content">
-            <div class="grid grid-cols-3 divide-x divide-gray-500">
-                <div class="flex flex-col items-center">
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>code</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>title</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>filter</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>filter_pos</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>list</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>list_pos</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>list_sort</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>edit</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-                </div>
-                <div class="flex flex-col items-center">
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form_pos</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form_type</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form_palceholder</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form_value</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form_option</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form_ref_table</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>form_ref_field</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    
-                </div>
-                <div class="flex flex-col items-center">
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>ref_table</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-        
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>ref_field</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-
-                    <x-forms.inline>
-                        <x-slot name="label">
-                            <x-forms.label>description</x-forms.label>
-                        </x-slot>
-                        <x-slot name="item">
-                            <x-forms.text>
-                            </x-forms.text>
-                        </x-slot>
-                    </x-forms.inline>
-                    
-                </div>
-            </div>
+    </x-jinyui-modal-list>
 
 
-        </x-slot>
-        <x-slot name="footer">
-            kdfjkalsdfkj
-        </x-slot>
-
-    </x-jinyui::modal-form>
 </div>
+
+<script>
+        
+    let root = document.querySelector('[drag-root]');
+    let prevY;
+    root.querySelectorAll('[drag-item]').forEach(el => {
+        // console.log(el)
+        el.addEventListener('dragstart', e => {
+            //console.log('start');
+            e.target.classList.add('bg-blue-100');
+            e.target.setAttribute('dragging', true); // 드래그 플레그 설정
+            prevY = e.pageY;
+            //console.log("START=" + prevY);
+        });
+
+        el.addEventListener('drop', e => {
+            //console.log('drop');
+            
+            let draggingEl = root.querySelector('[dragging]');
+            draggingEl.classList.remove('bg-blue-100');
+            //console.log(draggingEl )
+            
+            console.log("DRAG=" + e.pageY);
+            if (prevY < e.pageY) {
+                //console.log("아래방향 이동");
+                e.target.parentElement.after(draggingEl);
+
+            } else {
+                //console.log("위방향 이동");
+                e.target.parentElement.before(draggingEl);
+            }
+
+            // 선택 노랑색 제거
+            e.target.parentElement.classList.remove('bg-yellow-100');
+            
+            // 라이브와이어 갱신
+       
+            let component = Livewire.find(
+                e.target.closest('[wire\\:id]').getAttribute('wire:id')
+            );
+            let orderIds = Array.from(root.querySelectorAll('[drag-item]'))
+                .map(itemEl => 
+                    itemEl.getAttribute('drag-item')
+                );
+            //console.log(orderIds);
+            let method = root.getAttribute('drag-root');
+            component.call(method,orderIds);
+          
+
+            
+        });
+
+        el.addEventListener('dragover', e => {
+            e.preventDefault(); // drop 기능과 방해
+        });
+
+        el.addEventListener('dragenter', e => {
+            e.target.parentElement.classList.add('bg-yellow-100');
+            //console.log("enter = " + e.target);
+            e.preventDefault(); // drop 기능과 방해
+        });
+
+        el.addEventListener('dragleave', e => {
+            e.target.parentElement.classList.remove('bg-yellow-100');
+            //console.log("leave = " + e.target);
+        });
+
+        el.addEventListener('dragend', e => {
+            e.target.removeAttribute('dragging'); // 드래그 플레그 삭제
+        });
+
+    })
+</script>
+

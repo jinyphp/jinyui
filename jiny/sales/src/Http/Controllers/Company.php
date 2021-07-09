@@ -12,17 +12,12 @@ class Company extends TableController
     public function __construct()
     {
         $this->setRuleJson("rules/menu.json");
-
-        // $fields = $this->get_field_db("/admin/menu");
-        // $this->put_field_json("rules/mmm.json", $fields);
-        // $fields = $this->get_field_json("rules/mmm.json");
-        // $fields[0]['title'] = "활성화2";
-        // $this->put_field_db("/admin/menu", $fields);
-        
-        
-
     }
 
+    public function new()
+    {
+        return view('company-new');
+    }
          
     /**
      * 필드정보들 DB에서 읽어옴
@@ -61,7 +56,9 @@ class Company extends TableController
     public function get_field_json($filename)
     {
         $path = resource_path($filename);
+        // dd($path);
         $json = file_get_contents($path);
+
         return json_decode($json,true);
     }
 

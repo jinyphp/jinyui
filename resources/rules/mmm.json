@@ -2,17 +2,20 @@
     {
         "id": 1,
         "uri": "\/admin\/menu",
+        "_enable": "checked",
         "code": "enable",
-        "title": "활성화",
-        "filter": "true",
+        "_title": "활성화",
+        "_list_filter": "true",
         "filter_pos": "1",
-        "list": "true",
-        "list_pos": "1",
-        "list_sort": null,
-        "edit": null,
-        "form": "true",
-        "form_pos": "1",
-        "form_type": "checkbox",
+        "_list": false,
+        "_list_pos": 1,
+        "_list_sort": "false",
+        "_edit": "false",
+
+        "_form": "true",
+        "_form_pos": 1,
+        "_form_type": "checkbox",
+        
         "form_placeholder": null,
         "form_value": "checked",
         "form_option": null,
@@ -23,19 +26,41 @@
         "description": "활성화 선택",
         "operator": null,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "_code": "enable"
     },
     {
+        "id": 3,
+        "_enable": "false",
+        "_title": "메뉴명",
+        "_code": "title",
+        "_list": "true",
+        "_list_pos": 2,
+        "_list_sort": "false",
+        "_edit": "false",
+        "_list_filter": "true",
+
+        "_form": "true",
+        "_form_pos": 2,
+        "_form_type": "text"
+    },
+    {
+        "id": 2,
         "uri": "\/admin\/menu",
+        "_enable": "false",
         "code": "code",
-        "title": "메뉴코드",
-        "filter": "true",
+        "_title": "메뉴코드",
+        "_list_filter": "true",
         "filter_pos": "1",
-        "list": "true",
-        "list_pos": "1",
-        "list_sort": null,
-        "edit": null,
-        "form": "true",
+        "_list": "true",
+        "_list_pos": 3,
+        "_list_sort": false,
+        "_edit": "true",
+
+        "_form": "true",
+        "_form_pos": 3,
+        "_form_type": "text",
+
         "form_pos": "1",
         "form_type": "input",
         "form_placeholder": "코드명을 입력해 주세요",
@@ -48,6 +73,22 @@
         "description": "활성화 선택",
         "operator": null,
         "created_at": null,
-        "updated_at": null
+        "updated_at": null,
+        "_code": "code"
+    },
+    {
+        "id": 4,
+        "_enable": "true",
+        "_title": "설명",
+        "_code": "description",
+        "_list": false,
+        "_list_pos": 4,
+        "_list_sort": false,
+        "_edit": "true",
+        "_list_filter": "true",
+
+        "_form": "true",
+        "_form_pos": 4,
+        "_form_type": "textarea"
     }
 ]
