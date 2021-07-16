@@ -1,0 +1,64 @@
+
+<div align="center">
+
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style='font-size:12px;padding:10px;'>
+
+		{formstart}<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style='border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;' bgcolor="#E9E9E9">
+				카드결제: 이니페이</td>
+				<td style='border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;' width="100" bgcolor="#E9E9E9">
+				　</td>
+				<td style='border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;' width="100" bgcolor="#E9E9E9">
+				　</td>
+				
+			</tr>
+		</table>
+
+		<table border="0" width="980" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style='font-size:12px;padding:10px;' width="100">결 제 방 법 </td>
+				<td style='font-size:12px;padding:10px;'>{inipay_payment}
+                                                        </td>
+			</tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' width="100">상 품 명</td>
+				<td style='font-size:12px;padding:10px;'><input type=text name=goodname size=20 value="축구공"></td>
+			</tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' width="100">성 명</td>
+				<td style='font-size:12px;padding:10px;'><input type=text name=buyername size=20 value="홍길동"></td>
+			</tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' width="100">전 자 우 편</td>
+				<td style='font-size:12px;padding:10px;'><input type=text name=buyeremail size=20 value="hkd@abcd.com"></td>
+			</tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' width="100">보호자 전자우편</td>
+				<td style='font-size:12px;padding:10px;'><input type=text name=parentemail size=20 value="parents@parents.com"></td>
+			</tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' width="100">이 동 전 화</td>
+				<td style='font-size:12px;padding:10px;'><input type=text name=buyertel size=20 value="011-123-1234"></td>
+			</tr>
+		</table>
+		<p>
+		<input type=image src="img/button_03.gif" width="63" height="25" style="border: medium none" name="I1">{formend}</p>
+
+        <!-----------------------------------------------------------------------------------------------------
+                                                    ※ 주의 ※
+                                                    보호자 이메일 주소입력 받는 필드는 소액결제(핸드폰 , 전화결제)
+                                                    중에  14세 미만의 고객 결제시에 부모 이메일로 결제 내용통보하라는 정통부 권고 사항입니다. 
+                                                    다른 결제 수단을 이용시에는 해당 필드(parentemail)삭제 하셔도 문제없습니다.
+         -------------------------------------------------------------------------------------------------------> 
+
+
+</div>
+
+
+
+
+
+

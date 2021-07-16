@@ -1,0 +1,47 @@
+<x-theme>
+	<x-main class="p-4">
+		<x-main-content class="bg-white p-4">
+			
+		</x-main-content>
+	</x-main>
+</x-theme>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF" >
+		
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#E9E9E9">
+				파트너 프로그램</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">
+				&nbsp;</td>
+				
+			</tr>
+		</table>
+		
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">총 고객수 :</td>
+				<td style="font-size:12px;padding:10px;" width="100" align="left">
+				{total_users}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">총 리셀러 :</td>
+				<td style="font-size:12px;padding:10px;" width="100" align="left">
+				{total_reseller}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">총 서버수 :</td>
+				<td style="font-size:12px;padding:10px;" width="100" align="left">
+				{total_server}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+		</table>
+		
+		<p align="center">&nbsp;</p>
+		</td>
+	</tr>
+</table>

@@ -1,0 +1,173 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<div align="center">
+
+<div align="center">
+
+
+
+
+
+<table border="0" cellpadding="5" cellspacing="5" width="100%" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<tr>
+			<td valign="top">
+
+
+
+
+
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#DBEEF3'>
+			<tr>
+				<td align='left' style='font-size:12px;padding:10px;'><b>환경설정</b></td>
+			</tr>
+			</table>
+			<table border="0" width="100%" cellspacing="5" cellpadding="5">
+				<tr>
+					<td>&#9642;<font size="2"> <a href="pages.php?pages=members_free">
+							무료서비스</a> /
+							<a href="sales_members_service.php">유료서비스</a> / <a href="sales_members_renewal.php">
+							연장내역</a> / <a href="sales_manager.php">직원 
+							관리</a> / <a href="sales_members_bank.php">계좌관리</a> / <a href="pages.php?pages=reseller">리셀러안내</a> 
+					/ <a href="sales_reseller.php">리셀러 상품</a> / <a href="sales_reseller_order.php">
+							리셀러 연장주문</a> / <a href="sales_reseller_point.php">
+							리셀러 적립금</a></font></td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left'><font size="2"><b>회원 정보 수정</b></font></td>
+		<td align='left' width="50">&nbsp;</td>
+	</tr>
+</table>
+
+{formstart}
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right"><font size="2">거주지역</font></td>
+			<td><font size="2">{country}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">사용언어</font></td>
+			<td><font size="2">{language}</font></td>
+			</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">사용환율</font></td>
+			<td><font size="2">{currency}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">부가세율</font></td>
+			<td><font size="2">{taxrate}</font></td>
+			</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height='5'>
+			<tr><td></td></tr>
+		</table>
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right"><font size="2" color="#FF0000">* 이메일</font></td>
+			<td><font size="2">{email}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">담당자명</font></td>
+			<td><font size="2">{manager}</font></td>
+			</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">패스워드</font></td>
+			<td><font size="2">{password}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">패스워드 재입력</font></td>
+			<td><font size="2">{password2}</font></td>
+			</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height='5'>
+			<tr><td></td></tr>
+		</table>
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right"><font size="2">핸드폰</font></td>
+			<td><font size="2">{phone}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">일반전화</font></td>
+			<td><font size="2">{tel}</font></td>
+			</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">팩스</font></td>
+			<td><font size="2">{fax}</font></td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height='5'>
+			<tr><td></td></tr>
+		</table>
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right"><font size="2">회사명</font></td>
+			<td><font size="2">{company}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">사업자번호</font></td>
+			<td><font size="2">{biznumber}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">대표자명</font></td>
+			<td><font size="2">{president}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">우편번호</font></td>
+			<td><font size="2">{post}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">주소</font></td>
+			<td><font size="2">{address}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">업태</font></td>
+			<td><font size="2">{subject}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">업종</font></td>
+			<td><font size="2">{item}</font></td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height='5'>
+			<tr><td></td></tr>
+		</table>
+
+
+<table border="0" width="100%" cellspacing="5" cellpadding="5">
+	<tr>
+		<td align="center">
+	<font size="2">{submit}</font></td>
+	</tr>
+	</table>
+{formend}
+
+		
+		</td>
+		</tr>
+	</table>
+
+
+
+
+			</div>
+
+
+
+			</div>
+

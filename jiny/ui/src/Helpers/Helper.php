@@ -1,5 +1,9 @@
 <?php
 
+function CTabView($data = []) {
+	return new \Jiny\UI\CTabView($data);
+}
+
 if (!function_exists("CMenu")) {
     function CMenu() {
         return new \Jiny\UI\CMenu();

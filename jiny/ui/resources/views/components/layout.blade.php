@@ -1,3 +1,3 @@
-<div {{ $attributes->merge(['class' => 'wrapper']) }} style="height:inherit">
+<div {{ $attributes->merge(['class' => 'wrapper layout']) }} style="height:inherit">
     {{$slot}}
 </div>

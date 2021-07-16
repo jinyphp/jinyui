@@ -1,6 +1,6 @@
 require('./bootstrap');
 
-require('alpinejs');
+//require('alpinejs');
 
 /**
  * 부트스트랩 CSS & JS
@@ -11,4 +11,5 @@ import "./modules/bootstrap";
 
 
 //import "./modules/feather";
-//import "./modules/sidebar";
+import "./jiny/sidebar";
+import "./jiny/scroll";

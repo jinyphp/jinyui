@@ -58,5 +58,21 @@ class AppServiceProvider extends ServiceProvider
             $args = substr_replace($args, $viewBasePath.'.', 1, 0);
             return "<?php echo \$__env->make({$args}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
+
+
+        //Compoent Object Tag
+        /*
+        Blade::directive('input', function ($args) {
+            $args = Blade::stripParentheses($args);
+            
+            if(isset($args['type'])) {
+                $type = $args['type'];
+            } else {
+                $type = null;
+            }
+
+            return new \Jiny\Html\Form\CInput($type);
+        });
+        */
     }
 }

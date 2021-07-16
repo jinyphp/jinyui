@@ -23,18 +23,16 @@ class SidebarItem extends Component
      */
     public function render()
     {
-        return view('jinyui::components.sidebar-item');
+        return view('jinyui::components.sidebar.item');
+        
         /*
         $res = <<<'blade'
-        <div>
-        {!! CMenuItem()
-            ->addItem( CLink($slot)->addClass("sidebar-link") )
-            ->setLivewireAttrs($attributes)
-            ->addClass("sidebar-item") !!} 
-        </div>
+        <li {{ $attributes->merge(['class' => 'sidebar-item']) }} >
+            {{$slot}}
+        </li>
         blade;
 		
 		return $res;
-        */
+        */     
     }
 }

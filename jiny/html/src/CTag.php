@@ -78,8 +78,9 @@ class CTag extends CObject
 	protected function startToString() {
 		$res = '<'.$this->tagname;// 시작테그 생성
 		foreach ($this->_attributes as $key => $value) {
-			if ($value === null) {
-				continue;
+
+			if ($value === null ) {
+				continue; // 값이 없는 속성은 제외
 			}
 
 			// "value", "name"및 "id"속성에는 특수 인코딩 전략을 사용해야합니다.

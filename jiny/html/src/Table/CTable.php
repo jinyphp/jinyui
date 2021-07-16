@@ -21,6 +21,7 @@ class CTable extends CTag {
 		$this->heading_column = null;
 	}
 
+	// 테이블속성
 	public function setCellPadding($value) {
 		$this->attributes['cellpadding'] = strval($value);
 		return $this;

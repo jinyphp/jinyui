@@ -1,0 +1,19 @@
+/* Collapse */
+.bootstrap {
+    .collapse:not(.show) {
+        display: none
+    }
+    
+    .collapsing {
+        height: 0;
+        overflow: hidden;
+        transition: height .35s ease
+    }
+    
+    @media (prefers-reduced-motion:reduce) {
+        .collapsing {
+            transition: none
+        }
+    }
+}
+

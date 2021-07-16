@@ -1,0 +1,104 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<div align="center">
+
+<div align="center">
+
+<table border="0" width="1000" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style='font-size:12px;padding:10px;'>
+		&nbsp;</tr>
+	<tr>
+		<td style='border:1px solid #E9E9E9;font-size:12px;padding:10px;' bgcolor="#FFFFFF">
+		{formstart}
+			
+			<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+				<tr>
+					<td align='left' width="50%"><font size="2"><b>전표수정</b></font></td>
+					<td align='right' width="50%">　</td>
+				</tr>
+			</table>
+			<table border="0" width="100%" cellspacing="5" cellpadding="5" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+				<tr>
+					<td width="70" align="right"><font size="2">거래처명</font></td>
+					<td colspan="2">{company}</td>
+				</tr>
+				<tr>
+					<td width="70" align="right"><font size="2">작성일자</font></td>
+					<td width="200"><font size="2">{transdate}</font></td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="70" align="right"><font size="2">상품명</font></td>
+					<td colspan="2"><font size="2">{goodname}</font></td>
+				</tr>
+			</table>
+			<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+{script}
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='background-color:#fafafa;border:1px solid #D2D2D2;'>
+	<tr>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		규격</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		수량</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		단가</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		공급가액</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		부가세</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		할인액</td>
+		<td style='font-size:12px;padding:10px;' align="center">
+		합계</td>
+	</tr>
+</table>
+
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;border-left:1px solid #D2D2D2;'>
+	<tr>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">{spec}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		{num}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		{prices}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		{sum}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		{vat}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+		{discount}</td>
+		<td style='font-size:12px;padding:10px;' align="center">
+		{total}</td>
+	</tr>
+</table>
+
+
+
+			<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+			<table border="0" width="100%" cellspacing="5" cellpadding="5">
+				<tr>
+					<td align="center"><font size="2">{submit}</font></td>
+				</tr>
+			</table>
+			<p>{formend}</td>
+	</tr>
+	<tr>
+		<td style='font-size:12px;padding:10px;'>&nbsp;</td>
+	</tr>
+</table>
+
+</div>
+			</div>

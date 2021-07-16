@@ -1,0 +1,1 @@
+<h5 {{ $attributes->merge(['class' => 'card-title mb-0']) }}>{{$slot}}</h5>

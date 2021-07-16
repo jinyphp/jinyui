@@ -13,10 +13,13 @@
 body {
     position: relative;
     background-color: #ebeef0;
-    font-size: 75%;
+    //font-size: 75%;
+    font-size: .875rem;
     font-family: Arial, Tahoma, Verdana, sans-serif;
     line-height: 1.4em;
     color: #1f2c33;
+
+    
 }
 
 
@@ -32,8 +35,21 @@ body {
 @import "adminkit/app";
 //@import "adminkit/basic";
 @import "adminkit/card";
+@import "adminkit/row";
+@import "adminkit/col";
+@import "adminkit/alert";
+@import "adminkit/form";
+@import "adminkit/width";
+@import "adminkit/tabs";
+@import "adminkit/sidebar";
 
+@import "adminkit/table";
+@import "adminkit/collapse";
 
+@import "adminkit/bootstrap-display";
+@import "adminkit/bootstrap-svg";
+
+@import "jiny_component_scroll";
 
 /**
   * 버튼 스타일
@@ -317,6 +333,7 @@ input[readonly] {
 @import "form_textarea";
 
 @import "ui_tab";
+
 @import "ui_filter";
 @import "ui_table";
 

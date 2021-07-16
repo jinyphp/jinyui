@@ -1,0 +1,345 @@
+@charset "UTF-8";
+/* Open Shopping 2.0 Default CSS Style */
+html { font-family: "Ropa Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif,"맑은고딕","돋움","Arial"; font-size: 12px; line-height: 1.5; }
+a {text-decoration: none}
+
+
+h1 {
+	font-size: 16px;
+}
+
+h2 {
+	font-size: 14px;
+}
+
+
+#popup_mask {  
+	position:absolute;  
+	z-index:9000;  
+	background-color:#000000;  
+	display:none;
+	left:0;
+	top:0;
+} 
+
+#listview {
+	width:100%; 
+	font-size:12px; 
+	color:#000000; 
+	font-weight:bold; 
+	background-color:#f3f3f3; 
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#listnum {
+	width:100%; 
+	font-size:12px; 
+	color:#000000; 
+	font-weight:bold; 
+	background-color:#f3f3f3; 
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#btn_search {
+	width:80px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+}
+
+#cate_search{
+	width:100%;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#btn_shop_search {
+	width:80px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+	text-align: center;
+}
+
+#shop_search{
+	width:100%;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#btn_newgoods {
+	width:80px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#f46624;
+	height:28px;
+	font-size:12px;
+	border:1px solid #df5d21;
+}
+
+
+
+#btn_detail_cart{
+	width:90px; 
+	font-size:12px; 
+	color:#000000; 
+	font-weight:bold; 
+	background-color:#f3f3f3; 
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#btn_detail_buynow{
+	width:90px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+#btn_detail_wish{
+	width:90px; 
+	font-size:12px; 
+	color:#000000; 
+	font-weight:bold; 
+	background-color:#f3f3f3; 
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#btn_detail_reseller{
+	width:90px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#f46624;
+	height:28px;
+	font-size:12px;
+	border:1px solid #df5d21;
+}
+
+#shipping{
+	width:100%;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#detail_num{
+	width:100px;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+
+}
+
+#detail_option{
+	width:100%;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+
+#btn_cart_delete{
+	width:90px; 
+	font-size:12px; 
+	color:#000000; 
+	font-weight:bold; 
+	background-color:#f3f3f3; 
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+
+#btn_cart_seller_order{
+	width:150px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+#btn_cart_all_order{
+	width:90px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+#cart_num{
+	width:50px;
+	height:15px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+
+}
+
+
+#btn_paynow{
+	width:90px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+#btn_order_delete{
+	width:90px; 
+	font-size:12px; 
+	color:#000000; 
+	font-weight:bold; 
+	background-color:#f3f3f3; 
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#btn_transfer{
+	width:250px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+#btn_login_submit{
+	width:100px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+#input_login_email{
+	width:100%;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#input_login_password{
+	width:100%;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#input_login_securekey{
+	width:100%;
+	height:28px;	
+	font-size:12px;	
+	border:1px solid #d8d8d8;
+}
+
+#btn_eximbay_retry{
+	width:100px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+#btn_eximbay{
+	width:150px; 
+	font-size:12px;
+	color:#ffffff;
+	font-weight:bold;
+	background-color:#4b8df8;
+	height:28px;
+	font-size:12px;
+	border:1px solid #3079ed;
+
+}
+
+/* 상품이미지 표시 텝바 */
+ul.images_navtab {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.images_navtab:after {
+    content:"";
+    display:block;
+    clear:both;
+}
+
+ul.images_navtab li {
+    float: left;
+    cursor: pointer;
+    padding:5px;    
+}
+
+ul.images_navtab li.active {
+
+}
+
+.images_container {
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #FFFFFF;
+}
+
+.images_content {
+    display: none;
+}
+
+.images_container .images_content ul {
+    width:100%;
+    margin:0px;
+    padding:0px;
+}
+
+.images_container .images_content ul li {
+   
+}
+

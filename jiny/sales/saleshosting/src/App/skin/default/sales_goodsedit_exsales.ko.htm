@@ -1,0 +1,165 @@
+<html>
+
+<head>
+<meta http-equiv='Content-Language' content='ko'>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+<meta name='viewport' content='user-scalable=nom, initial-scale=1.0,
+ maximum-scale=1.0, minimum-scale=1.0, width=device-width' />
+  <style>
+   a {text-decoration: none}
+  </style>
+<title>OKNETWORKS 010-3911-3106</title>
+
+<script type="text/javascript">
+     function setcompany(selectObj) {
+     	var f = document.good;
+     	var sel = f.company;
+     	
+     	var target = document.getElementById("company");
+		
+     	if(target.options[target.selectedIndex].text != "거래처 선택")
+			document.good.company1.value = target.options[target.selectedIndex].text;
+		else document.good.company1.value = "";
+		// document.good.company.options[document.good.company.selectedIndex].value;	     
+
+     	document.good.company1.focus();
+     }
+     
+     function setcate(selectObj) {
+     	var f = document.good;
+     	var sel = f.cate1;
+     	
+     	var target = document.getElementById("cate1");
+		
+     	if(target.options[target.selectedIndex].text != "분류")
+			document.good.cate.value = target.options[target.selectedIndex].text;
+		else document.good.cate.value = "";
+		// document.good.company.options[document.good.company.selectedIndex].value;	     
+
+     	document.good.cate.focus();
+     }
+     
+  
+     function setMargin(selectObj) {
+     	document.exsales.supply_prices.value = document.exsales.prices.value * (100 - document.exsales.margin.value)/100;
+     }
+
+     
+ </script>
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="980" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<trstyle="vertical-align:top">
+			<td style="width:250px; border-right:1px solid #f1f1f1; padding-right:12px; text-align:justify" valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DBEEF3'>
+	<tr>
+		<td align='left'><font size="2">
+		<a href="../ssss/sales/ko/sales_goods.php?treemode=default">상품구분</a>&nbsp; |&nbsp;
+		<a href="../ssss/sales/ko/sales_goods.php?treemode=cate">그룹구분</a></font></td>
+	</tr>
+</table>
+
+
+			<font size="2">{productMenu}</font></td>
+			<td style="padding-left:10px" valign="top">
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left'><font size="2">{goodstitle}</font></td>
+		<td align='left' width="65">
+		&nbsp;</td>
+	</tr>
+</table>
+
+
+
+<table border="0" width="100%" cellspacing="5" cellpadding="5">
+	<tr>{formstart}
+		<td><font size="2">본 판매재고 시스템을 이용하는 거래처를 대상으로 B2B 홍보 설정을 합니다. 보다 많은 거래 공급처를 늘릴 수 있습니다.</font></td>
+	</tr>
+	<tr>
+		<td>
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100">
+			<p align="center"><font size="2">외부판매</font></td>
+			<td>
+			<font size="2">{exsales}</font></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right"><font size="2">기본가격</font></td>
+			<td><font size="2">{prices}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">마진율</font></td>
+			<td><font size="2">{margin}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">공급단가</font></td>
+			<td><font size="2">{supply_prices}</font></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right"><font size="2">대리배송{autodelivery}</font></td>
+			<td><font size="2">지정된 장소 이외로 제품 배송이 가능합니다.</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">자동발주{autoorder}</font></td>
+			<td><font size="2">재고 부족시 공급처에게 자동 발주 주문을 처리합니다.</font></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" bgcolor="#FAFAFA">
+		<tr>
+			<td>
+			<p align="center"><font size="2">{exnote}</font></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p align="right"><font size="2">{submit}{formend}</font></td>
+	</tr>
+	<tr>
+		<td>&nbsp;</td>
+	</tr>
+</table>
+
+
+		</td>
+		</tr>
+	</table>
+			</div>
+
+
+
+
+</body>
+
+</html>

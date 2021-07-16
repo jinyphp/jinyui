@@ -14,10 +14,18 @@ class Company extends TableController
         $this->setRuleJson("rules/menu.json");
     }
 
+    public function index(Request $request)
+    {
+        return view('jinyerp::company');
+    }
+
     public function new()
     {
-        return view('company-new');
+        //return view('company-new');
+        return view('jinyerp::company-new');
     }
+
+
          
     /**
      * 필드정보들 DB에서 읽어옴

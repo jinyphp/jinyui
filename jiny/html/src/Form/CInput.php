@@ -16,7 +16,7 @@ class CInput extends CTag {
 	 */
 	protected $enabled = true;
 
-	public function __construct($type = 'text', $name = 'textbox', $value = '') {
+	public function __construct($type = 'text', $name = null, $value = null) {
 		parent::__construct('input');
 		$this->setType($type);
 
@@ -101,6 +101,12 @@ class CInput extends CTag {
 	public function setAutofocus()
 	{
 		$this->setAttribute('autofocus', 'autofocus');
+		return $this;
+	}
+
+	public function setPlaceholder($value)
+	{
+		$this->setAttribute('placeholder', $value);
 		return $this;
 	}
 

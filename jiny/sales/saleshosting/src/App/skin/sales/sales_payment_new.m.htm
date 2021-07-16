@@ -1,0 +1,121 @@
+
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="100%" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<tr>
+			<td valign="top">
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#DBEEF3'>
+			<tr>
+				<td align='left' style='font-size:12px;padding:10px;'><b>전표관리 : 
+				입출금</b></td>
+			</tr>
+			</table>
+			<table border="0" width="100%" cellspacing="5" cellpadding="5">
+				<tr>
+					<td>▪<font size="2"><a href="sales_trans_sell.php">{@86}</a> 
+					/
+							<a href="sales_trans_sell_auth.php">{@87}</a> / <a href="sales_quotation.php">{@88}</a> 
+					/
+							<a href="sales_payment_edit.php?company_id=&paymode=1">{@89}</a> 
+					/ <a href="sales_trans_report.php">{@90}</a> / <a href="sales_trans_buy.php">
+					{@91}</a> / <a href="sales_trans_buy_auth.php">
+							{@92}</a> /
+							<a href="sales_payment_edit.php?company_id=&paymode=2">{@93}</a> 
+					/ <a href="sales_payment.php">{@94}</a></font></td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left' width="50%"><font size="2"><b>입금 / 출금</b></font></td>
+		<td align='right' width="50%">{list}</td>
+	</tr>
+</table>
+
+{formstart}<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+	<tr>
+		<td></td>
+	</tr>
+</table>
+<trstyle="vertical-align:top">
+
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right"><font size="2">입금일자</font></td>
+			<td><font size="2">{transdate}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right">&nbsp;</td>
+			<td><font size="2">{paymode}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">거래처명</font></td>
+			<td><font size="2">{company}</font></td>
+			</tr>
+		<tr>
+			<td width="100" align="right"><font size="2">거래방식</font></td>
+			<td>
+			<font size="2">{payment}</font></td>
+		</tr>
+		<tr>
+			<td width="100" align="right">
+			<font size="2">입금액</font></td>
+			<td>
+			<font size="2">{paymoney}</font></td>
+			</tr>
+		</table>
+				<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+
+
+	<table border="0" width="100%" cellspacing="5" cellpadding="5" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td valign='top'><font size="2">메모</font></td>
+		</tr>
+		<tr>
+			<td valign='top'>{memo}</td>
+			</tr>
+		</table>
+				<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+<table border="0" width="100%" cellspacing="5" cellpadding="5">
+	<tr>
+		<td align="center" width="50%">
+	{delete}</td>
+		<td align="center" width="50%">
+	<font size="2">{submit}</font></td>
+	</tr>
+</table>
+{formend}
+
+			</td>
+		</tr>
+	</table>
+			</div>
+<p>&nbsp;</p>
+
+
+
+			

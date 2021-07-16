@@ -1,0 +1,1 @@
+<a {{ $attributes->merge(['class' => 'sidebar-link']) }}>{{$slot}}</a>

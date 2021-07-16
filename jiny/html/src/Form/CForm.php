@@ -68,4 +68,47 @@ class CForm extends CTag {
 
 		return $this;
 	}
+
+
+	private $layout;	
+	/**
+	 * 폼요소 출력 레이아웃
+	 * basic,horizontal, row, inline
+	 *
+	 * @param  mixed $layout
+	 * @return void
+	 */
+	public function setLayout($layout="basic")
+	{	
+		$this->layout = $layout;
+		return $this;
+	}
+
+		
+	/**
+	 * 레이아웃 형식에 맞추어 항목을 추가
+	 *
+	 * @param  mixed $value
+	 * @return void
+	 */
+	public function addList($value)
+	{
+		if($this->layout == "basic") {
+			$item = CDiv($value)->addClass("mb-3");
+		} else 
+		if($this->layout == "horizontal") {
+			$item = CDiv(
+				[
+					CDiv($value[0])->addClass("col-sm-2")->addClass("text-sm-end"),
+					CDiv($value[1])->addClass("col-sm-10")
+				]
+			)->addClass("mb-3")->addClass("row");
+		}
+		else {
+			$item = $value;
+		}
+		
+		$this->addItem($item);
+		return $this;
+	}
 }

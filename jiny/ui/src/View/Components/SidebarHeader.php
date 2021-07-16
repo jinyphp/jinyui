@@ -23,6 +23,6 @@ class SidebarHeader extends Component
      */
     public function render()
     {
-        return view('jinyui::components.sidebar-header');
+        return view('jinyui::components.sidebar.header');
     }
 }

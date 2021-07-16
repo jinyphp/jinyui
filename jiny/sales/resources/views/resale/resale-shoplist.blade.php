@@ -1,0 +1,26 @@
+<x-theme>
+	<x-main class="p-4">
+		<x-main-content class="bg-white p-4">
+			
+		</x-main-content>
+	</x-main>
+</x-theme>
+
+<table border="0" width="800" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border-top:1px solid #E9E9E9;border-left:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF" width="100">
+				업체검색</td>
+		<td style="border-top:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF">
+		{searchkey}</td>		
+		<td style="border-top:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF" width="50">
+		{btn_search}</td>		
+		<td style="border-top:1px solid #E9E9E9;border-left:1px solid #E9E9E9;border-right:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF" width="50">
+		{close}</td>
+	</tr>
+</table>
+<table border="0" width="800" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF">
+		<p>{list}</td>
+	</tr>
+</table>

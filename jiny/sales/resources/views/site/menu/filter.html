@@ -1,0 +1,51 @@
+<ul class="table-forms" style="user-select: auto;">
+    <li style="user-select: auto;">
+        <div class="table-forms-td-left" style="user-select: auto;"><label
+                for="filter_groups__ms" style="user-select: auto;">Host groups</label></div>
+        <div class="table-forms-td-right" style="user-select: auto;">
+            <div class="multiselect-control" style="user-select: auto;">
+                <div id="filter_groups_" class="multiselect" role="application"
+                    style="width: 270px; user-select: auto;">
+                    <div aria-live="assertive" aria-atomic="true" style="user-select: auto;">
+                    </div>
+                    <div class="selected" style="user-select: auto;">
+                        <ul class="multiselect-list" style="user-select: auto;"></ul>
+                    </div><input id="filter_groups__ms" class="input" type="text"
+                        autocomplete="off" placeholder="type here to search"
+                        aria-label="Host groups. type here to search" aria-required="false"
+                        style="user-select: auto;">
+                </div>
+                <div class="multiselect-button" style="user-select: auto;"><button type="button"
+                        class="btn-grey" style="user-select: auto;">Select</button></div>
+            </div>
+        </div>
+    </li>
+    <li style="user-select: auto;">
+        <div class="table-forms-td-left" style="user-select: auto;"><label for="label-field"
+                style="user-select: auto;">Field</label></div>
+        <div class="table-forms-td-right" style="user-select: auto;">
+            <z-select value="alias" name="filter_field" tabindex="-1" width="198"
+                style="width: 198px; user-select: auto;"><button type="button" class="focusable"
+                    id="label-field" style="user-select: auto;">Alias</button><input
+                    name="filter_field" type="hidden" value="alias" style="user-select: auto;">
+                <ul class="list" style="user-select: auto;">
+                    <li value="alias" style="user-select: auto;">Alias</li>
+
+                </ul>
+            </z-select>
+            <div class="form-input-margin" style="user-select: auto;"></div>
+            <z-select value="0" name="filter_exact" tabindex="-1" width="89"
+                style="width: 89px; user-select: auto;"><button type="button" class="focusable"
+                    style="user-select: auto;">contains</button><input name="filter_exact"
+                    type="hidden" value="0" style="user-select: auto;">
+                <ul class="list" style="user-select: auto;">
+                    <li value="0" style="user-select: auto;">contains</li>
+                    <li value="1" style="user-select: auto;">equals</li>
+                </ul>
+            </z-select>
+            <div class="form-input-margin" style="user-select: auto;"></div><input type="text"
+                id="filter_field_value" name="filter_field_value" value="" maxlength="255"
+                style="width: 150px; user-select: auto;">
+        </div>
+    </li>
+</ul>

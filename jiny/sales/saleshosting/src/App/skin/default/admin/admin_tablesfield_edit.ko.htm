@@ -1,0 +1,166 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{formstart}
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#E9E9E9">
+		<b>테이블&nbsp;필드 관리 : </b>{table_name}</td>
+		<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9" align="center"> </td>
+		<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9" align="center"> </td>				
+	</tr>
+</table>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">활성화 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{enable}</td>
+<td style="font-size:12px;padding:10px;"> </td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">등록일자 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{regdate}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> </td>
+</tr>
+</table>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				<font color="#FF0000">필드 타이틀</font> :</td>
+<td style="font-size:12px;padding:10px;" width="200">
+{field_title}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">필드 타이틀 이름</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				<font color="#FF0000">필드 이름</font> :</td>
+<td style="font-size:12px;padding:10px;" width="200">
+{field_name}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">필드 이름 (영문으로 작성)</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				<font color="#FF0000">필드 타입</font> :</td>
+<td style="font-size:12px;padding:10px;" width="200">
+{field_type}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">필드 데이터 유형</font></td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+필드 기본값 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{field_default}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> 
+<font color="#808080">필드 기본값</font></td>
+</tr>
+</table>
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">폼 입력 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{form_check}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">필드 폼 입력 허용</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				<font color="#FF0000">폼 필수입력</font> :</td>
+<td style="font-size:12px;padding:10px;" width="200">{form_require}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">필수 입력일 경우 체크</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">폼 치환코드 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{form_str}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">폼필드 치환코드</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">폼 타입 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{form_type}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">폼필드 타입</font></td>
+</tr>
+</table>
+
+<!-- table 선택시 추가설정-->
+<div id="select_table" style="display:none;">
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="10">&gt;</td>
+		<td style="font-size:12px;padding:10px;" width="100">연동테이블 :</td>
+		<td style="font-size:12px;padding:10px;" width="170">{form_table}</td>
+		<td style="font-size:12px;padding:10px;" > <font color="#808080">셀렉트 선택시 연동 테이블 명</font></td>
+	</tr>
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="10">&nbsp;</td>
+		<td style="font-size:12px;padding:10px;" width="100">셀렉트 타이틀 :</td>
+		<td style="font-size:12px;padding:10px;" width="170">{form_title}</td>
+		<td style="font-size:12px;padding:10px;" > <font color="#808080">셀렉트 타이틀명</font></td>
+	</tr>
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="10">&nbsp;</td>
+		<td style="font-size:12px;padding:10px;" width="100">테이블필드 :</td>
+		<td style="font-size:12px;padding:10px;" width="170">{form_field}</td>
+		<td style="font-size:12px;padding:10px;" > <font color="#808080">연동테이블의 선택필드명</font></td>
+	</tr>
+	</table>
+</div>
+
+<!-- array 선택시 추가설정-->
+<div id="select_array" style="display:none;">
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="10">&gt;</td>
+		<td style="font-size:12px;padding:10px;" width="100">array 타이틀 :</td>
+		<td style="font-size:12px;padding:10px;" width="170">{form_arrayname}</td>
+		<td style="font-size:12px;padding:10px;" > <font color="#808080">어레이 데이터 셀렉트</font></td>
+	</tr>
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="10">&nbsp;</td>
+		<td style="font-size:12px;padding:10px;" width="100">array값:</td>
+		<td style="font-size:12px;padding:10px;" width="170">{form_array}</td>
+		<td style="font-size:12px;padding:10px;" > <font color="#808080">;으로 구분</font></td>
+	</tr>
+	</table>
+</div>
+<!-- input 선택시 추가설정-->
+<div id="select_input" >
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="10">&gt;</td>
+		<td style="font-size:12px;padding:10px;" width="100">다국어 입력 :</td>
+		<td style="font-size:12px;padding:10px;" width="170">{form_lang}</td>
+		<td style="font-size:12px;padding:10px;" > <font color="#808080">다국어 입력</font></td>
+	</tr>
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="10">&nbsp;</td>
+		<td style="font-size:12px;padding:10px;" width="100">&nbsp;</td>
+		<td style="font-size:12px;padding:10px;" width="170">&nbsp;</td>
+		<td style="font-size:12px;padding:10px;" > &nbsp;</td>
+	</tr>
+	</table>
+</div>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+	<td style="font-size:12px;padding:10px;" width="100">미입력 메세지 :</td>
+	<td style="font-size:12px;padding:10px;" width="200">{form_msg}</td>
+	<td style="font-size:12px;padding:10px;"><font color="#808080">필수 미입력시 오류 메세지</font></td>
+</tr>
+<tr>
+	<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">출력 순위 :</td>
+	<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{pos}</td>
+	<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"><font color="#808080">출력 순번 지정</font></td>
+</tr>
+</table>
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="100">메모 :</td>
+		<td style="font-size:12px;padding:10px;">{comment}</td>
+	</tr>
+</table>
+<p align="center">{form_submit}</p>
+{formend}

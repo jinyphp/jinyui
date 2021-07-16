@@ -4,46 +4,9 @@
  * Object HTML Components
  */
 
-function CFormList($id=null) {
-	return new \Jiny\Html\Form\CFormList($id);
-}
-
-function CLabel($label, $for = null){
-	return new \Jiny\Html\Form\CLabel($label, $for);
-}
 
 
 
-function CTextBox($name = 'textbox', $value = '', $readonly = false, $maxlength = 255) {
-	return new \Jiny\Html\Form\CTextBox($name, $value, $readonly, $maxlength);
-}
-
-function CCheckBox($name = 'checkbox', $value = '1') {
-	return new \Jiny\Html\Form\CCheckBox($name, $value);
-}
-
-function CSelect($name, $value=null) {
-	return new \Jiny\Html\Form\CSelect($name, $value);
-}
-
-function CMultiSelect(array $options = []) {
-	return new \Jiny\Html\Form\CMultiSelect($options);
-}
-
-/**
- * 버튼타입의 라디오 선택
- *
- * @param  mixed $name
- * @param  mixed $value
- * @return void
- */
-function CRadioButtonList($name, $value) {
-	return new \Jiny\Html\Form\CRadioButtonList($name, $value);
-}
-
-function CTabView($data = []) {
-	return new \Jiny\Html\CTabView($data);
-}
 
 
 

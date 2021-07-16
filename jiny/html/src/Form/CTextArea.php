@@ -38,6 +38,9 @@ class CTextArea extends CTag {
 		}
 	}
 
+
+
+
 	public function setReadonly($value) {
 		if ($value) {
 			$this->setAttribute('readonly', 'readonly');
@@ -105,6 +108,12 @@ class CTextArea extends CTag {
 		else {
 			$this->setAttribute('disabled', 'disabled');
 		}
+		return $this;
+	}
+
+	public function setPlaceholder($value)
+	{
+		$this->setAttribute('placeholder', $value);
 		return $this;
 	}
 }
