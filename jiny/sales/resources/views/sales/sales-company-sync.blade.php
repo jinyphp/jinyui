@@ -1,6 +1,4 @@
-<x-theme>
-    <x-main class="bg-white p-4">
-        
+<x-jinyui-theme theme="jinyerp" class="bootstrap">
 	<table border="0" width="1200" cellspacing="0" cellpadding="0">
 		<tr>
 			<td style="border:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF">
@@ -27,5 +25,5 @@
 			{formend}</td>
 		</tr>
 		</table>
-    </x-main>    
-</x-theme>
+</x-jinyui-theme>
+

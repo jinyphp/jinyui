@@ -3,10 +3,12 @@
 namespace Jiny\UI\View\Components;
 
 use Illuminate\View\Component;
+use Illuminate\Support\Facades\View;
 
 class Theme extends Component
 {
-    public $theme;
+    public $Theme;
+    public $theme_name;
     /**
      * Create a new component instance.
      *
@@ -14,7 +16,13 @@ class Theme extends Component
      */
     public function __construct($theme=null)
     {
-        $this->theme = $theme;
+        // 싱글턴 Theme객체
+        $this->Theme = \Jiny\UI\Theme::instance();
+
+        if($theme) {
+            $this->theme_name = $theme;
+            $this->Theme->setTheme($this->theme_name);            
+        }
     }
 
     /**
@@ -24,6 +32,6 @@ class Theme extends Component
      */
     public function render()
     {
-        return view('jinyui::components.theme');
+        return view('jinyui::components.theme.theme');
     }
 }

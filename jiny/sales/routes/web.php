@@ -7,39 +7,49 @@ Route::get('/sales', function () {
     
 });
 
-
 use Jiny\Sales\Http\Controllers\Company;
-Route::prefix('/sales/company')->group(function () {
-    Route::get('/', [Company::class,"index"]);
-    Route::delete('/', [Company::class,"delete"]);
-    Route::get('/new', [Company::class,"new"]);
+Route::group(['middleware' => 'web'], function () {
+    Route::prefix('/sales/company')->group(function () {
+        Route::get('/', [Company::class,"index"]);
+        Route::delete('/', [Company::class,"delete"]);
+        Route::get('/new', [Company::class,"new"]);
+    
+        Route::get('/fields', function () {
+            return view('company-fields');    
+        });
+    });
 
-    Route::get('/fields', function () {
-        return view('company-fields');    
+    Route::get('/sales/sales-company', function () {
+        return view("jinyerp::sales.sales-company");
+    });
+    Route::get('/sales/sales-company-edit', function () {
+        return view("jinyerp::sales.sales-company-edit");
+    });
+    Route::get('/sales/sales-company-list', function () {
+        return view("jinyerp::sales.sales-company-list");
+    });
+    Route::get('/sales/sales-company-sync', function () {
+        return view("jinyerp::sales.sales-company-sync");
+    });
+    Route::get('/sales/sales-company-syncNew', function () {
+        return view("jinyerp::sales.sales-company-syncNew");
+    });
+
+});
+
+
+Route::group(['middleware' => 'web'], function () {
+
+    Route::get('/sales/sales-business', function () {
+        return view("jinyerp::sales.sales-business");
+    });
+
+    Route::get('/sales/sales-business-edit', function () {
+        return view("jinyerp::sales.sales-business-edit");
     });
 });
 
-Route::get('/sales/sales-business', function () {
-    return view("jinyerp::sales.sales-business");
-});
-Route::get('/sales/sales-business-edit', function () {
-    return view("jinyerp::sales.sales-business-edit");
-});
-Route::get('/sales/sales-company', function () {
-    return view("jinyerp::sales.sales-company");
-});
-Route::get('/sales/sales-company-edit', function () {
-    return view("jinyerp::sales.sales-company-edit");
-});
-Route::get('/sales/sales-company-list', function () {
-    return view("jinyerp::sales.sales-company-list");
-});
-Route::get('/sales/sales-company-sync', function () {
-    return view("jinyerp::sales.sales-company-sync");
-});
-Route::get('/sales/sales-company-syncNew', function () {
-    return view("jinyerp::sales.sales-company-syncNew");
-});
+
 Route::get('/sales/sales-goods', function () {
     return view("jinyerp::sales.sales-goods");
 });

@@ -1,3 +1,9 @@
-<li class="nav-item">
-    <a {{ $attributes->merge(['class' => 'nav-link']) }} data-bs-toggle="tab" >{{$slot}}</a>
-</li>
+{{--
+@push('tab-link')
+<a {{ $attributes->merge(['class' => 'list-group-item list-group-item-action']) }} role="tab" aria-selected="false">
+    {{$slot}}
+</a>
+@endpush
+--}}
+
+{{ BootTab()->pushHeader($slot, $attributes) }}

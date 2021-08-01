@@ -1,23 +1,24 @@
-<x-jinyui::alert.default class="alert-primary">
+<x-alert-primary>
     <strong>Hello there!</strong> A simple primary alert—check it out!
-</x-jinyui::alert.default>
+</x-alert-primary>
 
-<x-jinyui::alert.default class="alert-secondary">
+<x-alert-secondary>
     <strong>Hello there!</strong> A simple secondary alert—check it out!
-</x-jinyui::alert.default>
+</x-alert-secondary>
 
-<x-jinyui::alert.default class="alert-success">
+<x-alert-success>
     <strong>Hello there!</strong> A simple success alert—check it out!
-</x-jinyui::alert.default>
+</x-alert-success>
 
-<x-jinyui::alert.default class="alert-danger">
+<x-alert-danger>
     <strong>Hello there!</strong> A simple danger alert—check it out!
-</x-jinyui::alert.default>
+</x-alert-danger>
 
-<x-jinyui::alert.default class="alert-warning">
+<x-alert-warning>
     <strong>Hello there!</strong> A simple warning alert—check it out!
-</x-jinyui::alert.default>
+</x-alert-warning>
 
-<x-jinyui::alert.default class="alert-info">
+<x-alert-info>
     <strong>Hello there!</strong> A simple info alert—check it out!
-</x-jinyui::alert.default>
+</x-alert-info>
+

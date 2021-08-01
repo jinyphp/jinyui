@@ -1,42 +1,55 @@
-<div class="col-12 col-md-6 col-lg-4">
-    <x-jiny-card>
-        <img class="card-img-top" src="/img/photos/unsplash-1.jpg" alt="Unsplash">
-        
-        <div class="card-header">
-            <h5 class="card-title mb-0">Card with image and links</h5>
-        </div>
+<x-col-4>
+    <x-jinyui-card>
+        <x-jinyui::card.before>
+            <img class="card-img-top" src="/img/photos/unsplash-1.jpg" alt="Unsplash">
+        </x-jinyui::card.before>
 
-        <div class="card-body">
+        <x-jinyui::card.header>
+            <h5 class="card-title mb-0">Card with image and links</h5>
+        </x-jinyui::card.header>
+
+        <x-jinyui::card.body>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>
-        </div>
-    </x-jiny-card>
-</div>
+        </x-jinyui::card.body>
+    </x-jinyui-card>
+</x-col-4>
 
-<div class="col-12 col-md-6 col-lg-4">
-    <x-jiny-card>
-        <img class="card-img-top" src="/img/photos/unsplash-2.jpg" alt="Unsplash">
-        <div class="card-header">
+<x-col-4>
+    <x-jinyui-card>
+        <x-jinyui::card.before>
+            <img class="card-img-top" src="/img/photos/unsplash-2.jpg" alt="Unsplash">
+        </x-jinyui::card.before>
+
+        <x-jinyui::card.header>
             <h5 class="card-title mb-0">Card with image and button</h5>
-        </div>
-        <div class="card-body">
+        </x-jinyui::card.header>
+
+        <x-jinyui::card.body>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </x-jiny-card>
-</div>
+        </x-jinyui::card.body>
 
-<div class="col-12 col-md-6 col-lg-4">
-    <x-jiny-card>
-        <img class="card-img-top" src="/img/photos/unsplash-3.jpg" alt="Unsplash">
-        <div class="card-header">
+    </x-jinyui-card>
+</x-col-4>
+
+<x-col-4>
+    <x-jinyui-card>
+        <x-jinyui::card.before>
+            <img class="card-img-top" src="/img/photos/unsplash-3.jpg" alt="Unsplash">
+        </x-jinyui::card.before>
+        
+
+        <x-jinyui::card.header>
             <h5 class="card-title mb-0">Card with image and list</h5>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-        </ul>
-    </x-jiny-card>
-</div>
+        </x-jinyui::card.header>
+
+        <x-jinyui::list.flush>
+            <x-jinyui::list.item>Cras justo odio</x-jinyui::list.item>
+            <x-jinyui::list.item>Dapibus ac facilisis in</x-jinyui::list.item>
+            <x-jinyui::list.item>Vestibulum at eros</x-jinyui::list.item>
+        </x-jinyui::list.flush>
+
+    </x-jinyui-card>
+</x-col-4>

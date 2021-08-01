@@ -1,6 +1,5 @@
-<x-jiny-theme theme="adminkit" class="bootstrap">
-    <div class="main">
-        <main class="content">
+<x-jinyui-theme theme="adminkit" class="bootstrap">
+
             <div class="container-fluid p-0">
 
                 <div class="mb-3">
@@ -93,6 +92,5 @@
                 </div>
 
             </div>
-        </main>
-    </div>
-</x-jiny-theme>
+
+</x-jinyui-theme>

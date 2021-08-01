@@ -7,53 +7,85 @@
         <form>
 
             <div class="row">
-                <div class="mb-3 col-md-6">
-                    <label class="form-label" for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                </div>
+                <x-jinyui::forms.row class="col-md-6">
+                    <x-jinyui::forms.label for="inputEmail4">
+                        Email
+                    </x-jinyui::forms.label>
+                    <x-jinyui::forms.item>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </x-jinyui::forms.item>
+                </x-jinyui::forms.row>
 
-                <div class="mb-3 col-md-6">
-                    <label class="form-label" for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                </div>
+                <x-jinyui::forms.row class="col-md-6">
+                    <x-jinyui::forms.label for="inputPassword4">
+                        Password
+                    </x-jinyui::forms.label>
+                    <x-jinyui::forms.item>
+                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    </x-jinyui::forms.item>
+                </x-jinyui::forms.row>
             </div>
+
+            <x-jinyui::forms.row>
+                <x-jinyui::forms.label for="inputAddress">
+                    Address
+                </x-jinyui::forms.label>
+                <x-jinyui::forms.item>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.row>
             
-            <div class="mb-3">
-                <label class="form-label" for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
+            <x-jinyui::forms.row>
+                <x-jinyui::forms.label for="inputAddress2">
+                    Address 2
+                </x-jinyui::forms.label>
+                <x-jinyui::forms.item>
+                    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.row>
 
-            <div class="mb-3">
-                <label class="form-label" for="inputAddress2">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
+
 
             <div class="row">
-                <div class="mb-3 col-md-6">
-                    <label class="form-label" for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
+                <x-jinyui::forms.row class="col-md-6">
+                    <x-jinyui::forms.label for="inputCity">
+                        City
+                    </x-jinyui::forms.label>
+                    <x-jinyui::forms.item>
+                        <input type="text" class="form-control" id="inputCity">
+                    </x-jinyui::forms.item>
+                </x-jinyui::forms.row>
 
-                <div class="mb-3 col-md-4">
-                    <label class="form-label" for="inputState">State</label>
-                    <select id="inputState" class="form-control">
-                        <option selected="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
+                <x-jinyui::forms.row class="col-md-4">
+                    <x-jinyui::forms.label for="inputState">
+                        State
+                    </x-jinyui::forms.label>
+                    <x-jinyui::forms.item>
+                        <select id="inputState" class="form-control">
+                            <option selected="">Choose...</option>
+                            <option>...</option>
+                        </select>
+                    </x-jinyui::forms.item>
+                </x-jinyui::forms.row>
+                
+                <x-jinyui::forms.row class="col-md-2">
+                    <x-jinyui::forms.label for="inputZip">
+                        Zip
+                    </x-jinyui::forms.label>
+                    <x-jinyui::forms.item>
+                        <input type="text" class="form-control" id="inputZip">
+                    </x-jinyui::forms.item>
+                </x-jinyui::forms.row>
 
-                <div class="mb-3 col-md-2">
-                    <label class="form-label" for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
             </div>
 
-            <div class="mb-3">
-                <label class="form-label">
-                    <input type="checkbox" class="form-check-input">
-                    <span class="form-check-label">Check me out</span>
-                </label>
-            </div>
+            <x-jinyui::forms.row>
+                <x-jinyui::forms.item>
+                    <x-jinyui::forms.checkbox>
+                        <span class="form-check-label">Check me out</span>
+                    </x-jinyui::forms.checkbox>
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.row>
 
             <button type="submit" class="btn btn-primary">Submit</button>
             

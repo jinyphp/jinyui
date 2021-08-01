@@ -184,6 +184,8 @@ return [
         Jiny\Site\SiteServiceProvider::class,
         Jiny\Sales\SalesServiceProvider::class,
 
+        App\Providers\CarpetServiceProvider::class,
+
     ],
 
     /*

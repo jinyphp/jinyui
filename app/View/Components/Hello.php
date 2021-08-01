@@ -14,7 +14,7 @@ class Hello extends Component
      */
     public function __construct()
     {
-        $this->hello = "안녕하세요";
+        $this->hello = "안녕하세요...";
     }
 
     /**

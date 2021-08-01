@@ -1,5 +1,3 @@
-<x-theme>
-    <x-main class="bg-white p-4">
-        company-new
-    </x-main>    
-</x-theme>
+<x-jinyui-theme theme="adminkit" class="bootstrap">
+    company new
+</x-jinyui-theme>

@@ -1,518 +1,105 @@
+/* Jinyui Tailwind+bootstrap 병합 */
+/* jiny=Tailwind */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* Adminkit Custom Variable */
 // Variables
-//@import "1-variables/app";
-//@import "~simplebar/dist/simplebar";
-//@import "sidebar/app";
+@import "adminkit/1-variables/app";
 
-/**
-  * 레이아웃 관련 설정
-  */
-body {
-    position: relative;
-    background-color: #ebeef0;
-    //font-size: 75%;
-    font-size: .875rem;
-    font-family: Arial, Tahoma, Verdana, sans-serif;
-    line-height: 1.4em;
-    color: #1f2c33;
+/* jiny=bootstrap */
+/*!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
 
-    
-}
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/utilities";
 
+// Layout & components
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/containers";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/accordion";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/toasts";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/spinners";
+@import "bootstrap/offcanvas";
 
+// Helpers
+@import "bootstrap/helpers";
 
-.content {
-    main {
-        @apply p-2;
-    }
-}
+// Utilities
+@import "bootstrap/utilities/api";
+// scss-docs-end import-stack
 
+/* adminkit */
 
-/* Bootstrap AdminKit CSS*/
-@import "adminkit/app";
-//@import "adminkit/basic";
-@import "adminkit/card";
-@import "adminkit/row";
-@import "adminkit/col";
-@import "adminkit/alert";
-@import "adminkit/form";
-@import "adminkit/width";
-@import "adminkit/tabs";
-@import "adminkit/sidebar";
+// Theme mixins
+@import "adminkit/2-mixins/button";
 
-@import "adminkit/table";
-@import "adminkit/collapse";
+// Theme components
+@import "adminkit/3-components/avatar";
+@import "adminkit/3-components/buttons";
+@import "adminkit/3-components/card";
+@import "adminkit/3-components/chart";
+@import "adminkit/3-components/content";
+// @import "adminkit/3-components/dropdown"; 기본 부트스트랩 적용
+@import "adminkit/3-components/feather";
+@import "adminkit/3-components/footer";
+@import "adminkit/3-components/hamburger";
+@import "adminkit/3-components/list-group";
+@import "adminkit/3-components/main";
+@import "adminkit/3-components/navbar";
+@import "adminkit/3-components/reboot";
+@import "adminkit/3-components/sidebar";
+@import "adminkit/3-components/sizing";
+@import "adminkit/3-components/stat";
+@import "adminkit/3-components/tables";
+@import "adminkit/3-components/type";
+@import "adminkit/3-components/wrapper";
 
-@import "adminkit/bootstrap-display";
-@import "adminkit/bootstrap-svg";
-
-@import "jiny_component_scroll";
-
-/**
-  * 버튼 스타일
-  */
-button[disabled], button[disabled]:hover, button[disabled]:active {
-    color: #acbbc2;
-    background-color: #ebebeb;
-    border-color: #ccd5d9;
-    cursor: default; 
-}
-
-.btn {
-    font-family: Arial, Tahoma, Verdana, sans-serif;
-    font-size: 1em;
-    border-radius: 2px;
-    margin: 0;
-    padding: 0 11px;
-    min-height: 24px;
-    cursor: pointer;
-    outline: 0;
-    transition: border-color .2s ease-out, background-color .2s ease-out;
-}
-
-.btn-icon {
-    font-size: 1em;
-    border-radius: 2px;
-    margin: 0;
-    padding: 0 6px;
-    min-height: 24px;
-    cursor: pointer;
-    outline: 0;
-    transition: border-color .2s ease-out, background-color .2s ease-out;
-}
-
-.btn-blue {
-    color: #ffffff;
-    border: 1px solid #0275b8;
-    background-color: #0275b8;    
-
-    &:hover {
-        color: #ffffff;
-        background-color: #02659f;
-        border-color: #02659f; 
-    }
-
-    &:focus {
-        box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
-        color: #ffffff;
-        background-color: #02659f;
-        border-color: #02659f; 
-    }
-
-    &:active {
-        color: #ffffff;
-        background-color: #02659f;
-        border-color: #02659f; 
-    }
-}
-
-.btn-danger {
-    color: #ffffff;
-    border: 1px solid #e33734;
-    background-color: #e33734;    
-
-    &:hover {
-        color: #ffffff;
-        background-color: #ed9898;
-        border-color: #ed9898; 
-    }
-
-    &:focus {
-        box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
-        color: #ffffff;
-        background-color: #ed9898;
-        border-color: #ed9898; 
-    }
-
-    &:active {
-        color: #ffffff;
-        background-color: #ed9898;
-        border-color: #ed9898; 
-    }
-}
-
-.btn-alt-blue {
-    color: #0275b8;
-    border: 1px solid #0275b8;
-    background-color: transparent; 
-
-    &:hover {
-        color: #ffffff;
-        background-color: #02659f;
-        border-color: #02659f; 
-    }
-
-    &:focus {
-        color: #ffffff;
-        background-color: #02659f;
-        border-color: #02659f; 
-    }
-  
-    &:active {
-        color: #ffffff;
-        background-color: #02659f;
-        border-color: #02659f; 
-    }
-}
-
-
-
-    
-
-
-
-.btn-gray {
-    @apply border-gray-600 bg-gray-600 text-white
-    hover:border-gray-500 hover:bg-gray-500
-    focus:border-gray-600 focus:bg-gray-600
-    active:border-gray-600 active:bg-gray-600
-}
-
-.btn-outline-blue {
-    @apply border-blue-600 text-blue-600;
-    @apply hover:border-blue-500 hover:bg-blue-500 hover:text-white;
-}
-
-.btn-outline-gray {
-    @apply border-gray-600 text-gray-600;
-    @apply hover:border-gray-500 hover:bg-gray-500 hover:text-white;
-}
-
-
-
-// 데이터 테이블 
-.datatable {
-    @apply w-full bg-white border border-gray-200;
-
-    .check {
-        @apply w-4;
-
-        input[type=button] {
-            @apply border border-gray-300;
-            @apply  focus:border-gray-300 focus:bg-gray-300 focus:text-white;
-        }
-    }
-
-    th {
-        color: #768d99;
-
-        overflow: hidden;
-        white-space: nowrap;
-        padding: 6px 5px;
-        vertical-align: bottom;
-        border-bottom: 2px solid #dce2e5;
-        text-align: left;
-    }
-
-    td {
-        padding: 6px 5px;
-        position: relative;
-        border-bottom: 1px solid #ebeef0;
-        line-height: 18px;
-        vertical-align: top;
-    }
-
-    .row-selected {
-        background-color: #fcf7c2;
-    }
-
-    tbody tr:hover {
-        background-color: #e8f5ff; 
-    }
-}
-
+// Theme utilities
 /*
-.pagination {
-    a {
-        display: inline-block;
-        margin-left: -1px;
-        padding: 3px 11px;
-        background-color: #ffffff;
-        border: 1px solid #acbbc2 !important;
-        text-decoration: none;
-        color: #1f2c33;
-        outline: 0;
-        transition: background-color .2s ease-out;
-    }
-}
-.paging_selected {
-    color: #ffffff;
-    background-color: #768d99;
-}
+@import "adminkit/4-utilities/cursors";
+
+// 3rd party plugins
+@import "~jsvectormap/dist/css/jsvectormap";
+@import "~simplebar/dist/simplebar";
+@import "~flatpickr/dist/flatpickr";
+
+// 3rd party plugin styles
+@import "adminkit/5-vendor/flatpickr";
+@import "adminkit/5-vendor/simplebar";
 */
 
-
-
-
-
-/*zabbix ui style */
-
-input {
-    font-family: Arial, Tahoma, Verdana, sans-serif;
-    font-size: 1em;
-
-}
-
-
-input[type="file"] {
-    padding: 1px;
-}
-
-input[readonly] {
-    color: #1f2c33 !important;
-}
-
-
-input[type="radio"] {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: middle;
-    position: relative;
-    top: -1px;
-    overflow: hidden;
-    width: 13px;
-    height: 13px;
-    background: none;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="email"],
-input[type="time"] {
-    margin: 0;
-    padding: 0 5px;
-    min-height: 24px;
-}
-
-
-input[type="text"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="email"],
-input[type="time"],
-input[type="file"] {
-    background-color: #ffffff;
-    border: 1px solid #acbbc2;
-    box-sizing: border-box;
-    color: #1f2c33;
-    outline: 0;
-    transition: border-color .2s ease-out, box-shadow .2s ease-out;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="time"]:focus,
-input[type="file"]:focus {
-    border-color: #02659f;
-}
-
-input[disabled],
-input[readonly] {
-    color: #acbbc2;
-    background-color: #ebebeb !important;
-    border-color: #ccd5d9;
-}
-
-
-
-
-// checkbox
-@import "form_checkbox";
-@import "form_select";
-@import "form_radio";
-@import "form_textarea";
-
-@import "ui_tab";
-
-@import "ui_filter";
-@import "ui_table";
-
-@import "jiny-sidebar";
-
-
-
-// ul 세로배치
-.hor-list {
-    li {
-        display: inline-block;
-        margin: 0 6px 0 0;
-    }
-
-    li:last-child {
-        margin: 0;
-    }
-
-    .object-group {
-        margin: 0;
-    }
-}
-
-
-
-
-
-
-label.form-label-asterisk::before {
-    color: #e33734;
-    display: inline-block;
-    content: '*';
-    margin-right: .3em;
-}
-
-
-
-
-// 테이블폼
-.table-forms {
-    display: table;
-    width: 100%;
-    color: #1f2c33;
-
-
-}
-
-.table-forms li {
-    display: table-row;
-}
-
-
-.table-forms .multiselect-suggest li,
-.table-forms .multiselect-matches li {
-    display: block;
-}
-
-.table-forms th {
-    color: #768d99;
-    padding: 0 5px 0 0;
-    text-align: left;
-}
-
-.table-forms th:last-child {
-    padding: 0;
-}
-
-.table-forms tfoot .table-forms-td-right,
-.table-forms .tfoot-buttons .table-forms-td-right {
-    padding-top: 5px;
-}
-
-.table-forms tfoot button,
-.table-forms .tfoot-buttons button {
-    margin: 0 10px 0 0;
-}
-
-.table-forms .table-forms-td-left {
-    display: table-cell;
-    padding: 5px 0;
-    text-align: right;
-    vertical-align: top;
-    width: 15%;
-    white-space: nowrap;
-}
-
-.table-forms .table-forms-td-left label {
-    display: block;
-    height: 24px;
-    line-height: 24px;
-}
-
-.table-forms .table-forms-td-right {
-    display: table-cell;
-    padding: 5px 0 5px 10px;
-    vertical-align: middle;
-    width: 85%;
-    position: relative;
-}
-
-.table-forms .table-forms-td-right.has-before {
-    padding-top: 0;
-}
-
-.table-forms .table-forms-td-right td {
-    padding: 5px 5px 5px 0;
-    position: relative;
-}
-
-.table-forms .table-forms-td-right td.td-drag-icon {
-    padding: 0 11px 0 0;
-    vertical-align: middle;
-}
-
-.table-forms .table-forms-td-right td .drag-icon {
-    position: absolute;
-    top: 5px;
-    margin-right: 5px;
-}
-
-.table-forms .table-forms-td-right td.center {
-    text-align: center;
-    vertical-align: middle;
-}
-
-.table-forms .table-forms-td-right td.center .btn-grey {
-    margin: 3px 0;
-}
-
-.table-forms .table-forms-td-right td.overflow-break {
-    max-width: 150px;
-    overflow-wrap: break-word;
-    white-space: initial;
-    word-wrap: break-word;
-}
-
-.table-forms .table-forms-td-right td:last-child {
-    padding-right: 0;
-}
-
-.table-forms .table-forms-td-right .wrap-multiple-controls {
-    display: flex;
-}
-
-.table-forms .table-forms-td-right .table-forms-separator .radio-segmented+.multiselect-wrapper {
-    margin-top: 5px;
-}
-
-.table-forms .form-fields-inline label {
-    margin: 0 8px 0 3px;
-}
-
-.table-forms h4 {
-    margin-bottom: -5px;
-}
-
-.table-forms .hor-list li {
-    display: inline-block;
-}
-
-.table-forms .dynamic-row>td {
-    padding-top: 0;
-}
-
-.table-forms .dynamic-row-control>td {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-
-.table-forms li.display-none {
-    display: none;
-}
-
-.table-forms .tfoot-buttons {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+/* zabbix */

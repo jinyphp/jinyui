@@ -1,23 +1,41 @@
-<x-jinyui::alert.outline class="alert-primary">
+<x-alert-primary-none>
+    <x-slot name="icon">
+        <x-icon.bell-outline></x-icon.bell-outline>
+    </x-slot>    
     <strong>Hello there!</strong> A simple primary alert—check it out!
-</x-jinyui::alert.outline>
+</x-alert-primary-none>
 
-<x-jinyui::alert.outline class="alert-secondary">
+<x-alert-secondary-none>
+    <x-slot name="icon">
+        <x-icon.bell-outline></x-icon.bell-outline>
+    </x-slot>
     <strong>Hello there!</strong> A simple secondary alert—check it out!
-</x-jinyui::alert.outline>
+</x-alert-secondary-none>
 
-<x-jinyui::alert.outline class="alert-success">
+<x-alert-success-none>
+    <x-slot name="icon">
+        <x-icon.bell-outline></x-icon.bell-outline>
+    </x-slot>  
     <strong>Hello there!</strong> A simple success alert—check it out!
-</x-jinyui::alert.outline>
+</x-alert-success-none>
 
-<x-jinyui::alert.outline class="alert-danger">
+<x-alert-danger-none>
+    <x-slot name="icon">
+        <x-icon.bell-outline></x-icon.bell-outline>
+    </x-slot>  
     <strong>Hello there!</strong> A simple danger alert—check it out!
-</x-jinyui::alert.outline>
+</x-alert-danger-none>
 
-<x-jinyui::alert.outline class="alert-warning">
+<x-alert-warning-none>
+    <x-slot name="icon">
+        <x-icon.bell-outline></x-icon.bell-outline>
+    </x-slot>  
     <strong>Hello there!</strong> A simple warning alert—check it out!
-</x-jinyui::alert.outline>
+</x-alert-warning-none>
 
-<x-jinyui::alert.outline class="alert-info">
+<x-alert-info-none>
+    <x-slot name="icon">
+        <x-icon.bell-outline></x-icon.bell-outline>
+    </x-slot>  
     <strong>Hello there!</strong> A simple info alert—check it out!
-</x-jinyui::alert.outline>
+</x-alert-info-none>

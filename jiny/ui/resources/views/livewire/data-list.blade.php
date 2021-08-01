@@ -1,5 +1,4 @@
 <div x-data="datatables()">
-    
     {{-- 조건검색 필터 --}}
     <x-tab>
         

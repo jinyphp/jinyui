@@ -1,21 +1,19 @@
-<x-theme>
-    <x-main class="bg-white p-4">
-        
-<table border="0" width="1200" cellspacing="0" cellpadding="0">
-	<tr>
-		<td style="border:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF">
-		{formstart}<table border="0" width="100%" cellspacing="0" cellpadding="0">
-			<tr>
-				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#E9E9E9">
-				판매관리 : 제품목록</td>
-				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">
-				 </td>
-				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">
-				{delete}</td>
-				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">{new}</td>
-				
-			</tr>
-		</table>
+<x-jinyui-theme theme="jinyerp" class="bootstrap">
+	<div class="container-fluid p-0">
+		<h1 class="h3 mb-3">판매관리 : 제품목록</h1>
+		<div class="flex flex-row justify-between">
+			<div>
+				<x-jinyui::button.button class="btn-secondary">Manual</x-jinyui::button.button>
+			</div>
+			<div>
+				<x-jinyui::button.button class="btn-primary">삭제</x-jinyui::button.button>
+				<x-jinyui::button.button class="btn-primary">추가</x-jinyui::button.button>
+			</div>
+		</div>
+	<div>
+
+
+		{formstart}
 		<table border="0" width="100%" cellspacing="0" cellpadding="0">
 			<tr>
 				<td style="font-size:12px;padding:10px;" width="100">{products}</td>
@@ -29,9 +27,13 @@
 				<td style="font-size:12px;padding:10px;" width="80">{list_num}</td>
 			</tr>
 		</table>
-		<p>{goods_list}</p>
-		<p>{formend} </td>
-	</tr>
-	</table>
-    </x-main>    
-</x-theme>
+	{formend}
+
+	<x-jinyui-card>
+		<x-jinyui::table.basic>
+			{datalist}
+		</x-jinyui::table.basic>
+	</x-jinyui-card>
+
+</x-jinyui-theme>
+

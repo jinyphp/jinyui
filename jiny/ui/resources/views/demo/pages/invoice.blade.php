@@ -1,6 +1,5 @@
-<x-jiny-theme theme="adminkit" class="bootstrap">
-    <div class="main">
-        <main class="content">
+<x-jinyui-theme theme="adminkit" class="bootstrap">
+
             <div class="container-fluid p-0">
 
                 <h1 class="h3 mb-3">Invoice</h1>
@@ -125,6 +124,5 @@
                 </div>
 
             </div>
-        </main>
-    </div>
+
 </x-jiny-theme>   

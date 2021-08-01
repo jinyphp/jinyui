@@ -1,0 +1,1 @@
+{{ BootFormItem()->setLabel($slot, $attributes) }}

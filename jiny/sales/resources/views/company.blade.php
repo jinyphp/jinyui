@@ -1,7 +1,3 @@
-<x-theme>
-
-    <x-main class="bg-white p-4">
-        company
-    </x-main>
-    
-</x-theme>
+<x-jinyui-theme theme="jinyerp" class="bootstrap">
+    company
+</x-jinyui-theme>

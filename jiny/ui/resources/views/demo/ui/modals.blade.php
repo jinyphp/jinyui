@@ -1,4 +1,4 @@
-<x-jiny-theme theme="adminkit" class="bootstrap">
+<x-jinyui-theme theme="adminkit" class="bootstrap">
     <div class="main">
         <main class="content">
             <div class="container-fluid p-0">
@@ -16,7 +16,11 @@
                                 <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely
                                     custom content.</p>
 
-                                <x-jinyui::boot.modal>
+                                <x-jinyui::modal.button class="btn-primary" data-bs-target="#defaultModalPrimary">
+                                    Primary
+                                </x-jinyui::modal.button>
+
+                                <x-jinyui::modal.boot id="defaultModalPrimary">
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title">Default modal</h5>
@@ -33,7 +37,7 @@
                                             <button type="button" class="btn btn-primary">Save changes</button>
                                         </div>
                                     </div>
-                                </x-jinyui::boot.modal>
+                                </x-jinyui::modal.boot>
 
                                 <!-- BEGIN primary modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#defaultModalPrimary">
@@ -149,6 +153,7 @@
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#coloredModalPrimary">
                                     Primary
                                 </button>
+                                
                                 <div class="modal modal-colored modal-primary fade" id="coloredModalPrimary" tabindex="-1" role="dialog" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">

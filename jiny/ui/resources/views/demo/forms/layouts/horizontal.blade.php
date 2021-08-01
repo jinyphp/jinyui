@@ -4,80 +4,85 @@
         <h6 class="card-subtitle text-muted">Horizontal Bootstrap layout.</h6>
     </div>
     <div class="card-body">
-        {!! $form
-            ->setLayout("horizontal")
-            ->addList(
-                [
-                    CLabel("Email address")->addClass("col-form-label"),
-                    CEmail()->addClass("form-control")->setPlaceholder("Email")
-                ]
-            ) 
-        !!}
-
 
         <form>
 
-            <x-jinyui::forms.horizontal>
-                <x-slot name="left">
-                    <label class="col-form-label">Email</label>                    
-                </x-slot>
-                <x-slot name="right">
+            <x-jinyui::forms.hor>
+                <x-jinyui::forms.label>
+                    Email
+                </x-jinyui::forms.label>
+                <x-jinyui::forms.item>
                     <input type="email" class="form-control" placeholder="Email">
-                </x-slot>
-            </x-jinyui::forms.horizontal>
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.hor>
 
-
-
-
-            
-            <div class="mb-3 row">
-                <div class="col-sm-2 text-sm-end">
-                    <label class="col-form-label">Password</label>
-                </div>                
-                <div class="col-sm-10">
+            <x-jinyui::forms.hor>
+                <x-jinyui::forms.label>
+                    Password
+                </x-jinyui::forms.label>
+                <x-jinyui::forms.item>
                     <input type="password" class="form-control" placeholder="Password">
-                </div>
-            </div>
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.hor>
 
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2 text-sm-end">Textarea</label>
-                <div class="col-sm-10">
+            <x-jinyui::forms.hor>
+                <x-jinyui::forms.label class="col-form-label">
+                    Textarea
+                </x-jinyui::forms.label>
+                <x-jinyui::forms.item>
                     <textarea class="form-control" placeholder="Textarea" rows="3"></textarea>
-                </div>
-            </div>
-            <fieldset class="mb-3">
-                <div class="row">
-                    <label class="col-form-label col-sm-2 text-sm-end pt-sm-0">Radios</label>
-                    <div class="col-sm-10">
-                        <label class="form-check">
-                            <input name="radio-3" type="radio" class="form-check-input" checked="">
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.hor>
+        
+
+
+
+
+            <fieldset>
+                <x-jinyui::forms.hor>
+                    <x-jinyui::forms.label class="col-form-label pt-sm-0 ">
+                        Radios
+                    </x-jinyui::forms.label>
+                    <x-jinyui::forms.item>
+                        <x-jinyui::forms.radio name="radio-3" checked="">
                             <span class="form-check-label">Default radio</span>
-                        </label>
-                        <label class="form-check">
-                            <input name="radio-3" type="radio" class="form-check-input">
+                        </x-jinyui::forms.radio>
+
+                        <x-jinyui::forms.radio name="radio-3">
                             <span class="form-check-label">Second default radio</span>
-                        </label>
-                        <label class="form-check">
-                            <input name="radio-3" type="radio" class="form-check-input" disabled="">
+                        </x-jinyui::forms.radio>
+                        
+                        <x-jinyui::forms.radio name="radio-3" disabled="">
                             <span class="form-check-label">Disabled radio</span>
-                        </label>
-                    </div>
-                </div>
+                        </x-jinyui::forms.radio>
+                        
+
+                        
+                    </x-jinyui::forms.item>
+                </x-jinyui::forms.hor>
             </fieldset>
-            <div class="mb-3 row">
-                <label class="col-form-label col-sm-2 text-sm-end pt-sm-0">Checkbox</label>
-                <div class="col-sm-10">
-                    <label class="form-check m-0">
-                        <input type="checkbox" class="form-check-input">
+            
+            <x-jinyui::forms.hor>
+                <x-jinyui::forms.label class="col-form-label pt-sm-0">
+                    Checkbox
+                </x-jinyui::forms.label>
+                <x-jinyui::forms.item>
+                    <x-jinyui::forms.checkbox>
                         <span class="form-check-label">Check me out</span>
-                    </label>
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <div class="col-sm-10 ms-sm-auto">
+                    </x-jinyui::forms.checkbox>
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.hor>
+
+            <x-jinyui::forms.hor>
+                <x-jinyui::forms.item class="ms-sm-auto">
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-            </div>
+                </x-jinyui::forms.item>
+            </x-jinyui::forms.hor>
+
+
+
+
+
         </form>
     </div>
 </div>

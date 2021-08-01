@@ -37,6 +37,9 @@
             @endif
 
             <div class="flex flex-row">
+
+                csrf_token = {{csrf_token()}}
+
                 <div>
                     <ul>
                         <li><a href="/admin/country">국가</a></li>

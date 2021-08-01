@@ -33,6 +33,11 @@ function CSpan($items = null) {
 	return new \Jiny\Html\CSpan($items);
 }
 
+function CListItem($items = null) {
+	return new \Jiny\Html\CListItem($items);
+}
+
+
 /**
  * 테이블
  */

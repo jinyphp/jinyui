@@ -4947,10 +4947,12 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/bootstrap */ "./resources/js/modules/bootstrap.js");
-/* harmony import */ var _jiny_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./jiny/sidebar */ "./resources/js/jiny/sidebar.js");
-/* harmony import */ var _jiny_sidebar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_jiny_sidebar__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _jiny_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./jiny/scroll */ "./resources/js/jiny/scroll.js");
-/* harmony import */ var _jiny_scroll__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_jiny_scroll__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/theme */ "./resources/js/modules/theme.js");
+/* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_theme__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _jiny_sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./jiny/sidebar */ "./resources/js/jiny/sidebar.js");
+/* harmony import */ var _jiny_sidebar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_jiny_sidebar__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _jiny_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./jiny/scroll */ "./resources/js/jiny/scroll.js");
+/* harmony import */ var _jiny_scroll__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_jiny_scroll__WEBPACK_IMPORTED_MODULE_3__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //require('alpinejs');
 
 /**
@@ -4958,7 +4960,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //require
  */
 
 
- // require('livewire-sortable');
+
+ // window.theme 변수값 설정
+// require('livewire-sortable');
 //import "./modules/feather";
 
 
@@ -5105,6 +5109,40 @@ __webpack_require__.r(__webpack_exports__);
 // Note: If you want to make bootstrap globally available, e.g. for using `bootstrap.modal`
 
 window.bootstrap = bootstrap__WEBPACK_IMPORTED_MODULE_0__;
+
+/***/ }),
+
+/***/ "./resources/js/modules/theme.js":
+/*!***************************************!*\
+  !*** ./resources/js/modules/theme.js ***!
+  \***************************************/
+/***/ (() => {
+
+/*
+ * Add color theme colors to the window object
+ * so this can be used by the charts and vector maps
+ */
+var theme = {
+  "primary": "#3B7DDD",
+  "secondary": "#6c757d",
+  "success": "#1cbb8c",
+  "info": "#17a2b8",
+  "warning": "#fcb92c",
+  "danger": "#dc3545",
+  "white": "#fff",
+  "gray-100": "#f8f9fa",
+  "gray-200": "#e9ecef",
+  "gray-300": "#dee2e6",
+  "gray-400": "#ced4da",
+  "gray-500": "#adb5bd",
+  "gray-600": "#6c757d",
+  "gray-700": "#495057",
+  "gray-800": "#343a40",
+  "gray-900": "#212529",
+  "black": "#000"
+}; // Add theme to the window object
+
+window.theme = theme;
 
 /***/ }),
 

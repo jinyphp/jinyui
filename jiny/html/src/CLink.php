@@ -1,9 +1,10 @@
 <?php
 namespace Jiny\Html;
 
-class CLink extends CTag {
+class CLink extends CTag 
+{
 
-	private	$use_sid = false;
+	
 	private	$confirm_message = '';
 	private $url;
 
@@ -14,6 +15,12 @@ class CLink extends CTag {
 			$this->addItem($item);
 		}
 		$this->url = $url;
+	}
+
+	public function setHref($url)
+	{
+		$this->url = $url;
+		return $this;
 	}
 
 	public function setUrl($url) 
@@ -29,12 +36,11 @@ class CLink extends CTag {
 
 
 
-
-
 	/*
 	 * Add a "sid" argument into the URL.
 	 * POST method will be used for the "sid" argument.
 	 */
+	private	$use_sid = false;
 	public function addSID() {
 		$this->use_sid = true;
 		return $this;

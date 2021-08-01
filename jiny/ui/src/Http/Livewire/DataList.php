@@ -44,10 +44,6 @@ class DataList extends Component
 
     }
 
-    
-
-
-
     public function listTitle($conf)
     {
         foreach($conf as $item) {
@@ -167,6 +163,5 @@ class DataList extends Component
     {
         $this->dialogVisible = false;
     }
-
 
 }

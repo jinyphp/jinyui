@@ -17,6 +17,36 @@ if (!function_exists("CMenuItem")) {
 }
 
 
+function BCard()
+{
+    return \Jiny\UI\BCard::instance();
+}
+
+function BNav()
+{
+    return \Jiny\UI\BNav::instance();
+}
+
+function BootTab()
+{
+    return \Jiny\UI\CTab::instance();
+}
+
+function BootButton($item=null)
+{
+    return new \Jiny\UI\BootButton($item);
+}
+
+function BootFormItem()
+{
+    return \Jiny\UI\BootFormItem::instance();
+}
+
+function uiStack()
+{
+    return \Jiny\UI\Stack::instance();
+}
+
 /**
      * 2차원 배열 정렬
      *
