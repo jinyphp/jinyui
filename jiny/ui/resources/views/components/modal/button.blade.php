@@ -1,3 +1,3 @@
-<button type="button" {{ $attributes->merge(['class' => 'btn']) }} data-bs-toggle="modal" >
+<x-button {{$attributes}} data-bs-toggle="modal">
     {{$slot}}
-</button>
+</x-button>

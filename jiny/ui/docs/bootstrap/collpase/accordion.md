@@ -2,9 +2,7 @@
 
 Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
 
-[![ads via Carbon](https://cdn4.buysellads.net/uu/1/3386/1525189943-38523.png)](https://srv.carbonads.net/ads/click/x/GTND42JLCASDL5QEF6YLYKQNCVSIP277FTBICZ3JCY7D52QMFTBDCKJKCEBD42JLCKSD5KJYCKAIV27JCVSDCK7KC6SD627UCTBDTK3EHJNCLSIZ?segment=placement:getbootstrapcom;)[Limited time offer: Get 10 free Adobe Stock images.](https://srv.carbonads.net/ads/click/x/GTND42JLCASDL5QEF6YLYKQNCVSIP277FTBICZ3JCY7D52QMFTBDCKJKCEBD42JLCKSD5KJYCKAIV27JCVSDCK7KC6SD627UCTBDTK3EHJNCLSIZ?segment=placement:getbootstrapcom;)[ads via Carbon](http://carbonads.net/?utm_source=getbootstrapcom&utm_medium=ad_via_link&utm_campaign=in_unit&utm_term=carbon)
-
-**On this page**[How it works](https://getbootstrap.com/docs/5.0/components/accordion/#how-it-works)[Example](https://getbootstrap.com/docs/5.0/components/accordion/#example)[Flush](https://getbootstrap.com/docs/5.0/components/accordion/#flush)[Always open](https://getbootstrap.com/docs/5.0/components/accordion/#always-open)[Accessibility](https://getbootstrap.com/docs/5.0/components/accordion/#accessibility)[Sass](https://getbootstrap.com/docs/5.0/components/accordion/#sass)[Variables](https://getbootstrap.com/docs/5.0/components/accordion/#variables)
+tps://getbootstrap.com/docs/5.0/components/accordion/#variables)
 
 ## How it works
 
@@ -16,15 +14,21 @@ The animation effect of this component is dependent on the `prefers-reduced-moti
 
 Click the accordions below to expand/collapse the accordion content.
 
+
+
+
+
 ## Accordion Item #1
 
 ## Accordion Item #2
 
 ## Accordion Item #3
 
+
+
 **This is the third item's accordion body.** It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the `.accordion-body`, though the transition does limit overflow.
 
-Copy
+
 
 ```html
 <div class="accordion" id="accordionExample">
@@ -67,9 +71,13 @@ Copy
 </div>
 ```
 
+
+
 ### Flush
 
 Add `.accordion-flush` to remove the default `background-color`, some borders, and some rounded corners to render accordions edge-to-edge with their parent container.
+
+
 
 ## Accordion Item #1
 
@@ -79,7 +87,9 @@ Placeholder content for this accordion, which is intended to demonstrate the `.a
 
 ## Accordion Item #3
 
-Copy
+
+
+
 
 ```html
 <div class="accordion accordion-flush" id="accordionFlushExample">

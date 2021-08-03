@@ -37,6 +37,11 @@ function BootButton($item=null)
     return new \Jiny\UI\BootButton($item);
 }
 
+function BootModal()
+{
+    return new \Jiny\UI\BootModal();
+}
+
 function BootFormItem()
 {
     return \Jiny\UI\BootFormItem::instance();
@@ -45,6 +50,11 @@ function BootFormItem()
 function uiStack()
 {
     return \Jiny\UI\Stack::instance();
+}
+
+function BootCarousel()
+{
+    return \Jiny\UI\BootCarousel::instance();
 }
 
 /**

@@ -107,6 +107,21 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component(\Jiny\UI\View\Components\Icon::class, "icon");
         $shot = true;
         if($shot) {
+            // 테마
+            Blade::component(\Jiny\UI\View\Components\Theme::class, "theme");
+            Blade::component(\Jiny\UI\View\Components\ThemeSidebar::class, "theme-sidebar");
+            Blade::component(\Jiny\UI\View\Components\ThemeMain::class, "theme-main");
+            Blade::component(\Jiny\UI\View\Components\MainContent::class, "main-content");
+
+            // 레이아웃
+            Blade::component('jinyui::components.'.'layout.container', 'container');
+
+            //
+            Blade::component('jinyui::components.'.'list.list', 'list');
+            Blade::component('jinyui::components.'.'list.group', 'list-group');
+            Blade::component('jinyui::components.'.'list.item', 'list-item');
+
+
             Blade::component(\Jiny\UI\View\Components\FormRow::class, "form-row");
             Blade::component(\Jiny\UI\View\Components\FormHor::class, "form-hor");
             Blade::component(\Jiny\UI\View\Components\FormLabel::class, "form-label");
@@ -116,10 +131,13 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'card.body', 'card-body');
             Blade::component('jinyui::components.'.'card.header', 'card-header');
             Blade::component('jinyui::components.'.'card.footer', 'card-footer');
+            Blade::component('jinyui::components.'.'card.title', 'card-title');
+            Blade::component('jinyui::components.'.'card.subtitle', 'card-subtitle');
 
             Blade::component(\Jiny\UI\View\Components\Button\Button::class, "button");
             Blade::component(\Jiny\UI\View\Components\Button\Dropdown::class, "button-dropdown");
             Blade::component(\Jiny\UI\View\Components\Button\Group::class, "button-group");
+            Blade::component('jinyui::components.'.'button.close', 'close');
 
 
             Blade::component(\Jiny\UI\View\Components\Accordion::class, "dropdown");
@@ -133,6 +151,29 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\Dropdown\Menu::class, "dropdown-menu");
             Blade::component(\Jiny\UI\View\Components\Dropdown\Item::class, "dropdown-item");
             Blade::component(\Jiny\UI\View\Components\Dropdown\Link::class, "dropdown-link");
+
+            //breadcrumb
+            Blade::component('jinyui::components.'.'nav.breadcrumb', 'breadcrumb');
+            Blade::component('jinyui::components.'.'nav.breadcrumb-item', 'breadcrumb-item');
+
+            //Nav
+            Blade::component('jinyui::components.'.'nav.nav', 'nav');
+            Blade::component('jinyui::components.'.'nav.nav-item', 'nav-item');
+
+            //Modal
+            Blade::component('jinyui::components.'.'modal.button', 'modal-button');
+            Blade::component('jinyui::components.'.'modal.layout', 'modal-layout');
+            Blade::component('jinyui::components.'.'modal.header', 'modal-header');
+            Blade::component('jinyui::components.'.'modal.body', 'modal-body');
+            Blade::component('jinyui::components.'.'modal.footer', 'modal-footer');
+
+            // Icon
+            Blade::component(\Jiny\UI\View\Components\IconFile::class, "icon-file");
+
+            //carousel
+            Blade::component('jinyui::components.'.'carousel.inner', 'carousel');
+            Blade::component('jinyui::components.'.'carousel.item', 'carousel-item');
+
         }
 
 
@@ -174,6 +215,7 @@ class JinyUIServiceProvider extends ServiceProvider
         //Blade::component('jinyui::components.'.'layouts.content', 'main-content');
         Blade::component('jinyui::components.'.'layout.row', 'row');
         Blade::component('jinyui::components.'.'layout.col', 'col');
+        Blade::component('jinyui::components.'.'layout.col-12', 'col-12');
         Blade::component('jinyui::components.'.'layout.col-6', 'col-6');
         Blade::component('jinyui::components.'.'layout.col-4', 'col-4');
 

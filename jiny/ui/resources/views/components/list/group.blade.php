@@ -1,3 +1,3 @@
-<ul {{ $attributes->merge(['class' => 'list-group']) }}>
+<div {{ $attributes->merge(['class' => 'list-group']) }}>
     {{$slot}}
-</ul>
+</div>

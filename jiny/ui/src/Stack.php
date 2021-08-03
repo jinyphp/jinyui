@@ -92,4 +92,6 @@ class Stack
             return $this->_collapse;
         }
     }
+
+    
 }

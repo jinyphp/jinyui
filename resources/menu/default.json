@@ -170,6 +170,32 @@
         "_ref": 0,
         "_level": 1,
         "icon": "",
+        "header": "Theme",
+        "title": "Theme"
+    },    
+    {
+        "_id": 18,
+        "_ref": 14,
+        "_level": 2,
+        "icon": "feather-puzzle",
+        "title": "Theme",
+        "href": "\/jinyui\/theme",
+        "target": ""
+    },
+    {
+        "_id": 18,
+        "_ref": 14,
+        "_level": 2,
+        "icon": "",
+        "title": "Grid",
+        "href": "\/jinyui\/theme/grid",
+        "target": ""
+    },
+    {
+        "_id": 19,
+        "_ref": 0,
+        "_level": 1,
+        "icon": "",
         "header": "Components",
         "title": "Components"
     },
@@ -288,7 +314,7 @@
                         "_level": 2,
                         "icon": "",
                         "title": "Nav",
-                        "href": "\/jinyui\/nav",
+                        "href": "\/jinyui\/nav/nav",
                         "target": ""
                     },
                     {
@@ -357,15 +383,7 @@
                 "href": "\/jinyui\/ui\/grid",
                 "target": ""
             },
-            {
-                "_id": 26,
-                "_ref": 20,
-                "_level": 2,
-                "icon": "",
-                "title": "Modals",
-                "href": "\/jinyui\/ui\/modals",
-                "target": ""
-            },
+            
             {
                 "_id": 27,
                 "_ref": 20,
@@ -394,6 +412,24 @@
                 "target": ""
             }
         ]
+    },
+    {
+        "_id": 26,
+        "_ref": 20,
+        "_level": 2,
+        "icon": "",
+        "title": "Modals",
+        "href": "\/jinyui\/ui\/modals",
+        "target": ""
+    },
+    {
+        "_id": 26,
+        "_ref": 20,
+        "_level": 2,
+        "icon": "",
+        "title": "List",
+        "href": "\/jinyui\/ui\/list",
+        "target": ""
     },
     {
         "_id": 30,

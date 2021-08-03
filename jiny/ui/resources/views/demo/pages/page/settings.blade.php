@@ -7,19 +7,17 @@
     display: block
 }
 </style>
-<x-jinyui-theme theme="adminkit" class="bootstrap">
-
-        <div class="container-fluid p-0">
-
+<x-theme theme="adminkit" class="bootstrap">
+    <x-main-content>
+        <x-container>
             <h1 class="h3 mb-3">Settings</h1>
 
             <x-row>
                 <div class="col-12 col-md-3 col-xl-2">
-
-                    <x-jinyui-card>
-                        <x-jinyui::card.header>
+                    <x-card>
+                        <x-card-header>
                             <h5 class="card-title mb-0">Profile Settings</h5>
-                        </x-jinyui::card.header>
+                        </x-card-header>
 
                         <x-jinyui::tab.flush>
                             {{ BootTab()->links(
@@ -35,8 +33,7 @@
                                 ],
                                 "account") }}
                         </x-jinyui::tab.flush>
-                    </x-jinyui-card>
-
+                    </x-card>
                 </div>
 
                 <div class="col-12 col-md-9 col-xl-10">
@@ -54,12 +51,9 @@
                         </x-jinyui::tab.item>
                     </x-jinyui::tab.contents>
                     
-                    
-
                 </div>
             </x-row>
+        </x-container>
+    </x-main-content>
 
-        </div>
-
-
-</x-jinyui-theme>   
+</x-theme>   

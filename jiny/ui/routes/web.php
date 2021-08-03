@@ -128,11 +128,17 @@ Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
         return view("jinyui::demo.ui.modals");
     });
 
-
-    
+    Route::get('/list', function(){
+        return view("jinyui::demo.ui.list");
+    });
 
 });
 
+Route::middleware(['web'])->prefix('jinyui')->group(function () {
+    Route::get('/carousel', function(){
+        return view("jinyui::demo.carousel");
+    });
+});
 
 Route::middleware(['web'])->prefix('jinyui/nav')->group(function () {
     Route::get('/breadcrumb', function(){

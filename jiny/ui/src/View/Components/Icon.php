@@ -4,7 +4,6 @@ use Illuminate\View\Component;
 
 class Icon extends Component
 {
-  
     private $name;
     private $width = "w-6";
     private $height = "h-6";

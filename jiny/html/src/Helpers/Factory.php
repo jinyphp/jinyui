@@ -8,10 +8,10 @@ function CDiv($items = null) {
     if($items) {
         return new \Jiny\Html\CDiv($items);
     } else {
-        static $obj; //flyweight pattern
-        if (!$obj) {
+        //static $obj; //flyweight pattern
+        //if (!$obj) {
             $obj = new \Jiny\Html\CDiv();
-        }
+        //}
         return $obj;
     }	
 }

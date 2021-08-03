@@ -6,7 +6,7 @@
                 <h1 class="h3 mb-3">Modals</h1>
 
                 <div class="row">
-                    <div class="col-12 col-lg-6">
+                    <x-col-6>
                         <div class="card">
                             <div class="card-header">
                                 <h5 class="card-title">Default modal</h5>
@@ -15,29 +15,6 @@
                             <div class="card-body text-center">
                                 <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely
                                     custom content.</p>
-
-                                <x-jinyui::modal.button class="btn-primary" data-bs-target="#defaultModalPrimary">
-                                    Primary
-                                </x-jinyui::modal.button>
-
-                                <x-jinyui::modal.boot id="defaultModalPrimary">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Default modal</h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                        </div>
-                                        
-                                        <div class="modal-body m-3">
-                                            <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                notifications, or completely custom content.</p>
-                                        </div>
-
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                        </div>
-                                    </div>
-                                </x-jinyui::modal.boot>
 
                                 <!-- BEGIN primary modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#defaultModalPrimary">
@@ -63,200 +40,93 @@
                                 </div>
                                 <!-- END primary modal -->
 
-                                <!-- BEGIN success modal -->
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#defaultModalSuccess">
+                                <x-modal-button secondary data-bs-target="#defaultModalsecondary">
+                                    Secondary
+                                </x-modal-button>
+
+                                <x-modal-layout id="defaultModalsecondary">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
+
+
+                                <x-modal-button success data-bs-target="#defaultModalSuccess">
                                     Success
-                                </button>
-                                <div class="modal fade" id="defaultModalSuccess" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Default modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-success">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END success modal -->
+                                </x-modal-button>
 
-                                <!-- BEGIN danger modal -->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#defaultModalDanger">
+                                <x-modal-layout id="defaultModalSuccess">
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
+
+                                <x-modal-button danger data-bs-target="#defaultModalDanger">
                                     Danger
-                                </button>
-                                <div class="modal fade" id="defaultModalDanger" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Default modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-danger">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END danger modal -->
+                                </x-modal-button>
 
-                                <!-- BEGIN warning modal -->
-                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#defaultModalWarning">
-                                    Warning
-                                </button>
-                                <div class="modal fade" id="defaultModalWarning" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Default modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-warning">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END warning modal -->
+                                <x-modal-layout id="defaultModalDanger">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                </x-modal-layout>
 
                             </div>
                         </div>
-                    </div>
+                    </x-col-6>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">Colored modal</h5>
-                                <h6 class="card-subtitle text-muted">Colored Bootstrap modal.</h6>
-                            </div>
-                            <div class="card-body text-center">
-                                <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely
-                                    custom content.</p>
+                    <x-col-6>
+                        <x-card>
+                            <x-card-header>
+                                <h5 class="card-title">Static Backdrop</h5>
+                            </x-card-header>
+                            <x-card-body>
 
-                                <!-- BEGIN primary modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#coloredModalPrimary">
-                                    Primary
-                                </button>
-                                
-                                <div class="modal modal-colored modal-primary fade" id="coloredModalPrimary" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Colored modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-light">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END primary modal -->
+                                <!-- Button trigger modal -->
+                                <x-modal-button primary data-bs-target="#staticBackdrop">
+                                    Launch static backdrop modal
+                                </x-modal-button>
 
-                                <!-- BEGIN success modal -->
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#coloredModalSuccess">
-                                    Success
-                                </button>
-                                <div class="modal modal-colored modal-success fade" id="coloredModalSuccess" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Colored modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-light">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END success modal -->
+                                <x-modal-layout static id="staticBackdrop">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                </x-modal-layout>
 
-                                <!-- BEGIN danger modal -->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#coloredModalDanger">
-                                    Danger
-                                </button>
-                                <div class="modal modal-colored modal-danger fade" id="coloredModalDanger" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Colored modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-light">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END danger modal -->
 
-                                <!-- BEGIN warning modal -->
-                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#coloredModalWarning">
-                                    Warning
-                                </button>
-                                <div class="modal modal-colored modal-warning fade" id="coloredModalWarning" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Colored modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-light">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END warning modal -->
+                            </x-card-body>
+                        </x-card>
+                    </x-col-6>
 
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-12 col-lg-6">
-                        <div class="card">
-                            <div class="card-header">
+                    <x-col-6>
+                        <x-card>
+                            <x-card-header>
                                 <h5 class="card-title">Centered modal</h5>
                                 <h6 class="card-subtitle text-muted">Vertically centered modal.</h6>
-                            </div>
-                            <div class="card-body text-center">
+                            </x-card-header>
+                            <x-card-body>
                                 <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely
                                     custom content.</p>
 
@@ -269,7 +139,7 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <h5 class="modal-title">Centered modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body m-3">
                                                 <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
@@ -285,76 +155,49 @@
                                 <!-- END primary modal -->
 
                                 <!-- BEGIN success modal -->
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#centeredModalSuccess">
+                                <x-modal-button success data-bs-target="#centeredModalsecondary">
                                     Success
-                                </button>
-                                <div class="modal fade" id="centeredModalSuccess" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Centered modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-success">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END success modal -->
+                                </x-modal-button>
 
-                                <!-- BEGIN danger modal -->
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#centeredModalDanger">
-                                    Danger
-                                </button>
-                                <div class="modal fade" id="centeredModalDanger" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Centered modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-danger">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END danger modal -->
+                                <x-modal-layout center id="centeredModalsecondary">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
+                            
 
-                                <!-- BEGIN warning modal -->
-                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#centeredModalWarning">
-                                    Warning
-                                </button>
-                                <div class="modal fade" id="centeredModalWarning" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Centered modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-warning">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END warning modal -->
+                                
+                                
+
+                                
+
+                                
+                            </x-card-body>
+                        </x-card>
+                    </x-col-6>
+
+
+
+                
+
+
+
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">
+                                
+                            </div>
+                            <div class="card-body text-center">
+                                
 
                             </div>
                         </div>
@@ -372,80 +215,237 @@
                                     custom content.</p>
 
                                 <!-- BEGIN  modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sizedModalSm">
-                                    Small
-                                </button>
-                                <div class="modal fade" id="sizedModalSm" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-sm" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Small modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <x-modal-button primary data-bs-target="#sizedModalSm">
+                                    Small Modal window
+                                </x-modal-button>
+
+                                <x-modal-layout small id="sizedModalSm">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
                                 <!-- END  modal -->
 
                                 <!-- BEGIN  modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sizedModalMd">
-                                    Medium
-                                </button>
-                                <div class="modal fade" id="sizedModalMd" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-md" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Medium modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <x-modal-button secondary data-bs-target="#sizedModalMd">
+                                    Medium Modal window
+                                </x-modal-button>
+
+                                <x-modal-layout medium id="sizedModalMd">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
                                 <!-- END  modal -->
 
                                 <!-- BEGIN  modal -->
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sizedModalLg">
-                                    Large
-                                </button>
-                                <div class="modal fade" id="sizedModalLg" tabindex="-1" role="dialog" aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Large modal</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                            </div>
-                                            <div class="modal-body m-3">
-                                                <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
-                                                    notifications, or completely custom content.</p>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-primary">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <x-modal-button success data-bs-target="#sizedModalLg">
+                                    Large Modal window
+                                </x-modal-button>
+
+                                <x-modal-layout large id="sizedModalLg">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
                                 <!-- END  modal -->
+
+                                <!-- BEGIN  modal -->
+                                <x-modal-button info data-bs-target="#sizedModalXl">
+                                    Extra Large Modal window
+                                </x-modal-button>
+
+                                <x-modal-layout extra id="sizedModalXl">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
+                                <!-- END  modal -->
+
+
+
+
+                                
 
                             </div>
                         </div>
                     </div>
+
+                    <x-col-6>
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Full screen</h5>
+                                <h6 class="card-subtitle text-muted">These sizes kick in at certain breakpoints to avoid scrollbars on smaller viewports.
+                                </h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely
+                                    custom content.</p>
+
+                                <!-- BEGIN  modal -->
+                                <x-modal-button primary data-bs-target="#sizedModalFull">
+                                    fullscreen Modal window
+                                </x-modal-button>
+
+                                <x-modal-layout fullscreen id="sizedModalFull">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
+                                <!-- END  modal -->
+
+
+
+
+
+                                
+
+                            </div>
+                        </div>
+                    </x-col-6>
+
+                    <x-col-6>
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Scroll</h5>
+                                <h6 class="card-subtitle text-muted">These sizes kick in at certain breakpoints to avoid scrollbars on smaller viewports.
+                                </h6>
+                            </div>
+                            <div class="card-body text-center">
+                                <p>Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user notifications, or completely
+                                    custom content.</p>
+
+                                <!-- BEGIN  modal -->
+                                <x-modal-button primary data-bs-target="#sizedModalScroll">
+                                    scroll Modal window
+                                </x-modal-button>
+
+                                <x-modal-layout scroll id="sizedModalScroll">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                            @foreach (range(1,100) as $item)
+                                                {{$item}} <br>
+                                            @endforeach
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
+                                <!-- END  modal -->
+
+
+
+
+
+                                
+
+                            </div>
+                        </div>
+                    </x-col-6>
+
+                    <x-col-6>
+                        <div class="card">
+                            <div class="card-header">
+                                <h5 class="card-title">Toggle between modals</h5>
+                                <h6 class="card-subtitle text-muted">These sizes kick in at certain breakpoints to avoid scrollbars on smaller viewports.
+                                </h6>
+                            </div>
+                            <div class="card-body text-center">
+                                
+                                <x-modal-button primary data-bs-target="#exampleModalToggle">
+                                    Open first modal
+                                </x-modal-button>
+
+                                <x-modal-layout id="exampleModalToggle">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                            
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+
+                                        <x-modal-button primary data-bs-target="#exampleModalToggle2" data-bs-dismiss="modal">
+                                            modal2
+                                        </x-modal-button>
+                                        
+                                    </x-modal-footer>
+                                </x-modal-layout>
+
+                                <x-modal-layout id="exampleModalToggle2">
+                                    <x-modal-header>
+                                        <h5 class="modal-title">Default modal </h5>
+                                    </x-modal-header>
+                                    <x-modal-body>
+                                        <p class="mb-0">Use Bootstrap’s JavaScript modal plugin to add dialogs to your site for lightboxes, user
+                                            notifications, or completely custom content.</p>
+                                            
+                                    </x-modal-body>
+                                    <x-modal-footer>
+                                        <x-button secondary data-bs-dismiss="modal">Close</x-button>
+                                        <x-button primary>Save changes</x-button>
+                                        <x-modal-button primary data-bs-target="#exampleModalToggle" data-bs-dismiss="modal">
+                                            modal1
+                                        </x-modal-button>
+                                    </x-modal-footer>
+                                </x-modal-layout>
+
+
+                            </div>
+                        </div>
+                    </x-col-6>
+                    
+
+
                 </div>
 
             </div>
