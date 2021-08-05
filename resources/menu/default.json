@@ -54,15 +54,6 @@
                 "target": ""
             },
             {
-                "_id": 7,
-                "_ref": 3,
-                "_level": 2,
-                "icon": "",
-                "title": "Pricing",
-                "href": "\/jinyui\/pages\/pricing",
-                "target": ""
-            },
-            {
                 "_id": 8,
                 "_ref": 3,
                 "_level": 2,
@@ -83,6 +74,15 @@
         ]
     },
     {
+        "_id": 7,
+        "_ref": 3,
+        "_level": 2,
+        "icon": "",
+        "title": "Pricing",
+        "href": "\/jinyui\/pages\/pricing",
+        "target": ""
+    },
+    {
         "_id": 10,
         "_ref": 0,
         "_level": 1,
@@ -97,7 +97,7 @@
         "_level": 1,
         "icon": "feather-credit-card",
         "title": "Invoice",
-        "href": "jinyui\/pages\/invoice",
+        "href": "/jinyui\/pages\/invoice",
         "target": ""
     },
     {
@@ -289,54 +289,53 @@
 
         ]
     },
-    
+    {
+        "_id": 29,
+        "_ref": 20,
+        "_level": 2,
+        "icon": "",
+        "title": "Nav",
+        "href": "",
+        "target": "",
+        "submenu":[
             {
-                "_id": 29,
+                "_id": 21,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "Breadcrumb",
+                "href": "\/jinyui\/nav/breadcrumb",
+                "target": ""
+            },
+            {
+                "_id": 21,
                 "_ref": 20,
                 "_level": 2,
                 "icon": "",
                 "title": "Nav",
-                "href": "",
-                "target": "",
-                "submenu":[
-                    {
-                        "_id": 21,
-                        "_ref": 20,
-                        "_level": 2,
-                        "icon": "",
-                        "title": "Breadcrumb",
-                        "href": "\/jinyui\/nav/breadcrumb",
-                        "target": ""
-                    },
-                    {
-                        "_id": 21,
-                        "_ref": 20,
-                        "_level": 2,
-                        "icon": "",
-                        "title": "Nav",
-                        "href": "\/jinyui\/nav/nav",
-                        "target": ""
-                    },
-                    {
-                        "_id": 21,
-                        "_ref": 20,
-                        "_level": 2,
-                        "icon": "",
-                        "title": "navbar",
-                        "href": "\/jinyui\/nav/navbar",
-                        "target": ""
-                    },
-                    {
-                        "_id": 21,
-                        "_ref": 20,
-                        "_level": 2,
-                        "icon": "",
-                        "title": "tab",
-                        "href": "\/jinyui\/nav/tab",
-                        "target": ""
-                    }
-                ]
+                "href": "\/jinyui\/nav/nav",
+                "target": ""
             },
+            {
+                "_id": 21,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "navbar",
+                "href": "\/jinyui\/nav/navbar",
+                "target": ""
+            },
+            {
+                "_id": 21,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "tab",
+                "href": "\/jinyui\/nav/tab",
+                "target": ""
+            }
+        ]
+    },
     {
         "_id": 20,
         "_ref": 0,
@@ -370,8 +369,26 @@
                 "_ref": 20,
                 "_level": 2,
                 "icon": "",
-                "title": "General",
-                "href": "\/jinyui\/ui\/general",
+                "title": "Images",
+                "href": "\/jinyui\/ui\/images",
+                "target": ""
+            },
+            {
+                "_id": 24,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "Spinners",
+                "href": "\/jinyui\/ui\/spinners",
+                "target": ""
+            },
+            {
+                "_id": 24,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "Progress",
+                "href": "\/jinyui\/ui\/progress",
                 "target": ""
             },
             {
@@ -410,8 +427,62 @@
                 "title": "Typography",
                 "href": "\/jinyui\/ui\/typography",
                 "target": ""
+            },
+            {
+                "_id": 29,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "Tooltip",
+                "href": "\/jinyui\/ui\/tooltip",
+                "target": ""
+            },
+            {
+                "_id": 29,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "PopOvers",
+                "href": "\/jinyui\/ui\/popovers",
+                "target": ""
+            },
+            {
+                "_id": 29,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "toasts",
+                "href": "\/jinyui\/ui\/toasts",
+                "target": ""
+            },
+            {
+                "_id": 29,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "Scrollspy",
+                "href": "\/jinyui\/ui\/scrollspy",
+                "target": ""
+            },
+            {
+                "_id": 29,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
+                "title": "box",
+                "href": "\/jinyui\/ui\/box",
+                "target": ""
             }
         ]
+    },
+    {
+        "_id": 29,
+        "_ref": 20,
+        "_level": 2,
+        "icon": "",
+        "title": "TimeLine",
+        "href": "\/jinyui\/ui\/timeline",
+        "target": ""
     },
     {
         "_id": 26,
@@ -494,6 +565,24 @@
                 "icon": "",
                 "title": "Bar",
                 "href": "\/jinyui\/tabs\/virtical",
+                "target": ""
+            },
+            {
+                "_id": 36,
+                "_ref": 33,
+                "_level": 2,
+                "icon": "",
+                "title": "Virtical2",
+                "href": "\/jinyui\/tabs\/virtical2",
+                "target": ""
+            },
+            {
+                "_id": 36,
+                "_ref": 33,
+                "_level": 2,
+                "icon": "",
+                "title": "Border Style",
+                "href": "\/jinyui\/tabs\/Border",
                 "target": ""
             }
         ]

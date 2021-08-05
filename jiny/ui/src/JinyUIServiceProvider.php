@@ -58,7 +58,7 @@ class JinyUIServiceProvider extends ServiceProvider
             \Jiny\UI\View\Components\ThemeLayout::class,
             \Jiny\UI\View\Components\ThemeSidebar::class, // 테마 sidebar.blade.php 로드
             \Jiny\UI\View\Components\Icon::class, //svg아이콘 생성
-            \Jiny\UI\View\Components\Menu::class, //메뉴 빌더를 호출
+            
 
 
             \Jiny\UI\View\Components\LayoutTile::class, // 타일 격자 배치
@@ -116,9 +116,13 @@ class JinyUIServiceProvider extends ServiceProvider
             // 레이아웃
             Blade::component('jinyui::components.'.'layout.container', 'container');
 
-            //
+            // 메뉴
+            Blade::component(\Jiny\UI\View\Components\Menu\Menu::class, "menu"); //메뉴 빌더를 호출
+
+            // 리스트
             Blade::component('jinyui::components.'.'list.list', 'list');
             Blade::component('jinyui::components.'.'list.group', 'list-group');
+            Blade::component('jinyui::components.'.'list.group-flush', 'list-group-flush');
             Blade::component('jinyui::components.'.'list.item', 'list-item');
 
 
@@ -133,11 +137,14 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'card.footer', 'card-footer');
             Blade::component('jinyui::components.'.'card.title', 'card-title');
             Blade::component('jinyui::components.'.'card.subtitle', 'card-subtitle');
+            Blade::component('jinyui::components.'.'card.before', 'card-before');
 
             Blade::component(\Jiny\UI\View\Components\Button\Button::class, "button");
             Blade::component(\Jiny\UI\View\Components\Button\Dropdown::class, "button-dropdown");
             Blade::component(\Jiny\UI\View\Components\Button\Group::class, "button-group");
             Blade::component('jinyui::components.'.'button.close', 'close');
+
+            
 
 
             Blade::component(\Jiny\UI\View\Components\Accordion::class, "dropdown");
@@ -159,6 +166,10 @@ class JinyUIServiceProvider extends ServiceProvider
             //Nav
             Blade::component('jinyui::components.'.'nav.nav', 'nav');
             Blade::component('jinyui::components.'.'nav.nav-item', 'nav-item');
+            Blade::component('jinyui::components.'.'nav.tab', 'navtab');
+            Blade::component('jinyui::components.'.'nav.tab-pillbar', 'navtab-pillbar');// pillbar
+            Blade::component('jinyui::components.'.'nav.tab-item', 'navtab-item');
+            Blade::component('jinyui::components.'.'nav.tab-link', 'navtab-link');
 
             //Modal
             Blade::component('jinyui::components.'.'modal.button', 'modal-button');
@@ -173,6 +184,24 @@ class JinyUIServiceProvider extends ServiceProvider
             //carousel
             Blade::component('jinyui::components.'.'carousel.inner', 'carousel');
             Blade::component('jinyui::components.'.'carousel.item', 'carousel-item');
+
+            //Images
+            Blade::component('jinyui::components.'.'images.round', 'img-round');
+            Blade::component('jinyui::components.'.'images.circle', 'img-circle');
+            Blade::component('jinyui::components.'.'images.res', 'img-res');
+            Blade::component('jinyui::components.'.'images.thumb', 'img-thumb');
+            Blade::component('jinyui::components.'.'figure.figure', 'figure');
+            Blade::component('jinyui::components.'.'figure.text', 'figure-text');
+
+            // Tab
+            Blade::component('jinyui::components.'.'tab.header', 'tab-header');
+            Blade::component('jinyui::components.'.'tab.link', 'tab-link');
+            Blade::component('jinyui::components.'.'tab.button', 'tab-button');
+            Blade::component('jinyui::components.'.'tab.item', 'tab-item');
+            Blade::component('jinyui::components.'.'tab.group', 'tab-group');
+            Blade::component('jinyui::components.'.'tab.list', 'tab-list');
+            Blade::component('jinyui::components.'.'tab.contents', 'tab-contents');
+            Blade::component(\Jiny\UI\View\Components\Tab\HeaderJson::class, "tab-header-json"); // 템 목록을 json으로 변환하여 전달합니다.
 
         }
 
@@ -214,6 +243,7 @@ class JinyUIServiceProvider extends ServiceProvider
         //Blade::component('jinyui::components.'.'layouts.main', 'main');
         //Blade::component('jinyui::components.'.'layouts.content', 'main-content');
         Blade::component('jinyui::components.'.'layout.row', 'row');
+        Blade::component('jinyui::components.'.'layout.row-center', 'row-center'); // 가로 가운데 정렬배치
         Blade::component('jinyui::components.'.'layout.col', 'col');
         Blade::component('jinyui::components.'.'layout.col-12', 'col-12');
         Blade::component('jinyui::components.'.'layout.col-6', 'col-6');
@@ -238,11 +268,7 @@ class JinyUIServiceProvider extends ServiceProvider
         // Box model
         Blade::component('jinyui::components.'.'box.layout', 'jiny-box');
 
-        // Tab
-        Blade::component('jinyui::components.'.'tab.header', 'jiny-tab-header');
-        Blade::component('jinyui::components.'.'tab.link', 'jiny-tab-link');
-        Blade::component('jinyui::components.'.'tab.body', 'jiny-tab-body');
-        Blade::component('jinyui::components.'.'tab.content', 'jiny-tab-content');
+        
 
         // Alert ShortCut
         Blade::component('jinyui::components.alert.primary', 'alert-primary');

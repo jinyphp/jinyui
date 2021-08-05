@@ -16,23 +16,27 @@ Route::middleware(['web'])->prefix('jinyui')->group(function () {
 //PAGES
 Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
     Route::get('/settings', function(){
-        return view("jinyui::demo.pages.page.settings");
+        return view("jinyui::demo.pages.settings");
     });
 
     Route::get('/projects', function(){
-        return view("jinyui::demo.pages.page.projects");
+        return view("jinyui::demo.pages.projects");
     });
 
     Route::get('/clients', function(){
         return view("jinyui::demo.pages.page.clients");
     });
 
+
     Route::get('/pricing', function(){
-        return view("jinyui::demo.pages.page.price");
+        return view("jinyui::demo.pages.price");
     });
 
+
+
+
     Route::get('/chat', function(){
-        return view("jinyui::demo.pages.page.chat");
+        return view("jinyui::demo.pages.chat");
     });
 
     Route::get('/blank', function(){
@@ -50,14 +54,18 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
     });
 
     Route::get('/tasks', function(){
-        return view("jinyui::demo.pages.tasks");
+        $res = view("jinyui::demo.pages.tasks");
+        
+        file_put_contents(base_path()."/docs/pages/task.html", $res);
+        return $res;
     });
 
     Route::get('/calendar', function(){
         return view("jinyui::demo.pages.calendar");
     });
 
-}); 
+});
+
 
 // AUTH
 Route::middleware(['web'])->prefix('jinyui/auth')->group(function () {
@@ -99,9 +107,21 @@ Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
         return view("jinyui::demo.ui.alerts");
     });
 
-    Route::get('/general', function(){
-        return view("jinyui::demo.ui.general");
+    Route::get('/images', function(){
+        return view("jinyui::demo.ui.images");
     });
+    Route::get('/spinners', function(){
+        return view("jinyui::demo.ui.spinners");
+    });
+    Route::get('/progress', function(){
+        return view("jinyui::demo.ui.progress");
+    });
+    Route::get('/pagination', function(){
+        return view("jinyui::demo.ui.pagination");
+    });
+
+
+    
 
     Route::get('/grid', function(){
         return view("jinyui::demo.ui.grid");
@@ -131,6 +151,30 @@ Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
     Route::get('/list', function(){
         return view("jinyui::demo.ui.list");
     });
+
+    // Notice
+    Route::get('/tooltip', function(){
+        return view("jinyui::demo.ui.tooltip");
+    });
+    Route::get('/popovers', function(){
+        return view("jinyui::demo.ui.popovers");
+    });
+    Route::get('/toasts', function(){
+        return view("jinyui::demo.ui.toasts");
+    });
+
+    Route::get('/scrollspy', function(){
+        return view("jinyui::demo.ui.scrollspy");
+    });
+
+    Route::get('/box', function(){
+        return view("jinyui::demo.ui.box");
+    });
+
+    Route::get('/timeline', function(){
+        return view("jinyui::demo.ui.timeline");
+    });
+
 
 });
 
@@ -175,6 +219,12 @@ Route::prefix('jinyui/tabs')->group(function () {
     });
     Route::get('/virtical', function(){
         return view("jinyui::demo.tabs.virtical");
+    });
+    Route::get('/virtical2', function(){
+        return view("jinyui::demo.tabs.virtical2");
+    });
+    Route::get('/border', function(){
+        return view("jinyui::demo.tabs.border");
     });
 });
 

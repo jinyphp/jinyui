@@ -59,7 +59,6 @@ class MenuTree extends Component
             }
             $menu->add($item);
         }
-
         return $menu;
     }
 
@@ -71,6 +70,7 @@ class MenuTree extends Component
         $item = CMenuItem();
         $item->addItem($value['header']);
         
+        /*
         if($this->admin) {
             $item->addItem( 
                 $this->menuIcon("feather-settings")
@@ -78,6 +78,7 @@ class MenuTree extends Component
                     ->getIcon()
             );
         }
+        */
         
         return $item;
     }
@@ -115,12 +116,14 @@ class MenuTree extends Component
         //$item->set($value);
         
         // 관리자모드
+        /*
         if($this->admin) {
             $dots = $this->menuIcon()->featherDotsVertical()->addClass("text-white w-4 h-4");
             $item->addItem( 
                 CLink($dots)->setAttribute('wire:click',"edit(".$value['_id'].")")
             )->addClass("flex flex-row justify-between align-middle");
         }
+        */
         
         return $item;
     }
@@ -138,17 +141,16 @@ class MenuTree extends Component
         }
         $link->addItem( $this->spanTitle($value['title']) );
 
+        /*
         if($this->admin) {
-            /*
-            $link = CDiv([
-                $link,
-                CLink(
-                    CSpan("+")->addClass("align-middle")
-                )->addClass("sidebar-link") 
-            ])->addClass("flex flex-row justify-between");
-            */
-
-        } 
+            // $link = CDiv([
+            //     $link,
+            //     CLink(
+            //         CSpan("+")->addClass("align-middle")
+            //     )->addClass("sidebar-link") 
+            // ])->addClass("flex flex-row justify-between");
+        }
+        */
         
         $submenu = $this->collpaseContent($value['submenu']);
         
@@ -156,12 +158,9 @@ class MenuTree extends Component
     }
 
 
-    private function spanTitle($title)
-    {
-        return CSpan($title)->addClass("align-middle");
-    }
 
 
+    // 메뉴 링크
     private function itemLink($value)
     {
         $link = CLink()->addClass("sidebar-link");
@@ -169,6 +168,11 @@ class MenuTree extends Component
         if(isset($value['target']) && $value['target']) $link->setUrl($value['target']);
         
         return $link;
+    }
+
+    private function spanTitle($title)
+    {
+        return CSpan($title)->addClass("align-middle");
     }
 
 
@@ -209,13 +213,24 @@ class MenuTree extends Component
     }
 
 
+
+
+
+
+
+
+
+
+
+
+    /**
+     * 
+     */
+
     public function sort()
     {
         
     }
-
-
-
 
     // modal popup
 

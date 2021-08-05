@@ -1,11 +1,10 @@
-<x-jinyui-theme theme="adminkit" class="bootstrap">
-
-            <div class="container-fluid p-0">
-
-                <a href="#" class="btn btn-primary float-end mt-n1"><i class="fas fa-plus"></i> New task</a>
+<x-theme theme="adminkit" class="bootstrap">
+    <x-main-content>
+        <x-container>
+            <a href="#" class="btn btn-primary float-end mt-n1"><i class="fas fa-plus"></i> New task</a>
                 <div class="mb-3">
-                    <h1 class="h3 d-inline align-middle">Tasks</h1><a class="badge bg-primary ms-2" href="https://adminkit.io/pricing/" target="_blank">Pro
-                        Component <i class="fas fa-fw fa-external-link-alt"></i></a>
+                    <h1 class="h3 d-inline align-middle">Tasks</h1>
+                    
                 </div>
 
                 <div class="row">
@@ -300,7 +299,8 @@
                         </div>
                     </div>
                 </div>
+        </x-container>
+    </x-main-content>
 
-            </div>
 
-</x-jinyui-theme>   
+</x-theme>   

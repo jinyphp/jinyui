@@ -22,9 +22,9 @@ function BCard()
     return \Jiny\UI\BCard::instance();
 }
 
-function BNav()
+function BootNav($ri=null)
 {
-    return \Jiny\UI\BNav::instance();
+    return \Jiny\UI\BootNav::instance($ri);
 }
 
 function BootTab()

@@ -9,5 +9,5 @@
     </x-jinyui-main-content>
 
     {{-- footer --}}
-    
+    @include("theme.adminkit.footer")
 </div>

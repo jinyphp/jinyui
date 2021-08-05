@@ -1,0 +1,255 @@
+/* 텝 스타일 */
+
+/* bordered from hyper */
+/* border 라인으로 텝표기 */
+.nav-tabs.nav-bordered {
+    border-bottom: 2px solid rgba(152, 166, 173, .2);
+}
+
+.nav-tabs.nav-bordered .nav-item {
+    margin-bottom: -1px;
+}
+
+.nav-tabs.nav-bordered li a {
+    border: 0;
+    padding: .625rem 1.25rem;
+}
+
+.nav-tabs.nav-bordered li a.active {
+    background-color: #fff;
+    border-bottom: 2px solid $primary; //#727cf5
+}
+
+/* from hyper*/
+/* pills 방식의 텝 사용시, 배경설정 */
+.bg-nav-pills {
+    background-color: #eef2f7;
+}
+
+/* from adminkit */
+.tab-vertical .nav-tabs {
+    float: left;
+    flex-direction: column
+}
+
+.tab-vertical .nav-tabs .nav-link {
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.tab-vertical .tab-content {
+    overflow: auto
+}
+
+
+
+.tab-danger {
+    .nav-tabs .nav-link.active {
+        background: #dc3545;
+        border-color: #dc3545;
+        color: #fff
+    }
+
+    .tab-content {
+        background: #dc3545;
+        color: #fff
+    }
+
+    .h1, .h2, .h3, .h4, .h5, .h6,
+    h1, h2, h3, h4, h5, h6 {
+        color: #fff
+    }
+}
+
+
+
+.tab-light .nav-tabs .nav-link.active {
+    background: #f5f7fb;
+    border-bottom-color: #f5f7fb;
+    color: #fff
+}
+
+.tab-light .tab-content {
+    background: #f5f7fb;
+    color: #fff
+}
+
+.tab-light .h1,
+.tab-light .h2,
+.tab-light .h3,
+.tab-light .h4,
+.tab-light .h5,
+.tab-light .h6,
+.tab-light h1,
+.tab-light h2,
+.tab-light h3,
+.tab-light h4,
+.tab-light h5,
+.tab-light h6 {
+    color: #fff
+}
+
+.tab-primary .nav-tabs .nav-link.active {
+    background: #3b7ddd;
+    border-bottom-color: #3b7ddd;
+    color: #fff
+}
+
+.tab-primary .tab-content {
+    background: #3b7ddd;
+    color: #fff
+}
+
+.tab-primary .h1,
+.tab-primary .h2,
+.tab-primary .h3,
+.tab-primary .h4,
+.tab-primary .h5,
+.tab-primary .h6,
+.tab-primary h1,
+.tab-primary h2,
+.tab-primary h3,
+.tab-primary h4,
+.tab-primary h5,
+.tab-primary h6 {
+    color: #fff
+}
+
+.tab-secondary .nav-tabs .nav-link.active {
+    background: #6c757d;
+    border-bottom-color: #6c757d;
+    color: #fff
+}
+
+.tab-secondary .tab-content {
+    background: #6c757d;
+    color: #fff
+}
+
+.tab-secondary .h1,
+.tab-secondary .h2,
+.tab-secondary .h3,
+.tab-secondary .h4,
+.tab-secondary .h5,
+.tab-secondary .h6,
+.tab-secondary h1,
+.tab-secondary h2,
+.tab-secondary h3,
+.tab-secondary h4,
+.tab-secondary h5,
+.tab-secondary h6 {
+    color: #fff
+}
+
+.tab-success .nav-tabs .nav-link.active {
+    background: #1cbb8c;
+    border-bottom-color: #1cbb8c;
+    color: #fff
+}
+
+.tab-success .tab-content {
+    background: #1cbb8c;
+    color: #fff
+}
+
+.tab-success .h1,
+.tab-success .h2,
+.tab-success .h3,
+.tab-success .h4,
+.tab-success .h5,
+.tab-success .h6,
+.tab-success h1,
+.tab-success h2,
+.tab-success h3,
+.tab-success h4,
+.tab-success h5,
+.tab-success h6 {
+    color: #fff
+}
+
+.tab-info .nav-tabs .nav-link.active {
+    background: #17a2b8;
+    border-bottom-color: #17a2b8;
+    color: #fff
+}
+
+.tab-info .tab-content {
+    background: #17a2b8;
+    color: #fff
+}
+
+.tab-info .h1,
+.tab-info .h2,
+.tab-info .h3,
+.tab-info .h4,
+.tab-info .h5,
+.tab-info .h6,
+.tab-info h1,
+.tab-info h2,
+.tab-info h3,
+.tab-info h4,
+.tab-info h5,
+.tab-info h6 {
+    color: #fff
+}
+
+.tab-warning .nav-tabs .nav-link.active {
+    background: #fcb92c;
+    border-bottom-color: #fcb92c;
+    color: #fff
+}
+
+.tab-warning .tab-content {
+    background: #fcb92c;
+    color: #fff
+}
+
+.tab-warning .h1,
+.tab-warning .h2,
+.tab-warning .h3,
+.tab-warning .h4,
+.tab-warning .h5,
+.tab-warning .h6,
+.tab-warning h1,
+.tab-warning h2,
+.tab-warning h3,
+.tab-warning h4,
+.tab-warning h5,
+.tab-warning h6 {
+    color: #fff
+}
+
+
+
+.tab-dark {
+    .nav-tabs .nav-link.active {
+        background: #212529;
+        border-color: #212529;
+        color: #fff
+    }
+
+    .tab-content {
+        background: #212529;
+        color: #fff
+    }
+
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #fff
+    }
+} 
+
+
+

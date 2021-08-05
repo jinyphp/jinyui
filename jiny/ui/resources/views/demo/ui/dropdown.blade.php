@@ -393,6 +393,72 @@
                 </x-card>
             </x-col-6>
 
+            <x-col-6>
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">Dropdowns</h5>
+                        <h6 class="card-subtitle text-muted">Toggle contextual overlays for displaying lists of links.</h6>
+                    </div>
+                    <div class="card-body pb-0">
+
+                        <div class="row mb-3">
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
+                                <p class="mb-0">Basic:</p>
+                                <div class="dropdown-menu mb-2" style="position:static;display:block;">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
+                                <p class="mb-0">Active:</p>
+                                <div class="dropdown-menu mb-2" style="position:static;display:block;">
+                                    <a class="dropdown-item" href="#">Regular link</a>
+                                    <a class="dropdown-item active" href="#">Active link</a>
+                                    <a class="dropdown-item" href="#">Another link</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
+                                <p class="mb-0">Disabled:</p>
+                                <div class="dropdown-menu mb-2" style="position:static;display:block;">
+                                    <a class="dropdown-item" href="#">Regular link</a>
+                                    <a class="dropdown-item disabled" href="#">Disabled link</a>
+                                    <a class="dropdown-item" href="#">Another link</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
+                                <p class="mb-0">Header:</p>
+                                <div class="dropdown-menu mb-2" style="position:static;display:block;">
+                                    <h6 class="dropdown-header">Dropdown header</h6>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
+                                <p class="mb-0">Dividers:</p>
+                                <div class="dropdown-menu mb-2" style="position:static;display:block;">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Separated link</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
+                                <p class="mb-0">Text:</p>
+                                <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;position:static;display:block;">
+                                    <p class="mb-0">
+                                        Some example text that's free-flowing within the dropdown menu.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </x-col-6>
+
 
         </x-row>
 

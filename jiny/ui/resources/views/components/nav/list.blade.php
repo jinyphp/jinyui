@@ -1,6 +1,6 @@
 {{-- 네비게이션 탭의 항목을 출력합니다. --}}
-<ul {{ $attributes->merge(['class' => 'nav']) }} role="tablist">
-    @foreach (BNav()->popHeaders() as $item)
+<ul {{ $attributes->merge(['class' => 'nav nav-tabs']) }} >
+    @foreach (BootNav()->popHeaders() as $item)
         <li class="nav-item">
             {!! $item !!}
         </li>

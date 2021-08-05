@@ -5,6 +5,36 @@
 		<h1 class="h3 mb-3">Badges</h1>
 
 		<div class="row">
+			<x-col-6>
+				<div class="card">
+					<div class="card-header">
+						<h5 class="card-title">Badges</h5>
+						<h6 class="card-subtitle text-muted">Examples for badges.</h6>
+					</div>
+					<div class="card-body">
+
+						<div class="mb-1">
+							<span class="badge bg-primary">Primary</span>
+							<span class="badge bg-secondary">Secondary</span>
+							<span class="badge bg-success">Success</span>
+							<span class="badge bg-danger">Danger</span>
+							<span class="badge bg-warning">Warning</span>
+							<span class="badge bg-info">Info</span>
+						</div>
+
+						<div class="mt-1">
+							<span class="badge bg-primary rounded-pill">Primary</span>
+							<span class="badge bg-secondary rounded-pill">Secondary</span>
+							<span class="badge bg-success rounded-pill">Success</span>
+							<span class="badge bg-danger rounded-pill">Danger</span>
+							<span class="badge bg-warning rounded-pill">Warning</span>
+							<span class="badge bg-info rounded-pill">Info</span>
+						</div>
+
+					</div>
+				</div>
+			</x-col-6>
+
 			<div class="col-12 col-lg-6">
 				<div class="card">
 					<div class="card-header">

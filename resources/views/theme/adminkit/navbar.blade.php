@@ -1,3 +1,8 @@
+<style>
+.navbar-right {
+    margin-left: auto
+}
+</style>
 <nav class="navbar navbar-expand navbar-light navbar-bg">
 
     <a class="sidebar-toggle js-sidebar-toggle">
