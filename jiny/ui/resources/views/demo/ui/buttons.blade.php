@@ -4,36 +4,60 @@
 
 		<h1 class="h3 mb-3">Buttons</h1>
 
+
 		<div class="row">
-			<div class="col-12 col-lg-6">
-				<div class="card">
-					<div class="card-header">
+			<x-col class="col-12 col-lg-6">
+				<x-card>
+					<x-card-header>
 						<h5 class="card-title">Basic Buttons</h5>
 						<h6 class="card-subtitle text-muted">기본적인 부트스트랩 버튼을 생성할 수있습니다.</h6>
-					</div>
-					<div class="card-body text-center">
+					</x-card-header>
+					<x-card-body class="text-center">
+						<x-navtab class="nav-bordered mb-3">
+							<x-navtab-item class="show active" >
+								<x-navtab-link class="rounded-0 active">
+									Preview
+								</x-navtab-link>
+								{{-- preview 코드를 삽입합니다. --}}
+								<div class="mb-3">
+									<x-button primary>Primary</x-button>
+									<x-button secondary>Secondary</x-button>
+									<x-button success>Success</x-button>
+									<x-button danger>Danger</x-button>
+									<x-button warning>Warning</x-button>
+									<x-button info>Info</x-button>									
+								</div>
+		
+								<div>
+									<x-button primary disabled>Primary</x-button>
+									<x-button secondary disabled>Secondary</x-button>
+									<x-button success disabled>Success</x-button>
+									<x-button danger disabled>Danger</x-button>
+									<x-button warning disabled>Warning</x-button>
+									<x-button info disabled>Info</x-button>
+								</div>
+								
+							</x-navtab-item>
+						
+							<x-navtab-item >
+								<x-navtab-link class="rounded-0">
+									Code
+								</x-navtab-link> 
+								code...
+							</x-navtab-item>
+						
+							<x-navtab-item >
+								<x-navtab-link class="rounded-0">
+									Description
+								</x-navtab-link> 
+								description...
+							</x-navtab-item>                            
+						</x-navtab>
+					</x-card-body>
+				</x-card>
+			</x-col>
 
-						<div class="mb-3">
-							<x-button primary>Primary</x-button>
-							<x-button secondary>Secondary</x-button>
-							<x-button success>Success</x-button>
-							<x-button danger>Danger</x-button>
-							<x-button warning>Warning</x-button>
-							<x-button info>Info</x-button>									
-						</div>
 
-						<div>
-							<x-button primary disabled>Primary</x-button>
-							<x-button secondary disabled>Secondary</x-button>
-							<x-button success disabled>Success</x-button>
-							<x-button danger disabled>Danger</x-button>
-							<x-button warning disabled>Warning</x-button>
-							<x-button info disabled>Info</x-button>
-						</div>
-
-					</div>
-				</div>
-			</div>
 			<div class="col-12 col-lg-6">
 				<div class="card">
 					<div class="card-header">

@@ -95,7 +95,7 @@ class MenuTree extends Component
         // 아이템       
         $link = $this->itemLink($value);
         if(isset($value['icon']) && $value['icon'] ) {
-            $icon = $this->menuIcon($value['icon'])->getIcon(); // 아이콘 처리
+            $icon = $this->menuIcon($value['icon']);
             $link->addItem($icon);
         }
         if(isset($value['title'])) {
@@ -136,7 +136,7 @@ class MenuTree extends Component
 
         $link = $this->collpaseLink();
         if(isset($value['icon']) && $value['icon'] ) {
-            $icon = $this->menuIcon($value['icon'])->getIcon(); // 아이콘 처리
+            $icon = $this->menuIcon($value['icon']);//->getIcon(); // 아이콘 처리
             $link->addItem($icon);
         }
         $link->addItem( $this->spanTitle($value['title']) );
@@ -203,7 +203,8 @@ class MenuTree extends Component
 
     public function menuIcon($icon=null)
     {
-        return (new Icon($icon));
+
+        return (new Icon($icon));//>setFile($icon);
     }
 
 

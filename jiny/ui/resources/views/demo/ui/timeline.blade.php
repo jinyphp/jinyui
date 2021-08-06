@@ -4,39 +4,45 @@
             <h1 class="h3">TimeLine</h1>
 
             <x-row>
+
                 <x-col-6>
                     <x-card>
                         <x-card-header>
-
+                            <h4 class="header-title">Json Data</h4>
+                            <p class="text-muted font-14">
+                                지니UI는 json 데이터릴 이용하여 Timeline 을 쉽게 구현할 수 있습니다. jsondata는 직접 코드에 삽입 또는 외부의 데이터베이스에서 받아서 동적으로 구현할 수 있습니다.
+                                code탭을 클릭하시면 작성한 html소스 코드를 보실 수 있습니다.
+                            </p>
                         </x-card-header>
                         <x-card-body>
-                            <ul class="timeline mt-2 mb-0">
-                                <li class="timeline-item">
-                                    <strong>Signed out</strong>
-                                    <span class="float-end text-muted text-sm">30m ago</span>
-                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit...</p>
-                                </li>
-                                <li class="timeline-item">
-                                    <strong>Created invoice #1204</strong>
-                                    <span class="float-end text-muted text-sm">2h ago</span>
-                                    <p>Sed aliquam ultrices mauris. Integer ante arcu...</p>
-                                </li>
-                                <li class="timeline-item">
-                                    <strong>Discarded invoice #1147</strong>
-                                    <span class="float-end text-muted text-sm">3h ago</span>
-                                    <p>Nam pretium turpis et arcu. Duis arcu tortor, suscipit...</p>
-                                </li>
-                                <li class="timeline-item">
-                                    <strong>Signed in</strong>
-                                    <span class="float-end text-muted text-sm">3h ago</span>
-                                    <p>Curabitur ligula sapien, tincidunt non, euismod vitae...</p>
-                                </li>
-                                <li class="timeline-item">
-                                    <strong>Signed up</strong>
-                                    <span class="float-end text-muted text-sm">2d ago</span>
-                                    <p>Sed aliquam ultrices mauris. Integer ante arcu...</p>
-                                </li>
-                            </ul>
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                                    <x-navtab-link class="rounded-0 active">
+                                        Preview
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="basic">
+                                        @include("jinyui::demo.ui.timelines.jsondata")
+                                    </div>
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        Code
+                                    </x-navtab-link> 
+                                    code...
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        Description
+                                    </x-navtab-link> 
+                                    description...
+                                </x-navtab-item>                            
+                            </x-navtab>
+
+                            
                         </x-card-body>
                     </x-card>
                 </x-col-6>
@@ -44,30 +50,89 @@
                 <x-col-6>
                     <x-card>
                         <x-card-header>
-                            Json Data 
+                            <h4 class="header-title">구) HTML 코드 예시</h4>
+                            <p class="text-muted font-14">
+                                순수한 HTML 코드를 이용하여 구한한 Timeline 입니다. code탭을 클릭하시면 작성한 html소스 코드를 보실 수 있습니다.
+                            </p>
                         </x-card-header>
                         <x-card-body>
-                            @php
-                            $timeline = '[
-                                {"time":"30m ago","title":"Signed out","description":"Nam pretium turpis et arcu. Duis arcu tortor, suscipit..."},
-                                {"time":"2h ago","title":"Created invoice #1204","description":"Sed aliquam ultrices mauris. Integer ante arcu..."},
-                                {"time":"3h ago","title":"Discarded invoice #1147","description":"Nam pretium turpis et arcu. Duis arcu tortor, suscipit..."},
-                                {"time":"3h ago","title":"Signed in","description":"Curabitur ligula sapien, tincidunt non, euismod vitae..."},
-                                {"time":"2d ago","title":"Signed up","description":"Sed aliquam ultrices mauris. Integer ante arcu..."}
-                            ]';
-                        @endphp
-                        <ul class="timeline mt-2 mb-0">
-                            @foreach (json_decode($timeline, true) as $item)
-                                <li class="timeline-item">
-                                    <strong>{{$item['title']}}</strong>
-                                    <span class="float-end text-muted text-sm">{{$item['time']}}</span>
-                                    <p>{{$item['description']}}</p>
-                                </li>
-                            @endforeach
-                        </ul>
+
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                                    <x-navtab-link class="rounded-0 active">
+                                        Preview
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="basic">
+                                        @include("jinyui::demo.ui.timelines.basic")
+                                    </div>
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        Code
+                                    </x-navtab-link> 
+                                    code...
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        Description
+                                    </x-navtab-link> 
+                                    description...
+                                </x-navtab-item>                            
+                            </x-navtab>
+                            
                         </x-card-body>
                     </x-card>
                 </x-col-6>
+
+            </x-row>
+
+            <x-row>
+                <x-col>
+                    <x-card>
+                        <x-card-header>
+                            <h4 class="header-title">Center</h4>
+                            <p class="text-muted font-14">
+                                중앙 타임라인을 기준으로 좌/우에 시간이력을 출력합니다.
+                            </p>
+                        </x-card-header>
+                        <x-card-body>
+
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                                    <x-navtab-link class="rounded-0 active">
+                                        Preview
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="hyper">
+                                        @include("jinyui::demo.ui.timelines.center")
+                                    </div>
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        Code
+                                    </x-navtab-link> 
+                                    code...
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        Description
+                                    </x-navtab-link> 
+                                    description...
+                                </x-navtab-item>                            
+                            </x-navtab>
+
+                            
+                            
+                        </x-card-body>
+                    </x-card>
+                </x-col>                
             </x-row>
         </x-container>
     </x-main-content>
