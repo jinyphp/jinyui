@@ -7,6 +7,8 @@ use Illuminate\View\Component;
 class Hello extends Component
 {
     public $hello;
+    
+
     /**
      * Create a new component instance.
      *
@@ -15,6 +17,18 @@ class Hello extends Component
     public function __construct()
     {
         $this->hello = "안녕하세요";
+    }
+
+    private $attrs;
+    public function setAttrs($attributes)
+    {
+        $attributes['class'] .= "w-4 h-4'";
+        $this->attrs = $attributes;
+    }
+
+    public function getAttrs()
+    {
+        return $this->attrs;
     }
 
     /**

@@ -76,7 +76,7 @@ class JinyUIServiceProvider extends ServiceProvider
             \Jiny\UI\View\Components\SidebarLink::class,
             \Jiny\UI\View\Components\SidebarBadge::class,
 
-            \Jiny\UI\View\Components\Hello::class,
+            
 
             \Jiny\UI\View\Components\Card::class,
 
@@ -97,7 +97,7 @@ class JinyUIServiceProvider extends ServiceProvider
 
             \Jiny\UI\View\Components\Markdown::class,
 
-
+            \Jiny\UI\View\Components\Hello::class,
         ]);
 
         /**
@@ -202,6 +202,10 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'tab.list', 'tab-list');
             Blade::component('jinyui::components.'.'tab.contents', 'tab-contents');
             Blade::component(\Jiny\UI\View\Components\Tab\HeaderJson::class, "tab-header-json"); // 템 목록을 json으로 변환하여 전달합니다.
+
+            // Extension
+            // Simplebar
+            Blade::component('jinyui::components.'.'extension.simplebar', 'simplebar');
 
         }
 

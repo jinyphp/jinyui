@@ -13,9 +13,8 @@
         "_level": 1,
         "icon": "feather.sliders",
         "title": "Dashboard",
-        "href": "index.html",
-        "target": "",
-        "selected": "true"
+        "href": "/jinyui",
+        "target": ""
     },
     {
         "_id": 3,
@@ -23,8 +22,9 @@
         "_level": 1,
         "icon": "feather.layout",
         "title": "Pages",
-        "href": "",
+        "href": "/jinyui/pages",
         "target": "",
+        "selected": "true",
         "submenu": [
             {
                 "_id": 4,
@@ -245,7 +245,7 @@
         "_id": 22,
         "_ref": 20,
         "_level": 2,
-        "icon": "",
+        "icon": "feather.finger.print",
         "title": "Buttons",
         "href": "",
         "target": "",
@@ -826,7 +826,27 @@
                         "icon": "",
                         "title": "Item 1",
                         "href": "#",
-                        "target": ""
+                        "target": "",
+                        "submenu": [
+                            {
+                                "_id": 62,
+                                "_ref": 61,
+                                "_level": 3,
+                                "icon": "",
+                                "title": "Item 1",
+                                "href": "#",
+                                "target": ""
+                            },
+                            {
+                                "_id": 63,
+                                "_ref": 61,
+                                "_level": 3,
+                                "icon": "",
+                                "title": "Item 2",
+                                "href": "#",
+                                "target": ""
+                            }
+                        ]
                     },
                     {
                         "_id": 63,

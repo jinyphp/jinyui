@@ -41,6 +41,9 @@ a.sidebar-link {
   svg {
     margin-right: .75rem;
     color: $sidebar-link-icon-color;
+
+    @apply inline-block;
+
   }
 }
 
@@ -144,4 +147,71 @@ a.sidebar-link {
 
   background: $sidebar-cta-bg;
   color: $sidebar-cta-color;
+}
+
+
+/* 사이드바 우측 collapse 표시 */
+.sidebar .submenu,
+.sidebar [data-bs-toggle=collapse] {
+  position: relative
+}
+
+.sidebar .submenu:after,
+.sidebar [data-bs-toggle=collapse]:after {
+  content: " ";
+  border: solid;
+  border-width: 0 .075rem .075rem 0;
+  display: inline-block;
+  padding: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  transition: all .2s ease-out;
+}
+
+//.sidebar [aria-expanded=true]:after,
+.sidebar .submenu:not(.collapsed):after,
+.sidebar [data-bs-toggle=collapse]:not(.collapsed):after {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  top: 1.4rem;
+}
+
+/*드롭다운*/
+.sidebar-dropdown {
+  // 1단
+  .sidebar-link {
+      padding: .625rem 1.5rem .625rem 3.25rem;
+      font-weight: 400;
+      font-size: 90%;
+      border-left: 0;
+      color: #adb5bd;
+      background: transparent;
+  }
+
+  .sidebar-link:before {
+      content: "→";
+      display: inline-block;
+      position: relative;
+      left: -14px;
+      transition: all .1s ease;
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+  }
+
+  .sidebar-dropdown {
+    // 2단
+    .sidebar-link {
+        padding: .625rem 1.5rem .625rem 4.5rem
+    }
+
+    .sidebar-dropdown {
+        // 3단
+        .sidebar-link {
+            padding: .625rem 1.5rem .625rem 5.75rem
+        }
+    }
+  }
 }

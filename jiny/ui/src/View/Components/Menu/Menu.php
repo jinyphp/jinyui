@@ -12,37 +12,25 @@ class Menu extends Component
     public $filename;
     public function __construct($json=null)
     {
-        $path = resource_path($json);
-        $json = file_get_contents($path);
-        $jsondata = json_decode($json,true);
+        // json 파일 읽기
+        if ($json) {
+            $path = resource_path($json);
+            $json = file_get_contents($path);
+            $jsondata = json_decode($json,true);
 
-        $this->jsondata = $jsondata;
-        $this->filename = $json;
+            $this->jsondata = $jsondata;
+            $this->filename = $json;
+        }
+        
     }
 
-    /*
-    public function getData()
+    public function builder()
     {
-        return $this->jsondata;
+        return (new \Jiny\UI\MenuBuilder($this->jsondata))->make()->addClass("sidebar-nav");
     }
-
-    public function setData($data)
-    {
-        $this->jsondata = $data;
-        return $this;
-    }
-    */
-
 
     public function render()
     {   
-        // Livewire menu-tree 호출...
-        //return view('jinyui::components.sidebar.menu');
-        return <<<'blade'
-        <div {{ $attributes }}>
-            @livewire('menu-tree',['menu'=>$jsondata, 'content'=>$slot->toHtml(), 'filename'=>$filename]) 
-            {{$slot}}
-        </div>
-    blade;
+        return view('jinyui::components.menu.menu');
     }
 }

@@ -337,6 +337,8 @@ Route::middleware(['web'])->prefix('jinyui/maps')->group(function () {
 
 
 
+//====
+
 
 
 
@@ -429,4 +431,9 @@ Route::get('jinyui/timeline/vertical', function(){
 
 Route::get('/bbb', function(){
     return view("jinyui::demo.bbb");
+});
+
+
+Route::get('jinyui/hello', function(){
+    return view("jinyui::demo.hello");
 });

@@ -19,8 +19,8 @@ class Icon extends Component
 
     public function render()
     {
-        $attrs = "h-4 w-4";
-		return view('jinyui::components.icon.'.$this->name, ['attrs'=>$attrs]);
+        
+		return view('jinyui::components.icon.'.$this->name);
     }
 
     public function toString()
@@ -32,6 +32,8 @@ class Icon extends Component
     {
         return $this->render();
 	}
+
+
 
 }
 

@@ -12,7 +12,7 @@ import "./modules/theme"; // window.theme 변수값 설정
 
 
 //import "./modules/feather";
-import "./jiny/sidebar";
-import "./jiny/scroll";
+//import "./jiny/sidebar";
+//import "./jiny/scroll";
 
-
+import "./modules/sidebar";

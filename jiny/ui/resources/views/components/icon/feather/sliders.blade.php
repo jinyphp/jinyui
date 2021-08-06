@@ -1,6 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" 
-    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-    class="feather feather-sliders align-middle">
+<svg
+    @if (isset($attributes))
+    {{ $attributes->merge(['class' => 'feather feather-sliders align-middle']) }}
+    @else
+    class="feather feather-sliders align-middle inline-block"
+    width="24" height="24" 
+    @endif
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    >
     <line x1="4" y1="21" x2="4" y2="14"></line>
     <line x1="4" y1="10" x2="4" y2="3"></line>
     <line x1="12" y1="21" x2="12" y2="12"></line>
