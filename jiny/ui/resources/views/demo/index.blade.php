@@ -1,7 +1,25 @@
 <x-theme theme="adminkit">
     <x-main-content>
         <x-container>
-            <h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                        	<li class="breadcrumb-item active">Analytics</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle"><strong>Analytics</strong> Dashboard</h1>
+                            <p></p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
+ 
 
             <x-row>
                 <x-col class="col-xl-6 col-xxl-5 d-flex"> 

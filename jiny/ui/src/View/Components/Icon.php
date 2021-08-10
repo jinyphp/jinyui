@@ -33,7 +33,5 @@ class Icon extends Component
         return $this->render();
 	}
 
-
-
 }
 

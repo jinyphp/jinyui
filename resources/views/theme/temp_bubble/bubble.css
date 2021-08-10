@@ -9019,9 +9019,7 @@ fieldset:disabled .btn {
     font-weight: lighter !important
 }
 
-.fw-normal {
-    font-weight: 400 !important
-}
+
 
 .fw-bold {
     font-weight: 700 !important
@@ -13166,13 +13164,7 @@ a {
     padding-left: 2rem
 }
 
-.card-heading {
-    margin-bottom: 0;
-    font-size: .9rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .2em
-}
+
 
 .card-header-more {
     display: inline-block;
@@ -16098,9 +16090,7 @@ div.code-toolbar>.toolbar span:hover {
     background-color: #f7d6e6
 }
 
-.bg-red-light {
-    background-color: #f8d7da
-}
+
 
 .bg-orange-light {
     background-color: #ffe5d0

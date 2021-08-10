@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{ asset('css/markdown.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.1.0/styles/atom-one-dark.min.css">
     -->
+    
+    @stack('css')
+
     <script src="//unpkg.com/alpinejs" defer></script>
 
     <!-- ChartJS https://www.chartjs.org/ -->
@@ -43,9 +46,12 @@
     <script>hljs.initHighlightingOnLoad();</script>
     -->
 
-    
+    <!-- stack script :: start -->
+    @stack('scripts')
+    <!-- end :: stack script -->
 
     @livewireScripts
+
 </body>
 
 </html>

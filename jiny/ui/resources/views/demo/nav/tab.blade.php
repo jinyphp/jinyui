@@ -1,41 +1,54 @@
 <x-jinyui-theme theme="adminkit" class="bootstrap">
 
-	<div class="container-fluid p-0">
+	<x-main-content>
+        <x-container>
+            <!-- start page title -->
+            <x-row>
+                <x-col-12>
+                    <div class="page-title-box">                        
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Component</a></li>
+                            <li class="breadcrumb-item active">Nav</li>
+                        </ol>    
+						<div class="mb-3">
+                            <h1 class="h3 d-inline align-middle">Tab</h1>
+                        </div>                    
+						<p></p>
+                    </div>
+                </x-col-12>
+            </x-row>  
+            <!-- end page title -->
 
-		<h1 class="h3 mb-3">Tab</h1>
-
-		<div class="row">
-			<div class="col-12 col-lg-6">
-				<div class="card">
-					<div class="card-header">
-						<h5 class="card-title"></h5>
-						<h6 class="card-subtitle text-muted"></h6>
-					</div>
-					<div class="card-body">
-						
-
-					</div>
-				</div>
-			</div>
-
-			<div class="col-12 col-lg-6">
-				<div class="card">
-					<div class="card-header">
-						<h5 class="card-title"></h5>
-						<h6 class="card-subtitle text-muted"></h6>
-					</div>
-					<div class="card-body ">
-					
-
-					</div>
-				</div>
-			</div>
+			<div class="row">
+				<div class="col-12 col-lg-6">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-title"></h5>
+							<h6 class="card-subtitle text-muted"></h6>
+						</div>
+						<div class="card-body">
+							
 	
-		</div>
+						</div>
+					</div>
+				</div>
+	
+				<div class="col-12 col-lg-6">
+					<div class="card">
+						<div class="card-header">
+							<h5 class="card-title"></h5>
+							<h6 class="card-subtitle text-muted"></h6>
+						</div>
+						<div class="card-body ">
+						
+	
+						</div>
+					</div>
+				</div>
+		
+			</div>
 
-	</div>
-
-
-
-
-</x-jinyui-theme>   
+		</x-container>
+	</x-main-content>
+</x-theme>   

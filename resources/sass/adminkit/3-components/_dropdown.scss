@@ -2,6 +2,7 @@
   box-shadow: $box-shadow;
 }
 
+
 .dropdown .dropdown-menu.show {
   animation-name: dropdownAnimation;
   animation-duration: .25s;
@@ -10,6 +11,7 @@
   animation-fill-mode: forwards;
 }
 
+/*
 @keyframes dropdownAnimation {
   from {
     opacity: 0;
@@ -20,6 +22,8 @@
     transform: translate(0);
   }
 }
+*/
+
 
 .dropdown-toggle:after {
   border: solid;
@@ -29,13 +33,16 @@
   transform: rotate(45deg);
 }
 
+
 .dropdown-item {
   transition: $transition-appearance-fast;
 }
 
+/*
 .dropdown-menu {
   top: auto;
 }
+*/
 
 .dropdown-menu-lg {
   min-width: $dropdown-min-width*2;
@@ -56,6 +63,7 @@
   }
 }
 
+
 .dropdown-menu-header {
   padding: $spacer*0.75;
   text-align: center;
@@ -69,3 +77,9 @@
   display: block;
   font-size: $font-size-sm;
 }
+
+
+/* jiny 추가 */
+// dropdown icon
+
+

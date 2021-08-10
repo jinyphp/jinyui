@@ -1,0 +1,64 @@
+
+.password-eye:before {
+    font-family: "Material Design Icons";
+    content: "\F06D0";
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    vertical-align: middle;
+    line-height: 1.2;
+    font-size: 16px
+}
+
+.show-password .password-eye:before {
+    content: "\F06D1"
+}
+
+
+.form-checkbox-primary .form-check-input:checked,
+.form-radio-primary .form-check-input:checked {
+    background-color: #727cf5;
+    border-color: #727cf5
+}
+
+.form-checkbox-secondary .form-check-input:checked,
+.form-radio-secondary .form-check-input:checked {
+    background-color: #6c757d;
+    border-color: #6c757d
+}
+
+.form-checkbox-success .form-check-input:checked,
+.form-radio-success .form-check-input:checked {
+    background-color: #0acf97;
+    border-color: #0acf97
+}
+
+.form-checkbox-info .form-check-input:checked,
+.form-radio-info .form-check-input:checked {
+    background-color: #39afd1;
+    border-color: #39afd1
+}
+
+.form-checkbox-warning .form-check-input:checked,
+.form-radio-warning .form-check-input:checked {
+    background-color: #ffbc00;
+    border-color: #ffbc00
+}
+
+.form-checkbox-danger .form-check-input:checked,
+.form-radio-danger .form-check-input:checked {
+    background-color: #fa5c7c;
+    border-color: #fa5c7c
+}
+
+.form-checkbox-light .form-check-input:checked,
+.form-radio-light .form-check-input:checked {
+    background-color: #eef2f7;
+    border-color: #eef2f7
+}
+
+.form-checkbox-dark .form-check-input:checked,
+.form-radio-dark .form-check-input:checked {
+    background-color: #313a46;
+    border-color: #313a46
+}

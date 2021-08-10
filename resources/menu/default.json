@@ -80,7 +80,37 @@
         "icon": "feather.currency.dollar",
         "title": "Pricing",
         "href": "\/jinyui\/pages\/pricing",
-        "target": ""
+        "target": "",
+        "submenu":[
+            {
+                "_id": 7,
+                "_ref": 3,
+                "_level": 2,
+                "icon": "",
+                "title": "Pricing1",
+                "href": "\/jinyui\/pages\/pricing1",
+                "target": ""
+            },
+            {
+                "_id": 7,
+                "_ref": 3,
+                "_level": 2,
+                "icon": "",
+                "title": "Pricing2",
+                "href": "\/jinyui\/pages\/pricing2",
+                "target": ""
+            },
+            {
+                "_id": 7,
+                "_ref": 3,
+                "_level": 2,
+                "icon": "",
+                "title": "Pricing3",
+                "href": "\/jinyui\/pages\/pricing3",
+                "target": ""
+            }            
+        ]
+
     },
     {
         "_id": 10,
@@ -141,8 +171,8 @@
                 "_ref": 14,
                 "_level": 2,
                 "icon": "",
-                "title": "Sign Up",
-                "href": "\/jinyui\/auth\/signup",
+                "title": "Sign Out",
+                "href": "\/jinyui\/auth\/signout",
                 "target": ""
             },
             {
@@ -187,6 +217,15 @@
         "_ref": 14,
         "_level": 2,
         "icon": "feather.template",
+        "title": "Layout",
+        "href": "\/jinyui\/theme/layout",
+        "target": ""
+    },
+    {
+        "_id": 18,
+        "_ref": 14,
+        "_level": 2,
+        "icon": "feather.template",
         "title": "Grid",
         "href": "\/jinyui\/theme/grid",
         "target": ""
@@ -214,7 +253,7 @@
                 "_level": 2,
                 "icon": "",
                 "title": "Collapse",
-                "href": "\/jinyui\/ui\/collapse",
+                "href": "\/jinyui\/toggle\/collapse",
                 "target": ""
                 
             },
@@ -224,7 +263,7 @@
                 "_level": 2,
                 "icon": "",
                 "title": "Accordion",
-                "href": "\/jinyui\/ui\/accordion",
+                "href": "\/jinyui\/toggle\/accordion",
                 "target": ""
                 
             },
@@ -234,7 +273,7 @@
                 "_level": 2,
                 "icon": "",
                 "title": "Dropdown",
-                "href": "\/jinyui\/ui\/dropdown",
+                "href": "\/jinyui\/toggle\/dropdown",
                 "target": ""
                 
             }
@@ -324,15 +363,6 @@
                 "title": "navbar",
                 "href": "\/jinyui\/nav/navbar",
                 "target": ""
-            },
-            {
-                "_id": 21,
-                "_ref": 20,
-                "_level": 2,
-                "icon": "",
-                "title": "tab",
-                "href": "\/jinyui\/nav/tab",
-                "target": ""
             }
         ]
     },
@@ -362,7 +392,66 @@
                 "icon": "",
                 "title": "Cards",
                 "href": "\/jinyui\/ui\/cards",
-                "target": ""
+                "target": "",
+                "submenu":[
+                    {
+                        "_id": 23,
+                        "_ref": 20,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Cards",
+                        "href": "\/jinyui\/ui\/cards",
+                        "target": ""
+                    },
+                    {
+                        "_id": 23,
+                        "_ref": 20,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Cards Basic",
+                        "href": "\/jinyui\/ui\/cards/basic",
+                        "target": ""
+                    },
+                    {
+                        "_id": 23,
+                        "_ref": 20,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Cards Layouts",
+                        "href": "\/jinyui\/ui\/cards/layouts",
+                        "target": ""
+                    },
+                    {
+                        "_id": 23,
+                        "_ref": 20,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Cards with images",
+                        "href": "\/jinyui\/ui\/cards/images",
+                        "target": ""
+                    },
+                    {
+                        "_id": 23,
+                        "_ref": 20,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Cards with Nav",
+                        "href": "\/jinyui\/ui\/cards/nav",
+                        "target": ""
+                    },
+                    {
+                        "_id": 23,
+                        "_ref": 20,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Card portlets",
+                        "href": "\/jinyui\/ui\/cards/portlets",
+                        "target": ""
+                    }
+
+                ]
+
+                
             },
             {
                 "_id": 24,
@@ -479,7 +568,7 @@
         "_id": 29,
         "_ref": 20,
         "_level": 2,
-        "icon": "",
+        "icon": "feather.clock",
         "title": "TimeLine",
         "href": "\/jinyui\/ui\/timeline",
         "target": ""
@@ -488,7 +577,7 @@
         "_id": 26,
         "_ref": 20,
         "_level": 2,
-        "icon": "",
+        "icon": "feather.annotation",
         "title": "Modals",
         "href": "\/jinyui\/ui\/modals",
         "target": ""
@@ -497,7 +586,7 @@
         "_id": 26,
         "_ref": 20,
         "_level": 2,
-        "icon": "",
+        "icon": "feather.annotation",
         "title": "List",
         "href": "\/jinyui\/ui\/list",
         "target": ""
@@ -535,7 +624,7 @@
         "_id": 33,
         "_ref": 0,
         "_level": 1,
-        "icon": "",
+        "icon": "feather.bookmark.alt",
         "title": "Tabs",
         "href": "",
         "target": "",
@@ -587,6 +676,7 @@
             }
         ]
     },
+
     {
         "_id": 37,
         "_ref": 0,
@@ -601,9 +691,83 @@
                 "_ref": 37,
                 "_level": 2,
                 "icon": "",
-                "title": "Basic Inputs",
+                "title": "Basic",
                 "href": "\/jinyui\/forms\/inputs",
-                "target": ""
+                "target": "",
+                "submenu":[
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Input",
+                        "href": "\/jinyui\/forms\/inputs/input",
+                        "target": ""
+                    },
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "Text",
+                        "href": "\/jinyui\/forms\/inputs/text",
+                        "target": ""
+                    },
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "TextArea",
+                        "href": "\/jinyui\/forms\/inputs/textarea",
+                        "target": ""
+                    },
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "checkbox",
+                        "href": "\/jinyui\/forms\/inputs/checkbox",
+                        "target": ""
+                    },
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "radio",
+                        "href": "\/jinyui\/forms\/inputs/radio",
+                        "target": ""
+                    },
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "select",
+                        "href": "\/jinyui\/forms\/inputs/select",
+                        "target": ""
+                    },
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "select2",
+                        "href": "\/jinyui\/forms\/inputs/select2",
+                        "target": ""
+                    },
+                    {
+                        "_id": 38,
+                        "_ref": 37,
+                        "_level": 2,
+                        "icon": "",
+                        "title": "files",
+                        "href": "\/jinyui\/forms\/inputs/files",
+                        "target": ""
+                    }
+                ]
             },
             {
                 "_id": 39,
@@ -648,6 +812,15 @@
                 "icon": "",
                 "title": "Validation",
                 "href": "\/jinyui\/forms\/validation",
+                "target": ""
+            },
+            {
+                "_id": 43,
+                "_ref": 37,
+                "_level": 2,
+                "icon": "",
+                "title": "Wizard",
+                "href": "\/jinyui\/forms\/wizard",
                 "target": ""
             }
         ]
@@ -703,7 +876,7 @@
                 "_level": 2,
                 "icon": "",
                 "title": "Fixed Header",
-                "href": "\/jinyui\/tables\/header",
+                "href": "\/jinyui\/tables\/fixed",
                 "target": ""
             },
             {

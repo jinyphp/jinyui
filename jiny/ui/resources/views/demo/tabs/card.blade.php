@@ -7,11 +7,29 @@
     display: block
 }
 </style>
-<x-jinyui-theme theme="adminkit" class="bootstrap">
-
-        <div class="container-fluid p-0">
-
-            <h1 class="h3 mb-3">Settings</h1>
+<x-theme theme="adminkit" class="bootstrap">
+    <x-main-content>
+        <x-container>
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Tab</a></li>
+                        	<li class="breadcrumb-item active">Card</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle">Card Tab</h1>
+                            <p>
+                             
+                            </p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
 
             <div class="row">
                 <div class="col-md-3 col-xl-2">
@@ -61,13 +79,9 @@
                             </x-jinyui-card>
                         </x-jinyui::tab.item>
                     </x-jinyui::tab.content>
-                    
-                    
-
                 </div>
             </div>
 
-        </div>
-
-
-</x-jinyui-theme>   
+        </x-container>
+    </x-main-content>
+</x-theme>   

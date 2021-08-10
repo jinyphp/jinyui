@@ -6,8 +6,32 @@ use Illuminate\Http\Request;
 // DASHBOARD
 Route::middleware(['web'])->prefix('jinyui')->group(function () {
 
+    Route::prefix('/theme')->group(function () {
+        Route::get('/', function(){
+            return view("jinyui::demo.theme.theme");
+        });
+        Route::get('/layout', function(){
+            return view("jinyui::demo.theme.layout");
+        });
+        Route::get('/layout/hor', function(){
+            return view("jinyui::demo.theme.layouts.hor");
+        });
+
+        Route::get('/grid', function(){
+            return view("jinyui::demo.theme.grid");
+        });
+    });
 
 
+    // Widgets
+    Route::prefix('/widgets')->group(function () {
+        Route::get('/', function(){
+            return view("jinyui::demo.widgets.widgets");
+        });
+        Route::get('/stats', function(){
+            return view("jinyui::demo.widgets.stats");
+        });
+    });
 
 
 });
@@ -28,8 +52,14 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
     });
 
 
-    Route::get('/pricing', function(){
-        return view("jinyui::demo.pages.price");
+    Route::get('/pricing1', function(){
+        return view("jinyui::demo.pages.price1");
+    });
+    Route::get('/pricing2', function(){
+        return view("jinyui::demo.pages.price2");
+    });
+    Route::get('/pricing3', function(){
+        return view("jinyui::demo.pages.price3");
     });
 
 
@@ -73,34 +103,45 @@ Route::middleware(['web'])->prefix('jinyui/auth')->group(function () {
         return view("jinyui::demo.auth.signin");
     });
 
-    Route::get('/singout', function(){
-        return view("jinyui::demo.pages.auth.singout");
+    Route::get('/signout', function(){
+        return view("jinyui::demo.auth.signout");
     });
     Route::get('/reset', function(){
-        return view("jinyui::demo.pages.auth.reset");
+        return view("jinyui::demo.auth.reset");
     });
     Route::get('/404', function(){
-        return view("jinyui::demo.pages.auth.404");
+        return view("jinyui::demo.auth.404");
     });
     Route::get('/500', function(){
-        return view("jinyui::demo.pages.auth.500");
+        return view("jinyui::demo.auth.500");
     });
 
 }); 
 
 
 //COMPONENTS
-// UI
-Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
+//Toggle
+Route::middleware(['web'])->prefix('jinyui/toggle')->group(function () {
     Route::get('/accordion', function(){
-        return view("jinyui::demo.ui.accordion");
-    });
-    Route::get('/collapse', function(){
-        return view("jinyui::demo.ui.collapse");
+        return view("jinyui::demo.toggle.accordion");
     });
     Route::get('/dropdown', function(){
-        return view("jinyui::demo.ui.dropdown");
+        return view("jinyui::demo.toggle.dropdown");
     });
+    Route::get('/dropdown2', function(){
+        return view("jinyui::demo.toggle.dropdown2");
+    });
+
+    Route::get('/collapse', function(){
+        return view("jinyui::demo.toggle.collapse");
+    });
+});
+
+// UI
+Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
+    
+    
+    
 
     Route::get('/alerts', function(){
         return view("jinyui::demo.ui.alerts");
@@ -174,6 +215,28 @@ Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
         return view("jinyui::demo.ui.timeline");
     });
 
+    //Cards
+    Route::get('/cards', function(){
+        return view("jinyui::demo.ui.cards");
+    });
+    Route::get('/cards/basic', function(){
+        return view("jinyui::demo.ui.cards.basic");
+    });
+    Route::get('/cards/layouts', function(){
+        return view("jinyui::demo.ui.cards.layouts");
+    });
+    Route::get('/cards/images', function(){
+        return view("jinyui::demo.ui.cards.images");
+    });
+    Route::get('/cards/nav', function(){
+        return view("jinyui::demo.ui.cards.nav");
+    });
+    Route::get('/cards/portlets', function(){
+        return view("jinyui::demo.ui.cards.portlets");
+    });
+
+    
+
 
 });
 
@@ -230,6 +293,10 @@ Route::prefix('jinyui/tabs')->group(function () {
 //FORMS
 Route::prefix('jinyui/forms')->group(function () {
 
+    Route::get('/hyper', function(){
+        return view("jinyui::demo.forms.inputs.hyper");
+    });
+
     Route::get('/', function(){
         return view("jinyui::demo.forms.index");
     });
@@ -237,6 +304,31 @@ Route::prefix('jinyui/forms')->group(function () {
     Route::get('/inputs', function(){
         return view("jinyui::demo.forms.inputs");
     });
+    Route::get('/inputs/input', function(){
+        return view("jinyui::demo.forms.inputs.input");
+    });
+    Route::get('/inputs/text', function(){
+        return view("jinyui::demo.forms.inputs.text");
+    });
+    Route::get('/inputs/textarea', function(){
+        return view("jinyui::demo.forms.inputs.textarea");
+    });
+    Route::get('/inputs/checkbox', function(){
+        return view("jinyui::demo.forms.inputs.checkbox");
+    });
+    Route::get('/inputs/radio', function(){
+        return view("jinyui::demo.forms.inputs.radio");
+    });
+    Route::get('/inputs/select', function(){
+        return view("jinyui::demo.forms.inputs.select");
+    });
+    Route::get('/inputs/select2', function(){
+        return view("jinyui::demo.forms.inputs.selects.select2");
+    });
+    Route::get('/inputs/files', function(){
+        return view("jinyui::demo.forms.inputs.files");
+    });
+
 
     Route::get('/layouts', function(){
         return view("jinyui::demo.forms.layouts");
@@ -258,11 +350,25 @@ Route::prefix('jinyui/forms')->group(function () {
         return view("jinyui::demo.forms.validation");
     });
 
+    Route::get('/wizard', function(){
+        return view("jinyui::demo.forms.wizard");
+    });
+
+    // Editors
+    Route::get('/editors/quill', function(){
+        return view("jinyui::demo.forms.editors.quill");
+    });
+
 });
 
 
 //TABLE
 Route::middleware(['web'])->prefix('jinyui/tables')->group(function () {
+    Route::get('/table', function(){
+        return view("jinyui::demo.tables.table");
+    });
+
+
     Route::get('/bootstrap', function(){
         return view("jinyui::demo.tables.bootstrap");
     });
@@ -346,17 +452,11 @@ Route::group(['middleware' => 'web'], function () {
     
 
 
-    Route::get('jinyui/ui/cards', function(){
-        return view("jinyui::demo.ui.cards");
-    });
+    
 
     Route::get('jinyui/layouts', function(){
         return view("jinyui::demo.layouts.index");
     });
-
-    
-    
-
 
 
 });
@@ -371,21 +471,13 @@ Route::prefix('jinyui')->group(function () {
 });
 
 
-// ui 컴포넌트
-Route::prefix('jinyui/ui')->group(function () {
-    
-
-    
-
-});
 
 
 
 
 
-Route::get('jinyui/ui/cards2', function(){
-    return view("test.cards2");
-});
+
+
 
 
 

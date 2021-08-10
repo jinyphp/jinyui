@@ -1,5 +1,11 @@
 {{-- https://heroicons.com/ --}}
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+<svg 
+@if (isset($attributes)) 
+{{$attributes->merge(['class' => 'feather align-middle'])}} 
+@else 
+    class="feather align-middle"
+@endif  
+    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
     class="feather feather-alert-circle align-middle me-2">
     <circle cx="12" cy="12" r="10"></circle>
     <line x1="12" y1="8" x2="12" y2="12"></line>

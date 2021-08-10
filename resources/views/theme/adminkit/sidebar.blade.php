@@ -4,7 +4,7 @@
 
         <a class="sidebar-brand" href="/jinyui">
             <span class="sidebar-brand-text align-middle">
-                JinyUI
+                UI Component Builder
             </span>
         </a>
 

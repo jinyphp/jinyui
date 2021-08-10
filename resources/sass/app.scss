@@ -4,9 +4,10 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-/* Adminkit Custom Variable */
+
+/* Custom Variable */
 // Variables
-@import "adminkit/1-variables/app";
+@import "variables";
 
 /* jiny=bootstrap */
 /*!
@@ -73,7 +74,7 @@
 @import "adminkit/3-components/card";
 @import "adminkit/3-components/chart";
 @import "adminkit/3-components/content";
-// @import "adminkit/3-components/dropdown"; 기본 부트스트랩 적용
+@import "adminkit/3-components/dropdown"; //기본 부트스트랩 적용
 @import "adminkit/3-components/feather";
 @import "adminkit/3-components/footer";
 @import "adminkit/3-components/hamburger";
@@ -115,3 +116,6 @@
 @import "jiny/timeline";
 @import "jiny/fullcalendar";
 //@import "jiny/sidebar";
+@import "jiny/components/badge";
+@import "jiny/components/forms";
+@import "jiny/pages";

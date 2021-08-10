@@ -73,10 +73,30 @@
 }
 
 </style>
-<x-jinyui-theme theme="adminkit" class="bootstrap">
+
+<x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
         <x-container>
-            <h1 class="h3 mb-3">box</h1>
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">UI</a></li>
+                        	<li class="breadcrumb-item active">Box</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle">Box</h1>
+                            <p></p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
+
+          
             https://themes.getbootstrap.com/preview/?theme_id=93418
 
             <div class="row">
@@ -289,4 +309,4 @@
         </x-container>
     </x-main-content>
 
-</x-jinyui-theme>
+</x-theme>

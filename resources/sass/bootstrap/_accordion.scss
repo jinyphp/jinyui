@@ -17,6 +17,7 @@
   overflow-anchor: none;
   @include transition($accordion-transition);
 
+  /* 비확장 */
   &:not(.collapsed) {
     color: $accordion-button-active-color;
     background-color: $accordion-button-active-bg;

@@ -1,17 +1,41 @@
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
         <x-container>
-            <a href="#" class="btn btn-primary float-end mt-n1">
-                <i class="fas fa-plus"></i> 
-                New project
-            </a>
-            <div class="mb-3">
-                <h1 class="h3 d-inline align-middle">Projects</h1>
-                <p>
-                    프로젝트를 관리할 수 있는 UI화면 구현 입니다. 
-                    다수의 프로젝트들의 데이터는 json으로 구성하며, UIcell을 이용하여 json 데이터를 각각의 cell에 맞추어 출력할 수 있습니다.
-                </p>
+            
+            
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                        	<li class="breadcrumb-item active">Projects</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle">Projects</h1>
+                            <p>
+                                프로젝트를 관리할 수 있는 UI화면 구현 입니다. 
+                                다수의 프로젝트들의 데이터는 json으로 구성하며, UIcell을 이용하여 json 데이터를 각각의 cell에 맞추어 출력할 수 있습니다.
+                            </p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
+
+            <div class="relative">
+                <div class="absolute bottom-4 right-0">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+                        <a href="#" class="btn btn-primary">추가</a>
+                    </div>
+                </div>
             </div>
+
+
+
 
             @php
                 $projects ='[{

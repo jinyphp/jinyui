@@ -1,10 +1,5 @@
 <svg
-    @if (isset($attributes))
-        {{ $attributes->merge(['class' => 'feather feather-layout align-middle']) }}
-    @else
-        class="feather feather-layout align-middle inline-block"
-        width="24" height="24" 
-    @endif
+    class="feather"
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 24 24" 
     fill="none" stroke="currentColor" 

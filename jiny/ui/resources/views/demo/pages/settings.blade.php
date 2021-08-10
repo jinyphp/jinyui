@@ -11,26 +11,28 @@
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
         <x-container>
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                        	<li class="breadcrumb-item active">Settings</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle">Settings</h1>
+                            <p>
+                                list와 tab을 이용하여 다양한 사용자 정보를 입력받을 수 있는 설정화면을 구현할 수 있습니다.
+                            </p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
 
-            <x-row>
-                <x-col-12>
-                    <div class="page-title-box">
-                        <div class="page-title-right">
-                            <ol class="breadcrumb m-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Hyper</a></li>
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
-                                <li class="breadcrumb-item active">Form Elements</li>
-                            </ol>
-                        </div>
-                        <h4 class="page-title">Settings</h4>
-                    </div>
-                </x-col-12>
-                <x-col-12>
-                    <p>list와 tab을 이용하여 다양한 사용자 정보를 입력받을 수 있는 설정화면을 구현할 수 있습니다.</p>
-                </x-col-12>
-            </x-row>
 
-            <!-- Content -->
 
             <x-row>
             

@@ -1,8 +1,3 @@
-{{--
-<div {{ $attributes }}>
-    @livewire('menu-tree',['menu'=>$jsondata, 'content'=>$slot->toHtml(), 'filename'=>$filename]) 
-    {{$slot}}
-</div>
---}}
-
-{!! $builder() !!}
+{{-- json 메뉴 데이터를 기반으로 tree 메뉴를 생성합니다. --}}
+{{-- 데이터가 없는 경우 slot 데이터만 출력합니다. --}}
+{!! $builder($slot) !!}

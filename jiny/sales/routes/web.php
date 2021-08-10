@@ -40,12 +40,12 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::group(['middleware' => 'web'], function () {
 
-    Route::get('/sales/sales-business', function () {
-        return view("jinyerp::sales.sales-business");
+    Route::get('/sales/business', function () {
+        return view("jinyerp::sales.business.list");
     });
 
-    Route::get('/sales/sales-business-edit', function () {
-        return view("jinyerp::sales.sales-business-edit");
+    Route::get('/sales/business/edit', function () {
+        return view("jinyerp::sales.business.edit");
     });
 });
 

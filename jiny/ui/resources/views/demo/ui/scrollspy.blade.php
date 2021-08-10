@@ -1,202 +1,213 @@
 <x-jinyui-theme theme="adminkit" class="bootstrap">
     <x-main-content>
         <x-container>
-            <h1 class="h3 mb-3">scrollspy</h1>
 
-                <x-row>
-                    <x-col-6>
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">navbar</h5>
-                                <h6 class="card-subtitle text-muted"></h6>
-                            </div>
-                            <div class="card-body">
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">UI</a></li>
+                        	<li class="breadcrumb-item active">scrollspy</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle">scrollspy</h1>
+                            <p></p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
+          
 
-                                <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
-                                    <a class="navbar-brand" href="#">Navbar</a>
-                                    <ul class="nav nav-pills">
-                                      <li class="nav-item">
-                                        <a class="nav-link" href="#scrollspyHeading1">First</a>
-                                      </li>
-                                      <li class="nav-item">
-                                        <a class="nav-link" href="#scrollspyHeading2">Second</a>
-                                      </li>
-                                      <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
-                                        <ul class="dropdown-menu">
-                                          <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
-                                          <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
-                                          <li><hr class="dropdown-divider"></li>
-                                          <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
-                                        </ul>
-                                      </li>
+            <x-row>
+                <x-col-6>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">navbar</h5>
+                            <h6 class="card-subtitle text-muted"></h6>
+                        </div>
+                        <div class="card-body">
+
+                            <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+                                <a class="navbar-brand" href="#">Navbar</a>
+                                <ul class="nav nav-pills">
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#scrollspyHeading1">First</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#scrollspyHeading2">Second</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+                                        <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
                                     </ul>
-                                  </nav>
-                                  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                                    <h4 id="scrollspyHeading1">First heading</h4>
-                                    <p>...</p>
-                                    <h4 id="scrollspyHeading2">Second heading</h4>
-                                    <p>...</p>
-                                    <h4 id="scrollspyHeading3">Third heading</h4>
-                                    <p>...</p>
-                                    <h4 id="scrollspyHeading4">Fourth heading</h4>
-                                    <p>...</p>
-                                    <h4 id="scrollspyHeading5">Fifth heading</h4>
-                                    <p>...</p>
-                                  </div>
+                                    </li>
+                                </ul>
+                                </nav>
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                                <h4 id="scrollspyHeading1">First heading</h4>
+                                <p>...</p>
+                                <h4 id="scrollspyHeading2">Second heading</h4>
+                                <p>...</p>
+                                <h4 id="scrollspyHeading3">Third heading</h4>
+                                <p>...</p>
+                                <h4 id="scrollspyHeading4">Fourth heading</h4>
+                                <p>...</p>
+                                <h4 id="scrollspyHeading5">Fifth heading</h4>
+                                <p>...</p>
+                                </div>
 
-                            </div>
                         </div>
-                    </x-col-6>
+                    </div>
+                </x-col-6>
 
+                <x-col-6>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">nested nav</h5>
+                            <h6 class="card-subtitle text-muted"></h6>
+                        </div>
+                        <div class="card-body">
 
-                    <x-col-6>
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">nested nav</h5>
-                                <h6 class="card-subtitle text-muted"></h6>
-                            </div>
-                            <div class="card-body">
-
-                                <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
-                                    <a class="navbar-brand" href="#">Navbar</a>
+                            <nav id="navbar-example3" class="navbar navbar-light bg-light flex-column align-items-stretch p-3">
+                                <a class="navbar-brand" href="#">Navbar</a>
+                                <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link" href="#item-1">Item 1</a>
                                     <nav class="nav nav-pills flex-column">
-                                      <a class="nav-link" href="#item-1">Item 1</a>
-                                      <nav class="nav nav-pills flex-column">
-                                        <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
-                                        <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
-                                      </nav>
-                                      <a class="nav-link" href="#item-2">Item 2</a>
-                                      <a class="nav-link" href="#item-3">Item 3</a>
-                                      <nav class="nav nav-pills flex-column">
-                                        <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
-                                        <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
-                                      </nav>
+                                    <a class="nav-link ms-3 my-1" href="#item-1-1">Item 1-1</a>
+                                    <a class="nav-link ms-3 my-1" href="#item-1-2">Item 1-2</a>
                                     </nav>
-                                  </nav>
-                                  
-                                  <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
-                                    <h4 id="item-1">Item 1</h4>
-                                    <p>...</p>
-                                    <h5 id="item-1-1">Item 1-1</h5>
-                                    <p>...</p>
-                                    <h5 id="item-1-2">Item 1-2</h5>
-                                    <p>...</p>
-                                    <h4 id="item-2">Item 2</h4>
-                                    <p>...</p>
-                                    <h4 id="item-3">Item 3</h4>
-                                    <p>...</p>
-                                    <h5 id="item-3-1">Item 3-1</h5>
-                                    <p>...</p>
-                                    <h5 id="item-3-2">Item 3-2</h5>
-                                    <p>...</p>
-                                  </div>
+                                    <a class="nav-link" href="#item-2">Item 2</a>
+                                    <a class="nav-link" href="#item-3">Item 3</a>
+                                    <nav class="nav nav-pills flex-column">
+                                    <a class="nav-link ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                                    <a class="nav-link ms-3 my-1" href="#item-3-2">Item 3-2</a>
+                                    </nav>
+                                </nav>
+                                </nav>
+                                
+                                <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                                <h4 id="item-1">Item 1</h4>
+                                <p>...</p>
+                                <h5 id="item-1-1">Item 1-1</h5>
+                                <p>...</p>
+                                <h5 id="item-1-2">Item 1-2</h5>
+                                <p>...</p>
+                                <h4 id="item-2">Item 2</h4>
+                                <p>...</p>
+                                <h4 id="item-3">Item 3</h4>
+                                <p>...</p>
+                                <h5 id="item-3-1">Item 3-1</h5>
+                                <p>...</p>
+                                <h5 id="item-3-2">Item 3-2</h5>
+                                <p>...</p>
+                                </div>
 
-                            
+                        
 
-                            </div>
                         </div>
-                    </x-col-6>
+                    </div>
+                </x-col-6>
 
-
-                    <x-col-6>
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">list-group</h5>
-                                <h6 class="card-subtitle text-muted"></h6>
-                            </div>
-                            <div class="card-body">
-                                <div id="list-example" class="list-group">
-                                    <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
-                                    <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
-                                    <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
-                                    <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
-                                  </div>
-                                  <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-                                    <h4 id="list-item-1">Item 1</h4>
-                                    <p>...</p>
-                                    <h4 id="list-item-2">Item 2</h4>
-                                    <p>...</p>
-                                    <h4 id="list-item-3">Item 3</h4>
-                                    <p>...</p>
-                                    <h4 id="list-item-4">Item 4</h4>
-                                    <p>...</p>
-                                  </div>
-
-                            </div>
+                <x-col-6>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">list-group</h5>
+                            <h6 class="card-subtitle text-muted"></h6>
                         </div>
-                    </x-col-6>
+                        <div class="card-body">
+                            <div id="list-example" class="list-group">
+                                <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-2">Item 2</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+                                <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+                                </div>
+                                <div data-bs-spy="scroll" data-bs-target="#list-example" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+                                <h4 id="list-item-1">Item 1</h4>
+                                <p>...</p>
+                                <h4 id="list-item-2">Item 2</h4>
+                                <p>...</p>
+                                <h4 id="list-item-3">Item 3</h4>
+                                <p>...</p>
+                                <h4 id="list-item-4">Item 4</h4>
+                                <p>...</p>
+                                </div>
 
-
-                    <x-col-6>
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">scrollspy</h5>
-                                <h6 class="card-subtitle text-muted"></h6>
-                            </div>
-                            <div class="card-body">
-
-                           
-
-                            
-
-                            </div>
                         </div>
-                    </x-col-6>
+                    </div>
+                </x-col-6>
 
-
-                    <x-col-6>
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">scrollspy</h5>
-                                <h6 class="card-subtitle text-muted"></h6>
-                            </div>
-                            <div class="card-body">
-
-                           
-
-                            
-
-                            </div>
+                <x-col-6>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">scrollspy</h5>
+                            <h6 class="card-subtitle text-muted"></h6>
                         </div>
-                    </x-col-6>
+                        <div class="card-body">
 
+                        
 
-                    <x-col-6>
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">scrollspy</h5>
-                                <h6 class="card-subtitle text-muted"></h6>
-                            </div>
-                            <div class="card-body">
+                        
 
-                           
-
-                            
-
-                            </div>
                         </div>
-                    </x-col-6>
+                    </div>
+                </x-col-6>
 
-
-                    <x-col-6>
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title">scrollspy</h5>
-                                <h6 class="card-subtitle text-muted"></h6>
-                            </div>
-                            <div class="card-body">
-
-                           
-
-                            
-
-                            </div>
+                <x-col-6>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">scrollspy</h5>
+                            <h6 class="card-subtitle text-muted"></h6>
                         </div>
-                    </x-col-6>
+                        <div class="card-body">
 
-                 
-                </x-row>
+                        
+
+                        
+
+                        </div>
+                    </div>
+                </x-col-6>
+
+                <x-col-6>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">scrollspy</h5>
+                            <h6 class="card-subtitle text-muted"></h6>
+                        </div>
+                        <div class="card-body">
+
+                        
+
+                        
+
+                        </div>
+                    </div>
+                </x-col-6>
+
+                <x-col-6>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">scrollspy</h5>
+                            <h6 class="card-subtitle text-muted"></h6>
+                        </div>
+                        <div class="card-body">
+
+                        
+
+                        
+
+                        </div>
+                    </div>
+                </x-col-6>
+            </x-row>
         </x-container>
     </x-main-content>
 

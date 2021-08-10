@@ -7,52 +7,52 @@
 
         <form>
         
-            <x-jinyui::forms.row>
-                <x-jinyui::forms.label>
+            <x-form-row>
+                <x-form-label>
                     Email address
-                </x-jinyui::forms.label>
-                <x-jinyui::forms.item>
+                </x-form-label>
+                <x-form-item>
                     <input type="email" class="form-control" placeholder="Email">
-                </x-jinyui::forms.item>
-            </x-jinyui::forms.row>
+                </x-form-item>
+            </x-form-row>
 
-            <x-jinyui::forms.row>
-                <x-jinyui::forms.label>
+            <x-form-row>
+                <x-form-label>
                     Password
-                </x-jinyui::forms.label>
-                <x-jinyui::forms.item>
+                </x-form-label>
+                <x-form-item>
                     {!! CPassword()->addClass("form-control")->setPlaceholder("Password") !!}
-                </x-jinyui::forms.item>
-            </x-jinyui::forms.row>
+                </x-form-item>
+            </x-form-row>
 
 
-            <x-jinyui::forms.row>
-                <x-jinyui::forms.label>
+            <x-form-row>
+                <x-form-label>
                     Textarea
-                </x-jinyui::forms.label>
-                <x-jinyui::forms.item>
+                </x-form-label>
+                <x-form-item>
                     {!! CTextarea()->addClass("form-control")->setPlaceholder("Textarea")->setRows(5) !!}
-                </x-jinyui::forms.item>
-            </x-jinyui::forms.row>
+                </x-form-item>
+            </x-form-row>
 
 
-            <x-jinyui::forms.row>
-                <x-jinyui::forms.label class="w-100">
+            <x-form-row>
+                <x-form-label class="w-100">
                     File input
-                </x-jinyui::forms.label>
-                <x-jinyui::forms.item>
+                </x-form-label>
+                <x-form-item>
                     <input type="file">
-                </x-jinyui::forms.item>                
+                </x-form-item>                
                 <small class="form-text text-muted">Example block-level help text here.</small>
-            </x-jinyui::forms.row>
+            </x-form-row>
 
-            <x-jinyui::forms.row>
-                <x-jinyui::forms.item>
+            <x-form-row>
+                <x-form-item>
                     <x-jinyui::forms.checkbox>
                         <span class="form-check-label">Check me out</span>
                     </x-jinyui::forms.checkbox>
-                </x-jinyui::forms.item>
-            </x-jinyui::forms.row>
+                </x-form-item>
+            </x-form-row>
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

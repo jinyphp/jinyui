@@ -24,9 +24,14 @@ class Menu extends Component
         
     }
 
-    public function builder()
+    public function builder($slot)
     {
-        return (new \Jiny\UI\MenuBuilder($this->jsondata))->make()->addClass("sidebar-nav");
+        $content = "";
+        if (!empty($this->jsondata)) {
+            $content .= (new \Jiny\UI\MenuBuilder($this->jsondata))->make()->addClass("sidebar-nav");
+        }
+
+        return $content.$slot;
     }
 
     public function render()
