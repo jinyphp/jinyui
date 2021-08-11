@@ -1,4 +1,4 @@
-<x-jinyui-theme theme="jinyerp" class="bootstrap">
+<x-theme theme="jinyerp" class="bootstrap">
 	<table border="0" width="100%" cellspacing="0" cellpadding="0" >
 		<tr>
 			<td style="border:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF">
@@ -109,7 +109,7 @@
 			{newdata}{datalist}{formend}</td>
 		</tr>
 	</table>
-</x-jinyui-theme>
+</x-theme>
 
 
 

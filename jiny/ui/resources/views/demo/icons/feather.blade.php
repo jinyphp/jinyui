@@ -20,6 +20,14 @@
         	</x-row>  
         	<!-- end page title -->
 
+            <div class="relative">
+                <div class="absolute bottom-4 right-0">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Feather Icons</h3>

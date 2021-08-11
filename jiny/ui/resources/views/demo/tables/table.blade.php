@@ -22,6 +22,14 @@
         	</x-row>  
         	<!-- end page title -->
 
+			<div class="relative">
+                <div class="absolute bottom-4 right-0">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+                    </div>
+                </div>
+            </div>
+
 
         </x-container>
     </x-main-content>

@@ -1,104 +1,119 @@
 $flatpickr-tile-height: 45px;
 
 .flatpickr-calendar.inline {
-  background: transparent;
-  box-shadow: none;
-  width: 100%;
-  
-  .flatpickr-days {
-    width: 100%;
-  }
+	background: transparent;
+	box-shadow: none;
+	width: 100%;
 
-  .dayContainer {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%;
-  }
+	.flatpickr-days {
+    	width: 100%;
+	}
 
-  .flatpickr-day {
-    border-radius: $border-radius;
-    max-width: inherit;
-    height: $flatpickr-tile-height;
-    line-height: $flatpickr-tile-height;
+	.dayContainer {
+    	width: 100%;
+    	min-width: 100%;
+    	max-width: 100%;
+	}
 
-    &.today {
-      border: 0;
+	.flatpickr-day {
+    	border-radius: $border-radius;
+    	max-width: inherit;
+    	height: $flatpickr-tile-height;
+    	line-height: $flatpickr-tile-height;
 
-      &:before {
-        content: "";
-        display: inline-block;
-        border-color: rgba(0,0,0,.2) transparent $primary;
-        border-style: solid;
-        border-width: 0 0 7px 7px;
-        position: absolute;
-        bottom: 4px;
-        right: 4px;
-      }
+		&.today {
+    		border: 0;
 
-      &.selected:before {
-        border-color: rgba(0,0,0,.2) transparent $white;
-      }
+    		&:before {
+        		content: "";
+        		display: inline-block;
+        		border-color: rgba(0,0,0,.2) transparent $primary;
+        		border-style: solid;
+        		border-width: 0 0 7px 7px;
+        		position: absolute;
+        		bottom: 4px;
+        		right: 4px;
+    		}
 
-      &:hover {
-        background: #e6e6e6;
-        color: $black;
-      }
-    }
+    		&.selected:before {
+        		border-color: rgba(0,0,0,.2) transparent $white;
+    		}
 
-    &.selected {
-      &,
-      &:hover,
-      &:focus {
-        border-radius: $border-radius;
-        background: $primary;
-        color: $white;
-      }
-    }
-  }
+      		&:hover {
+        		background: #e6e6e6;
+        		color: $black;
+    		}
+    	}
 
-  .flatpickr-weekdays {
-    height: $flatpickr-tile-height;
-  }
-  .flatpickr-weekday {
-    height: $flatpickr-tile-height;
-    line-height: $flatpickr-tile-height;
-  }
+    	&.selected {
+    		&,
+    		&:hover,
+      		&:focus {
+        		border-radius: $border-radius;
+        		background: $primary;
+        		color: $white;
+      		}
+    	}
+	}
 
-  .flatpickr-months {
-    .flatpickr-month {
-      height: $flatpickr-tile-height;
-    }
+	.flatpickr-weekdays {
+    	height: $flatpickr-tile-height;
+	}
 
-    .flatpickr-prev-month,
-    .flatpickr-next-month {
-      height: $flatpickr-tile-height;
-    }
-  }
+	.flatpickr-weekday {
+    	height: $flatpickr-tile-height;
+    	line-height: $flatpickr-tile-height;
+	}
 
-  .flatpickr-current-month {
-    padding-top: 0;
-    line-height: $flatpickr-tile-height;
-    height: $flatpickr-tile-height;
+  	// 이전달 버튼
+	.flatpickr-months {
+    	.flatpickr-month {
+    		height: $flatpickr-tile-height;
+    	}
 
-    .flatpickr-monthDropdown-months {
-      appearance: none;
-    }
+    	.flatpickr-prev-month,
+    	.flatpickr-next-month {
+    		height: $flatpickr-tile-height;
+		}
+	}
+
+	.flatpickr-current-month {
+    	padding-top: 0;
+    	line-height: $flatpickr-tile-height;
+    	height: $flatpickr-tile-height;
+
+    	.flatpickr-monthDropdown-months {
+    		appearance: none;
+    	}
     
-    .flatpickr-monthDropdown-months,
-    input.cur-year {
-      font-weight: $font-weight-normal;
-      font-size: $h4-font-size;
-    }
-  }
+    	.flatpickr-monthDropdown-months,
+    	input.cur-year {
+    		font-weight: $font-weight-normal;
+    		font-size: $h4-font-size;
+    	}
+	}
 
-  .flatpickr-prev-month,
-  .flatpickr-next-month {
-    width: 45px;
-    border-radius: $border-radius;
+	.flatpickr-prev-month,
+	.flatpickr-next-month {
+    	width: 45px;
+    	border-radius: $border-radius;
 
-    &:hover {
-      background: #e6e6e6;
-      color: $black;
-    }
-  }
+		&:hover {
+    		background: #e6e6e6;
+    		color: $primary; //$black;
+    	}
+
+		svg {
+			width:20px; height:20px; 
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+	}
+
+	.flatpickr-months .flatpickr-prev-month:hover svg,
+	.flatpickr-months .flatpickr-next-month:hover svg {
+		fill:none;		
+	}
+
 }

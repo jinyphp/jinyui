@@ -20,6 +20,14 @@
         	</x-row>  
         	<!-- end page title -->
 
+            <div class="relative">
+                <div class="absolute bottom-4 right-0">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+                    </div>
+                </div>
+            </div>
+
             <x-card class="mb-3">
                 <x-card-body>
                     <x-row-center>

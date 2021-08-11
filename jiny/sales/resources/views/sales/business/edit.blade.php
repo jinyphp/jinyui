@@ -3,30 +3,36 @@
 	<x-main-content>
 		<x-container>
 			<!-- start page title -->
-			<div class="mb-3">
-				<div class="page-title-right">
-					<ol class="breadcrumb m-0">
-						<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-						<li class="breadcrumb-item"><a href="javascript: void(0);">Sales</a></li>
-						<li class="breadcrumb-item active">Business</li>
-					</ol>
-				</div>
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Sales</a></li>
+                        	<li class="breadcrumb-item active">Business</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle">Business</h1>
+                            <p>
+                                
+                            </p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
 
-				<div class="float-end mt-n1">
-					<a href="#" class="btn btn-primary ">
-						동양상
-					</a>
-					<a href="#" class="btn btn-primary ">
-						메뉴얼
-					</a>
-				</div>
-				
-				<div class="page-title-box">                        
-					<h4 class="page-title">사업장관리</h4>
-					<p>사업장 정보를 입력합니다.</p>
-				</div>
-			</div>			
-            <!-- end page title -->
+            <div class="relative">
+                <div class="absolute bottom-4 right-0">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+                        <a href="#" class="btn btn-success">수정</a>
+                    </div>
+                </div>
+            </div>
+
+
 			<x-row>
 				<x-col-6>
 					<x-card>

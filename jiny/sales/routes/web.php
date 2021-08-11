@@ -116,3 +116,6 @@ Route::get('/sales/sales-trans-pay', function () {
 Route::get('/sales/sales-trans-sync', function () {
     return view("jinyerp::sales.sales-trans-sync");
 });
+
+
+/* ===== Site ===== */

@@ -1,7 +1,35 @@
 <x-theme theme="adminkit" class="bootstrap">
-    <div class="main">
-        <main class="content">
-            <div class="container-fluid p-0">
+    <x-main-content>
+        <x-container>
+
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                        	<li class="breadcrumb-item active">Commerce</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle"><strong>Commerce</strong> Dashboard</h1>
+                            <p></p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
+
+            <div class="relative">
+                <div class="absolute bottom-4 right-0">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+                    </div>
+                </div>
+            </div>
+
+         
 
                 <div class="row mb-2 mb-xl-3">
                     <div class="col-auto d-none d-sm-block">
@@ -395,7 +423,9 @@
                     </div>
                 </div>
 
-            </div>
-        </main>
-    </div>
+ 
+
+        </x-container>
+    </x-main-content>
+
 </x-theme>

@@ -89,9 +89,7 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
         return $res;
     });
 
-    Route::get('/calendar', function(){
-        return view("jinyui::demo.pages.calendar");
-    });
+    
 
 });
 
@@ -354,9 +352,13 @@ Route::prefix('jinyui/forms')->group(function () {
         return view("jinyui::demo.forms.wizard");
     });
 
+
     // Editors
-    Route::get('/editors/quill', function(){
-        return view("jinyui::demo.forms.editors.quill");
+    Route::get('/quill/snow', function(){
+        return view("jinyui::demo.forms.quill.snow");
+    });
+    Route::get('/quill/bubble', function(){
+        return view("jinyui::demo.forms.quill.bubble");
     });
 
 });
@@ -403,6 +405,17 @@ Route::middleware(['web'])->prefix('jinyui/tables')->group(function () {
     });
 
 });
+
+//Plug-in
+
+//Calenders
+Route::get('jinyui/plugin/calendar', function(){
+    return view("jinyui::demo.plugin.calendar");
+});
+Route::get('jinyui/plugin/flatpicker', function(){
+    return view("jinyui::demo.plugin.flatpicker.inline");
+});
+
 
 //CHART
 Route::middleware(['web'])->prefix('jinyui/charts')->group(function () {

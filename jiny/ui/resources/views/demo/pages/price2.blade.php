@@ -19,6 +19,14 @@
         	</x-row>  
         	<!-- end page title -->
 
+          <div class="relative">
+            <div class="absolute bottom-4 right-0">
+                <div class="btn-group">
+                    <a href="#" class="btn btn-secondary">메뉴얼</a>
+                </div>
+            </div>
+        </div>
+
             <div class="card overflow-hidden mb-3">
                 <div class="bg-holder d-none d-lg-block bg-card" style="background-image:url(../../assets/img/icons/spot-illustrations/corner-4.png);"></div>
                 <!--/.bg-holder-->

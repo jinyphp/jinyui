@@ -16,3 +16,4 @@ import "./modules/theme"; // window.theme 변수값 설정
 //import "./jiny/scroll";
 
 import "./modules/sidebar";
+import "./modules/flatpickr";
