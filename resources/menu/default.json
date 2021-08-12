@@ -459,6 +459,15 @@
                 "_ref": 20,
                 "_level": 2,
                 "icon": "",
+                "title": "Avater",
+                "href": "\/jinyui\/ui\/avater",
+                "target": ""
+            },
+            {
+                "_id": 24,
+                "_ref": 20,
+                "_level": 2,
+                "icon": "",
                 "title": "Spinners",
                 "href": "\/jinyui\/ui\/spinners",
                 "target": ""

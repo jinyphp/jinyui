@@ -148,6 +148,11 @@ Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
     Route::get('/images', function(){
         return view("jinyui::demo.ui.images");
     });
+    Route::get('/avater', function(){
+        return view("jinyui::demo.ui.avater");
+    });
+
+
     Route::get('/spinners', function(){
         return view("jinyui::demo.ui.spinners");
     });
