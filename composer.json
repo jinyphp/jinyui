@@ -14,7 +14,8 @@
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
-        "livewire/livewire": "^2.0"
+        "livewire/livewire": "^2.0",
+        "webuni/front-matter": "^1.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -38,7 +39,8 @@
             "Jiny\\UI\\": "jiny/ui/src",
             "Jiny\\Table\\": "jiny/table/src",
             "Jiny\\Site\\": "jiny/site/src",
-            "Jiny\\Sales\\": "jiny/sales/src"
+            "Jiny\\Sales\\": "jiny/sales/src",
+            "Jiny\\Pages\\": "jiny/pages/src"
         },
         "files" : [
             "jiny/html/src/Helpers/Helper.php",
@@ -47,7 +49,8 @@
             "jiny/ui/src/Helpers/Helper.php",
             "jiny/table/src/Helpers/Helper.php",
             "jiny/site/src/Helpers/Helper.php",
-            "jiny/sales/src/Helpers/Helper.php"
+            "jiny/sales/src/Helpers/Helper.php",
+            "jiny/pages/src/Helpers/Helper.php"
         ]
     },
     "scripts": {

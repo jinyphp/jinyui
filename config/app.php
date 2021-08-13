@@ -183,6 +183,7 @@ return [
         Jiny\Table\TableServiceProvider::class,
         Jiny\Site\SiteServiceProvider::class,
         Jiny\Sales\SalesServiceProvider::class,
+        Jiny\Pages\PageServiceProvider::class,
 
         App\Providers\CarpetServiceProvider::class,
 

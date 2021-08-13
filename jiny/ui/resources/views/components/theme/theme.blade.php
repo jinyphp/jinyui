@@ -1,4 +1,4 @@
-<x-jinyui::app>
+<x-theme-app>
     @if (isset($seo_title)) 
         <x-slot name="seo_title">{{$seo_title}}</x-slot>
     @endif
@@ -13,6 +13,4 @@
             {{$slot}}
         @endif
     </x-jinyui::layout.wrapper>
-</x-jinyui::app>
-    
-    
+</x-theme-app>

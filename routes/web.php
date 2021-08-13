@@ -22,6 +22,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+
+
+
+
 use App\Http\Livewire\Admin\AdminMain;
 Route::get('/admin',AdminMain::class);
 
@@ -55,22 +59,7 @@ Route::get('/menu', [SiteMenu::class,"index"]);
 Route::get('/drag',App\Http\Livewire\Drag::class);
 
 
-// 테이블에서 라우트 uri 정보를 조회
-/*
-use Illuminate\Support\Facades\DB;
-$r = DB::table('routings')->where('uri', "=", "/company")->first();
-if ($r) {
-    // 동적 라우트 설정
-    Route::get($r->uri, function () use ($r) {
-        $table = [
-            'name'=>$r->table, //"site_menus",
-            'rules'=>"jiny/menu.json"
-        ];
-        
-        return view('sales.company', ['table'=>$table]);
-    });
-}
-*/
+
 
 
 

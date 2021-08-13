@@ -1,14 +1,15 @@
 <?php
 
-namespace Jiny\UI\View\Components;
+namespace Jiny\UI\View\Components\Theme;
 
 use Illuminate\View\Component;
 use Illuminate\Support\Facades\View;
 
-class App extends Component
+class Theme extends Component
 {
     public $Theme;
     public $theme_name;
+    
     /**
      * Create a new component instance.
      *
@@ -32,12 +33,6 @@ class App extends Component
      */
     public function render()
     {
-        if (View::exists("theme.".$this->theme_name.'.app')) {
-            // 테마 리소스가 있는 경우
-            return view("theme.".$this->theme_name.'.app');
-        } else {
-            // 컴포넌트 리소스로 대체하여 출력함
-            return view('jinyui::components.app');
-        }        
+        return view('jinyui::components.theme.theme');
     }
 }

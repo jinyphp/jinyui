@@ -49,7 +49,7 @@ class JinyUIServiceProvider extends ServiceProvider
 
         /* 컴포넌트 클래스 등록 */
         $this->loadViewComponentsAs('jinyui', [
-            \Jiny\UI\View\Components\App::class, 
+            //\Jiny\UI\View\Components\Theme\App::class, 
 
             // 테마관련 컴포넌트 클래스
             \Jiny\UI\View\Components\Theme::class, // 테마 레이아웃을 읽어 옵니다.
@@ -108,7 +108,8 @@ class JinyUIServiceProvider extends ServiceProvider
         $shot = true;
         if($shot) {
             // 테마
-            Blade::component(\Jiny\UI\View\Components\Theme::class, "theme");
+            Blade::component(\Jiny\UI\View\Components\Theme\App::class, "theme-app");
+            Blade::component(\Jiny\UI\View\Components\Theme\Theme::class, "theme");
             Blade::component(\Jiny\UI\View\Components\ThemeSidebar::class, "theme-sidebar");
             Blade::component(\Jiny\UI\View\Components\ThemeMain::class, "theme-main");
             Blade::component(\Jiny\UI\View\Components\MainContent::class, "main-content");
@@ -254,7 +255,7 @@ class JinyUIServiceProvider extends ServiceProvider
             $this->registerComponent('collapse');
             $this->registerComponent('scroll-bar');
 
-            $this->registerComponent('app');
+            //$this->registerComponent('app');
             $this->registerComponent('theme');
             $this->registerComponent('layout');
 
