@@ -5,13 +5,19 @@ namespace Jiny\Pages\Http;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+use Webuni\FrontMatter\FrontMatter;
+
 class MarkdownController extends Controller
 {
 
     public function index(...$slug)
     {
         // 경로분석
-        $string = implode(DIRECTORY_SEPARATOR,$slug);
+        if (empty($slug)) {
+            $string = "index";
+        } else {
+            $string = implode(DIRECTORY_SEPARATOR,$slug);
+        }        
         $path = resource_path("docs\\".$string.".md");
 
         // 파일읽기
@@ -19,7 +25,7 @@ class MarkdownController extends Controller
             $text = file_get_contents($path);
 
             // frontmatter ---
-            $frontMatter = new \Webuni\FrontMatter\FrontMatter();
+            $frontMatter = new FrontMatter();
             $document = $frontMatter->parse($text);
                 $data = $document->getData();
                 $content = $document->getContent();
@@ -28,7 +34,11 @@ class MarkdownController extends Controller
             $data['content'] = (new \Parsedown())->text($content);
             if (isset($data['layout'])) {
                 // forntmatter 설정된 resource layout을 이용
-                return view($data['layout'], $data);
+                if (isset($data['theme'])) {
+                    return view("theme.".$data['theme'].".".$data['layout'], $data);
+                } else {
+                    return view($data['layout'], $data);
+                }                
             } else {
                 return view("jinypage::markdown", $data);
             }            
