@@ -103,7 +103,7 @@ class JinyUIServiceProvider extends ServiceProvider
         /**
          * 클래스 Alias
          */
-        Blade::component(\Jiny\UI\View\Components\FormFilter::class, "filter");
+
         
         $shot = true;
         if($shot) {
@@ -236,9 +236,13 @@ class JinyUIServiceProvider extends ServiceProvider
             // Simplebar
             Blade::component('jinyui::components.'.'extension.simplebar', 'simplebar');
 
+            // 마크다운
+            Blade::component(\Jiny\UI\Markdown::class,'markdown');
+
         }
 
 
+        Blade::component(\Jiny\UI\View\Components\FormFilter::class, "filter");
 
 
         /* 패키지::컴포넌트 => 페키지-컴포넌트 재지정*/
@@ -311,8 +315,7 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component('jinyui::components.alert.info-none', 'alert-info-none');
 
 
-        // 마크다운
-        Blade::component(\Jiny\UI\Markdown::class,'markdown');
+        
 
     }
 

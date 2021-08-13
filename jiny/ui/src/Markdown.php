@@ -21,7 +21,7 @@ class Markdown extends Component
     public function render()
     {
         return <<<'blade'
-        <div {{ $attributes }}>{{ $slot }}</div>
+        <div {{ $attributes }}>{!! $toHtml($slot) !!}</div>
     blade;
     }
 }
