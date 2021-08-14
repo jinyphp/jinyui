@@ -19,6 +19,7 @@
             	</x-col>
         	</x-row>  
         	<!-- end page title -->
+            
 
             <div class="relative">
                 <div class="absolute bottom-4 right-0">

@@ -9,6 +9,13 @@ use Webuni\FrontMatter\FrontMatter;
 
 class MarkdownController extends Controller
 {
+    public $rootpath = "docs";
+    public function __construct($path=null)
+    {
+        if ($path) {
+            $this->rootpath = $path;
+        }        
+    }
 
     public function index(...$slug)
     {
@@ -17,8 +24,13 @@ class MarkdownController extends Controller
             $string = "index";
         } else {
             $string = implode(DIRECTORY_SEPARATOR,$slug);
-        }        
-        $path = resource_path("docs\\".$string.".md");
+            if(is_dir($string)) {
+                // 디렉터리인 경우, 디렉터리 안에 있는 index.md를 이용
+                $string .= DIRECTORY_SEPARATOR."index";
+            }
+        }
+        $path = resource_path($this->rootpath.DIRECTORY_SEPARATOR.$string.".md");
+        //dd($path);
 
         // 파일읽기
         if (file_exists($path)) {

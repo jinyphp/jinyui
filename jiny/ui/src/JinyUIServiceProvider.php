@@ -25,6 +25,9 @@ class JinyUIServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../resources/views', $this->package);
 
         $this->configureComponents();
+        $this->Directive();
+
+        
 
     }
 
@@ -323,6 +326,55 @@ class JinyUIServiceProvider extends ServiceProvider
     protected function registerComponent(string $component)
     {
         Blade::component('jinyui::components.'.$component, 'jiny-'.$component);
+    }
+
+    private function Directive()
+    {
+        /**
+         * Markdown Directive
+         */
+        Blade::directive('markdownText', function ($args) {
+            $body = Blade::stripParentheses($args);
+            return (new \Parsedown())->text($body);
+        });
+
+        Blade::directive('markdownFile', function ($args) {
+            $args = Blade::stripParentheses($args);
+            $args = trim($args,'"');
+            if($args[0] == ".") {
+                $path = str_replace(".", DIRECTORY_SEPARATOR, $args).".md";
+                $realPath = dirname(Blade::getPath()).$path;
+            }
+            
+            if (file_exists($realPath)) {
+                $body = file_get_contents($realPath);
+                return (new \Parsedown())->text($body);
+            } else {
+                return "cannot find markdown resource ".$realPath."<br>";
+            }
+        });
+
+        Blade::directive('codeFile', function ($args) {
+            $args = Blade::stripParentheses($args);
+            $args = trim($args,'"');
+            if($args[0] == ".") {
+                $path = str_replace(".", DIRECTORY_SEPARATOR, $args).".md";
+                $realPath = dirname(Blade::getPath()).$path;
+            }
+            
+            if (file_exists($realPath)) {
+                $body = file_get_contents($realPath);
+                return (new \Parsedown())->text("```".$body."```");
+            } else {
+                return "cannot find markdown resource ".$realPath."<br>";
+            }
+        });
+
+        Blade::directive('widget', function ($args) {
+            $expression = Blade::stripParentheses($args);
+            dd($expression);
+            return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
+        });
     }
 
 

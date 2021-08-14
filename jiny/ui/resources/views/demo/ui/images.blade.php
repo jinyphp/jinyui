@@ -1,24 +1,11 @@
-<x-jinyui-theme theme="adminkit" class="bootstrap">
+<x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
         <x-container>
-            <!-- start page title -->
-        	<x-row >
-            	<x-col class="col-8">
-                	<div class="page-title-box">                        
-                    	<ol class="breadcrumb m-0">
-                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
-                        	<li class="breadcrumb-item"><a href="javascript: void(0);">UI</a></li>
-                        	<li class="breadcrumb-item active">Images</li>
-                    	</ol>                        
-                    
-        				<div class="mb-3">
-                        	<h1 class="h3 d-inline align-middle">Images</h1>
-                            <p></p>
-                    	</div>
-                	</div>
-            	</x-col>
-        	</x-row>  
-        	<!-- end page title -->
+            @widget("jinyui::demo.widgets.pages.title",[
+                'title'=>"이미지 출력",
+                'subtitle'=>"x-img 테그는 이미지를 다양한 속성을 이용하여 출력할 수 있습니다."
+            ])
+            
 
             <div class="relative">
                 <div class="absolute bottom-4 right-0">
@@ -134,5 +121,4 @@
             
         </x-container>
     </x-main-content>
-
-</x-jinyui-theme>   
+</x-theme>   
