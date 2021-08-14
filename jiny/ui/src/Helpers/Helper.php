@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * xtag function
+ */
+
+function xIcon($name) {
+    return new \Jiny\UI\View\Components\Icon($name);
+}
+
+function xBadge($title, $attr=[]) {
+    return (new \Jiny\UI\View\Components\Button\Badge($title, $attr));
+}
+
+
 function CTabView($data = []) {
 	return new \Jiny\UI\CTabView($data);
 }

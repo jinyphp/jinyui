@@ -45,6 +45,8 @@
 		
 							<x-badge class="bg-light text-dark">Light</x-badge>
 							<x-badge class="bg-dark">Dark</x-badge>
+
+							{!! xBadge("Dark",['class'=>"bg-dark"]) !!}
 						</x-card-body>
 					</x-card>
 				</x-col-6>
@@ -78,30 +80,31 @@
 						<div class="card-body ">
 							<!-- Lighten Badges -->
 							<div class="mb-3">
-								<span class="badge badge-primary-lighten">Primary</span>
-								<span class="badge badge-secondary-lighten">Secondary</span>
-								<span class="badge badge-success-lighten">Success</span>
-								<span class="badge badge-danger-lighten">Danger</span>
-								<span class="badge badge-warning-lighten">Warning</span>
-								<span class="badge badge-info-lighten">Info</span>
-								<span class="badge badge-light-lighten">Light</span>
-								<span class="badge badge-dark-lighten">Dark</span>
+								<x-badge class="badge-primary-lighten">Primary</x-badge>
+								<x-badge class="badge-secondary-lighten">Secondary</x-badge>
+								<x-badge class="badge-success-lighten">Success</x-badge>
+								<x-badge class="badge-danger-lighten">Danger</x-badge>
+								<x-badge class="badge-warning-lighten">Warning</x-badge>
+								<x-badge class="badge-info-lighten">Info</x-badge>
+								<x-badge class="badge-light-lighten">Light</x-badge>
+								<x-badge class="badge-dark-lighten">Dark</x-badge>
 							</div>
 	
 							<!-- Outline Badges -->
 							<div class="mb-3">
-								<span class="badge badge-outline-primary">Primary</span>
-								<span class="badge badge-outline-secondary">Secondary</span>
-								<span class="badge badge-outline-success">Success</span>
-								<span class="badge badge-outline-danger">Danger</span>
-								<span class="badge badge-outline-warning">Warning</span>
-								<span class="badge badge-outline-info">Info</span>
-								<span class="badge badge-outline-light">Light</span>
-								<span class="badge badge-outline-dark">Dark</span>
+								<x-badge class="badge-outline-primary">Primary</x-badge>
+								<x-badge class="badge-outline-secondary">Secondary</x-badge>
+								<x-badge class="badge-outline-success">Success</x-badge>
+								<x-badge class="badge-outline-danger">Danger</x-badge>
+								<x-badge class="badge-outline-warning">Warning</x-badge>
+								<x-badge class="badge-outline-info">Info</x-badge>
+								<x-badge class="badge-outline-light">Light</x-badge>
+								<x-badge class="badge-outline-dark">Dark</x-badge>
 							</div>
 						</div>
 					</div>
 				</div>
+
 
 				<x-col-6>
 					<x-card>
@@ -131,12 +134,10 @@
 								<x-indicator class="rounded-pill bg-light text-dark">170</x-indicator>
 								<x-indicator class="rounded-pill bg-dark">180</x-indicator>
 							</div>
-							
-
-							
 						</x-card-body>
 					</x-card>
 				</x-col-6>
+
 
 				<div class="col-12 col-lg-6">
 					<div class="card">
@@ -153,8 +154,7 @@
 											d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
 									</svg>							
 									<x-indicator class="indicator bg-primary text-white ">5</x-indicator>
-								</span>
-								
+								</span>								
 							</a>
 	
 						</div>

@@ -157,7 +157,7 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\Button\Dropdown::class, "button-dropdown");
             Blade::component(\Jiny\UI\View\Components\Button\Group::class, "button-group");
             Blade::component('jinyui::components.'.'button.close', 'close');
-            Blade::component('jinyui::components.'.'button.badge', 'badge');
+            Blade::component(\Jiny\UI\View\Components\Button\Badge::class, 'badge');
             Blade::component('jinyui::components.'.'button.indicator', 'indicator');
             
 
@@ -372,7 +372,6 @@ class JinyUIServiceProvider extends ServiceProvider
 
         Blade::directive('widget', function ($args) {
             $expression = Blade::stripParentheses($args);
-            dd($expression);
             return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
     }

@@ -33,7 +33,14 @@
                     <div class="w-100">
                         <x-row>
                             <x-col class="col-sm-6">
-                                @include("jinyui::demo.widgets.stats.summary_sales")
+                                @widget("jinyui::demo.widgets.stats.summary_sales",[
+                                    'title' => 'Sales',
+                                    'icon' => xIcon("feather.shopping.cart"),
+                                    'point' => '2.382',
+                                    'rate' => xBadge("-3.65%",['class'=>"badge-danger-lighten"])
+                                ])
+
+                            
                                 @include("jinyui::demo.widgets.stats.summary_visitors")
                             </x-col>
 
