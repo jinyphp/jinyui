@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use Webuni\FrontMatter\FrontMatter;
+use Jiny\Pages\Http\Parsedown;
 
 class MarkdownController extends Controller
 {
@@ -43,7 +44,10 @@ class MarkdownController extends Controller
                 $content = $document->getContent();
 
             // 마크다운 변환
-            $data['content'] = (new \Parsedown())->text($content);
+            $markdown = (new Parsedown())->dom($content);
+            $data['content'] = $markdown['markup'];
+            $data['hash'] = $markdown['hash'];
+        
             if (isset($data['layout'])) {
                 // forntmatter 설정된 resource layout을 이용
                 if (isset($data['theme'])) {

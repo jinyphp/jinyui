@@ -118,6 +118,8 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\MainContent::class, "main-content");
 
             // 레이아웃
+            Blade::component(\Jiny\UI\View\Components\Layouts\Layout::class, 'layout');
+            Blade::component('jinyui::components.'.'layout.layout-item', 'layout-item');
             Blade::component('jinyui::components.'.'layout.container', 'container');
 
             // 메뉴
@@ -153,6 +155,11 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'card.subtitle', 'card-subtitle');
             Blade::component('jinyui::components.'.'card.before', 'card-before');
 
+
+            // Box model
+            Blade::component('jinyui::components.'.'box.box', 'box');
+
+
             Blade::component(\Jiny\UI\View\Components\Button\Button::class, "button");
             Blade::component(\Jiny\UI\View\Components\Button\Dropdown::class, "button-dropdown");
             Blade::component(\Jiny\UI\View\Components\Button\Group::class, "button-group");
@@ -177,7 +184,7 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\Dropdown\Link::class, "dropdown-link");
 
             //breadcrumb
-            Blade::component('jinyui::components.'.'nav.breadcrumb', 'breadcrumb');
+            Blade::component(\Jiny\UI\View\Components\Breadcrumb::class, 'breadcrumb');
             Blade::component('jinyui::components.'.'nav.breadcrumb-item', 'breadcrumb-item');
 
             //Nav
@@ -203,6 +210,8 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'carousel.item', 'carousel-item');
 
             //Images
+            Blade::component('jinyui::components.'.'images.img', 'img');
+            Blade::component('jinyui::components.'.'images.img-cover', 'img-cover');
             Blade::component('jinyui::components.'.'images.round', 'img-round');
             Blade::component('jinyui::components.'.'images.circle', 'img-circle');
             Blade::component('jinyui::components.'.'images.res', 'img-res');
@@ -291,8 +300,7 @@ class JinyUIServiceProvider extends ServiceProvider
 
 
 
-        // Box model
-        Blade::component('jinyui::components.'.'box.layout', 'jiny-box');
+        
 
         
 
@@ -374,6 +382,32 @@ class JinyUIServiceProvider extends ServiceProvider
             $expression = Blade::stripParentheses($args);
             return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
+
+
+        // 테마안에 있는 리소스를 읽어 옵니다.
+        Blade::directive('theme', function ($args) {
+            $expression = Blade::stripParentheses($args);
+            $path = trim($expression,'"');
+
+            // 상대경로 parsing
+            if($path[0] == ".") {
+                $path = substr($path,1);
+
+                $viewBasePath = Blade::getPath();
+                $base = dirname(trim($viewBasePath,'\/'));
+                $base = str_replace(['/','\\'], ".", $base);
+                $base = array_reverse(explode(".",$base));
+                for($i=0; $i<count($base);$i++) {
+                    if($base[$i] == "theme") break;
+                    $path = $base[$i].".".$path;
+                }              
+            }
+
+            $expression = '"'."theme.".$path.'"';
+            return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
+        });
+
+
     }
 
 

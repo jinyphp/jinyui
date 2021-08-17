@@ -35,7 +35,7 @@
     }
 
 </style>
-<x-jiny-theme>
+<x-theme-app theme="adminkit">
     {{-- grrid layout--}}
     <div class="header bg-blue-700">header</div>
     <div class="menu bg-blue-400">menu</div>
@@ -44,4 +44,4 @@
     <div class="aside bg-blue-300">aside</div>
     <div class="buttom bg-blue-600">bottom</div>
     <div class="footer bg-blue-700">footer</div>
-</x-jiny-theme>
+</x-theme-app>

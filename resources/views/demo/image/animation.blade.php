@@ -1,4 +1,4 @@
-<x-theme>
+<x-theme-app>
     <style>
         .card_animation {
             display:flex;
@@ -42,4 +42,4 @@
         <li>CCC</li>
         <li>DDD</li>
     </ul>
-</x-theme>
+</x-theme-app>

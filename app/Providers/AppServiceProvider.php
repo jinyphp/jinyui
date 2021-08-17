@@ -26,21 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-        Blade::directive('theme', function ($expression) {
-            $theme = "jiny";
-            if(isset($theme) && $theme) {
-                $file = resource_path("theme").DIRECTORY_SEPARATOR.$theme.DIRECTORY_SEPARATOR.trim($expression,"\"").".blade.php";
-            } else {
-                $file = resource_path("theme").DIRECTORY_SEPARATOR.trim($expression,"\"").".blade.php";
-            }
-            
-            if (file_exists($file)) {
-                return file_get_contents($file);
-            } else {
-                return "cannot find theme resource ".$file."<br>";
-            }
-        });
+        
 
         // 블레이드 컴포넌트
         // 상대경로 include

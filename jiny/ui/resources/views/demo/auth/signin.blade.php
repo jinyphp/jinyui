@@ -1,14 +1,14 @@
-<x-jinyui-app theme="adminkit" class="bootstrap">
-    <main class="d-flex w-100 h-100">
+<x-theme-app theme="adminkit" class="bootstrap">
+	<x-main-content class="d-flex w-100 h-100">
+
 		<div class="container d-flex flex-column">
 			<div class="row vh-100">
 				<div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
 					<div class="d-table-cell align-middle">
 
-						<x-jinyui-card>
-							<div class="card-body">
+						<x-card>
+							<x-card-body>
 								<div class="m-sm-4">
-
 									<form>
 										<x-form-row>
 											<x-form-label>
@@ -47,14 +47,15 @@
 											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
 										</div>
 									</form>
-
 								</div>
-							</div>
-						</x-jinyui-card>
+							</x-card-body>
+						</x-card>
+
 
 					</div>
 				</div>
 			</div>
 		</div>
-	</main>
-</x-jinyui-app>   
+	</x-main-content>
+
+</x-theme-app>   

@@ -26,19 +26,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 
+
+
+
 use App\Http\Livewire\Admin\AdminMain;
 Route::get('/admin',AdminMain::class);
-
-
-
-
-Route::get('/counter2', function(){
-    return view("test.counter");
-});
-
-
-
-
 
 
 /*
@@ -47,10 +39,6 @@ Route::get('/admin/language',App\Http\Livewire\Admin\BasicLanguage::class);
 Route::get('/admin/menu',App\Http\Livewire\Admin\BasicMenu::class);
 Route::get('/admin/popup',App\Http\Livewire\Popup::class);
 */
-
-
-
-
 
 
 use App\Http\Controllers\SiteMenu;
@@ -65,12 +53,10 @@ Route::get('/drag',App\Http\Livewire\Drag::class);
 
 /** demo */
 Route::get('layouts/grid/grid5', function () {
+    // https://www.youtube.com/watch?v=68O6eOGAGqA&t=16s
     return view('demo.layouts.grid.grid5');
 });
-Route::get('layouts/grid/grid6', function () {
-    // https://www.youtube.com/watch?v=68O6eOGAGqA&t=16s
-    return view('demo.layouts.grid.grid6');
-});
+
 Route::get('nav/virtical', function () {
     return view('demo.nav.virtical');
 });
@@ -78,9 +64,3 @@ Route::get('image/animation', function () {
     return view('demo.image.animation');
 });
 
-/**
- * test blade direction
- */
-Route::get('test/carpet', function () {
-    return view('test.carpet');
-});

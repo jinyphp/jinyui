@@ -78,6 +78,10 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
     Route::get('/profile', function(){
         return view("jinyui::demo.pages.profile");
     });
+    Route::get('/profile2', function(){
+        //https://bootstrapdash.com/demo/azia/v1.0.0/template/page-profile.html 
+        return view("jinyui::demo.pages.profile2");
+    });
 
     Route::get('/invoice', function(){
         return view("jinyui::demo.pages.invoice");
@@ -89,17 +93,16 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
         return $res;
     });
 
-    
+    Route::get('/newsgrid', function(){
+        //https://bootstrapdash.com/demo/azia/v1.0.0/template/page-news-grid.html
+        return view("jinyui::demo.pages.newsgrid");
+    });
 
 });
 
 
 // AUTH
 Route::middleware(['web'])->prefix('jinyui/auth')->group(function () {
-
-    Route::get('/signin', function(){
-        return view("jinyui::demo.auth.signin");
-    });
 
     Route::get('/signout', function(){
         return view("jinyui::demo.auth.signout");
@@ -114,7 +117,33 @@ Route::middleware(['web'])->prefix('jinyui/auth')->group(function () {
         return view("jinyui::demo.auth.500");
     });
 
-}); 
+    /**
+     * Login Form
+     */
+    Route::get('/signin', function(){
+        return view("jinyui::demo.auth.signin");
+    });
+    Route::get('/login/login1', function(){
+        //https://www.bootstrapdash.com/demo/login-template-free-2/
+        return view("jinyui::demo.auth.login.login1");
+    });
+    Route::get('/login/login2', function(){
+        //https://www.bootstrapdash.com/demo/login-template-free-1/
+        return view("jinyui::demo.auth.login.login2");
+    });
+    Route::get('/login/login3', function(){
+        //https://bootstrapdash.com/demo/azia/v1.0.0/template/page-signin.html
+        return view("jinyui::demo.auth.login.login3");
+    });
+
+});
+
+Route::get('/jinyui/menu/top', function(){
+    return view("jinyui::demo.menu.top");
+});
+Route::get('/jinyui/menu/top-dash', function(){
+    return view("jinyui::demo.menu.top-dash");
+});
 
 
 //COMPONENTS
@@ -366,6 +395,11 @@ Route::prefix('jinyui/forms')->group(function () {
         return view("jinyui::demo.forms.quill.bubble");
     });
 
+    Route::get('/select2', function(){
+        //https://bootstrapdash.com/demo/azia/v1.0.0/template/form-elements.html
+        return view("jinyui::demo.forms.select2");
+    });
+
 });
 
 
@@ -459,6 +493,19 @@ Route::middleware(['web'])->prefix('jinyui/maps')->group(function () {
 
 });
 
+
+
+//Theme Demo
+Route::get('jinyui/landing/azia', function(){
+    return view("theme.demo.azia.azia");
+});
+
+Route::get('boot', function(){
+    return view("theme.demo.boot.home");
+});
+Route::get('boot/docs', function(){
+    return view("theme.demo.boot.docs");
+});
 
 
 //====

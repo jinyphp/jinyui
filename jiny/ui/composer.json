@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": "^7.3|^8.0"
 
     },
     "autoload": {
@@ -20,6 +21,18 @@
         "files" : [
             "src/Helpers/Helper.php"
         ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jiny\\UI\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jiny\\UI\\JinyUIServiceProvider"
+            ]
+        }
     }
 
 }

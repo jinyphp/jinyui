@@ -1,10 +1,13 @@
 <?php
 use Illuminate\Support\Facades\Route;
 
+
+
+
+
 Route::get('/sales', function () {
     return view("jinyerp::sales");
 
-    
 });
 
 use Jiny\Sales\Http\Controllers\Company;

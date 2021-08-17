@@ -1,4 +1,4 @@
-<x-jiny-theme>
+<x-theme>
     <style>
         html {
             scroll-behavior: smooth;
@@ -113,4 +113,4 @@
 
         activateNavigation();
     </script>
-</x-jiny-theme>
+</x-theme>

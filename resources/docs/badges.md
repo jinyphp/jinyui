@@ -2,6 +2,7 @@
 theme: "adminkit"
 layout: "markdown"
 title: "Badges Manual"
+demo: "/jinyui/ui/buttons/badges"
 breadcrumb:
     - "Docs"
 ---
@@ -51,28 +52,28 @@ x-badge 테그는 보다 쉽게 배치를 출력할 수 있습니다.
 밝은 색의 베지를 출력하고자 할때에는 기존 `badge-primary` 대신에 `*-lighten`를 사용합니다.
 
 ```php
-<x-badge class="badge-primary-lighten">Primary</x-badge>
-<x-badge class="badge-secondary-lighten">Secondary</x-badge>
-<x-badge class="badge-success-lighten">Success</x-badge>
-<x-badge class="badge-danger-lighten">Danger</x-badge>
-<x-badge class="badge-warning-lighten">Warning</x-badge>
-<x-badge class="badge-info-lighten">Info</x-badge>
-<x-badge class="badge-light-lighten">Light</x-badge>
-<x-badge class="badge-dark-lighten">Dark</x-badge>
+<x-badge class="primary lighten">Primary</x-badge>
+<x-badge class="secondary lighten">Secondary</x-badge>
+<x-badge class="success lighten">Success</x-badge>
+<x-badge class="danger lighten">Danger</x-badge>
+<x-badge class="warning lighten">Warning</x-badge>
+<x-badge class="info lighten">Info</x-badge>
+<x-badge class="light lighten">Light</x-badge>
+<x-badge class="dark lighten">Dark</x-badge>
 ```
 
 ## 외각선
 외각선만 표시된 베지를 출력할때
 
 ```php
-<x-badge class="badge-outline-primary">Primary</x-badge>
-<x-badge class="badge-outline-secondary">Secondary</x-badge>
-<x-badge class="badge-outline-success">Success</x-badge>
-<x-badge class="badge-outline-danger">Danger</x-badge>
-<x-badge class="badge-outline-warning">Warning</x-badge>
-<x-badge class="badge-outline-info">Info</x-badge>
-<x-badge class="badge-outline-light">Light</x-badge>
-<x-badge class="badge-outline-dark">Dark</x-badge>
+<x-badge class="outline primary">Primary</x-badge>
+<x-badge class="outline secondary">Secondary</x-badge>
+<x-badge class="outline success">Success</x-badge>
+<x-badge class="outline danger">Danger</x-badge>
+<x-badge class="outline warning">Warning</x-badge>
+<x-badge class="outline info">Info</x-badge>
+<x-badge class="outline light">Light</x-badge>
+<x-badge class="outline dark">Dark</x-badge>
 ```
 
 ## 인디게이터

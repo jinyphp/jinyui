@@ -4,12 +4,12 @@
 			<!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
-                	<div class="page-title-box">                        
-                    	<ol class="breadcrumb m-0">
-                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                	<div class="page-title-box">
+						<x-breadcrumb class="m-0">
+							<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
                         	<li class="breadcrumb-item"><a href="javascript: void(0);">Button</a></li>
                         	<li class="breadcrumb-item active">Badges</li>
-                    	</ol>                        
+						</x-breadcrumb>
                     
         				<div class="mb-3">
                         	<h1 class="h3 d-inline align-middle">Badges</h1>
@@ -23,7 +23,7 @@
 			<div class="relative">
                 <div class="absolute bottom-4 right-0">
                     <div class="btn-group">
-                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+                        <a href="/docs/badges" class="btn btn-secondary">메뉴얼</a>
                     </div>
                 </div>
             </div>
@@ -80,26 +80,26 @@
 						<div class="card-body ">
 							<!-- Lighten Badges -->
 							<div class="mb-3">
-								<x-badge class="badge-primary-lighten">Primary</x-badge>
-								<x-badge class="badge-secondary-lighten">Secondary</x-badge>
-								<x-badge class="badge-success-lighten">Success</x-badge>
-								<x-badge class="badge-danger-lighten">Danger</x-badge>
-								<x-badge class="badge-warning-lighten">Warning</x-badge>
-								<x-badge class="badge-info-lighten">Info</x-badge>
-								<x-badge class="badge-light-lighten">Light</x-badge>
-								<x-badge class="badge-dark-lighten">Dark</x-badge>
+								<x-badge class="primary lighten">Primary</x-badge>
+								<x-badge class="secondary lighten">Secondary</x-badge>
+								<x-badge class="success lighten">Success</x-badge>
+								<x-badge class="danger lighten">Danger</x-badge>
+								<x-badge class="warning lighten">Warning</x-badge>
+								<x-badge class="info lighten">Info</x-badge>
+								<x-badge class="light lighten">Light</x-badge>
+								<x-badge class="dark lighten">Dark</x-badge>
 							</div>
 	
 							<!-- Outline Badges -->
 							<div class="mb-3">
-								<x-badge class="badge-outline-primary">Primary</x-badge>
-								<x-badge class="badge-outline-secondary">Secondary</x-badge>
-								<x-badge class="badge-outline-success">Success</x-badge>
-								<x-badge class="badge-outline-danger">Danger</x-badge>
-								<x-badge class="badge-outline-warning">Warning</x-badge>
-								<x-badge class="badge-outline-info">Info</x-badge>
-								<x-badge class="badge-outline-light">Light</x-badge>
-								<x-badge class="badge-outline-dark">Dark</x-badge>
+								<x-badge class="outline primary">Primary</x-badge>
+								<x-badge class="outline secondary">Secondary</x-badge>
+								<x-badge class="outline success">Success</x-badge>
+								<x-badge class="outline danger">Danger</x-badge>
+								<x-badge class="outline warning">Warning</x-badge>
+								<x-badge class="outline info">Info</x-badge>
+								<x-badge class="outline light">Light</x-badge>
+								<x-badge class="outline dark">Dark</x-badge>
 							</div>
 						</div>
 					</div>

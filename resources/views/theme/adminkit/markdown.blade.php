@@ -1,3 +1,11 @@
+@push('css')
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+@endpush
+@push('scripts')
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+@endpush
+
 <x-theme theme="adminkit">
     <x-main-content>
         <x-container>
@@ -31,6 +39,17 @@
             	</x-col>
         	</x-row>  
         	<!-- end page title -->
+
+            @if (isset($demo))
+            <div class="relative">
+                <div class="absolute bottom-4 right-0">
+                    <div class="btn-group">
+                        <a href="{{$demo}}" class="btn btn-success">Demo</a>
+                    </div>
+                </div>
+            </div>
+            @endif
+            
 
             <x-row>
                 <x-col-12>
