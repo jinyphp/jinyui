@@ -1,5 +1,5 @@
 <div>
-    {!! $table($slot, $attributes) !!}
+    {!! $tableBuild($slot, $attributes) !!}
 
     {{-- 라이브와이어 테이블 출력--}}
     {{--

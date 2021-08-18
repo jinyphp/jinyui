@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Containers
 
 Containers are a fundamental building block of Bootstrap that contain, pad, and align your content within a given device or viewport.

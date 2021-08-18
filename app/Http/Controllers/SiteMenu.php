@@ -8,9 +8,7 @@ class SiteMenu extends Controller
 {
     public function __construct()
     {
-        $fields = $this->get_field_json("rules/mmm.json");
-        dd($fields);
-    
+        $fields = $this->get_field_json("rules/mmm.json");    
     }
 
     public function get_field_json($filename)

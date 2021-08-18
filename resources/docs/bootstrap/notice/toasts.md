@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Toasts
 
 Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.

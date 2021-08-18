@@ -184,6 +184,7 @@ return [
         Jiny\Site\SiteServiceProvider::class,
         Jiny\Sales\SalesServiceProvider::class,
         Jiny\Pages\PageServiceProvider::class,
+        Jiny\Members\MemServiceProvider::class,
 
         App\Providers\CarpetServiceProvider::class,
 

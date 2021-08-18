@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Images
 
 Documentation and examples for opting images into responsive behavior (so they never become larger than their parent elements) and add lightweight styles to them—all via classes.

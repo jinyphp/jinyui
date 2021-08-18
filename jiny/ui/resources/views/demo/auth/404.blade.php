@@ -1,4 +1,4 @@
-<x-jinyui-theme theme="adminkit" class="bootstrap">
+<x-theme theme="adminkit" class="bootstrap">
     <div class="main">
         <main class="d-flex w-100 h-100">
             <div class="container d-flex flex-column">
@@ -19,4 +19,4 @@
             </div>
         </main>
     </div>
-</x-jinyui-theme>   
+</x-theme>   

@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # card box
 카드 박스는 컨덴츠의 내용을 묽어 화면에 출력할 수 있는 UI스킨입니다.
 

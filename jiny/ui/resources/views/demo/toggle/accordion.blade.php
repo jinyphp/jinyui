@@ -34,11 +34,16 @@
                 <x-col-6>
                     <x-card>
                         <x-card-header>
-                            여러개의 아코디언 하나면 선택할 수 있습니다.
-                            선택한 하나만 접어다 펼수 있는 아코디언 입니다.
+                            <h5 class="card-title">하나만 선택</h5>
+                            <h6 class="card-subtitle text-muted">여러개의 아코디언 하나면 선택할 수 있습니다.
+                                선택한 하나만 접어다 펼수 있는 아코디언 입니다.</h6>
+                            
                         </x-card-header>
                         <x-card-body>
-                            @include("jinyui::demo.toggle.accordion.toggle")
+                            {{-- widget --}}
+                            @include("jinyui::demo.widgets.preview",
+                                ['code'=>"jinyui::demo.toggle.accordion.toggle"]
+                            )
                         </x-card-body>
                     </x-card>
                 </x-col-6>
@@ -46,10 +51,15 @@
                 <x-col-6>
                     <x-card>
                         <x-card-header>
-                            아코디언 각각의 항목들을 개별적으로 선택하여 접었다 펼 수 있습니다.
+                            <h5 class="card-title">개별적 선택</h5>
+                            <h6 class="card-subtitle text-muted">아코디언 각각의 항목들을 개별적으로 선택하여 접었다 펼 수 있습니다.</h6>
                         </x-card-header>
                         <x-card-body>
-                            @include("jinyui::demo.toggle.accordion.open")
+                            {{-- widget --}}
+                            @include("jinyui::demo.widgets.preview",
+                                ['code'=>"jinyui::demo.toggle.accordion.open"]
+                            )
+                            
                         </x-card-body>
                     </x-card>
                 </x-col-6>

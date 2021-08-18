@@ -1,4 +1,4 @@
-<x-jinyui-theme theme="adminkit" class="bootstrap">
+<x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
         <x-container>
             <!-- start page title -->
@@ -36,9 +36,28 @@
 							<h6 class="card-subtitle text-muted">Different sized avatars with inner shadow.</h6>                            
                         </x-card-header>
                         <x-card-body>
-                            <img class="inline object-cover w-16 h-16 mr-2 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
-                            <img class="inline object-cover w-12 h-12 mr-2 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
-                            <img class="inline object-cover w-8 h-8 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <img class="inline object-cover w-16 h-16 mr-2 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+                                    <img class="inline object-cover w-12 h-12 mr-2 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+                                    <img class="inline object-cover w-8 h-8 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>								
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
                         </x-card-body>
                     </x-card>
                 </x-col-6>
@@ -49,11 +68,31 @@
 							<h6 class="card-subtitle text-muted">Group of stacked avatars with white border.</h6>                            
                         </x-card-header>
                         <x-card-body>
-                            <div class="-space-x-4">
-                                <img class="relative z-30 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
-                                <img class="relative z-20 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2955305/pexels-photo-2955305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
-                                <img class="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
-                            </div>
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="-space-x-4">
+                                        <img class="relative z-30 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+                                        <img class="relative z-20 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2955305/pexels-photo-2955305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+                                        <img class="relative z-10 inline object-cover w-12 h-12 border-2 border-white rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+                                    </div>									
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
+
                         </x-card-body>
                     </x-card>
                 </x-col-6>
@@ -64,10 +103,29 @@
 							<h6 class="card-subtitle text-muted">Avatar with status badge.</h6>                            
                         </x-card-header>
                         <x-card-body>
-                            <div class="relative inline-block">
-                                <img class="inline-block object-cover w-12 h-12 rounded-full" src="https://images.pexels.com/photos/2955305/pexels-photo-2955305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
-                                <span class="absolute bottom-0 right-0 inline-block w-3 h-3 bg-green-600 border-2 border-white rounded-full"></span>
-                            </div>
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="relative inline-block">
+                                        <img class="inline-block object-cover w-12 h-12 rounded-full" src="https://images.pexels.com/photos/2955305/pexels-photo-2955305.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Profile image"/>
+                                        <span class="absolute bottom-0 right-0 inline-block w-3 h-3 bg-green-600 border-2 border-white rounded-full"></span>
+                                    </div>								
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
                         </x-card-body>
                     </x-card>
                 </x-col-6>
@@ -75,5 +133,4 @@
 
         </x-container>
     </x-main-content>
-
-</x-jinyui-theme>  
+</x-theme>  

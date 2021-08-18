@@ -36,12 +36,30 @@
                             <h6 class="card-subtitle text-muted">Alerts with contextual background color.</h6>
                         </div>
                         <div class="card-body">
-                            <div class="mb-3">
-                                @include("jinyui::demo.ui.alert.default")
-                            </div>
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="mb-3">
+                                        @include("jinyui::demo.ui.alert.default")
+                                    </div>									
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
                         </div>
                     </x-card>
-                   
                 </x-col>
     
                 <x-col class="col-12 col-lg-6">
@@ -50,10 +68,29 @@
                             <h5 class="card-title">Icon alerts</h5>
                             <h6 class="card-subtitle text-muted">Alerts with icon and background color.</h6>
                         </div>
-                        <div class="card-body">                              
-                            <div class="mb-3">
-                                @include("jinyui::demo.ui.alert.icon")
-                            </div>
+                        <div class="card-body">  
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="mb-3">
+                                        @include("jinyui::demo.ui.alert.icon")
+                                    </div>									
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
                         </div>
                     </x-card>
                     
@@ -66,9 +103,28 @@
                             <h6 class="card-subtitle text-muted">Alerts with contextual icon background.</h6>
                         </div>
                         <div class="card-body">
-                            <div class="mb-3">
-                                @include("jinyui::demo.ui.alert.outline")                                   
-                            </div>
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="mb-3">
+                                        @include("jinyui::demo.ui.alert.outline")                                   
+                                    </div>								
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
                         </div>
                     </x-card>
                  
@@ -81,9 +137,28 @@
                             <h6 class="card-subtitle text-muted">Alerts with contextual outline color.</h6>
                         </div>
                         <div class="card-body">
-                            <div class="mb-3">
-                                @include("jinyui::demo.ui.alert.color")
-                            </div>
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    <div class="mb-3">
+                                        @include("jinyui::demo.ui.alert.color")
+                                    </div>								
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
                         </div>
                     </x-card>
                  
@@ -96,7 +171,26 @@
                             <h6 class="card-subtitle text-muted">Alerts with large contents.</h6>
                         </div>
                         <div class="card-body">
-                            @include("jinyui::demo.ui.alert.message")
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    @include("jinyui::demo.ui.alert.message")								
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    ...
+                                </x-navtab-item>
+                            </x-navtab>
+
+                            
                         </div>
                     </x-card>
                         
@@ -110,7 +204,25 @@
                             <h6 class="card-subtitle text-muted">Alerts with actions.</h6>
                         </div>
                         <div class="card-body">
-                            @include("jinyui::demo.ui.alert.confirm")
+                            <x-navtab class="nav-bordered mb-3">
+                                <x-navtab-item class="show active" >
+                            
+                                    <x-navtab-link class="rounded-0 active">
+                                        미리보기
+                                    </x-navtab-link>
+                                    {{-- preview 코드를 삽입합니다. --}}
+                                    @include("jinyui::demo.ui.alert.confirm")								
+                                    
+                                </x-navtab-item>
+                            
+                                <x-navtab-item >
+                                    <x-navtab-link class="rounded-0">
+                                        코드보기
+                                    </x-navtab-link> 
+                                    
+                                </x-navtab-item>
+                            </x-navtab>
+
                         </div>
                     </x-card>
                     

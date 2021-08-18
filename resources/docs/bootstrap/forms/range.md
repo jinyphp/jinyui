@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Range
 
 Use our custom range inputs for consistent cross-browser styling and built-in customization.

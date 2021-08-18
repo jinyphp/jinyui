@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Select
 
 Customize the native `<select>`s with custom CSS that changes the element’s initial appearance.

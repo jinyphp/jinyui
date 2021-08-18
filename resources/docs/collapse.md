@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Collapse
 `collapse`는 특정 아이템 클릭시 숨겨져 있는 내용을 확장하는 ui기술입니다.
 지니ui는 `<x-jiny-collapse>` 컴포넌트 테그를 이용하여 쉽게 구현을 할 수 있습니다.

@@ -1,5 +1,4 @@
 <x-theme theme="jinyerp" class="bootstrap">
-
 	<x-main-content>
 		<x-container>
 			<!-- start page title -->

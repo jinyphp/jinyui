@@ -1,4 +1,4 @@
-<x-jinyui-theme theme="adminkit" class="bootstrap">
+<x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
         <x-container>
             <!-- start page title -->
@@ -67,7 +67,7 @@
                 </div>
     
                 <div class="col-12 col-xl-6">
-                    <x-jinyui-card>
+                    <x-card>
                         <div class="card-header">
                             <h5 class="card-title">Striped Rows</h5>
                             <h6 class="card-subtitle text-muted">Use <code>.table-striped</code> to add zebra-striping to any table row within the
@@ -82,11 +82,11 @@
                             </x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-jinyui-card>  
+                    </x-card>  
                 </div>
     
                 <div class="col-12 col-xl-6">
-                    <x-jinyui-card>
+                    <x-card>
                         <div class="card-header">
                             <h5 class="card-title">Condensed Table</h5>
                             <h6 class="card-subtitle text-muted">Add <code>.table-sm</code> to make tables more compact by cutting cell padding in half.
@@ -96,11 +96,11 @@
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-jinyui-card> 
+                    </x-card> 
                 </div>
     
                 <div class="col-12 col-xl-6">
-                    <x-jinyui-card>
+                    <x-card>
                         <div class="card-header">
                             <h5 class="card-title">Hoverable Rows</h5>
                             <h6 class="card-subtitle text-muted">Add <code>.table-hover</code> to enable a hover state on table rows within a
@@ -112,11 +112,11 @@
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-jinyui-card> 
+                    </x-card> 
                 </div>
     
                 <div class="col-12 col-xl-6">
-                    <x-jinyui-card>
+                    <x-card>
                         <div class="card-header">
                             <h5 class="card-title">Bordered Table</h5>
                             <h6 class="card-subtitle text-muted">Add <code>.table-bordered</code> for borders on all sides of the table and cells.</h6>
@@ -125,11 +125,11 @@
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-jinyui-card> 
+                    </x-card> 
                 </div>
     
                 <div class="col-12 col-xl-6">
-                    <x-jinyui-card>
+                    <x-card>
                         <div class="card-header">
                             <h5 class="card-title">Contextual Classes</h5>
                             <h6 class="card-subtitle text-muted">Use contextual classes to color table rows or individual cells.</h6>
@@ -138,11 +138,11 @@
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-jinyui-card>                       
+                    </x-card>                       
                 </div>
     
                 <div class="col-12">
-                    <x-jinyui-card>
+                    <x-card>
                         <div class="card-header">
                             <h5 class="card-title">Always responsive</h5>
                             <h6 class="card-subtitle text-muted">Across every breakpoint, use <code>.table-responsive</code> for horizontally scrolling
@@ -154,7 +154,7 @@
                                 <x-table-body></x-table-body>
                             </x-table>
                         </div>
-                    </x-jinyui-card> 
+                    </x-card> 
                 </div>
     
             </div>

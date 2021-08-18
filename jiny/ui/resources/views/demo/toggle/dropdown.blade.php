@@ -36,8 +36,12 @@
                             <h5 class="card-title">단일버튼 펼침메뉴</h5>
                             <h6 class="card-subtitle text-muted">버튼을 이용하여 몊침메뉴를 제어합니다.</h6>
                         </x-card-header>
-                        <x-card-body class="flex flex-row gap-2">
-                            @include("jinyui::demo.toggle.dropdown.button")
+                        <x-card-body>
+
+                            {{-- widget --}}
+                            @include("jinyui::demo.widgets.preview",
+                                ['code'=>"jinyui::demo.toggle.dropdown.button"]
+                            )                           
                             
                         </x-card-body>
                     </x-card>
@@ -50,8 +54,12 @@
                             <h5 class="card-title">링크 펼침메뉴</h5>
                             <h6 class="card-subtitle text-muted">a링크를 이용하여 몊침메뉴를 제어합니다.</h6>
                         </x-card-header>
-                        <x-card-body class="flex flex-row gap-2">
-                            @include("jinyui::demo.toggle.dropdown.link")
+                        <x-card-body >
+                            {{-- widget --}}
+                            @include("jinyui::demo.widgets.preview",
+                                ['code'=>"jinyui::demo.toggle.dropdown.link"]
+                            )
+                            
     
                         </x-card-body>
                     </x-card>
@@ -64,18 +72,7 @@
                             <h6 class="card-subtitle text-muted"></h6>
                         </x-card-header>
                         <x-card-body>
-                            <div class="row mb-3">
-                                <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
-                                    @include("jinyui::demo.toggle.dropdown.alram")
-                                </div>
-                                <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
-                                    
-                                    
-                                </div>
-                                <div class="col-12 col-md-6 col-lg-12 col-xl-6 col-xxl-4">
-                                
-                                </div>
-                            </div>
+                            @include("jinyui::demo.toggle.dropdown.alram")
                         </x-card-body>
                     </x-card>
                 </x-col-6>

@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # alert
 지니ui는 경과를 쉽게 출력할 수 있는 alert 컴포넌트를 제공합니다.
 

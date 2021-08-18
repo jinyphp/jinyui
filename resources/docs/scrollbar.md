@@ -1,3 +1,10 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
 # ScrollBar
 내용이 많은 컨덴츠를 일부 영역에 배치를 할때 내용이 넘쳐 스크롤이 생깁니다.
 

@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Popovers
 
 Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.

@@ -1,3 +1,10 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
 # Figures
 
 Documentation and examples for displaying related images and text with the figure component in Bootstrap.

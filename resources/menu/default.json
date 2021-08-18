@@ -68,7 +68,7 @@
                 "_level": 2,
                 "icon": "",
                 "title": "Blank Page",
-                "href": "\/jinyui\/pages\/blank",
+                "href": "\/jinyui\/pages\/bank",
                 "target": ""
             }
         ]
@@ -182,7 +182,7 @@
                 "_level": 2,
                 "icon": "",
                 "title": "500",
-                "href": "\/jinyui\/auth\/pages\/500",
+                "href": "\/jinyui\/auth\/500",
                 "target": ""
             }
         ]

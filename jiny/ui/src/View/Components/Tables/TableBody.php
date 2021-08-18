@@ -6,22 +6,23 @@ use Illuminate\View\Component;
 
 class TableBody extends Component
 {
-    public $json;
+    public $json=null;
+    public $rows=[];
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($json=null)
+    public function __construct($json=null, $rows=[])
     {
-        $this->json = $json;
+        if ($rows) {
+            $this->rows = $rows;
+        } else {
+            if ($json) {
+                $this->rows = json_decode($json,true);
+            }
+        }       
     }
-
-
-
-    
-
-
 
 
     /**
@@ -39,6 +40,6 @@ class TableBody extends Component
         }
         */
 
-        return view('jinyui::components.tables.tbody' );
+        return view('jinyui::components.tables.tbody');
     }
 }

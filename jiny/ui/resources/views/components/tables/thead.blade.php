@@ -1,21 +1,7 @@
-<thead>
-    <tr>
-        @if ($json)
-            @foreach ( json_decode($json, true) as $item)
-                <th
-                @if (isset($item['class']))
-                    class="{{ $item['class'] }}" 
-                @endif
+@php
+    if (empty($rows) && $json) {
+        $rows = json_decode($json,true);
+    }        
+@endphp
 
-                @if (isset($item['style']))
-                    style="{{ $item['style'] }}" 
-                @endif
-
-                >{{$item['title']}}</th>
-            @endforeach
-        @else
-            {{-- 데이터없음--}}
-            {{$slot}}
-        @endif        
-    </tr>
-</thead>
+{!! \Jiny\UI\Table::instance()->setDataHead( $rows, $attributes, $slot) !!}

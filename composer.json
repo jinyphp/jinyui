@@ -40,7 +40,8 @@
             "Jiny\\Table\\": "jiny/table/src",
             "Jiny\\Site\\": "jiny/site/src",
             "Jiny\\Sales\\": "jiny/sales/src",
-            "Jiny\\Pages\\": "jiny/pages/src"
+            "Jiny\\Pages\\": "jiny/pages/src",
+            "Jiny\\Members\\": "jiny/members/src"
         },
         "files" : [
             "jiny/html/src/Helpers/Helper.php",
@@ -50,7 +51,8 @@
             "jiny/table/src/Helpers/Helper.php",
             "jiny/site/src/Helpers/Helper.php",
             "jiny/sales/src/Helpers/Helper.php",
-            "jiny/pages/src/Helpers/Helper.php"
+            "jiny/pages/src/Helpers/Helper.php",
+            "jiny/members/src/Helpers/Helper.php"
         ]
     },
     "scripts": {

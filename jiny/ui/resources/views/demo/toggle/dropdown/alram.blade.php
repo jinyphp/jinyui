@@ -1,6 +1,4 @@
 <x-dropdown>
-    <a href="#" class="border">aaa<span class="indicator">4</span></a>
-
     
     <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
         <div class="relative">

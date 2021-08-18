@@ -12,6 +12,7 @@ Route::get('/sales', function () {
 
 use Jiny\Sales\Http\Controllers\Company;
 Route::group(['middleware' => 'web'], function () {
+    /*
     Route::prefix('/sales/company')->group(function () {
         Route::get('/', [Company::class,"index"]);
         Route::delete('/', [Company::class,"delete"]);
@@ -21,18 +22,19 @@ Route::group(['middleware' => 'web'], function () {
             return view('company-fields');    
         });
     });
+    */
 
-    Route::get('/sales/sales-company', function () {
-        return view("jinyerp::sales.sales-company");
+    Route::get('/sales/company', function () {
+        return view("jinyerp::sales.company.list");
     });
-    Route::get('/sales/sales-company-edit', function () {
-        return view("jinyerp::sales.sales-company-edit");
+    Route::get('/sales/company/edit', function () {
+        return view("jinyerp::sales.company.edit");
     });
     Route::get('/sales/sales-company-list', function () {
         return view("jinyerp::sales.sales-company-list");
     });
-    Route::get('/sales/sales-company-sync', function () {
-        return view("jinyerp::sales.sales-company-sync");
+    Route::get('/sales/company/sync', function () {
+        return view("jinyerp::sales.company.sync");
     });
     Route::get('/sales/sales-company-syncNew', function () {
         return view("jinyerp::sales.sales-company-syncNew");
@@ -53,17 +55,17 @@ Route::group(['middleware' => 'web'], function () {
 });
 
 
-Route::get('/sales/sales-goods', function () {
-    return view("jinyerp::sales.sales-goods");
+Route::get('/sales/goods', function () {
+    return view("jinyerp::sales.goods.list");
 });
-Route::get('/sales/sales-goods-bom', function () {
-    return view("jinyerp::sales.sales-goods-bom");
+Route::get('/sales/goods/bom', function () {
+    return view("jinyerp::sales.goods.bom");
 });
-Route::get('/sales/sales-goods-bom-edit', function () {
-    return view("jinyerp::sales.sales-goods-bom-edit");
+Route::get('/sales/goods/bom/edit', function () {
+    return view("jinyerp::sales.goods.bom-edit");
 });
-Route::get('/sales/sales-goods-edit', function () {
-    return view("jinyerp::sales.sales-goods-edit");
+Route::get('/sales/goods/edit', function () {
+    return view("jinyerp::sales.goods.edit");
 });
 Route::get('/sales/sales-goods-info', function () {
     return view("jinyerp::sales.sales-goods-info");
@@ -71,20 +73,22 @@ Route::get('/sales/sales-goods-info', function () {
 Route::get('/sales/sales-goods-list', function () {
     return view("jinyerp::sales.sales-goods-list");
 });
-Route::get('/sales/sales-goods-sync', function () {
-    return view("jinyerp::sales.sales-goods-sync");
+Route::get('/sales/goods/sync', function () {
+    return view("jinyerp::sales.goods.sync");
 });
-Route::get('/sales/sales-house', function () {
-    return view("jinyerp::sales.sales-house");
+
+Route::get('/sales/house', function () {
+    return view("jinyerp::sales.house.list");
 });
-Route::get('/sales/sales-house-edit', function () {
-    return view("jinyerp::sales.sales-house-edit");
+Route::get('/sales/house/edit', function () {
+    return view("jinyerp::sales.house.edit");
 });
-Route::get('/sales/sales-manager', function () {
-    return view("jinyerp::sales.sales-manager");
+
+Route::get('/sales/manager', function () {
+    return view("jinyerp::sales.manager.list");
 });
-Route::get('/sales/sales-manager-edit', function () {
-    return view("jinyerp::sales.sales-manager-edit");
+Route::get('/sales/manager/edit', function () {
+    return view("jinyerp::sales.manager.edit");
 });
 Route::get('/sales/sales-quotation', function () {
     return view("jinyerp::sales.sales-quotation");

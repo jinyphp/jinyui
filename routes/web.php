@@ -52,6 +52,7 @@ Route::get('/drag',App\Http\Livewire\Drag::class);
 
 
 /** demo */
+/*
 Route::get('layouts/grid/grid5', function () {
     // https://www.youtube.com/watch?v=68O6eOGAGqA&t=16s
     return view('demo.layouts.grid.grid5');
@@ -63,4 +64,5 @@ Route::get('nav/virtical', function () {
 Route::get('image/animation', function () {
     return view('demo.image.animation');
 });
+*/
 

@@ -1,37 +1,14 @@
-<x-theme>
-	<x-main class="p-4">
-		<x-main-content class="bg-white p-4">
-			
-		</x-main-content>
-	</x-main>
-</x-theme>
+<x-theme theme="jinyerp" class="bootstrap">
+	<x-main-content>
+		<x-container>
+			<b>리셀러 프로그램 : </b>신규 및 연장
 
-<div align="center">
-<table border="0" width="1200" cellspacing="0" cellpadding="0">
-	<tr>
-		<td style="border:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF" >
-		{formstart}
-		
-		<table border="0" width="100%" cellspacing="0" cellpadding="0">
-			<tr>
-				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#E9E9E9">
-				<b>리셀러 프로그램 : </b>신규 및 연장</td>
-				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">
-				&nbsp;</td>
-				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">&nbsp;</td>
-				
-			</tr>
-		</table>
-		
-		<table border="0" width="100%" cellspacing="0" cellpadding="0">
-			<tr>
-				<td style="font-size:12px;padding:10px;">&nbsp;</td>
-			</tr>
-		</table>
-		
-		<p align="center">{list}</p>
-		<p>&nbsp;{formend}
-		</td>
-	</tr>
-	</table>
-</div>
+			{formstart}
+
+			{list}
+
+			{formend}
+			
+		</x-container>
+	</x-main-content>
+</x-theme>

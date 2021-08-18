@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Tables
 
 Documentation and examples for opt-in styling of tables (given their prevalent use in JavaScript plugins) with Bootstrap.

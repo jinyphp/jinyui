@@ -30,14 +30,21 @@
 
 
         <x-row>
-            <x-col-6>
-                <div class="card">
-                    <div class="card-header">
-                        <h5 class="card-title">Basic</h5>
+          <x-col-6>
+            <!-- -->
+            <x-card>
+                <x-card-header>
+                  <h5 class="card-title">Basic</h5>
                         <h6 class="card-subtitle text-muted"></h6>
-                    </div>
-                    <div class="card-body text-center">
-                    
+                </x-card-header>
+                <x-card-body>
+                  <x-navtab class="nav-bordered mb-3">
+                    <x-navtab-item class="show active" >
+                
+                        <x-navtab-link class="rounded-0 active">
+                            미리보기
+                        </x-navtab-link>
+                        {{-- preview 코드를 삽입합니다. --}}
                         <button type="button" class="btn btn-primary" onclick="toasty()" id="liveToastBtn">Show live toast</button>
 
                         <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
@@ -64,11 +71,30 @@
                                 })
                                 toastEl.show();
                             }
-                        </script>
+                        </script>								
                         
-                    </div>
-                </div>
-            </x-col-6>
+                    </x-navtab-item>
+                
+                    <x-navtab-item >
+                        <x-navtab-link class="rounded-0">
+                            코드보기
+                        </x-navtab-link> 
+                        ...
+                    </x-navtab-item>
+                </x-navtab>
+                </x-card-body>
+            </x-card>
+            
+            <x-card>
+                <x-card-header>
+                    
+                </x-card-header>
+                <x-card-body>
+                    
+                </x-card-body>
+            </x-card>
+        </x-col-6>
+
 
             <x-col-6>
                 <div class="card">

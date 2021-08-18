@@ -14,6 +14,7 @@ use Jiny\UI\Http\Livewire\DataTable;
 use Livewire\Livewire;
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\File;
 
 class JinyUIServiceProvider extends ServiceProvider
 {
@@ -147,7 +148,7 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\FormLabel::class, "form-label");
             Blade::component(\Jiny\UI\View\Components\FormItem::class, "form-item");
 
-            Blade::component(\Jiny\UI\View\Components\Card::class, "card");
+            Blade::component(\Jiny\UI\View\Components\Cards\Card::class, "card");
             Blade::component('jinyui::components.'.'card.body', 'card-body');
             Blade::component('jinyui::components.'.'card.header', 'card-header');
             Blade::component('jinyui::components.'.'card.footer', 'card-footer');
@@ -243,6 +244,10 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\Tables\Table::class, "table");
             Blade::component(\Jiny\UI\View\Components\Tables\TableHead::class, 'table-head');
             Blade::component(\Jiny\UI\View\Components\Tables\TableBody::class, 'table-body');
+            Blade::component('jinyui::components.'.'tables.check-all', 'table-check-all');
+            Blade::component('jinyui::components.'.'tables.check', 'table-check');
+
+
 
 
             // Extension
@@ -363,19 +368,24 @@ class JinyUIServiceProvider extends ServiceProvider
         });
 
         Blade::directive('codeFile', function ($args) {
-            $args = Blade::stripParentheses($args);
-            $args = trim($args,'"');
-            if($args[0] == ".") {
-                $path = str_replace(".", DIRECTORY_SEPARATOR, $args).".md";
-                $realPath = dirname(Blade::getPath()).$path;
+            $expression = Blade::stripParentheses($args);
+            /*
+            $filename = explode("::", $expression)[1];
+            $filename = str_replace(".", DIRECTORY_SEPARATOR, $filename);
+            $filename = trim($filename,'"').".blade.php";
+
+            $file = "";
+            dd($this->app['config']['view.paths'] );
+            foreach ($this->app['config']['view.paths'] as $path) {
+                dd($path.DIRECTORY_SEPARATOR.$filename);
+                if(file_exists($path.DIRECTORY_SEPARATOR.$filename)) {
+                    $file = $path.DIRECTORY_SEPARATOR.$filename;
+                    break;
+                }
             }
+            */
             
-            if (file_exists($realPath)) {
-                $body = file_get_contents($realPath);
-                return (new \Parsedown())->text("```".$body."```");
-            } else {
-                return "cannot find markdown resource ".$realPath."<br>";
-            }
+            return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
 
         Blade::directive('widget', function ($args) {

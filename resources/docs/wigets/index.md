@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Widget
 지니UI는 다양한 형식으로 만들어놓은 UI스타일과 데이터를 결합하여 화면 출력이 가능합니다.
 

@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Cards
 
 Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.

@@ -69,8 +69,8 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
         return view("jinyui::demo.pages.chat");
     });
 
-    Route::get('/blank', function(){
-        return view("jinyui::demo.pages.page.blank");
+    Route::get('/bank', function(){
+        return view("jinyui::demo.pages.page.bank");
     });
 
 
@@ -496,9 +496,18 @@ Route::middleware(['web'])->prefix('jinyui/maps')->group(function () {
 
 
 //Theme Demo
-Route::get('jinyui/landing/azia', function(){
+Route::get('/theme/azia/landing', function(){
     return view("theme.demo.azia.azia");
 });
+Route::get('/theme/azia/dash/web', function(){
+    return view("theme.demo.azia.dash-web");
+});
+Route::get('/theme/azia/mail', function(){
+    return view("theme.demo.azia.mail");
+});
+
+
+
 
 Route::get('boot', function(){
     return view("theme.demo.boot.home");

@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Navs and tabs
 
 Documentation and examples for how to use Bootstrap’s included navigation components.

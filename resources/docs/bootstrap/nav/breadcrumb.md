@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Breadcrumb
 
 Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.

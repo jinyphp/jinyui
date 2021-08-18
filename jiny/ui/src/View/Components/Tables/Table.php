@@ -37,12 +37,36 @@ class Table extends Component
         }
     }
 
-    public function table($slot, $attrs)
+    // 테이블 빌드
+    public function tableBuild($slot, $attrs)
     {
-        $table = new \Jiny\Html\Table\CTable();
-        $table->addClass("table");
+        $table = (new \Jiny\Html\Table\CTable())->addClass("table");
+        $table = $this->tableStyle($table, $attrs);
+        $table = $this->setAttrs($table, $attrs);
 
-        
+        // Head, Body 데이터 생성
+        $table
+            ->addItem(\Jiny\UI\Table::instance()->dataHead())
+            ->addItem(\Jiny\UI\Table::instance()->dataBody());
+
+        //
+        if($slot) {
+            $table->addItem($slot);
+        }
+
+        \Jiny\UI\Table::instance()->init();
+        return $table;
+    }
+
+    // 테이블 스타일, 클래스 추가
+    private function tableStyle($table, $attrs)
+    {
+        // BulkCheck
+        if(isset($attrs['check'])) {
+            unset($attrs['check']);
+            \Jiny\UI\Table::instance()->check();
+        }
+
 
         if(isset($attrs['striped'])) {
             unset($attrs['striped']);
@@ -74,14 +98,9 @@ class Table extends Component
             $table->addClass("table-responsive");
         }
 
-        $table = $this->setAttrs($table, $attrs);
-
-        if($slot) {
-            $table->addItem($slot);
-        }
-
         return $table;
     }
+
 
     private function setAttrs($item, $attrs)
     {
@@ -102,8 +121,6 @@ class Table extends Component
     }
 
 
-
-
     /**
      * Get the view / contents that represent the component.
      *
@@ -111,15 +128,6 @@ class Table extends Component
      */
     public function render()
     {
-        /*
-        if (!$this->rules) {
-            return <<<'blade'
-            <div>테이블 처리 규칙이 지정되어 있지 않습니다. <code> rule=코드명 </code> 를 추가해 주세요.</div>
-        blade; 
-        }
-        */
-
-
         return view('jinyui::components.tables.table' );
     }
 }

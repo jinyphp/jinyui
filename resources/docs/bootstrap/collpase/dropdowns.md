@@ -1,3 +1,11 @@
+---
+theme: "adminkit"
+layout: "markdown"
+title: "..."
+breadcrumb:
+    - "Docs"
+---
+
 # Dropdowns
 
 Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
