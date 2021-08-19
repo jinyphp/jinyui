@@ -22,22 +22,14 @@ class Table
     }
 
     public $bulkCheck = false;
-    public $headRows;
-    public $headAttrs;
-    public $headSlot;
-    public $bodyRows;
-    public $bodyAttrs;
-    public $bodySlot;
+    public $head=[];
+    public $body=[];
 
     public function init()
     {
         $this->bulkCheck = false;
-        $this->headRows=[];
-        $this->headAttrs=[];
-        $this->headSlot=null;
-        $this->bodyRows=[];
-        $this->bodyAttrs=[];
-        $this->bodySlot=null;
+        $this->head = [];
+        $this->body = [];
     }
 
 
@@ -89,30 +81,26 @@ class Table
     
     public function setDataHead($rows, $attrs=[], $slot=null)
     {
-        $this->headRows=$rows;
-        $this->headAttrs=$attrs;
-        $this->headSlot=$slot;
+        $this->head['rows'] = $rows;
+        $this->head['attrs'] = $attrs;
+        $this->head['slot'] = $slot;
     }
 
     
     public function setDataBody($rows, $attrs=[], $slot=null)
     {
-        $this->bodyRows=$rows;
-        $this->bodyAttrs=$attrs;
-        $this->bodySlot=$slot;
+        $this->body['rows'] = $rows;
+        $this->body['attrs'] = $attrs;
+        $this->body['slot'] = $slot;
     }
 
     public function dataBody()
     {
-        $rows = $this->bodyRows;
-        $attrs=$this->bodyAttrs; 
-        $slot=$this->bodySlot;
-
         $tbody = new \Jiny\Html\CTag("tbody",true);
         $_td = (new \Jiny\Html\CTag("td",true));
         $_tr = new \Jiny\Html\CTag("tr",true);
 
-        foreach($rows as $i => $row) {
+        foreach($this->body['rows'] as $i => $row) {
             $tr = clone $_tr;
             
             if($this->bulkCheck) {
@@ -127,20 +115,14 @@ class Table
             $tbody->addItem($tr);
         }
 
-        if(!empty($slot)) $tbody->addItem($slot);
+        if(!empty($this->body['slot'])) $tbody->addItem($this->body['slot']);
 
-        return $this->setAttrs($tbody, $attrs);
-        //return $tbody;
+        return $this->setAttrs($tbody, $this->body['attrs']);
     }
 
 
     public function dataHead()
     {
-
-        $title=$this->headRows;
-        $attrs=$this->headAttrs;
-        $slot=$this->headSlot;
-
         $thead = new \Jiny\Html\CTag("thead",true);
         $_th = (new \Jiny\Html\CTag("th",true));
         $tr = new \Jiny\Html\CTag("tr",true);
@@ -150,19 +132,16 @@ class Table
             $tr->addItem($th->addStyle("width: 20px;"));
         }
 
-        //dd($title);
-
-        foreach($title as $item) {
+        foreach($this->head['rows'] as $item) {
             $th = (clone $_th)->addItem($item['title']);
             $tr->addItem($th);
         }
 
         $thead->addItem($tr);
 
-        if(!empty($slot)) $thead->addItem($slot);
+        if(!empty($this->head['slot'])) $thead->addItem($this->head['slot']);
 
-        return $this->setAttrs($thead, $attrs);
-        //return $thead;
+        return $this->setAttrs($thead, $this->head['attrs']);
     }
 
     private function setAttrs($item, $attrs)
