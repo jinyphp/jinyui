@@ -42,4 +42,8 @@ class TableBody extends Component
 
         return view('jinyui::components.tables.tbody');
     }
+
+
+
+
 }

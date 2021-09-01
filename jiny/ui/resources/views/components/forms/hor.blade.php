@@ -1,4 +1,5 @@
-<div {{ $attributes->merge(['class' => 'mb-3 row']) }}>
+{{--
+<div {{ $attributes->merge(['class' => 'row mb-3']) }}>
     {{ BootFormItem()->start() }}
 
     <div class="col-sm-2 text-sm-end">
@@ -9,3 +10,5 @@
     
     {{ BootFormItem()->clear() }}
 </div>
+--}}
+{!! BootFormItem()->hor($attributes->merge(['class' => 'mb-3'])) !!}

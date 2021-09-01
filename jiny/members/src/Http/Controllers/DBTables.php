@@ -26,6 +26,7 @@ class DBTables extends Controller
         $query = "SHOW TABLES"; // 테이블 목록
         $stmt = $pdo->query($query); // 쿼리준비
 
+        $rows = [];
         while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             $rows []= $row;
         }
@@ -41,7 +42,7 @@ class DBTables extends Controller
     public function create()
     {
 
-        return view("jinymem::members.edit");
+
     }
 
     /**
@@ -61,9 +62,17 @@ class DBTables extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name)
     {
-        //
+        $pdo = DB::connection()->getPdo();
+        $query = "DESC ".$name; // 테이블 목록
+        $stmt = $pdo->query($query); // 쿼리준비
+
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            $rows []= $row;
+        }
+
+        return view("jinymem::database.tabledesc",compact('rows'));
     }
 
     /**

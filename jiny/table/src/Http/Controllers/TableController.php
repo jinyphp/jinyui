@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class TableController extends Controller
 {
-    private $tablename;
+    protected $tablename;
+
+    /*
     private $rule;
     private $conf;
 
@@ -44,22 +46,10 @@ class TableController extends Controller
         $this->conf['title'] = $title;
         return $this;
     }
+    */
 
 
-
-
-
-    /**
-     * index 리스트목록 출력
-     *
-     * @return void
-     */
-    public function index(Request $request)
-    {
-        return view('jinytable::datatable', $this->rules());
-    }
-
-        
+    
     /**
      * delete 선택한 항목 삭제
      *
@@ -73,4 +63,5 @@ class TableController extends Controller
         DB::table($this->tablename)->whereIn('id', $ids)->delete();
         return response()->json(['status'=>"200", 'ids'=>$ids]);
     }
+
 }

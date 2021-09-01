@@ -15,7 +15,6 @@ class CObject extends Component
 			$this->addItem($items);
 		}
 
-		
 	}
 
 
@@ -87,7 +86,8 @@ class CObject extends Component
     {
 		if (is_object($value)) {
             // 객체 아이템
-			array_push($this->items, unpack_object($value));
+			//array_push($this->items, unpack_object($value));
+			array_push($this->items, $value);
 		}
 		elseif (is_string($value)) {
             // 문자열

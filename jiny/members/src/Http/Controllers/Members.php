@@ -6,100 +6,44 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class Members extends Controller
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Route;
+
+use Jiny\Members\Http\Controllers\CrudController;
+
+class Members extends CrudController
 {
-    private $tablename;
 
     public function __construct()
     {
-        //dd($magic);
-        $pdo = DB::connection()->getPdo();
-        $query = "SHOW TABLES"; // 테이블 목록
-        $stmt = $pdo->query($query); // 쿼리준비
+        $this->initRules($this::class);
+        app()->instance("LiveDataController", $this);
+    }
 
-        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
-            $rows []= $row;
+    public function select()
+    {
+        $rows = [];
+        //user 테이블을 반환
+        $datas = DB::table("users")->paginate(5);
+        $this->livewire->pagination = $datas->links();
+        foreach($datas as $data)
+        {
+            $id = $data->id;
+            foreach($data as $key => $value) {
+                // _출력용 필드변환
+                if($key == "id") {
+                    $rows[$id]["user_".$key] = $value;
+                } else {
+                    $rows[$id]["_".$key] = $value;
+                }
+                
+            } 
         }
 
-        
+        return $rows;
     }
 
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        return view("jinymem::members.members");
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-
-        return view("jinymem::members.edit");
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
 
 }

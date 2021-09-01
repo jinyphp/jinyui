@@ -58,4 +58,10 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    //onr to one
+    public function phone()
+    {
+        return $this->hasOne('App\Models\Phone');
+    }
 }

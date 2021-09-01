@@ -29,6 +29,8 @@
             </div>
 
             <x-row>
+
+
                 <x-col-6>
                     <x-card>
                         <x-card-header>
@@ -43,6 +45,7 @@
                                         미리보기
                                     </x-navtab-link>
                                     {{-- preview 코드를 삽입합니다. --}}
+
                                     <x-list>                                
                                         <x-list-item>An item</x-list-item>
                                         <x-list-item>A second item</x-list-item>

@@ -16,6 +16,8 @@ class CInput extends CTag {
 	 */
 	protected $enabled = true;
 
+
+	// 객체 생성
 	public function __construct($type = 'text', $name = null, $value = null) {
 		parent::__construct('input');
 		$this->setType($type);
@@ -29,11 +31,15 @@ class CInput extends CTag {
 		return $this;
 	}
 
+
+	// 타입지정
 	public function setType($type) {
 		$this->setAttribute('type', $type);
 		return $this;
 	}
 
+
+	// 읽기 전용 설정
 	public function setReadonly($value) {
 		if ($value) {
 			$this->setAttribute('readonly', 'readonly');
@@ -46,14 +52,15 @@ class CInput extends CTag {
 		return $this;
 	}
 
+
 	/**
 	 * Prevent browser to autocomplete input element.
 	 */
 	public function disableAutocomplete() {
 		$this->setAttribute('autocomplete', 'off');
-
 		return $this;
 	}
+
 
 	/**
 	 * Enable or disable the element.
@@ -71,6 +78,15 @@ class CInput extends CTag {
 		return $this;
 	}
 
+
+	public function setDisable() {
+		$this->setAttribute('disabled', 'disabled');
+		return $this;
+	}
+
+
+	// overriding
+	// 속성제거
 	public function removeAttribute($name) {
 		if ($name === 'disabled') {
 			$this->enabled = false;
@@ -79,6 +95,9 @@ class CInput extends CTag {
 		return parent::removeAttribute($name);
 	}
 
+
+	// overriding
+	// 속성설정
 	public function setAttribute($name, $value) {
 		if ($name === 'disabled') {
 			$this->enabled = ($value !== 'disabled');
@@ -86,6 +105,7 @@ class CInput extends CTag {
 
 		return parent::setAttribute($name, $value);
 	}
+
 
 	/**
 	 * 추가: 최대 입력허용 글자수 지정
@@ -98,11 +118,13 @@ class CInput extends CTag {
 		return $this;
 	}
 
+
 	public function setAutofocus()
 	{
 		$this->setAttribute('autofocus', 'autofocus');
 		return $this;
 	}
+
 
 	public function setPlaceholder($value)
 	{
@@ -110,12 +132,8 @@ class CInput extends CTag {
 		return $this;
 	}
 
-	/**
-	 * 라이브와이어 속성
-	 */
-	public function setWireModel($pros)
-	{
-		$this->setAttribute('wire:model', $pros);
+	public function setValue($value) {
+		$this->setAttribute('value', $value);
 		return $this;
 	}
 

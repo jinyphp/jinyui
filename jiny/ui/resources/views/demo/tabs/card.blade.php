@@ -31,6 +31,7 @@
         	</x-row>  
         	<!-- end page title -->
 
+
             <div class="relative">
                 <div class="absolute bottom-4 right-0">
                     <div class="btn-group">
@@ -42,10 +43,10 @@
             <div class="row">
                 <div class="col-md-3 col-xl-2">
 
-                    <x-jinyui-card>
-                        <x-jinyui::card.header>
+                    <x-card>
+                        <x-card-header>
                             <h5 class="card-title mb-0">Tabs</h5>
-                        </x-jinyui::card.header>
+                        </x-card-header>
 
                         <x-jinyui::tab.header class="list-group list-group-flush">
                             {{ \Jiny\UI\CTab::instance()->links(
@@ -57,7 +58,7 @@
                                 "tab1") }}
                         </x-jinyui::tab.header>
                         
-                    </x-jinyui-card>
+                    </x-card>
 
                 </div>
 
@@ -67,24 +68,24 @@
                     <x-jinyui::tab.content>
                         {{-- 텝 컨덴츠 생성--}}
                         <x-jinyui::tab.item class="active show" id="tab1">
-                            <x-jinyui-card>
+                            <x-card>
                                 Tab1 Content  
-                            </x-jinyui-card>
+                            </x-card>
                                                     
                         </x-jinyui::tab.item>
 
                         {{-- 텝 컨덴츠 생성--}}
                         <x-jinyui::tab.item id="tab2">                        
-                            <x-jinyui-card>
+                            <x-card>
                                 Tab2 Content  
-                            </x-jinyui-card>
+                            </x-card>
                         </x-jinyui::tab.item>
 
                         {{-- 텝 컨덴츠 생성--}}
                         <x-jinyui::tab.item id="tab3">                        
-                            <x-jinyui-card>
+                            <x-card>
                                 Tab3 Content  
-                            </x-jinyui-card>
+                            </x-card>
                         </x-jinyui::tab.item>
                     </x-jinyui::tab.content>
                 </div>

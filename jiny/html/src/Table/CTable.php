@@ -32,6 +32,7 @@ class CTable extends CTag {
 		return $this;
 	}
 
+	
 	public function prepareRow($item, $class = null, $id = null) {
 		if ($item === null) {
 			return null;

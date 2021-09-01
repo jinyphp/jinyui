@@ -65,7 +65,7 @@ class Table
             ->setAttribute("type", "checkbox")
             ->setAttribute("id", "all_checks")
             ->setAttribute("name", "all_checks")
-            ->addClass("form-check-input rowCheckbox");
+            ->addClass("form-check-input");
             // @click="selectAllCheckbox($event);">
 
         $label = (new \Jiny\Html\CTag("label",true))
@@ -94,6 +94,7 @@ class Table
         $this->body['slot'] = $slot;
     }
 
+
     public function dataBody()
     {
         $tbody = new \Jiny\Html\CTag("tbody",true);
@@ -109,7 +110,9 @@ class Table
             }
 
             foreach($row as $item) {
-                $td = (clone $_td)->addItem($item);
+                $td = (clone $_td)->addItem(
+                    $item
+                );
                 $tr->addItem($td);
             }
             $tbody->addItem($tr);
@@ -124,25 +127,32 @@ class Table
     public function dataHead()
     {
         $thead = new \Jiny\Html\CTag("thead",true);
-        $_th = (new \Jiny\Html\CTag("th",true));
-        $tr = new \Jiny\Html\CTag("tr",true);
-        
-        if($this->bulkCheck) {
-            $th = (clone $_th)->addItem($this->allCheck());
-            $tr->addItem($th->addStyle("width: 20px;"));
+
+        if(empty($this->head['slot'])) {
+            // 데이터를 기반으로 해더 생성
+            $_th = (new \Jiny\Html\CTag("th",true));
+            $tr = new \Jiny\Html\CTag("tr",true);
+            
+            if($this->bulkCheck) {
+                $th = (clone $_th)->addItem($this->allCheck());
+                $tr->addItem($th->addStyle("width: 20px;"));
+            }
+
+            foreach($this->head['rows'] as $item) {
+                $th = (clone $_th)->addItem($item['title']);
+                $tr->addItem($th);
+            }
+
+            $thead->addItem($tr);
+
+        } else {
+            // slot 출력
+            $thead->addItem($this->head['slot']);
         }
-
-        foreach($this->head['rows'] as $item) {
-            $th = (clone $_th)->addItem($item['title']);
-            $tr->addItem($th);
-        }
-
-        $thead->addItem($tr);
-
-        if(!empty($this->head['slot'])) $thead->addItem($this->head['slot']);
 
         return $this->setAttrs($thead, $this->head['attrs']);
     }
+
 
     private function setAttrs($item, $attrs)
     {
@@ -152,7 +162,6 @@ class Table
                     $item->setUrl($value);
                     continue;
                 } else if ($name === "class") {
-
                     $item->addClass($value);
                     continue;
                 }

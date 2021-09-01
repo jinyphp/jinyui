@@ -8,6 +8,7 @@ use Illuminate\View\Compilers\BladeCompiler;
 use Livewire\Livewire;
 
 use Illuminate\Support\Facades\View;
+use Laravel\Fortify\Fortify;
 
 class MemServiceProvider extends ServiceProvider
 {
@@ -18,7 +19,20 @@ class MemServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', $this->package);
 
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
         $this->configureComponents();
+
+        // Fortify 설정
+        /*
+        Fortify::registerView(function () {
+            return view("jinymem::auth.register");
+        });
+
+        Fortify::loginView(function () {
+            return view("auth.login");
+        });
+        */
 
     }
 

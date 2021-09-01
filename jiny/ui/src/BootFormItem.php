@@ -17,35 +17,30 @@ class BootFormItem
         }
     }
 
-    public $tag;
 
+    public $tag;
     public function start()
     {
         $this->tag = true;
-        //dd($this->tag);
     }
 
+
+    // 라벨지정
     public $label;
     public function setLabel($title, $attrs=null)
     {
-        //dd($this->tag);
         if ($title) {
             $label = CLabel($title);
             $this->label = $this->setAttrs($label, $attrs);
-            
-            // 시작테그가 없는 경우, 결과값 바로 반환
-            //dd($this->tag);
-            //if($this->tag === false) return $this->label;
         }
     }
 
     public function getLabel($attrs=null)
     {
-        // 추가 속성이 있는 경우
         if ($this->label && $attrs) {
+            // 추가 속성이 있는 경우
             return $this->setAttrs($this->label, $attrs);
         }
-
         return $this->label;
     }
     
@@ -55,20 +50,17 @@ class BootFormItem
     {
         $item = CDiv($item);
         $this->item = $this->setAttrs($item, $attrs);
-
-        // 시작테그가 없는 경우, 결과값 바로 반환
-        //if(!$this->tag) return $this->item;
     }
 
     public function getItem($attrs=null)
     {
-        // 추가 속성이 있는 경우
         if ($this->item && $attrs) {
+            // 추가 속성이 있는 경우
             return $this->setAttrs($this->item, $attrs);
         }
-
         return $this->item;
     }
+
 
     public function clear()
     {
@@ -76,6 +68,7 @@ class BootFormItem
         $this->item = null;
         $this->tag = false;
     }
+
 
     private function setAttrs($item, $attrs)
     {
@@ -90,5 +83,30 @@ class BootFormItem
         }
         return $item;
     }
+
+    // 출력:bootstrap
+    public function hor($attrs)
+    {
+        $itemRow = CDiv()
+            ->addItem(
+                CDiv(
+                    $this->label->addClass("col-form-label")
+                    //$this->getLabel(['class'=>"col-form-label"])
+                )
+                ->addClass("col-sm-2") //>= 576px
+                ->addClass("text-sm-end")
+            )
+            ->addItem(
+                $this->item->addClass("col-sm-10")
+                //$this->getItem(['class'=>"col-sm-10"])
+            )
+            ->addClass("row");
+
+        $this->clear(); //속성값 제거
+
+        return $this->setAttrs($itemRow, $attrs);
+    }
+
+
 
 }

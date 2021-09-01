@@ -29,7 +29,6 @@
             </div>
 
 		
-
 			<x-row>
 				<x-col-6>
 					<x-card>

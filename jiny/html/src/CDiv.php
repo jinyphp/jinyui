@@ -1,7 +1,8 @@
 <?php
 namespace Jiny\Html;
 
-class CDiv extends CTag {
+class CDiv extends CTag 
+{
 
 	public function __construct($items = null) {
 		parent::__construct('div', true); // CTag

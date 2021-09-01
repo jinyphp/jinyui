@@ -24,6 +24,7 @@ class CList extends CTag {
 		}
 	}
 
+
 	private function prepareItem($value = null, $class = null, $id = null) {
 		if ($value !== null) {
 			$value = new CListItem($value);
@@ -38,6 +39,7 @@ class CList extends CTag {
 		return $value;
 	}
 
+	
 	public function addItem($value, $class = null, $id = null) {
 		if (!is_null($value) && $this->emptyList) {
 			$this->emptyList = false;

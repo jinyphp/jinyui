@@ -1,38 +1,44 @@
 <x-theme theme="adminkit">
     <x-main-content>
         <x-container>
-
-            <h1 class="h3 mb-3">Inputs Radio</h1>
+            <!-- start page title -->
+        	<x-row >
+            	<x-col class="col-8">
+                	<div class="page-title-box">                        
+                    	<ol class="breadcrumb m-0">
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
+                        	<li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                        	<li class="breadcrumb-item active">Input</li>
+                    	</ol>                        
+                    
+        				<div class="mb-3">
+                        	<h1 class="h3 d-inline align-middle">Input Radio</h1>
+                            <p></p>
+                    	</div>
+                	</div>
+            	</x-col>
+        	</x-row>  
+        	<!-- end page title -->
 
             <x-row>
                 <x-col-6>
                     <x-card>
-                        <div class="card-header">
+                        <x-card-header>
                             <h5 class="card-title mb-0">Radios</h5>
-                        </div>
-                        <div class="card-body">
-                            <div>
-                                <label class="form-check">
-                                    <input class="form-check-input" type="radio" value="option1" name="radios-example" checked="">
-                                    <span class="form-check-label">
-                                        Option one is this and that—be sure to include why it's great
-                                    </span>
-                                </label>
-                                <label class="form-check">
-                                    <input class="form-check-input" type="radio" value="option2" name="radios-example">
-                                    <span class="form-check-label">
-                                        Option two can be something else and selecting it will deselect option one
-                                    </span>
-                                </label>
-                                <label class="form-check">
-                                    <input class="form-check-input" type="radio" value="option3" name="radios-example" disabled="">
-                                    <span class="form-check-label">
-                                        Option three is disabled
-                                    </span>
-                                </label>
-                            </div>
-                            
-                        </div>
+                        </x-card-header>
+                        <x-card-body>
+                            {!! xRadioGroup()
+                                ->addRadio(
+                                    xRadio("radios-example", "option1"), 
+                                    "Option one is this and that—be sure to include why it's great")   
+                                ->addRadio(
+                                    xRadio("radios-example", "option2")->setChecked(), 
+                                    "Option two can be something else and selecting it will deselect option one")
+                                ->addRadio(
+                                    xRadio("radios-example", "option3")->setDisable(), 
+                                    "Option three is disabled")
+                            !!}
+                        </x-card-body>
                     </x-card>
                 </x-col-6>
 
@@ -46,15 +52,16 @@
                         </x-card-header>
                         <x-card-body>
                             <div class="mt-2">
-                                <div class="form-check form-check-inline">
-                                    <input type="radio" id="customRadio3" name="customRadio1" class="form-check-input">
-                                    <label class="form-check-label" for="customRadio3">Toggle this custom radio</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input type="radio" id="customRadio4" name="customRadio1" class="form-check-input">
-                                    <label class="form-check-label" for="customRadio4">Or toggle this other custom radio</label>
-                                </div>
+                                {!! xRadioGroup("inline")
+                                    ->addRadio(
+                                        xRadio("customRadio1", "option1"), 
+                                        "Toggle this custom radio")   
+                                    ->addRadio(
+                                        xRadio("customRadio1", "option2")->setChecked(), 
+                                        "Or toggle this other custom radio")                               
+                                !!}                 
                             </div>
+
                             <div>
                                 <label class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="inline-radios-example" value="option1">
@@ -105,14 +112,14 @@
                             <h5 class="card-title mb-0">Colors</h5>
                         </x-card-header>
                         <x-card-body>
-                            <div class="form-check mb-2">
-                                <input type="radio" id="customRadiocolor1" name="customRadiocolor1" class="form-check-input" checked="">
-                                <label class="form-check-label" for="customRadiocolor1">Default Radio</label>
-                            </div>
-                            <div class="form-check form-radio-success mb-2">
-                                <input type="radio" id="customRadiocolor2" name="customRadiocolor2" class="form-check-input" checked="">
-                                <label class="form-check-label" for="customRadiocolor2">Success Radio</label>
-                            </div>
+                            {!! xRadioLabel(xRadio("customRadiocolor1", "option1")
+                                ->setChecked(), "Default Radio")
+                                ->addClass("mb-2") !!}
+
+                            {!! xRadioLabel(xRadio("customRadiocolor2", "option1")->setChecked(), "Success Radio")
+                                ->addClass("form-radio-success")
+                                ->addClass("mb-2") !!}
+
                             <div class="form-check form-radio-info mb-2">
                                 <input type="radio" id="customRadiocolor3" name="customRadiocolor3" class="form-check-input" checked="">
                                 <label class="form-check-label" for="customRadiocolor3">Info Radio</label>

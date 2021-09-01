@@ -6,11 +6,14 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Compilers\BladeCompiler;
 
+/*
 use Jiny\UI\Http\Livewire\DataField;
 use Jiny\UI\Http\Livewire\DataList;
 use Jiny\UI\Http\Livewire\DataForm;
 use Jiny\UI\Http\Livewire\DataFormSetting;
 use Jiny\UI\Http\Livewire\DataTable;
+*/
+
 use Livewire\Livewire;
 
 use Illuminate\Support\Facades\View;
@@ -36,6 +39,7 @@ class JinyUIServiceProvider extends ServiceProvider
     {
         /* 라이브와이어 컴포넌트 등록 */
         $this->app->afterResolving(BladeCompiler::class, function () {
+            /*
             Livewire::component('data-field', DataField::class);
             Livewire::component('data-list', DataList::class);
             Livewire::component('data-form', DataForm::class);
@@ -45,6 +49,7 @@ class JinyUIServiceProvider extends ServiceProvider
             Livewire::component('menu-tree', \Jiny\UI\Http\Livewire\MenuTree::class);
 
             Livewire::component('datatable', DataTable::class);
+            */
         });
     }
 
@@ -167,6 +172,9 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'button.close', 'close');
             Blade::component(\Jiny\UI\View\Components\Button\Badge::class, 'badge');
             Blade::component('jinyui::components.'.'button.indicator', 'indicator');
+
+            // 링크
+            Blade::component('jinyui::components.'.'link.a', 'link');
             
 
             
@@ -195,6 +203,11 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'nav.tab-pillbar', 'navtab-pillbar');// pillbar
             Blade::component('jinyui::components.'.'nav.tab-item', 'navtab-item');
             Blade::component('jinyui::components.'.'nav.tab-link', 'navtab-link');
+
+            //Navbar
+            Blade::component('jinyui::components.'.'nav.navbar', 'navbar');
+            Blade::component('jinyui::components.'.'nav.navbar-nav', 'navbar-nav');
+
 
             //Modal
             Blade::component('jinyui::components.'.'modal.button', 'modal-button');
@@ -239,6 +252,8 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'forms.text', 'form-text');
             Blade::component('jinyui::components.'.'forms.email', 'form-email');
             Blade::component('jinyui::components.'.'forms.number', 'form-number');
+
+            
 
             //Table
             Blade::component(\Jiny\UI\View\Components\Tables\Table::class, "table");
@@ -287,19 +302,7 @@ class JinyUIServiceProvider extends ServiceProvider
 
 
 
-        // 레이아웃
-        //Blade::component('jinyui::components.'.'app', 'app');
-        //Blade::component('jinyui::components.'.'layout', 'layout');
-        //Blade::component('jinyui::components.'.'theme', 'theme');
-        Blade::component('jinyui::components.'.'bootstrap', 'bootstrap'); //부트스트랩 랩퍼
-        //Blade::component('jinyui::components.'.'layouts.main', 'main');
-        //Blade::component('jinyui::components.'.'layouts.content', 'main-content');
-        Blade::component('jinyui::components.'.'layout.row', 'row');
-        Blade::component('jinyui::components.'.'layout.row-center', 'row-center'); // 가로 가운데 정렬배치
-        Blade::component('jinyui::components.'.'layout.col', 'col');
-        Blade::component('jinyui::components.'.'layout.col-12', 'col-12');
-        Blade::component('jinyui::components.'.'layout.col-6', 'col-6');
-        Blade::component('jinyui::components.'.'layout.col-4', 'col-4');
+        
 
 
 
@@ -330,6 +333,25 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component('jinyui::components.alert.danger-none', 'alert-danger-none');
         Blade::component('jinyui::components.alert.warning-none', 'alert-warning-none');
         Blade::component('jinyui::components.alert.info-none', 'alert-info-none');
+
+        // Utility
+        // 레이아웃
+        //Blade::component('jinyui::components.'.'app', 'app');
+        //Blade::component('jinyui::components.'.'layout', 'layout');
+        //Blade::component('jinyui::components.'.'theme', 'theme');
+        Blade::component('jinyui::components.'.'bootstrap', 'bootstrap'); //부트스트랩 랩퍼
+        //Blade::component('jinyui::components.'.'layouts.main', 'main');
+        //Blade::component('jinyui::components.'.'layouts.content', 'main-content');
+        Blade::component('jinyui::components.'.'layout.row', 'row');
+        Blade::component('jinyui::components.'.'layout.row-center', 'row-center'); // 가로 가운데 정렬배치
+        Blade::component('jinyui::components.'.'layout.col', 'col');
+        Blade::component('jinyui::components.'.'layout.col-12', 'col-12');
+        Blade::component('jinyui::components.'.'layout.col-6', 'col-6');
+        Blade::component('jinyui::components.'.'layout.col-4', 'col-4');
+
+        Blade::component('jinyui::components.'.'flex.row', 'flex-row');
+        Blade::component('jinyui::components.'.'flex.col', 'flex-col');
+        Blade::component('jinyui::components.'.'flex.center', 'flex-center');
 
 
         

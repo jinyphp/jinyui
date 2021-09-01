@@ -28,9 +28,10 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 
-
+/*
 use App\Http\Livewire\Admin\AdminMain;
 Route::get('/admin',AdminMain::class);
+*/
 
 
 /*

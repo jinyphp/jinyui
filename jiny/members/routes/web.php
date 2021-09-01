@@ -2,28 +2,56 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-
 use Jiny\Members\Http\Controllers\DBTables;
-Route::resource('/admin/db/tables', DBTables::class);
+Route::resource('/admin/db/tables', DBTables::class)->names([
+    'create' => "db.tables.new"
+]);
 
+
+
+use Jiny\Members\Http\Controllers\Members;
+use Jiny\Members\Http\Controllers\Users;
+use Jiny\Members\Http\Controllers\Agreements;
+use Jiny\Members\Http\Controllers\Blacklist;
+use Jiny\Members\Http\Controllers\Reserved;
+use Jiny\Members\Http\Controllers\Level;
+use Jiny\Members\Http\Controllers\Group;
+use Jiny\Members\Http\Controllers\Team;
+use Jiny\Members\Http\Controllers\Roles;
+Route::middleware(['web'])->prefix('/admin/members')->name("admin-members")->group(function () {
+    // 회원목록    
+    Route::resource('/list', Members::class);
+    Route::resource('/users', Users::class);
+    Route::resource('/roles', Roles::class);
+
+
+    // 회원가입 동의서
+    Route::resource('/agreements', Agreements::class);
+
+    // 블랙리스트
+    Route::resource('/blacklist', Blacklist::class);
+
+    // 예약 회원
+    Route::resource('/reserved', Reserved::class);
+
+    // 회원 레벨
+    Route::resource('/level', Level::class);
+
+    //회원 그룹
+    Route::resource('/group', Group::class);
+
+    // 팀
+    Route::resource('/team', Team::class);
+
+});
 
 // 회원 dashboard
 
 
-// 회원목록
-use Jiny\Members\Http\Controllers\Members;
-Route::resource('/admin/members', Members::class);
-// Route::get('/admin/members',[\Jiny\Members\Http\Controllers\Members::class,"index"])->name("admin.members");
-//Route::get('/admin/members/new', [\Jiny\Members\Http\Controllers\Members::class,"addNew"])->name("admin.members.new");
 
 
-// 회원가입 동의서
-Route::get('/admin/members/agreement', function () {
-    return view("jinymem::members.agreement");
-});
-Route::get('/admin/members/agreement/edit', function () {
-    return view("jinymem::members.agreement-edit");
-});
+
+
 
 Route::get('/admin/members/agreement/log', function () {
     //회원 동의서 기록
@@ -31,24 +59,6 @@ Route::get('/admin/members/agreement/log', function () {
 
 // 회원 가입항목 관리
 
-
-
-// 블랙리스트
-Route::get('/admin/members/blacklist', function () {
-    return view("jinymem::members.blacklist");
-});
-Route::get('/admin/members/blacklist/edit', function () {
-    return view("jinymem::members.blacklist-edit");
-});
-
-
-// 예약 회원
-Route::get('/admin/members/reserved', function () {
-    return view("jinymem::members.reserved");
-});
-Route::get('/admin/members/reserved/edit', function () {
-    return view("jinymem::members.reserved-edit");
-});
 
 
 // 회원 적립금 관리
@@ -86,8 +96,13 @@ Route::get('/admin/members/point/edit', function () {
 
 // 회원 로그인기록
 
-// 회원 레벨
 
-//회원 그룹
+
+
 
 // contact
+
+
+
+
+// 권환

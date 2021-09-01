@@ -76,9 +76,12 @@ function CForm(){
 	return new \Jiny\Html\Form\CForm();
 }
 
-function CLabel($label, $for = null){
+function CLabel($label=null, $for = null){
 	return new \Jiny\Html\Form\CLabel($label, $for);
 }
+
+
+
 
 function CEmail(){
     return new \Jiny\Html\Form\CInput($type = 'email');

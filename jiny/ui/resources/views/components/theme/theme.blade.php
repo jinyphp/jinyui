@@ -1,4 +1,5 @@
 <x-theme-app>
+    {{-- 페이지 타이틀 설정--}}
     @if (isset($seo_title)) 
         <x-slot name="seo_title">{{$seo_title}}</x-slot>
     @endif
