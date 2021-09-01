@@ -1,0 +1,25 @@
+{
+    "name": "jinyerp/sales",
+    "description": "jinyERP Sales",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "hojinlee",
+            "email": "infohojin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiny\\Sales":"src/"
+        },
+        "files" : [
+            "src/Helpers/Helper.php"
+        ]
+    }
+
+}

@@ -1,0 +1,144 @@
+<html>
+
+<head>
+<meta http-equiv='Content-Language' content='ko'>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+<meta name='viewport' content='user-scalable=nom, initial-scale=1.0,
+ maximum-scale=1.0, minimum-scale=1.0, width=device-width' />
+  <style>
+   a {text-decoration: none}
+  </style>
+
+
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<div align="center">
+
+<div align="center">
+
+
+
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="100%" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<tr>
+			<td valign="top">
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#DBEEF3'>
+			<tr>
+				<td align='left' style='font-size:12px;padding:10px;'><b>영업관리</b></td>
+			</tr>
+			</table>
+			<table border="0" width="100%" cellspacing="5" cellpadding="5">
+				<tr>
+					<td>▪ <a href="sales_trans_sell.php">매출전표 작성</a> / <font size="2">
+							<a href="sales_trans_sell_auth.php">매출승인</a> / <a href="sales_quotation.php">견적서 작성</a> 
+					/
+							<a href="sales_payment_edit.php?company_id=&paymode=1">입금전표</a> 
+					/ <a href="sales_trans_report.php">거래명세서</a> / <a href="sales_trans_buy.php">매입전표 작성</a> 
+					/ <a href="sales_trans_buy_auth.php">
+							매입승인</a> /
+							<a href="sales_payment_edit.php?company_id=&paymode=2">출금전표</a> 
+					/ <a href="sales_payment.php">입출금 내역</a></font></td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+					
+	
+	{formstart}
+	<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#DEDEDF'>
+	<tr>
+	<td style='font-size:12px;padding:7px;'><b>견적서 관리</b></td>
+	<td width="100" align="right" style='font-size:12px;padding:7px;'>{new}</td>
+	</tr>
+	</table>
+
+
+				<table border='0' width='100%' cellspacing='0' cellpadding='0' style='background-color:#fafafa; border:1px solid #D2D2D2;'>
+				<tr>
+				<td style='border-right:1px solid #D2D2D2;font-size:12px;padding:7px;' align="center">
+				작성일자</td>
+				<td style='font-size:12px;padding:7px;' align="center" width="100">{startdate}</td>
+				<td style='font-size:12px;padding:7px;' width="10">~</td>
+				<td style='font-size:12px;padding:7px;' width="100">{enddate}</td>
+				</tr>
+				</table>
+
+
+
+
+				<table border='0' width='100%' cellspacing='0' cellpadding='0' style='background-color:#fafafa; border-left:1px solid #D2D2D2;border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;'>
+				<tr>
+				<td style='border-right:1px solid #D2D2D2;font-size:12px;padding:7px;' align="center">
+				검색</td>
+				<td style='font-size:12px;padding:7px;' width="130">{search}</td>
+				<td style='font-size:12px;padding:7px;' align="center" width="80">{submit}</td>
+				</tr>
+				</table>
+
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+
+
+				<table border='0' width='100%' cellspacing='0' cellpadding='0' style='background-color:#fafafa; border:1px solid #D2D2D2;'>
+				<tr>
+				<td style='font-size:12px;padding:10px;' align="center">
+				견적서 제목</td>
+				</tr>
+				</table>
+
+
+				<table border='0' width='100%' cellspacing='0' cellpadding='0' style='background-color:#fafafa; border-left:1px solid #D2D2D2; border-right:1px solid #D2D2D2; border-bottom:1px solid #D2D2D2;'>
+				<tr>
+				<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+				견적일자</td>
+				<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center">
+				업체명</td>
+				<td style='font-size:12px;padding:10px;' align="center" width="80">
+				견적금액</td>
+				</tr>
+				</table>
+	{databody}{formend}</td>
+		</tr>
+	</table>
+			</div>
+</div>
+
+
+
+<p>&nbsp;</p>
+</div>
+<p>&nbsp;</p>
+
+
+				<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-left:1px solid #D2D2D2; border-right:1px solid #D2D2D2; border-bottom:1px solid #D2D2D2;'>
+				<tr>
+				<td style='font-size:12px;padding:10px;' align="center">
+				{title}</td>
+				</tr>
+				</table>
+
+
+				<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-left:1px solid #D2D2D2; border-right:1px solid #D2D2D2; border-bottom:1px solid #D2D2D2;'>
+				<tr>
+				<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">
+				{transdate}</td>
+				<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center">
+				{company}</td>
+				<td style='font-size:12px;padding:10px;' align="center" width="80">
+				{amount}</td>
+				</tr>
+				</table>
+	
+
+</body>
+
+</html>

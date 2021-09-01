@@ -1,0 +1,292 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type=text/css>
+#default {font-size:12px;padding:10px;}
+</style>
+</head>
+
+<div align="center">
+	<div align="center">
+	
+	
+	
+	<table border="0" cellpadding="5" cellspacing="5" width="1000" style="border:1px solid #d2d2d2;" bgcolor="#FFFFFF">
+		<tr>
+			<td style="padding-left:10px" valign="top">
+		{formstart}
+		{tid}<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+		<tr>
+		<td align='left' width="100">{formtype}</td>
+		<td align='left'><font size="2"><b>매출전표 : 거래 명세서 인쇄</b></font></td>
+		<td align='right' width="100">{print}</td>
+		</tr>
+		</table>			
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+		
+		<div id="printbody">
+	<div align="center">
+	
+	
+	
+	<table border="0" cellpadding="0" cellspacing="0" width="1000" >
+		<tr>
+			<td >
+
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td width="250" valign='bottom'>
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:1px solid #6699FF;'>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="70">	
+		발급일자</td>
+		<td style='font-size:12px;padding:10px;' >{transdate}</td>
+	</tr>
+</table>
+		</td>
+		<td width="5">&nbsp;</td>
+		<td style="padding-left:10px" align="center"><h1>거&nbsp; 래&nbsp; 명&nbsp; 세&nbsp; 서</h1></td>
+		<td width="5">&nbsp;</td>
+		<td style="padding-left:10px" align="center" width="400">
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:1px solid #6699FF;'>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:5px;' align="center" width="20" rowspan="2">결<p>재</td>
+		<td style='border-right:1px solid #6699FF; border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="center" width="80" >담당</td>
+		<td style='border-right:1px solid #6699FF; border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="center" width="80">대리</td>
+		<td style='border-right:1px solid #6699FF; border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="center" width="80">과장</td>
+		<td style='border-right:1px solid #6699FF; border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="center" width="80">부장</td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="center" width="80">사장</td>
+	</tr>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' width="80" height="50" >&nbsp;</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="80" height="50">&nbsp;</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="80" height="50">&nbsp;</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="80" height="50">&nbsp;</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="80" height="50">&nbsp;</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="top">
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:2px solid #6699FF;'>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="10" rowspan="4">	
+		공<p>급</p>
+		<p>자</td>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		등록번호</td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:10px;' align="center" colspan="3">{biznumber1}</td>
+	</tr>
+	<tr>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		상호</td>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;'>
+		{company1}</td>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="40">
+		대표자</td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:10px;' width="100">{president1}</td>
+	</tr>
+	<tr>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		주소</td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:10px;' colspan="3">{address1}</td>
+		</tr>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		업태</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;'>
+		{subject1}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="40">
+		업종</td>
+		<td style='font-size:12px;padding:10px;' width="100">
+		{item1}</td>
+	</tr>
+</table>
+		</td>
+		<td width="5" valign="top">&nbsp;</td>
+		<td valign="top">
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:2px solid #6699FF;'>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="10" rowspan="4">	
+		공급<p>받는자</td>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		등록번호</td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:10px;' align="center" colspan="3">{biznumber2}</td>
+	</tr>
+	<tr>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		상호</td>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;'>
+		{company2}</td>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="40">
+		대표자</td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:10px;' width="100">{president2}</td>
+	</tr>
+	<tr>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		주소</td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:10px;' colspan="3">{address2}</td>
+		</tr>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">	
+		업태</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;'>
+		{subject2}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="40">
+		업종</td>
+		<td style='font-size:12px;padding:10px;' width="100">
+		{item2}</td>
+	</tr>
+</table>
+		</td>
+	</tr>
+</table>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:1px solid #6699FF;'>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="25">	
+		일자</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' >상품명</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">수량</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">단가</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">금액</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">부가세</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">할인율</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="80">합계</td>
+	</tr>
+</table>
+{paylist}
+
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:1px solid #6699FF;'>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:5px;' align="center" rowspan="4">	
+		{trans_memo}</td>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:5px;' align="center" width="70"><font size="2">공급가액</font></td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="right" width="130"><font size="2">{prices_sum}</font></td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="right" width="30">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:5px;' align="center" width="70"><font size="2">세액</font></td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="right" width="130"><font size="2">{tax_sum}</font></td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="right" width="30">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style='border-bottom:1px solid #6699FF;border-right:1px solid #6699FF; font-size:12px;padding:5px;' align="center" width="70"><font size="2">미수금</font></td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="right" width="130"><font size="2">{balance}</font></td>
+		<td style='border-bottom:1px solid #6699FF;font-size:12px;padding:5px;' align="right" width="30">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:5px;' align="center" width="70"><font size="2">합계</font></td>
+		<td style='font-size:12px;padding:5px;' align="right" width="130"><font size="2">{prices_total}</font></td>
+		<td style='font-size:12px;padding:5px;' align="right" width="30">&nbsp;</td>
+	</tr>
+</table>
+
+
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			</div>
+		</div>
+		{formend}
+
+			</td>
+		</tr>
+	</table>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+			</div>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</div>
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+<style type="text/css">
+    @media print
+    {
+        body {
+            /* styles */
+        }
+    }
+</style>
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+<table border='0' width='1000' cellspacing='0' cellpadding='0' style='border-right:1px solid #6699FF;border-bottom:1px solid #6699FF;border-left:1px solid #6699FF;'>
+	<tr>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="25">{TID}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' >{goodname}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="50">{num}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">{prices}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">{sum}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">{vat}</td>
+		<td style='border-right:1px solid #6699FF; font-size:12px;padding:10px;' align="center" width="60">{discount}</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="80">{total}</td>
+	</tr>
+</table>

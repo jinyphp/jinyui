@@ -1,0 +1,105 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{formstart}
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#E9E9E9">
+		<b>서비스 테이블 목록 : </b>{table_name}</td>
+		<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9" align="center"> </td>
+		<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9" align="center"> </td>				
+	</tr>
+</table>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">활성화 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{enable}</td>
+<td style="font-size:12px;padding:10px;"> </td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">등록일자 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{regdate}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> </td>
+</tr>
+</table>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				<font color="#FF0000">리스트 이름</font> :</td>
+<td style="font-size:12px;padding:10px;" width="200">
+{list_name}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">리스트 이름</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				<font color="#FF0000">리스트 타입</font> :</td>
+<td style="font-size:12px;padding:10px;" width="200">
+{list_type}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">리스트 출력 형식</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				<font color="#FF0000">리스트 필드</font> :</td>
+<td style="font-size:12px;padding:10px;" width="200">
+{list_field}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">출력 필드값</font></td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">
+				리스트 값 :</td>
+<td style="font-size:12px;padding:10px;" width="200">
+{list_value}</td>
+<td style="font-size:12px;padding:10px;"> <font color="#808080">link / string 
+선택시 값으로 입력</font></td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+리스트 가로크기 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+{list_width}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> 
+<font color="#808080">리스트출력 가로 사이즈, 미입력시 100%</font></td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+출력 순서 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+{pos}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> 
+<font color="#808080">출력 순서</font></td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+최대 글자수 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+{max_string}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> 
+출력내용의 글자수를 제어합니다.</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+수정링크 연결 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+{editlink}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> 
+&nbsp;</td>
+</tr>
+</table>
+
+
+
+<div id="select_table" style="display:none;">
+&nbsp;</div>
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="100">메모 :</td>
+		<td style="font-size:12px;padding:10px;">{comment}</td>
+	</tr>
+</table>
+<p align="center">{form_submit}</p>
+{formend}

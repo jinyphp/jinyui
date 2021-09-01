@@ -1,0 +1,45 @@
+{
+    "tablename":"admin_roles",
+    "title":"User Role",
+    "subtitle":"",
+    "list":{
+        "view":"jinymem::members.roles.list"           
+    },
+    "edit":{
+        "view":"jinymem::members.roles.edit"
+    },
+    "fields":[
+        {
+            "title":"타이틀",            
+            "name":"title",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+            "default":"",
+            "form_pos":1,
+
+            "list":true,
+            "list_edit":true,
+            "list_pos":1,
+            "filter":true,
+            "filter_pos":1
+        },
+
+        {
+            "title":"설명",            
+            "name":"description",
+
+            "form":true,
+            "input":"textarea",
+            "placeholder":"",
+            "default":"",
+            "form_pos":3,
+
+            "list":true,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        }
+    ]
+}

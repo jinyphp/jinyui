@@ -1,0 +1,72 @@
+<x-theme>
+	<x-main class="p-4">
+		<x-main-content class="bg-white p-4">
+			
+		</x-main-content>
+	</x-main>
+</x-theme>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#FFFFFF">
+		{formstart}<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#E9E9E9">
+				<b>쇼핑몰: </b>환율설정</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">
+				&nbsp;</td>
+				
+			</tr>
+		</table>
+		
+		<table border="0" width="1248" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">통화 활성화 :</td>
+				<td style="font-size:12px;padding:10px;" width="100">{enable}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+		</table>
+
+		
+		<table border="0" width="1248" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">통화 이름 :</td>
+				<td style="font-size:12px;padding:10px;" width="200">{currencyname}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">통화 코드 :</td>
+				<td style="font-size:12px;padding:10px;" width="200">{currency}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">통화Id (ISO4217)</td>
+				<td style="font-size:12px;padding:10px;" width="200">{currencyid}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+		</table>
+		<table border="0" width="1248" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">통화표시</td>
+				<td style="font-size:12px;padding:10px;" width="100">{currency_align}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">통화기호</td>
+				<td style="font-size:12px;padding:10px;" width="100">{currency_mark}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">1$ 환율</td>
+				<td style="font-size:12px;padding:10px;" width="100">{currency_rate}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">소수점 표시자리</td>
+				<td style="font-size:12px;padding:10px;" width="100">{dec_point}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+			</tr>
+		</table>
+		<p align="center">{form_submit}<p>{formend}</td>
+	</tr>
+	</table>

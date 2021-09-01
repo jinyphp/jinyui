@@ -1,0 +1,1 @@
+<button type="button" {{$attributes}} class="btn-close" aria-label="Close"></button>

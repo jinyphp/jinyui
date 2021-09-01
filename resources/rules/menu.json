@@ -1,0 +1,63 @@
+{
+    "tablename":"site_menus",
+    "title":"메뉴관리",
+    "filter":{
+        "filter":{
+            "code":{
+                "title":"메뉴코드",
+                "type":"input",
+                "description":"",
+                "placeholder":"aa",
+                "pos":1
+            },
+            "title":{
+                "title":"메뉴명",
+                "type":"input",
+                "description":"",
+                "placeholder":"",
+                "pos":3
+            }
+        }
+
+        
+    },
+    "forms":{
+        "code":{
+            "title":"메뉴코드",
+            "type":"input",
+            "description":"",
+            "pos":1,
+            "display_list":true,
+            "display_list_pos":10,
+    
+            "edit":true
+        },
+        "uri":{
+            "title":"URI",
+            "type":"input",
+            "description":"",
+            "pos":2,
+            "display_list":true,
+            "display_list_pos":10
+        },
+        "title":{
+            "title":"메뉴명",
+            "type":"input",
+            "description":"",
+            "pos":3,
+            "display_list":true,
+            "display_list_pos":10
+        },
+    
+        "description":{
+            "title":"설명",
+            "type":"input",
+            "description":"",
+            "pos":5,
+    
+            "display_list":true,
+            "display_list_pos":10
+        }
+    }
+    
+}

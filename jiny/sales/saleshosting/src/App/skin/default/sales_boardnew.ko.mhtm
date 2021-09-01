@@ -1,0 +1,110 @@
+<html>
+
+<head>
+<meta http-equiv='Content-Language' content='ko'>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+<meta name='viewport' content='user-scalable=nom, initial-scale=1.0,
+ maximum-scale=1.0, minimum-scale=1.0, width=device-width' />
+  <style>
+   a {text-decoration: none}
+  </style>
+<title>OKNETWORKS 010-3911-3106</title>
+
+<script type="text/javascript">
+     function setcompany(selectObj) {
+     	var f = document.good;
+     	var sel = f.company;
+     	
+     	var target = document.getElementById("company");
+		
+     	if(target.options[target.selectedIndex].text != "거래처 선택")
+			document.good.company1.value = target.options[target.selectedIndex].text;
+		else document.good.company1.value = "";
+		// document.good.company.options[document.good.company.selectedIndex].value;	     
+
+     	document.good.company1.focus();
+     }
+     
+     function setcate(selectObj) {
+     	var f = document.good;
+     	var sel = f.cate1;
+     	
+     	var target = document.getElementById("cate1");
+		
+     	if(target.options[target.selectedIndex].text != "분류")
+			document.good.cate.value = target.options[target.selectedIndex].text;
+		else document.good.cate.value = "";
+		// document.good.company.options[document.good.company.selectedIndex].value;	     
+
+     	document.good.cate.focus();
+     }
+     
+    function showBarcode($mode,$url){
+ 		App.callBarcodeReader($mode,$url);
+ 	}
+ 	
+ 	function saveBarcodeValue($value,$barcodeMode,$url){
+ 		// document.getElementById('barcodeValue').value = "1111111";
+ 		// document.getElementById('barcodeValue').value = $value;
+		// document.getElementById('barcodeMode').value = $barcodeMode;
+		
+		var url = "sales_goodsnew.php?barcode=" + $value + $url;
+		location.href = url;
+		
+ 	}
+     
+ </script>
+
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5'>
+	<tr>
+		<td><font size="2"><a href="../ssss/sales/ko/sales_board.php?code=FAQ">FAQ</a> :
+		<a href="../sales_board.php?code=질문답변">질문답변</a> :
+		<a href="../ssss/sales/ko/sales_board.php?code=기능개선">기능개선요청</a></font></td>
+		<td width='100' align='right'>
+		<p align='right'><font size="2">{logout}</font></td>
+	</tr>
+	</table>
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DBEEF3'>
+	<tr>
+		<td align='left'><b><font size="2">{code}</font></b></td>
+		<td align='left' width="50"><font size="2"></font></td>
+	</tr>
+</table>
+
+
+<table border="0" width="320" cellspacing="5" cellpadding="5">
+	<tr>{formstart}
+		<td bgcolor="#E4E4E3" align="center" width="320" colspan="2">
+	<table border="0" width="320" cellspacing="5" cellpadding="5" bgcolor="#FAFAFA">
+		<tr>
+			<td><font size="2">{title}</font></td>
+		</tr>
+		<tr>
+			<td><table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#e4e4e3' height='1'><tr><td></td></tr></table>
+			</td>
+		</tr>
+		<tr>
+			<td align="left">
+			<font size="2">{comment}</font></td>
+		</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" width="50%">
+		<p align="left"><font size="2">{delete}</font></td>
+		<td align="center" width="257">
+		<p align="right"><font size="2">{submit}</font></td>
+	</tr>{formend}
+</table>
+
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+<html>
+
+<head>
+<meta http-equiv='Content-Language' content='ko'>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+
+<meta name='viewport' content='user-scalable=nom, initial-scale=1.0,
+ maximum-scale=1.0, minimum-scale=1.0, width=device-width' />
+  <style>
+   a {text-decoration: none}
+  </style>
+<title>OKNETWORKS 010-3911-3106</title>
+
+<script type="text/javascript">
+     function setcompany(selectObj) {
+     	var f = document.good;
+     	var sel = f.company;
+     	
+     	var target = document.getElementById("company");
+		
+     	if(target.options[target.selectedIndex].text != "거래처 선택")
+			document.good.company1.value = target.options[target.selectedIndex].text;
+		else document.good.company1.value = "";
+		// document.good.company.options[document.good.company.selectedIndex].value;	     
+
+     	document.good.company1.focus();
+     }
+     
+     function setcate(selectObj) {
+     	var f = document.good;
+     	var sel = f.cate1;
+     	
+     	var target = document.getElementById("cate1");
+		
+     	if(target.options[target.selectedIndex].text != "분류")
+			document.good.cate.value = target.options[target.selectedIndex].text;
+		else document.good.cate.value = "";
+		// document.good.company.options[document.good.company.selectedIndex].value;	     
+
+     	document.good.cate.focus();
+     }
+     
+    function showBarcode($mode,$url){
+ 		App.callBarcodeReader($mode,$url);
+ 	}
+ 	
+ 	function saveBarcodeValue($value,$barcodeMode,$url){
+ 		// document.getElementById('barcodeValue').value = "1111111";
+ 		// document.getElementById('barcodeValue').value = $value;
+		// document.getElementById('barcodeMode').value = $barcodeMode;
+		
+		var url = "sales_goodsedit.php?barcode=" + $value + $url;
+		location.href = url;
+		
+ 	}
+     
+ </script>
+</head>
+
+<body topmargin="0" leftmargin="0">
+
+
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="100%" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<tr>
+			<td valign="top">
+
+
+
+
+
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#DBEEF3'>
+			<tr>
+				<td align='left' style='font-size:12px;padding:10px;'><b>{@50}</b></td>
+			</tr>
+			</table>
+			<table border="0" width="100%" cellspacing="5" cellpadding="5">
+				<tr>
+					<td>
+			<a href="sales_goods.php" style="text-decoration: none">{@51}</a> /
+			<a href="sales_bom.php" style="text-decoration: none">{@52}</a> /
+							<a href="sales_b2b.php" style="text-decoration: none">{@54}</a></td>
+				</tr>
+			</table>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left' style='font-size:12px;padding:10px;'><b>등록 상품 수정</b></td>
+		<td align='left' width="65">
+		&nbsp;</td>
+	</tr>
+</table>
+
+{formstart}
+
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{scan}</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{barcode}</td>
+		</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;font-size:12px;padding:10px;'>상품명</td>
+			<td style='font-size:12px;padding:10px;'>{name}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>매입가격</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{prices_buy}</td>
+		</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>매출가격</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{prices_sell}</td>
+		</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;font-size:12px;padding:10px;'>부가세</td>
+			<td style='font-size:12px;padding:10px;'>{vat}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>B2B설정</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{b2b}</td>
+		</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;font-size:12px;padding:10px;'>B2B 공급단가</td>
+			<td style='font-size:12px;padding:10px;'>{b2b_prices}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>실재고량</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;' >{stock}</td>
+		</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;font-size:12px;padding:10px;'>적정재고량</td>
+			<td style='font-size:12px;padding:10px;' >{stock1}</td>
+			</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>상품코드</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{goodcode}</td>
+		</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>브랜드</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{brand}</td>
+			</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;font-size:12px;padding:10px;'>모델명</td>
+			<td style='font-size:12px;padding:10px;'>{model}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>카테고리</td>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{cate}</td>
+		</tr>
+		<tr>
+			<td width="100" align="right" style='border-right:1px solid #D2D2D2;font-size:12px;padding:10px;'>거래처</td>
+			<td style='font-size:12px;padding:10px;'>{company}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td style='font-size:12px;padding:10px;'>상품이미지</td>
+		</tr>
+		<tr>
+			<td style='border-bottom:1px solid #D2D2D2;font-size:12px;padding:10px;'>{filename}</td>
+			</tr>
+		<tr>
+			<td style='font-size:12px;padding:10px;'>상품설명</td>
+		</tr>
+		<tr>
+			<td style='font-size:12px;padding:10px;'>{comment}</td>
+			</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5">
+			<tr>
+				<td></td>
+			</tr>
+</table>
+
+
+<table border="0" width="100%" cellspacing="5" cellpadding="5">
+	<tr>
+		<td align="center" width="50%">
+		{delete}</td>
+		<td align="center" width="50%">
+		{submit}</td>
+	</tr>
+</table>
+{formend}
+
+		</td>
+		</tr>
+	</table>
+			</div>
+<p>&nbsp;</p>
+
+
+
+</body>
+
+</html>

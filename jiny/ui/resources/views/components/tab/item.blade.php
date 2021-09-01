@@ -1,0 +1,1 @@
+{{ BootTab()->pushContent($slot, $attributes) }}

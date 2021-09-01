@@ -1,0 +1,119 @@
+/* Jinyui Tailwind+bootstrap 병합 */
+/* jiny=Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* Custom Variable */
+// Variables
+@import "variables";
+
+/* jiny=bootstrap */
+/*!
+ * Bootstrap v5.0.2 (https://getbootstrap.com/)
+ * Copyright 2011-2021 The Bootstrap Authors
+ * Copyright 2011-2021 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+// scss-docs-start import-stack
+// Configuration
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/utilities";
+
+// Layout & components
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/containers";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/accordion";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/toasts";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/spinners";
+@import "bootstrap/offcanvas";
+
+// Helpers
+@import "bootstrap/helpers";
+
+// Utilities
+@import "bootstrap/utilities/api";
+// scss-docs-end import-stack
+
+/* adminkit */
+
+// Theme mixins
+@import "adminkit/2-mixins/button";
+
+// Theme components
+@import "adminkit/3-components/avatar";
+@import "adminkit/3-components/buttons";
+@import "adminkit/3-components/card";
+@import "adminkit/3-components/chart";
+@import "adminkit/3-components/content";
+@import "adminkit/3-components/dropdown"; //기본 부트스트랩 적용
+@import "adminkit/3-components/feather";
+@import "adminkit/3-components/footer";
+@import "adminkit/3-components/hamburger";
+@import "adminkit/3-components/list-group";
+@import "adminkit/3-components/main";
+@import "adminkit/3-components/navbar";
+@import "adminkit/3-components/reboot";
+@import "adminkit/3-components/sidebar";
+@import "adminkit/3-components/sizing";
+@import "adminkit/3-components/stat";
+@import "adminkit/3-components/tables";
+@import "adminkit/3-components/type";
+@import "adminkit/3-components/wrapper";
+
+// Theme utilities
+/*
+@import "adminkit/4-utilities/cursors";
+
+// 3rd party plugins
+@import "~jsvectormap/dist/css/jsvectormap";
+*/
+@import "~simplebar/dist/simplebar";
+
+/* 3rd party */
+@import "~flatpickr/dist/flatpickr";
+@import "adminkit/5-vendor/flatpickr";
+
+
+@import "adminkit/5-vendor/simplebar";
+
+
+/* zabbix */
+
+
+/* JinyCSS */
+@import "jiny/tabs";
+@import "jiny/timeline";
+@import "jiny/fullcalendar";
+//@import "jiny/sidebar";
+@import "jiny/components/badge";
+@import "jiny/components/forms";
+@import "jiny/pages";

@@ -1,0 +1,76 @@
+{
+    "tablename":"users",
+    "title":"사용자목록",
+    "subtitle":"등록된 사용자를 관리합니다.",
+    "list":{
+        "view":"jinymem::members.users.list"           
+    },
+    "edit":{
+        "view":"jinymem::members.users.edit"
+    },
+    "fields":[
+        {
+            "title":"이름",            
+            "name":"name",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":1,
+
+            "list":true,
+            "list_pos":1,
+            "filter":true,
+            "filter_pos":1
+        },
+        {
+            "title":"이메일",            
+            "name":"email",
+
+            "form":true,
+            "input":"email",
+            "placeholder":"",
+
+            "form_pos":2,
+
+            "list":true,
+            "list_sort":"desc",
+            "list_edit":true,
+            "list_pos":2,
+            "filter":true,
+            "filter_pos":2
+        },
+
+        {
+            "title":"Sex",            
+            "name":"admin_members_.sex",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":true,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        },
+        {
+            "title":"패스워드",            
+            "name":"password",
+
+            "form":true,
+            "input":"password",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":false,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        }
+    ]
+}

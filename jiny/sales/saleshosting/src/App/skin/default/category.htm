@@ -1,0 +1,72 @@
+<?
+
+	$mysqli = new mysqli("localhost", "dojangshop2", "hj236889", "dojangshop2");
+
+	/* check connection */
+	if($mysqli->connect_errno) {
+    	die('DB Connect Error'.$mysqli->connect_error);
+	}
+
+	// Query
+	$query = "select * from shop_goods";
+
+
+	function _mysqli_query_count($query){
+		global $mysqli;
+		if($result = $mysqli->query($query)){
+			$row_cnt = mysqli_num_rows($result);
+		}
+		$result->free();
+		return $row_cnt;
+	}
+
+
+	echo "rows count is "._mysqli_query_count($query);
+
+	function _mysqli_query_rows($query){
+		global $mysqli;
+		if($result = $mysqli->query($query)){
+			if(mysqli_num_rows($result)) $row = mysqli_fetch_object($result);
+		}
+		$result->free();
+		return $row;
+	}
+
+
+	$rows = _mysqli_query_rows($query);
+	echo "ID: ".$rows->Id."<br><br>";
+
+
+
+	function _mysqli_query_rowss($query){
+		global $mysqli;
+		if($result = $mysqli->query($query)){
+
+			$row_cnt = mysqli_num_rows($result);
+			for($i=0;$i<$row_cnt;$i++){
+				$rowss[$i] = mysqli_fetch_object($result);
+			}
+		}
+		$result->free();
+		return $rowss;
+	}
+
+
+	$rowss = _mysqli_query_rowss($query);
+	for($i=0;$i<count($rowss);$i++){
+    	$rows = $rowss[$i];
+    	echo "Rows $i : ".$rows->Id."<br>";
+    }
+
+
+
+
+?><center>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style='font-size:12px;padding:10px;'>{category}</td>
+	</tr>
+</table>
+</center>
+
+

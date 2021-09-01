@@ -1,0 +1,261 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+{formstart}
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" bgcolor="#E9E9E9">
+				<b>판매관리 :</b> 제품목록</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9" align="right">
+				{scm_shop}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9">
+				{scm_seller}</td>
+				
+			</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="border-right:1px solid #E9E9E9;padding-right:10px;" valign="top">
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				상품
+				활성화 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding-left:10px;">
+				{enable}</td>
+				</tr>
+			</table>
+
+
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				상품 타입 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				{type_normal} 일반매입 상품 / {type_bom} 
+				제조생산품</td>
+				</tr>
+			</table>
+
+
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				상품명 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="400">
+				{name}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				&nbsp;</td>
+				</tr>
+		</table>
+
+
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				상품코드 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+				{goodcode}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				&nbsp;</td>
+				</tr>
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				바코드 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+				{barcode}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				{scan}</td>
+				</tr>
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				모델명 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+				{model}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				&nbsp;</td>
+				</tr>
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				브랜드 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+				{brand}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				&nbsp;</td>
+				</tr>
+		</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">
+				매출가격 :</td>
+				<td style="font-size:12px;padding:10px;" width="200">
+				{sell_currency}</td>
+				<td style="font-size:12px;padding:10px;" width="100">
+	{prices_sell}</td>
+				<td style="font-size:12px;padding:10px;">
+	{sell_vat_on}부가세포함 / {sell_vat_off}부가세별도</td>
+				</tr>
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+				매입가격 :</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+	{buy_currency}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+	{prices_buy}</td>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+	{buy_vat_on}부가세포함 / {buy_vat_off}부가세별도</td>
+				</tr>
+			</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">
+				B2B 공급단가 :</td>
+				<td style="font-size:12px;padding:10px;" width="200">
+				{b2b_currency}</td>
+				<td style="font-size:12px;padding:10px;" width="100">
+	{prices_b2b}</td>
+				<td style="font-size:12px;padding:10px;">
+	{b2b_vat_on}부가세포함 / {b2b_vat_off}부가세별도</td>
+				</tr>
+			</table>
+
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">B2B 설명문구 :</td>
+				<td style="font-size:12px;padding:10px;">{b2b_comment}</td>
+				</tr>
+		</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"><b>* 재고설정</b></td>
+			<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">&nbsp;</td>
+		</tr>
+	</table>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="font-size:12px;padding:10px;" width="120">재고부족 판매중단:</td>
+			<td style="font-size:12px;padding:10px;" width="100">{stock_check}</td>
+			<td style="font-size:12px;padding:10px;">재고부족시 매입/매출을 제한합니다.</td>
+		</tr>
+		<tr>
+			<td style="font-size:12px;padding:10px;" width="120">안전 재고량 경고:</td>
+			<td style="font-size:12px;padding:10px;" width="100">{stock_safe}</td>
+			<td style="font-size:12px;padding:10px;">안전재고 수량 이하 발생시 경고</td>
+		</tr>
+	</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">{stock_info}
+	</td>
+		</tr>
+	</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				<b>* 매입 거래처 설정 및 사업장</b></td>
+				</tr>
+	</table>
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">
+				사업장 :</td>
+				<td style="font-size:12px;padding:10px;" width="300">{business}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+				</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">
+				거래처 :</td>
+				<td style="font-size:12px;padding:10px;" width="300">{company}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+				</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">
+				분류
+				카테고리 :</td>
+				<td style="font-size:12px;padding:10px;" width="300">{cate}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+				</tr>
+			</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				<b>* 참고 정보</b></td>
+				</tr>
+	</table>
+				<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100" rowspan="2" valign="top">
+				{img}</td>
+				<td style="font-size:12px;padding:10px;" valign="top">상품 대표사진 :</td>
+				</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" valign="top">{images}</td>
+				</tr>
+			</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				<b>*
+				<font size="2">메모</font></b></td>
+				</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;">
+				<font size="2">{comment}</font></td>
+				</tr>
+</table>
+		<p align="center">{form_submit}</p>
+{formend}</td>
+		<td width="300" valign="top">
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;">
+				<b>* 쇼핑몰 판매</b></td>
+				</tr>
+	</table>
+				<table border="0" width="300" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">
+	쇼핑몰 연동판매 :</td>
+				<td style="font-size:12px;padding:10px;" width="20">{shopping}</td>
+				<td style="font-size:12px;padding:10px;" width="50">{shop_uid}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+				</tr>
+			</table>
+
+	<table border="0" width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"><b>* 
+			B2B 네트웍 등록 : </b></td>
+		</tr>
+	</table>
+
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">마진율 :</td>
+				<td style="font-size:12px;padding:10px;" width="100">
+				{b2b_margin}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+				</tr>
+			<tr>
+				<td style="font-size:12px;padding:10px;" width="100">&nbsp;</td>
+				<td style="font-size:12px;padding:10px;" width="100">
+				{scm_b2b}</td>
+				<td style="font-size:12px;padding:10px;">&nbsp;</td>
+				</tr>
+		</table>
+
+		</td>
+	</tr>
+</table>

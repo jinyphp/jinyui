@@ -1,0 +1,1 @@
+{{ BCard()->setAfter($slot) }}

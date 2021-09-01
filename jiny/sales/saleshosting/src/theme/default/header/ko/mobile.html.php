@@ -1,0 +1,4 @@
+<div style="text-align:center;font-size:12px;padding:10px;" >{logo}</div>
+
+<div style="text-align:center;font-size:12px;padding:10px;" >{login} | {member} | {mobile}</div>
+

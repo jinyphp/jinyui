@@ -1,0 +1,25 @@
+{
+    "name": "jinyerp/site",
+    "description": "jinyERP Site",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "hojinlee",
+            "email": "infohojin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiny\\Site":"src/"
+        },
+        "files" : [
+            "src/Helpers/Helper.php"
+        ]
+    }
+
+}

@@ -1,0 +1,1 @@
+{!! BootButton($slot)->setAttrs($attributes) !!}

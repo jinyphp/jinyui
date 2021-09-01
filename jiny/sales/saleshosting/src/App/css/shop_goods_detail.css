@@ -1,0 +1,204 @@
+
+/*
+ * Slideshow
+ */
+
+.slideshow img {
+    display: none;
+    position: absolute;
+}
+
+
+
+.slideshow-nav a,
+.slideshow-indicator a {
+    overflow: hidden;
+}
+.slideshow-nav a:before,
+.slideshow-indicator a:before {
+    content: url(../img/sprites.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.slideshow-nav a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    margin-top: -36px;
+}
+.slideshow-nav a.prev {
+    margin-left: -480px;
+}
+.slideshow-nav a.prev:before {
+    margin-top: -20px;    
+}
+.slideshow-nav a.next {
+    margin-left: 408px;
+}
+.slideshow-nav a.next:before {
+    margin-left: -80px;
+    margin-top: -20px;
+}
+.slideshow-nav a.disabled {
+    display: none;
+}
+
+
+
+.slideshow-indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.slideshow-indicator a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.slideshow-indicator a.active {
+    cursor: default;
+}
+.slideshow-indicator a:before {
+    margin-left: -110px;
+}
+.slideshow-indicator a.active:before {
+    margin-left: -130px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tabs-nav{
+    margin:0;
+    padding-left: 0;
+
+}
+
+.tabs-nav li{
+    float:left;             // 좌측 정려 
+    position:relative;
+    list-style-type: none;  // *점 없앰 
+}
+
+.tabs-nav a{
+    display:block;          
+    position:relative;
+    background-color: #f1f1f1;
+    color: #333333;
+    padding: 10px;
+}
+
+.tabs-nav a:hover{
+    background-color: #cccccc;
+    color: #333333;
+    padding: 10px;
+}
+
+.tabs-nav a.active {
+    background-color: #e62e04;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.tabs-nav a.active:after{
+    background-color: #e62e04;
+    color: #ffffff;
+    padding: 10px;
+}
+
+
+
+
+/* 템부분 처리*/
+/*
+.detail-section .tabs-nav {
+    
+    float: right;
+
+
+}
+.detail-section .tabs-nav li {
+    
+    float: left;
+    position: relative;
+    
+}
+.detail-section .tabs-nav a {
+    display: block;
+    padding: 0 10px;
+    position: relative;
+}
+
+.detail-section .tabs-nav a:hover{
+    background-color: #aaaaaa;
+    color: #ffffff;
+}
+
+.detail-section .tabs-nav a.active {
+    background-color: #e62e04;
+    color: #ffffff;
+}
+.detail-section .tabs-nav a.active:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 37px;
+    height: 10px;
+    margin-left: -18px;
+}
+*/
+
+
+/*
+ * detail section
+ */
+
+
+
+
+
+
+/* パネル */
+/*
+.detail-section .section-body {
+    height: 400px;
+    position: relative;
+    float: none;
+}
+
+.detail-section .section-body .content {
+    width: 100%;
+}
+*/
+
+

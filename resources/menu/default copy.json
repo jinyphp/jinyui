@@ -1,0 +1,581 @@
+[
+    {
+        "id": "1",
+        "ref": "0",
+        "level": "1",
+        "icon": "",
+        "header": "Pages",
+        "title": "Pages"
+    },
+    {
+        "id": "2",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-sliders",
+        "title": "Dashboard",
+        "href": "index.html",
+        "target": "",
+        "selected": "true"
+    },
+    {
+        "id": "3",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-layout",
+        "title": "Pages",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "4",
+                "ref": "2",
+                "level": "2",
+                "icon": "",
+                "title": "Settings",
+                "href": "/jinyui/pages/settings",
+                "target": ""
+            },
+            {
+                "id": "5",
+                "ref": "2",
+                "level": "2",
+                "icon": "",
+                "title": "Projects",
+                "href": "/jinyui/pages/projects",
+                "target": ""
+            },
+            {
+                "id": "6",
+                "ref": "2",
+                "level": "2",
+                "icon": "",
+                "title": "Clients",
+                "href": "/jinyui/pages/clients",
+                "target": ""
+            },
+            {
+                "id": "7",
+                "ref": "2",
+                "level": "2",
+                "icon": "",
+                "title": "Pricing",
+                "href": "/jinyui/pages/pricing",
+                "target": ""
+            },
+            {
+                "id": "8",
+                "ref": "2",
+                "level": "2",
+                "icon": "",
+                "title": "Chat",
+                "href": "/jinyui/pages/chat",
+                "target": ""
+            },
+            {
+                "id": "9",
+                "ref": "2",
+                "level": "2",
+                "icon": "",
+                "title": "Blank Page",
+                "href": "/jinyui/pages/blank",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "10",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-user",
+        "title": "Profile",
+        "href": "/jinyui/pages/profile",
+        "target": ""
+    },
+    {
+        "id": "11",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-credit-card",
+        "title": "Invoice",
+        "href": "jinyui/pages/invoice",
+        "target": ""
+    },
+    {
+        "id": "12",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-list",
+        "title": "Tasks",
+        "href": "/jinyui/pages/tasks",
+        "target": ""
+    },
+    {
+        "id": "13",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-calendar",
+        "title": "Calendar",
+        "href": "/jinyui/pages/calendar",
+        "target": ""
+    },
+    {
+        "id": "14",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-users",
+        "title": "Auth",
+        "href": "",
+        "target": "",
+        "submenu": [
+            {
+                "id": "15",
+                "ref": "0",
+                "level": "1",
+                "icon": "log-in",
+                "title": "Sign In",
+                "href": "/jinyui/auth/signin",
+                "target": ""
+            },
+            {
+                "id": "16",
+                "ref": "0",
+                "level": "1",
+                "icon": "user-plus",
+                "title": "Sign Up",
+                "href": "/jinyui/auth/signup",
+                "target": ""
+            },
+            {
+                "id": "18",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "404",
+                "href": "/jinyui/auth/404",
+                "target": ""
+            },
+            {
+                "id": "19",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "500",
+                "href": "/jinyui/auth/pages/500",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "20",
+        "ref": "0",
+        "level": "1",
+        "icon": "",
+        "header": "Components",
+        "title": "Components"
+    },
+    {
+        "id": "21",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-briefcase",
+        "title": "UI Elements",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "22",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Alerts",
+                "href": "/jinyui/ui/alerts",
+                "target": ""
+            },
+            {
+                "id": "23",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Buttons",
+                "href": "/jinyui/ui/buttons",
+                "target": ""
+            },
+            {
+                "id": "24",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Cards",
+                "href": "/jinyui/ui/cards",
+                "target": ""
+            },
+            {
+                "id": "25",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "General",
+                "href": "/jinyui/ui/general",
+                "target": ""
+            },
+            {
+                "id": "26",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Grid",
+                "href": "/jinyui/ui/grid",
+                "target": ""
+            },
+            {
+                "id": "27",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Modals",
+                "href": "/jinyui/ui/modals",
+                "target": ""
+            },
+            {
+                "id": "28",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Offcanvas",
+                "href": "/jinyui/ui/offcanvas",
+                "target": ""
+            },
+            {
+                "id": "29",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Tabs",
+                "href": "/jinyui/ui/tabs",
+                "target": ""
+            },
+            {
+                "id": "30",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Typography",
+                "href": "/jinyui/ui/typography",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "31",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-coffee",
+        "title": "Icons",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "32",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Feather",
+                "href": "/jinyui/icons/feather",
+                "target": ""
+            },
+            {
+                "id": "33",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Font Awesome",
+                "href": "icons-font-awesome.html",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "31",
+        "ref": "0",
+        "level": "1",
+        "icon": "",
+        "title": "Tabs",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "32",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Card",
+                "href": "/jinyui/tabs/card",
+                "target": ""
+            },
+            {
+                "id": "33",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Bar",
+                "href": "/jinyui/tabs/bar",
+                "target": ""
+            },
+            {
+                "id": "33",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Bar",
+                "href": "/jinyui/tabs/virtical",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "34",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-check-circle",
+        "title": "Forms",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "35",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Basic Inputs",
+                "href": "/jinyui/forms/inputs",
+                "target": ""
+            },
+            {
+                "id": "36",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Form Layouts",
+                "href": "/jinyui/forms/layouts",
+                "target": ""
+            },
+            {
+                "id": "37",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Input Groups",
+                "href": "/jinyui/forms/groups",
+                "target": ""
+            },
+            {
+                "id": "41",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Advanced Inputs",
+                "href": "/jinyui/forms/advanced",
+                "target": ""
+            },
+            {
+                "id": "42",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Editors",
+                "href": "/jinyui/forms/editors",
+                "target": ""
+            },
+            {
+                "id": "43",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Validation",
+                "href": "/jinyui/forms/validation",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "38",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-list",
+        "title": "Tables",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "41",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Basic",
+                "href": "/jinyui/tables/bootstrap",
+                "target": ""
+            },
+            {
+                "id": "45",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Responsive Table",
+                "href": "/jinyui/tables/responsive",
+                "target": ""
+            },
+            {
+                "id": "46",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Table with Buttons",
+                "href": "/jinyui/tables/buttons",
+                "target": ""
+            },
+            {
+                "id": "47",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Column Search",
+                "href": "/jinyui/tables/search",
+                "target": ""
+            },
+            {
+                "id": "48",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Fixed Header",
+                "href": "/jinyui/tables/header",
+                "target": ""
+            },
+            {
+                "id": "49",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Multi Selection ",
+                "href": "/jinyui/tables/multi",
+                "target": ""
+            },
+            {
+                "id": "50",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Ajax Sourced Data",
+                "href": "/jinyui/tables/ajax",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "39",
+        "ref": "0",
+        "level": "1",
+        "icon": "",
+        "header": "Plugins & Addons",
+        "title": "Plugins & Addons"
+    },
+
+
+    {
+        "id": "51",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-bar-chart-2",
+        "title": "Charts",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "52",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Chart.js",
+                "href": "/jinyui/charts/chartjs",
+                "target": ""
+            },
+            {
+                "id": "53",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "ApexCharts",
+                "href": "/jinyui/charts/apexcharts",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "54",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-bell",
+        "title": "Notifications",
+        "href": "/jinyui/notice",
+        "target": ""
+    },
+    {
+        "id": "55",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-map",
+        "title": "Maps",
+        "href": "",
+        "target": "",
+        "submenu": [{
+                "id": "56",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Google Maps",
+                "href": "/jinyui/maps/google",
+                "target": ""
+            },
+            {
+                "id": "57",
+                "ref": "0",
+                "level": "1",
+                "icon": "",
+                "title": "Vector Maps",
+                "href": "/jinyui/maps/vector",
+                "target": ""
+            }
+        ]
+    },
+    {
+        "id": "58",
+        "ref": "0",
+        "level": "1",
+        "icon": "feather-corner-right-down",
+        "title": "Multi Level",
+        "href": "",
+        "target": "",
+        "submenu": [{
+            "id": "59",
+            "ref": "0",
+            "level": "1",
+            "icon": "",
+            "title": "Two Levels",
+            "href": "",
+            "target": "",
+            "submenu": [{
+                    "id": "60",
+                    "ref": "0",
+                    "level": "1",
+                    "icon": "",
+                    "title": "Item 1",
+                    "href": "#",
+                    "target": ""
+                },
+                {
+                    "id": "61",
+                    "ref": "0",
+                    "level": "1",
+                    "icon": "",
+                    "title": "Item 2",
+                    "href": "#",
+                    "target": ""
+
+                }
+            ]
+        }]
+    }
+]

@@ -1,0 +1,133 @@
+#css_tabs {
+    font-family:'nanumgothic', '나눔고딕', 'malgun gothic', '맑은 고딕', 'dotum', '돋움', sans-serif
+}
+
+/* 탭 선택 시 표시할 요소(div) 정의(1번 탭 선택 시 첫 번째 div 요소 표시) */
+#css_tabs input:nth-of-type(1), #css_tabs input:nth-of-type(1) ~ div:nth-of-type(1),
+#css_tabs input:nth-of-type(2), #css_tabs input:nth-of-type(2) ~ div:nth-of-type(2),
+#css_tabs input:nth-of-type(3), #css_tabs input:nth-of-type(3) ~ div:nth-of-type(3),
+#css_tabs input:nth-of-type(4), #css_tabs input:nth-of-type(4) ~ div:nth-of-type(4),
+#css_tabs input:nth-of-type(5), #css_tabs input:nth-of-type(5) ~ div:nth-of-type(5),
+#css_tabs input:nth-of-type(6), #css_tabs input:nth-of-type(6) ~ div:nth-of-type(6),
+#css_tabs input:nth-of-type(7), #css_tabs input:nth-of-type(7) ~ div:nth-of-type(7),
+#css_tabs input:nth-of-type(8), #css_tabs input:nth-of-type(8) ~ div:nth-of-type(8),
+#css_tabs input:nth-of-type(9), #css_tabs input:nth-of-type(9) ~ div:nth-of-type(9),
+#css_tabs input:nth-of-type(10), #css_tabs input:nth-of-type(10) ~ div:nth-of-type(10),
+#css_tabs input:nth-of-type(11), #css_tabs input:nth-of-type(11) ~ div:nth-of-type(11),
+#css_tabs input:nth-of-type(12), #css_tabs input:nth-of-type(12) ~ div:nth-of-type(12),
+#css_tabs input:nth-of-type(13), #css_tabs input:nth-of-type(13) ~ div:nth-of-type(13),
+#css_tabs input:nth-of-type(14), #css_tabs input:nth-of-type(14) ~ div:nth-of-type(14),
+#css_tabs input:nth-of-type(15), #css_tabs input:nth-of-type(15) ~ div:nth-of-type(15) {
+    display:none
+}
+#css_tabs input:nth-of-type(1):checked ~ div:nth-of-type(1),
+#css_tabs input:nth-of-type(2):checked ~ div:nth-of-type(2),
+#css_tabs input:nth-of-type(3):checked ~ div:nth-of-type(3),
+#css_tabs input:nth-of-type(4):checked ~ div:nth-of-type(4),
+#css_tabs input:nth-of-type(5):checked ~ div:nth-of-type(5),
+#css_tabs input:nth-of-type(6):checked ~ div:nth-of-type(6),
+#css_tabs input:nth-of-type(7):checked ~ div:nth-of-type(7),
+#css_tabs input:nth-of-type(8):checked ~ div:nth-of-type(8),
+#css_tabs input:nth-of-type(9):checked ~ div:nth-of-type(9),
+#css_tabs input:nth-of-type(10):checked ~ div:nth-of-type(10),
+#css_tabs input:nth-of-type(11):checked ~ div:nth-of-type(11),
+#css_tabs input:nth-of-type(12):checked ~ div:nth-of-type(12),
+#css_tabs input:nth-of-type(13):checked ~ div:nth-of-type(13),
+#css_tabs input:nth-of-type(14):checked ~ div:nth-of-type(14),
+#css_tabs input:nth-of-type(15):checked ~ div:nth-of-type(15) {
+    display:block
+}
+
+/* 라벨 기본 스타일 지정 */
+#css_tabs > label {
+    display:inline-block;
+    font-variant:small-caps;
+    font-size:.9em;
+    padding:5px;
+    text-align:center;
+    width:70px;
+    line-height:1.8em;
+    font-weight:700;
+    border-radius:3px 3px 0 0;
+    background:#eee;
+    color:#777;
+    border:1px solid #ccc;
+    border-width:1px 1px 0
+}
+#css_tabs > label:hover {
+    cursor:pointer
+}
+#css_tabs label[for=tab1] {
+    margin-left:1.5em
+}
+
+/* 선택된 라벨, 커서를 올린 라벨 스타일 지정 */
+#css_tabs input:nth-of-type(1):checked ~ label:nth-of-type(1), #css_tabs > label[for=tab-1]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(2):checked ~ label:nth-of-type(2), #css_tabs > label[for=tab-2]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(3):checked ~ label:nth-of-type(3), #css_tabs > label[for=tab-3]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(4):checked ~ label:nth-of-type(4), #css_tabs > label[for=tab-4]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(5):checked ~ label:nth-of-type(5), #css_tabs > label[for=tab-5]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(6):checked ~ label:nth-of-type(6), #css_tabs > label[for=tab-6]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(7):checked ~ label:nth-of-type(7), #css_tabs > label[for=tab-7]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(8):checked ~ label:nth-of-type(8), #css_tabs > label[for=tab-8]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(9):checked ~ label:nth-of-type(9), #css_tabs > label[for=tab-9]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(10):checked ~ label:nth-of-type(10), #css_tabs > label[for=tab-10]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(11):checked ~ label:nth-of-type(11), #css_tabs > label[for=tab-11]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(12):checked ~ label:nth-of-type(12), #css_tabs > label[for=tab-12]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(13):checked ~ label:nth-of-type(13), #css_tabs > label[for=tab-13]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(14):checked ~ label:nth-of-type(14), #css_tabs > label[for=tab-14]:hover {
+    background:#cccccc;
+    color:#fff
+}
+#css_tabs input:nth-of-type(10):checked ~ label:nth-of-type(15), #css_tabs > label[for=tab-15]:hover {
+    background:#cccccc;
+    color:#fff
+}
+
+
+/* 실제 내용이 담긴 div 요소 스타일 지정 */
+#css_tabs .tab-1_content, #css_tabs .tab-2_content, #css_tabs .tab-3_content .tab-4_content .tab-5_content .tab-6_content .tab-7_content .tab-8_content .tab-9_content .tab-10_content .tab-11_content .tab-12_content .tab-13_content .tab-14_content .tab-15_content{
+    padding:2em;
+    border:1px solid #ddd;
+    width:70%;
+    height:100%
+}

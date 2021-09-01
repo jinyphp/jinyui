@@ -1,0 +1,1 @@
+<li {{ $attributes->merge(['class' => 'breadcrumb-item']) }}>{{$slot}}</li>

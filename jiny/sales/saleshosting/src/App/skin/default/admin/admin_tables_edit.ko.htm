@@ -1,0 +1,173 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+{formstart}
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;" bgcolor="#E9E9E9"><b>서비스 테이블&nbsp; 관리</b></td>
+		<td style="font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9" align="center"> </td>
+		<td style="font-size:12px;padding:2px;" width="100" bgcolor="#E9E9E9" align="center"> </td>				
+	</tr>
+</table>
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">활성화 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{enable}</td>
+<td style="font-size:12px;padding:10px;"> </td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">등록일자 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{regdate}</td>
+<td style="font-size:12px;padding:10px;"> </td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100"><font color="#FF0000">테이블 이름</font> :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{table_name}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> 필수: 서비스 이름을 입력합니다.</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">
+서비스 타이틀 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">
+{table_title}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> &nbsp;</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">서비스 활성 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_service}</td>
+<td style="font-size:12px;padding:10px;"> 테이블 웹서비스를 활성화</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">서비스 path :</td>
+<td style="font-size:12px;padding:10px;" width="200">{path}</td>
+<td style="font-size:12px;padding:10px;"> 접속 경로패스 http://doamin/path/서비스이름.php</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;"><b>권환 설정</b></td>
+	</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">회원로그인 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_login}</td>
+<td style="font-size:12px;padding:10px;"> 회원만 접속권한</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">서비스 권한 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_permit}</td>
+<td style="font-size:12px;padding:10px;"> 서비스 권환설정</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">권한 테이블 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{permit_table}</td>
+<td style="font-size:12px;padding:10px;"> 권한 설정시 참조 테이블</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">권한 필드 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{permit_field}</td>
+<td style="font-size:12px;padding:10px;"> 권한 설정시 참조 필드값</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;"><b>데이터 처리 및 조건절</b></td>
+	</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">출력 조건절 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_where}</td>
+<td style="font-size:12px;padding:10px;"> 출력 where 절</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">검색시 필드:</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_search}</td>
+<td style="font-size:12px;padding:10px;"> 검색시 적용 필드</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">empty 메세지 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_nolistmsg}</td>
+<td style="font-size:12px;padding:10px;"> 목록 내용이 없는 경우 출력할 문구</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">목록 정렬 필드 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_sortfield}</td>
+<td style="font-size:12px;padding:10px;"> 정렬 기준이되는 field</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">정렬 방법 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{table_sorttype}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> desc 오름차순, asc 내림차순</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;"><b>데이터 목록 출력 형식</b></td>
+	</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">목록 타입</td>
+<td style="font-size:12px;padding:10px;" width="200">{listview_type}</td>
+<td style="font-size:12px;padding:10px;"> 데이터 테이블을 출력하는 형식</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">출력 세로수 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{view_rows}</td>
+<td style="font-size:12px;padding:10px;"> &nbsp;</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">출록 가로수 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{view_cols}</td>
+<td style="font-size:12px;padding:10px;"> 타일형 출력일 경우만 적용됨</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">목록 출력수 :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{table_blocknum}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> &nbsp;</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;"><b>디자인 스킨 처리</b></td>
+	</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">사용자 테마 :</td>
+<td style="font-size:12px;padding:10px;" width="200">{theme}</td>
+<td style="font-size:12px;padding:10px;"> &nbsp;</td>
+</tr>
+<tr>
+<td style="font-size:12px;padding:10px;" width="100">스킨테마 (목록) :</td>
+<td style="font-size:12px;padding:10px;" width="200">{table_themelist}</td>
+<td style="font-size:12px;padding:10px;"> 서비스 목록 테마스타일 -&gt; 테마목록 연결</td>
+</tr>
+<tr>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="100">스킨테마 (수정) :</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;" width="200">{table_themeedit}</td>
+<td style="border-bottom:1px solid #E9E9E9;font-size:12px;padding:10px;"> 서비스 수정 테마스타일 -&gt; 테마목록 연결</td>
+</tr>
+</table>
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+	<tr>
+		<td style="font-size:12px;padding:10px;" width="100">메모 :</td>
+		<td style="font-size:12px;padding:10px;">{comment}</td>
+	</tr>
+</table>
+<p align="center">{form_submit}</p>
+{formend}

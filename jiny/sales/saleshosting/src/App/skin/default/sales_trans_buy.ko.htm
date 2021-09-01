@@ -1,0 +1,344 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<div align="center">
+	<p>&nbsp;</p>
+	<table border="0" cellpadding="5" cellspacing="5" width="1000" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<tr>
+			<td valign="top">{formstart}
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#FFCCFF'>
+				<tr>
+					<td width="40" style='font-size:12px;padding:5px;'>작성일:</td>
+					<td width="100" style='font-size:12px;padding:5px;'>{transdate}</td>
+					<td align='right' style='font-size:12px;padding:5px;' align="left">{warehouse}</td>
+					<td align='right' style='font-size:12px;padding:5px;' align="left">{manager}</td>
+					<td align='right' width="80" style='font-size:12px;padding:5px;'>{delete}</td>
+					<td align='right' width="80" style='font-size:12px;padding:5px;'>{bank}</td>
+					<td align='right' width="80" style='font-size:12px;padding:5px;'>{print}</td>
+					<td align='right' width="80" style='font-size:12px;padding:5px;'>{new}</td>
+				</tr>
+			</table>
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' style='background-color:#fafafa; border:1px solid #D2D2D2;'>
+				<tr>
+					<td style='font-size:12px;padding:2px;' valign='bottom'>
+					<table border="0" width="100%" cellpadding="2">
+						<tr>
+							<td  style='font-size:12px;padding:10px;' align="center" width="100">거래처 검색:</td>
+							<td style='font-size:12px;padding:10px;' align="center">{company_search}</td>
+							<td style='font-size:12px;padding:10px;' width='50'>{submit}</td>
+						</tr>
+					</table></td>
+					<td width="494" style='font-size:12px;padding:2px;'>
+					<table border="0" width="100%" cellpadding="0" style='border:1px solid #D2D2D2;' cellspacing="0">
+						<tr>
+							<td style='font-size:12px;padding:5px;border-bottom:1px solid #D2D2D2;border-right:1px solid #D2D2D2;' align="center">&nbsp;</td>
+							<td width="60" style='font-size:12px;padding:5px;border-bottom:1px solid #D2D2D2;border-right:1px solid #D2D2D2;' align="center">공급가</td>
+							<td width="60" style='font-size:12px;padding:5px;border-bottom:1px solid #D2D2D2;border-right:1px solid #D2D2D2;' align="center">부가세</td>
+							<td width="60" style='font-size:12px;padding:5px;border-bottom:1px solid #D2D2D2;border-right:1px solid #D2D2D2;' align="center">할인</td>
+							<td width="60" style='font-size:12px;padding:5px;border-bottom:1px solid #D2D2D2;border-right:1px solid #D2D2D2;' align="center">합계</td>
+							<td width="60" style='font-size:12px;padding:5px;border-bottom:1px solid #D2D2D2;border-right:1px solid #D2D2D2;' align="center">수금</td>
+							<td width="80" style='font-size:12px;padding:5px;border-bottom:1px solid #D2D2D2;' align="center">미수금</td>
+						</tr>
+						<tr>
+							<td  style='font-size:12px;padding:5px;border-right:1px solid #D2D2D2;' align="center">월</td>
+							<td width="60" style='font-size:12px;padding:5px;border-right:1px solid #D2D2D2;' align="center">{prices}</td>
+							<td width="60" style='font-size:12px;padding:5px;border-right:1px solid #D2D2D2;' align="center">{vat}</td>
+							<td width="60" style='font-size:12px;padding:5px;border-right:1px solid #D2D2D2;' align="center">{discount}</td>
+							<td width="60" style='font-size:12px;padding:5px;border-right:1px solid #D2D2D2;' align="center">{tot}</td>
+							<td width="60" style='font-size:12px;padding:5px;border-right:1px solid #D2D2D2;' align="center">{pay}</td>
+							<td width="80" style='font-size:12px;padding:5px;' align="center">{balance}</td>
+						</tr>
+					</table></td>
+				</tr>
+			</table>{company_list}
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' style='background-color:#fafafa;border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;border-left:1px solid #D2D2D2;'>
+				<tr>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="25" bgcolor="#DEDEDF">{all}</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="20" bgcolor="#DEDEDF">일</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" bgcolor="#DEDEDF">상품명 [상태]</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="50" bgcolor="#DEDEDF">규격</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="50" bgcolor="#DEDEDF">수량</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60" bgcolor="#DEDEDF">단가</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60" bgcolor="#DEDEDF">공급가액</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60" bgcolor="#DEDEDF">부가세</td>
+					<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60" bgcolor="#DEDEDF">할인액</td>
+					<td style='font-size:12px;padding:10px;' align="center" width="80" bgcolor="#DEDEDF">합계</td>
+				</tr>
+			</table>{newdata}{search_result}{datalist}{formend}<p>&nbsp;</td>
+		</tr>
+	</table>
+			</div>
+
+
+
+
+
+
+
+<p>&nbsp;</p>
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;border-left:1px solid #D2D2D2;'>
+	<tr>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="25">{TID}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="20">{day}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center">
+		{goodname}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="50">
+		{spec}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="50">
+		{num}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60">
+		{prices}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60">
+		{sum}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60">
+		{vat}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="60">
+		{discount}</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="80">
+		{total}</td>
+	</tr>
+</table>
+
+
+		
+
+
+
+
+
+
+
+
+			
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+<p>검색</p>
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-right:1px solid #D2D2D2;border-left:1px solid #D2D2D2;'>
+	<tr>
+		<td style='order-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="45">{img}</td>
+		<td style='font-size:12px;padding:10px;' >{goodname}</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="50">
+		&nbsp;</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="50">
+		&nbsp;</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="60">
+		&nbsp;</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="60">
+		&nbsp;</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="60">
+		&nbsp;</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="60">
+		&nbsp;</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="80">
+		&nbsp;</td>
+	</tr>
+</table>
+
+
+
+
+
+
+
+			
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+<p>&nbsp;</p>
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-bottom:1px solid #D2D2D2;'><tr><td></td></tr></table>
+<p>&nbsp;</p>
+
+
+
+		
+
+
+
+
+
+
+
+
+			
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+

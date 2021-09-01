@@ -174,6 +174,19 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\FortifyServiceProvider::class,
+        App\Providers\JetstreamServiceProvider::class,
+
+        // 사용자 추가
+        Jiny\Html\HtmlServiceProvider::class,
+        Jiny\UI\JinyUIServiceProvider::class,
+        Jiny\Table\TableServiceProvider::class,
+        Jiny\Site\SiteServiceProvider::class,
+        Jiny\Sales\SalesServiceProvider::class,
+        Jiny\Pages\PageServiceProvider::class,
+        Jiny\Members\MemServiceProvider::class,
+
+        App\Providers\CarpetServiceProvider::class,
 
     ],
 

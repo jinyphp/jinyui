@@ -1,0 +1,168 @@
+<div id='cssmenu'>
+    <ul>
+        <li class='has-sub'><a href='page.php?code=service'>서비스안내</a>
+            <ul>
+                <li><a href='#'>서비스신청</a>
+                <li><a href='#'>판매매출 관리</a></li>
+                <li><a href='#'>홈페이지제작</a></li>
+                <li><a href='#'>쇼핑몰제작</a></li>
+        </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='#'>입점관리</a>
+        <ul>
+            <li><a href='shop_seller_orders.php'>발주확인</a>
+            <li><a href='shop_seller_goods.php'>입점상품</a></li>
+            <li><a href='shop_selling.php'>입점리스트</a></li>
+    </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='pages.php?code=shopping'>쇼핑몰관리</a>
+        <ul>
+            <li><a href='#'>장바구니</a>
+            <li class='has-sub'><a href='shop_orders.php'>주문관리</a>
+                <ul>
+                    <li><a href='shop_orders.php?status=new'>신규주문</a>
+                    <li><a href='#'>입금요청</a></li>
+                    <li><a href='#'>입금완료</a></li>
+                    <li><a href='#'>결제완료</a></li>
+                    <li><a href='#'>주문확인</a></li>
+                    <li><a href='#'>배송준비</a></li>
+                    <li><a href='#'>배송중</a></li>
+                    <li><a href='#'>배송완료</a></li>
+                    <li><a href='#'>주문완료</a></li>
+                    <li><a href='#'>취소요청</a></li>
+                    <li><a href='#'>취소완료</a></li>
+                    <li><a href='shop_orders.php?status=refunding'>환불요청</a></li>
+                    <li><a href='shop_orders.php?status=refund'>환불완료</a></li>
+                    <li><a href='shop_orders.php?status=disputing'>분쟁중</a></li>
+                    <li><a href='shop_orders.php?status=dispute'>분쟁완료</a></li>
+            </li>
+        </ul>
+    </li>
+    <li class='has-sub'><a href='shop_goods.php'>제품관리</a>
+        <ul>
+            <li><a href='#'>외부상품</a>
+            <li><a href='#'>자체상품</a></li>
+    </li>
+    </ul>
+    </li>
+    <li><a href='shop_cate.php'>카테고리</a>
+    <li class='has-sub'><a href='#'>결제정보</a>
+        <ul>
+            <li><a href='#'>이머니결제</a>
+            <li><a href='sales_bank.php'>은행정보</a></li>
+            <li><a href='shop_pg.php'>카드결제</a></li>
+    </li>
+    </ul>
+    </li>
+    <li><a href='shop_shipping.php'>배송설정</a>
+    <li><a href='shop_country.php'>국가설정</a></li>
+    <li><a href='shop_seller.php'>입점승인</a></li>
+    </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='#'>홈페이지</a>
+        <ul>
+            <li><a href='site_gallary.php'>갤러리</a>
+            <li><a href='site_board.php'>계시판</a></li>
+            <li class='has-sub'><a href='site_members.php'>회원관리</a>
+                <ul>
+                    <li><a href='site_members_agreement.php'>가입동의서</a>
+                    <li><a href='site_members_blacklist.php'>블렉리스트</a></li>
+                    <li><a href='site_members_reserved.php'>예약어 관리</a></li>
+            </li>
+        </ul>
+    </li>
+    <li><a href='site_page.php'>정적페이지</a>
+    <li><a href='site_menu.php'>사이트메뉴</a></li>
+    <li class='has-sub'><a href='#'>디자인</a>
+        <ul>
+            <li><a href='site_layout.php'>레이아웃</a>
+            <li><a href='site_index.php'>초기페이지</a></li>
+            <li><a href='site_block.php'>디자인블럭</a></li>
+            <li><a href='site_header.php'>상단헤더</a></li>
+            <li><a href='site_footer'>하단 Footer</a></li>
+    </li>
+    </ul>
+    </li>
+    <li><a href='site_language.php'>언어설정</a>
+    <li><a href='site_env.php'>설정</a></li>
+    </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='sales_company.php'>거래처관리</a>
+        <ul>
+            <li><a href='sales_company.php?inout=buysell'>매입매출</a>
+            <li><a href='sales_company.php?inout=sell'>매출처</a></li>
+            <li><a href='sales_company.php?inout=buy'>매입처</a></li>
+            <li><a href='sales_company.php?inout=personal'>일반고객</a></li>
+            <li><a href='sales_manager.php'>담당자관리</a></li>
+            <li><a href='sales_company_auth.php'>거래처승인</a></li>
+            <li><a href='sales_business.php'>내사업장관리</a></li>
+    </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='sales_goods.php'>제품관리</a>
+        <ul>
+            <li><a href='sales_goods.php'>제품목록</a>
+            <li class='has-sub'><a href='sales_goods.php?type=bom'>생산관리</a>
+                <ul>
+                    <li><a href='sales_goods_bomlog.php'>생산이력</a></li>
+                </ul>
+            </li>
+            <li><a href='sales_house.php'>창고관리</a></li>
+        </ul>
+    </li>
+    <li class='has-sub'><a href='sales_trans.php?trans=sell'>매출전표</a>
+        <ul>
+            <li><a href='#'>매출승인</a>
+            <li><a href='#'>매출계산서</a></li>
+    </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='sales_trans.php?trans=buy'>매입전표</a>
+        <ul>
+            <li><a href='#'>매입승인</a>
+            <li><a href='#'>매입계산서</a></li>
+    </li>
+    </ul>
+    </li>
+    <li><a href='sales_quotation.php'>견적서</a>
+    <li class='has-sub'><a href='sales_report.php'>보고서</a>
+        <ul>
+            <li class='has-sub'><a href='#'>입출금</a>
+                <ul>
+                    <li><a href='#'>출금</a>
+                    <li><a href='#'>입금</a></li>
+            </li>
+        </ul>
+    </li>
+    <li class='has-sub'><a href='#'>업체별 보고서</a>
+        <ul>
+            <li><a href='#'>매출</a>
+            <li><a href='#'>매입</a></li>
+            <li><a href='#'>매입매출</a></li>
+    </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='#'>기간별 보고서</a>
+        <ul>
+            <li><a href='#'>매출</a>
+            <li><a href='#'>매입</a></li>
+            <li><a href='#'>매입매출</a></li>
+    </li>
+    </ul>
+    </li>
+    </li>
+    </ul>
+    </li>
+    <li class='has-sub'><a href='sales_myinfo.php'>환경설정</a>
+        <ul>
+            <li><a href='service_reseller.php'>리셀러</a>
+            <li><a href='#'>백업</a></li>
+    </li>
+    </ul>
+    </li>
+    </ul>
+</div>

@@ -1,0 +1,168 @@
+/*
+ * 레이아웃 처리 부분
+ */
+
+
+
+
+// Theme mixins
+@import "2-mixins/button";
+
+
+// Theme components
+@import "3-components/avatar";
+@import "3-components/buttons";
+@import "3-components/card";
+@import "3-components/chart";
+//@import "3-components/dropdown";
+@import "3-components/feather";
+
+@import "3-components/hamburger";
+@import "3-components/list-group";
+
+
+
+
+
+.main1 {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    transition: $sidebar-transition;
+    background: $body-bg;
+    flex-direction: column;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.content {
+    padding: $content-padding-mobile;
+    flex: 1;
+    width: 100vw;
+    max-width: 100vw;
+    direction: ltr;
+
+    /*
+    @include media-breakpoint-up(md) {
+        width: auto;
+        max-width: auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: $content-padding-desktop;
+    }
+    */
+}
+
+footer.footer {
+    padding: $spacer $spacer*0.875;
+    direction: ltr;
+    background: $footer-bg;
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    /*
+    @include media-breakpoint-down(md) {
+        width: 100vw;
+    }
+    */
+}
+
+
+
+
+
+@import "3-components/navbar";
+
+
+
+@import "3-components/reboot";
+@import "3-components/sizing";
+@import "3-components/stat";
+//@import "3-components/tables";
+@import "3-components/type";
+
+// Theme utilities
+@import "4-utilities/cursors";
+
+// 3rd party plugins
+// 3rd party plugin styles
+@import "5-vendor/flatpickr";
+
+
+
+/* jiny */
+
+
+
+/*폼요소 설계*/
+
+
+/*
+.btn {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 1em;
+    border-radius: 2px;
+    margin: 0;
+    padding: 0 11px;
+    min-height: 24px;
+    cursor: pointer;
+    outline: 0;
+    transition: border-color .2s ease-out, background-color .2s ease-out; 
+}
+
+.btn-primary {
+    background-color: #0275b8;
+    border: 1px solid #0275b8;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f; 
+}
+
+.btn-primary:focus {
+    box-shadow: 0 0 0 2px rgba(30, 135, 227, 0.35);
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f; 
+}
+    
+.btn-primary:active {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f; 
+}
+
+
+.btn-outline-primary {
+    color: #0275b8;
+    border-color: #0275b8;
+
+}
+
+.btn-outline-primary:hover {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f;
+}
+
+.btn-outline-primary:focus {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f;
+}
+
+.btn-outline-primary:active {
+    color: #ffffff;
+    background-color: #02659f;
+    border-color: #02659f;
+}
+
+*/

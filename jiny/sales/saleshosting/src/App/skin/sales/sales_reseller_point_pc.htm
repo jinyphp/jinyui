@@ -1,0 +1,641 @@
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="1000" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<trstyle="vertical-align:top">
+			<td style="width:180px; border-right:1px solid #f1f1f1; padding-right:10px; text-align:justify" valign="top">
+
+
+
+
+
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#75869f'>
+			<tr>
+				<td align='left' style='font-size:12px;color:#ffffff;padding:15px;'>
+				<b>환경설정</b></td>
+			</tr>
+			</table>
+
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #e9e9e9;">
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="pages.php?pages=members_free">
+							<font size="2">무료서비스</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><font size="2">
+							<a href="sales_members_service.php">유료서비스</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="sales_members_renewal.php">
+							<font size="2">연장내역</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_manager.php">직원 
+							관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_members_bank.php">계좌관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="pages.php?pages=reseller">리셀러안내</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller.php">리셀러 상품</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller_order.php">
+							리셀러 연장주문</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='font-size:12px;padding:10px;'>▪</td>
+			<td style='font-size:12px;padding:10px;'>
+							<font size="2"><a href="sales_reseller_point.php">
+							리셀러 적립금</a></font></td> 
+			</tr>
+						
+			
+			
+			
+			</table>
+					</td>
+			<td style="padding-left:10px" valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left'><b><font size="2">적립금 : {resellerpoint}</font></b></td>
+		<td align='left' width="65">{pay_auth}</td>
+		<td align='left' width="65">{pay_in}</td>
+		<td align='left' width="65">{pay_out}</td>
+	</tr>
+</table>
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:1px solid #D2D2D2;background-color:#fafafa;'>
+	<tr>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' width="150" align="center">	
+		거래일자</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center">	
+		거래명</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' width="100" align="center">
+		입금적립</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">	
+		사용차감</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="100">
+		잔액포인트</td>
+	</tr>
+	</table>
+
+
+		
+
+
+		{datalist}
+
+		</td>
+		</tr>
+	</table>
+			</div>
+
+
+<p>&nbsp;</p>
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;border-left:1px solid #D2D2D2;'>
+	<tr>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="150">	{regdate}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center">{title}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">	{point_in}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' width="100" align="center">{point_out}</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="100">
+		<b>{point}</b>
+</td>
+	</tr>
+	</table>
+
+
+		
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="1000" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<trstyle="vertical-align:top">
+			<td style="width:180px; " valign="top">
+
+
+
+
+
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#75869f'>
+			<tr>
+				<td align='left' style='font-size:12px;color:#ffffff;padding:15px;'>
+				<b>환경설정</b></td>
+			</tr>
+			</table>
+
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #e9e9e9;">
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="pages.php?pages=members_free">
+							<font size="2">무료서비스</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><font size="2">
+							<a href="sales_members_service.php">유료서비스</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="sales_members_renewal.php">
+							<font size="2">연장내역</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_manager.php">직원 
+							관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_members_bank.php">계좌관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="pages.php?pages=reseller">리셀러안내</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller.php">리셀러 상품</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller_order.php">
+							리셀러 연장주문</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='font-size:12px;padding:10px;'>▪</td>
+			<td style='font-size:12px;padding:10px;'>
+							<font size="2"><a href="sales_reseller_point.php">
+							리셀러 적립금</a></font></td> 
+			</tr>
+						
+			
+			
+			
+			</table>
+					</td>
+			<td style="padding-left:10px" valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left'><font size="2"><b>적립금 포인트 : 결제</b></font></td>
+		<td align='right' width='133'>
+		&nbsp;</td>
+	</tr>
+</table>
+
+{formstart}
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td style='font-size:12px;padding:10px;'>
+			부족한 포인트 금액을 충전합니다. 아래 계좌로 대금을 송금후, 충전 금액을 신청해 주세요</td></tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' align='center'>{banklist}</td>
+			</tr>
+</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0"  style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='font-size:12px;padding:10px;'>
+			입금 금액</td>
+			<td style='font-size:12px;padding:10px;'>{money}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0"  style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='font-size:12px;padding:10px;'>
+			입금자명</td>
+			<td style='font-size:12px;padding:10px;'>{name}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+<table border="0" width="100%" cellspacing="5" cellpadding="5">
+	<tr>
+		<td align="center" width="100%">
+	<font size="2">{submit}</font></td>
+	</tr>
+</table>
+{formend}
+
+		</td>
+		</tr>
+	</table>
+			</div>
+
+
+<p>&nbsp;</p>
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="1000" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<trstyle="vertical-align:top">
+			<td style="width:180px; " valign="top">
+
+
+
+
+
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#75869f'>
+			<tr>
+				<td align='left' style='font-size:12px;color:#ffffff;padding:15px;'>
+				<b>환경설정</b></td>
+			</tr>
+			</table>
+
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #e9e9e9;">
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="pages.php?pages=members_free">
+							<font size="2">무료서비스</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><font size="2">
+							<a href="sales_members_service.php">유료서비스</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="sales_members_renewal.php">
+							<font size="2">연장내역</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_manager.php">직원 
+							관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_members_bank.php">계좌관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="pages.php?pages=reseller">리셀러안내</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller.php">리셀러 상품</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller_order.php">
+							리셀러 연장주문</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='font-size:12px;padding:10px;'>▪</td>
+			<td style='font-size:12px;padding:10px;'>
+							<font size="2"><a href="sales_reseller_point.php">
+							리셀러 적립금</a></font></td> 
+			</tr>
+						
+			
+			
+			
+			</table>
+					</td>
+			<td style="padding-left:10px" valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left'><font size="2"><b>적립금 포인트 : 출금요청</b></font></td>
+		<td align='right' width='133'>
+		&nbsp;</td>
+	</tr>
+</table>
+
+{formstart}
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td style='font-size:12px;padding:10px;'>
+			적립된 포인트를 출금요청합니다.</td></tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' align='center'>{banklist}</td>
+			</tr>
+</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0"  style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='font-size:12px;padding:10px;'>
+			입금 금액</td>
+			<td style='font-size:12px;padding:10px;'>{money}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td>
+			<p></p>
+			<p></p>
+			<p></td></tr></table>
+	<table border="0" width="100%" cellspacing="0" cellpadding="0"  style="border:1px solid #D2D2D2;" bgcolor="#FAFAFA">
+		<tr>
+			<td width="100" align="right" style='font-size:12px;padding:10px;'>
+			입금자명</td>
+			<td style='font-size:12px;padding:10px;'>{name}</td>
+		</tr>
+		</table>
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td></td></tr></table>
+<table border="0" width="100%" cellspacing="5" cellpadding="5">
+	<tr>
+		<td align="center" width="100%">
+	<font size="2">{submit}</font></td>
+	</tr>
+</table>
+{formend}
+
+		</td>
+		</tr>
+	</table>
+			</div>
+
+
+<p>&nbsp;</p>
+<p>//////////////////////</p>
+
+<div align="center">
+	<table border="0" cellpadding="5" cellspacing="5" width="1000" style="border:1px solid #D2D2D2;" bgcolor="#FFFFFF">
+		<trstyle="vertical-align:top">
+			<td style="width:180px; " valign="top">
+
+
+
+
+
+
+			<table border='0' width='100%' cellspacing='0' cellpadding='0' bgcolor='#75869f'>
+			<tr>
+				<td align='left' style='font-size:12px;color:#ffffff;padding:15px;'>
+				<b>환경설정</b></td>
+			</tr>
+			</table>
+
+			<table border="0" cellpadding="0" cellspacing="0" width="100%" style="border:1px solid #e9e9e9;">
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="pages.php?pages=members_free">
+							<font size="2">무료서비스</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><font size="2">
+							<a href="sales_members_service.php">유료서비스</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'><a href="sales_members_renewal.php">
+							<font size="2">연장내역</font></a></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_manager.php">직원 
+							관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="sales_members_bank.php">계좌관리</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+							
+							<font size="2"><a href="pages.php?pages=reseller">리셀러안내</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller.php">리셀러 상품</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>▪</td>
+			<td style='border-bottom:1px solid #e9e9e9;font-size:12px;padding:10px;'>
+														
+							<font size="2"><a href="sales_reseller_order.php">
+							리셀러 연장주문</a></font></td> 
+			</tr>
+			<tr>
+			<td width="5" align="center" style='font-size:12px;padding:10px;'>▪</td>
+			<td style='font-size:12px;padding:10px;'>
+							<font size="2"><a href="sales_reseller_point.php">
+							리셀러 적립금</a></font></td> 
+			</tr>
+						
+			
+			
+			
+			</table>
+					</td>
+			<td style="padding-left:10px" valign="top">
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='5' cellpadding='5' bgcolor='#DEDEDF'>
+	<tr>
+		<td align='left'><font size="2"><b>리셀러 / 입금승인</b></font><b><font size="2"> : {resellerpoint}</font></b></td>
+		<td align='left' width="65">{pay_auth}</td>
+		<td align='left' width="65">{pay_in}</td>
+		<td align='left' width="65">{pay_out}</td>
+	</tr>
+</table>
+
+		<table border="0" width="100%" cellspacing="0" cellpadding="0" height="5"><tr><td style='font-size:12px;padding:10px;'>
+			<p align="center">리셀러 회원은 회원고객들로 부터 사용료를 수금할 수 있는 권한이 있습,니다. 본인 계좌에서 
+			고객입금 내역을 확인하시고 승인해 주세요. </td></tr>
+			<tr>
+				<td style='font-size:12px;padding:10px;' align='center'>입금승인을 확인 
+				하시면 ,&nbsp; 리셀러 적립금을 차감하고 고객 적립금을 지급하게 됩니다.</td>
+			</tr>
+</table>
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border:1px solid #D2D2D2;background-color:#fafafa;'>
+	<tr>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' width="150" align="center">	
+		입금일자</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center">	
+		고객명</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="100">	
+		입금금액</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="100">
+		승인확인</td>
+	</tr>
+	</table>
+
+
+		
+
+
+		{datalist}
+
+		</td>
+		</tr>
+	</table>
+			</div>
+
+
+<p>&nbsp;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+<table border='0' width='100%' cellspacing='0' cellpadding='0' style='border-right:1px solid #D2D2D2;border-bottom:1px solid #D2D2D2;border-left:1px solid #D2D2D2;'>
+	<tr>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center" width="150">	{regdate}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' align="center">{company}</td>
+		<td style='border-right:1px solid #D2D2D2; font-size:12px;padding:10px;' width="100" align="center">{money}</td>
+		<td style='font-size:12px;padding:10px;' align="center" width="100">{auth}</td>
+	</tr>
+	</table>
+
+
+		
+
+
+<p>&nbsp;</p>
+
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
