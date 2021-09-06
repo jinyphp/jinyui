@@ -2,10 +2,10 @@
     {{$slot}}
 
     @php
-        $tab = BootTab()->setTabAttrs($attributes);
+        $tab = xTab()->setTabAttrs($attributes);
     @endphp
 
-    @foreach (BootTab()->popHeaders() as $item)
+    @foreach (xTab()->popHeaders() as $item)
         {!! $item !!}
     @endforeach
 </nav>

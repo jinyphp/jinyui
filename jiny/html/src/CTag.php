@@ -77,10 +77,15 @@ class CTag extends CObject
 	// html 태그 앞뒤에 줄 바꿈 기호 (\ n)를 넣지 마십시오. 원하지 않는 곳에 공백이 추가됩니다.
 	protected function startToString() {
 		$res = '<'.$this->tagname;// 시작테그 생성
+
 		foreach ($this->_attributes as $key => $value) {
 
 			if ($value === null ) {
 				continue; // 값이 없는 속성은 제외
+			}
+
+			if ($key == "class" && is_array($value)) {
+				$value = implode(" ", $value);
 			}
 
 			// "value", "name"및 "id"속성에는 특수 인코딩 전략을 사용해야합니다.
@@ -88,7 +93,7 @@ class CTag extends CObject
 			$value = $this->encode($value, $strategy);
 			$res .= ' '.$key.'="'.$value.'"';
 		}
-		//$res .= '>';
+		
         $res .= ($this->paired) ? '>' : '/>'; //html5 tag
 
 		return $res;

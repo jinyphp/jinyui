@@ -23,7 +23,8 @@
 			<div class="relative">
                 <div class="absolute bottom-4 right-0">
                     <div class="btn-group">
-                        <a href="#" class="btn btn-secondary">메뉴얼</a>
+						<a href="/docs/xgroup" class="btn btn-secondary">그룹설정</a>
+                        <a href="/docs/xbutton" class="btn btn-secondary">버튼설정</a>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,9 @@
 										Preview
 									</x-navtab-link>
 									{{-- preview 코드를 삽입합니다. --}}
+
 									<div class="mb-3">
+
 										<x-button primary>Primary</x-button>
 										<x-button secondary>Secondary</x-button>
 										<x-button success>Success</x-button>
@@ -116,7 +119,9 @@
 							<h6 class="card-subtitle text-muted">Buttons without background color.</h6>
 						</div>
 						<div class="card-body text-center">
+							
 							<div class="mb-3">
+								
 								<x-button primary outline>Primary</x-button>
 								<x-button secondary outline>Secondary</x-button>
 								<x-button success outline>Success</x-button>
@@ -133,6 +138,7 @@
 								<x-button warning outline disabled>Warning</x-button>
 								<x-button info outline disabled>Info</x-button>
 							</div>
+							
 	
 			
 						</div>
@@ -146,6 +152,7 @@
 							<h6 class="card-subtitle text-muted">Buttons without border radius.</h6>
 						</div>
 						<div class="card-body text-center">
+							
 							<div class="mb-3">
 								<x-button primary square>Primary</x-button>
 								<x-button secondary square>Secondary</x-button>
@@ -163,7 +170,7 @@
 								<x-button warning square disabled>Warning</x-button>
 								<x-button info square disabled>Info</x-button>
 							</div>
-	
+							
 						</div>
 					</div>
 				</div>
@@ -175,6 +182,7 @@
 							<h6 class="card-subtitle text-muted">Default Bootstrap buttons with icons.</h6>
 						</div>
 						<div class="card-body text-center">
+							
 							<div class="mb-3">
 								<x-button primary><x-icon name="feather.bell" class="w-4 h-4 inline-block"/> Primary</x-button>
 								<x-button secondary><x-icon name="feather.bell" class="w-4 h-4 inline-block"/> Secondary</x-button>
@@ -192,6 +200,7 @@
 								<x-button warning><x-icon name="feather.bell"/></i></x-button>
 								<x-button info><x-icon name="feather.bell"/></x-button>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -203,6 +212,7 @@
 							<h6 class="card-subtitle text-muted">Social buttons with icons.</h6>
 						</div>
 						<div class="card-body text-center">
+							
 							<div class="mb-3">
 								<x-button class="mb-1 btn-facebook"><i class="align-middle fab fa-facebook"></i> Facebook</x-button>
 								<x-button class="mb-1 btn-twitter"><i class="align-middle fab fa-twitter"></i> Twitter</x-button>
@@ -229,6 +239,7 @@
 								<x-button class="mb-1 btn-flickr"><i class="align-middle fab my-1 fa-flickr"></i></x-button>
 								<x-button class="mb-1 btn-bitbucket"><i class="align-middle fab my-1 fa-bitbucket"></i></x-button>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -240,6 +251,7 @@
 							<h6 class="card-subtitle text-muted">Fancy larger or smaller buttons.</h6>
 						</div>
 						<div class="card-body text-center">
+							
 							<div class="mb-3">
 								<x-button primary small>Small</x-button>
 								<x-button primary>Medium</x-button>
@@ -250,6 +262,7 @@
 								<x-button primary><i class="fas fa-globe-americas"></i> Medium</x-button>
 								<x-button primary large><i class="fas fa-globe-americas"></i> Large</x-button>
 							</div>
+							
 						</div>
 					</div>
 				</div>
@@ -262,7 +275,7 @@
 						</div>
 						<div class="card-body text-center">
 							<div class="mb-3">
-	
+								
 								<x-button-group>
 									<x-button-dropdown primary>Primary</x-button-dropdown>	
 									<div class="dropdown-menu">
@@ -328,10 +341,10 @@
 										<a class="dropdown-item" href="#">Separated link</a>
 									</div>
 								</x-button-group>
-	
+								
 							</div>
 	
-							<div>
+							<div>								
 								<x-button-group>
 									<x-button-dropdown primary small>Primary</x-button-dropdown>	
 									<div class="dropdown-menu">
@@ -397,6 +410,7 @@
 										<a class="dropdown-item" href="#">Separated link</a>
 									</div>
 								</x-button-group>
+								
 							</div>
 						</div>
 					</div>
@@ -405,7 +419,6 @@
 
 
 			</x-row>
-
 
 
 		</x-container>

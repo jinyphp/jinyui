@@ -56,6 +56,24 @@ trait CTagAttribute
 		return $this;
 	}
 
+	public function setAriaLabel($value)
+	{
+		$this->setAttribute('aria-label',$value);
+		return $this;
+	}
+
+	public function setAriaCurrent($value)
+	{
+		$this->setAttribute('aria-current',$value);
+		return $this;
+	}
+
+
+
+	public function role($value) {
+		return $this->setAttribute('role', $value);
+	}
+
     /**
      * 스타일시트
      */
@@ -71,19 +89,7 @@ trait CTagAttribute
 		}
 		return $this;
 	}
-
-    public function addClass($class) {
-		if ($class !== null) {
-			if (!array_key_exists('class', $this->_attributes) || $this->_attributes['class'] === '') {
-				$this->_attributes['class'] = $class;
-			}
-			else {
-				$this->_attributes['class'] .= ' '.$class;
-			}
-		}
-
-		return $this;
-	}
+    
 
 
     public function getAttribute($name) {
@@ -100,6 +106,8 @@ trait CTagAttribute
 		$this->_attributes[$name] = $value;
 		return $this;
 	}
+
+
 
         
     /**
@@ -121,6 +129,44 @@ trait CTagAttribute
     public function removeAttribute($name) {
 		unset($this->_attributes[$name]);
 		return $this;
+	}
+
+
+    /**
+     * 클래스 속성 지정
+     *
+     * @param  mixed $class
+     * @return void
+     */
+    public function addClass($class) {
+		if ($class !== null) {
+			if (!array_key_exists('class', $this->_attributes) || $this->_attributes['class'] === '') {
+				// $this->_attributes['class'] = $class;
+				$this->_attributes['class'] = [ $class ]; // 배열 세팅
+			}
+			else {
+				//$this->_attributes['class'] .= ' '.$class;
+				$this->_attributes['class'] []= $class;
+			}
+		}
+
+		return $this;
+	}
+	
+
+
+	/**
+	 * isClass
+	 *
+	 * @param  mixed $name
+	 * @return void
+	 */
+	public function isClass($name)
+	{
+		if (isset($this->_attributes['class'])) {
+			return in_array($name, $this->_attributes['class'], true);
+		}
+		return false;
 	}
 
 

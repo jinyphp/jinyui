@@ -74,7 +74,7 @@
             
             <x-row>
                 <x-col-6>
-                    <x-jinyui-card>
+                    <x-card>
                         <div class="card-header">
                             <x-jinyui::nav.list class="nav-tabs card-header-tabs pull-right">
                     
@@ -118,12 +118,12 @@
                             </x-jinyui::nav.contents>
                         </div>
                     
-                    </x-jinyui-card>
+                    </x-card>
                 </x-col-6>
 
                 <x-col-6>
                     
-<x-jinyui-card>
+<x-card>
 
     <div class="card-header">
         <x-jinyui::nav.list class="nav-pills card-header-pills pull-right">
@@ -162,7 +162,7 @@
         </x-jinyui::nav.contents>
     </div>
 
-</x-jinyui-card>
+</x-card>
                 </x-col-6>
             </x-row>        
 

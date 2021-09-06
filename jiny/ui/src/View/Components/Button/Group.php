@@ -24,10 +24,13 @@ class Group extends Component
      */
     public function render()
     {
+        return view('jinyui::components.button.group');
+        /*
         return <<<'blade'
         <div {{ $attributes->merge(['class' => 'btn-group']) }}>
         {{$slot}}
         </div>
     blade;
+    */
     }
 }

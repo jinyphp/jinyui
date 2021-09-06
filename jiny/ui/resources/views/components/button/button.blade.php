@@ -1,1 +1,3 @@
-{!! BootButton($slot)->setAttrs($attributes) !!}
+{{-- --}}
+{!! xButton($slot)->setAttrs($attributes) !!}
+

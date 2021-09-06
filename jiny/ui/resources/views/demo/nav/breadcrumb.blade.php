@@ -1,4 +1,4 @@
-<x-jinyui-theme theme="adminkit" class="bootstrap">
+<x-theme theme="adminkit" class="bootstrap">
 	<x-main-content>
         <x-container>
             <!-- start page title -->

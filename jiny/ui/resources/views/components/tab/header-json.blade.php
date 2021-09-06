@@ -1,7 +1,10 @@
-{{-- tab 스택에 목록추가--}}
-{{ BootTab()->links(json_decode($slot,true), $active) }}
+{{-- Jiny\UI\View\Components\Tab\HeaderJson --}}
+{{-- json 데이터를 tab 스택에 추가--}}
 
-    {{-- 텝 목록을 출력--}}
-    @foreach (BootTab()->popHeaders() as $item)
-        {!! $item !!}
-    @endforeach
+{{ xTab()->links(json_decode($slot,true), $active) }}
+
+
+{{-- 텝 목록을 출력--}}
+@foreach (xTab()->popHeaders() as $item)
+    {!! $item !!}
+@endforeach

@@ -3,7 +3,7 @@ namespace Jiny\UI;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Str;
 
-class CTab 
+class XTab 
 {
     private static $Instance;
 
@@ -51,6 +51,7 @@ class CTab
         return $this;
     }
 
+    
     public function popHeaders()
     {
         $headers = [];
@@ -60,9 +61,9 @@ class CTab
         }
         
         $this->headers = []; //초기화
-
         return $headers;
     }
+
 
     // 텝 항목을 스텍에 저장합니다.
     public function pushHeader($slot, $attrs=null)
@@ -104,11 +105,19 @@ class CTab
         return $item;
     }
 
-
+    
+    /**
+     * 복수의 리스트 목록을 설정합니다.
+     *
+     * @param  mixed $arr
+     * @param  mixed $selected : Active 기본설정항목
+     * @return void
+     */
     public function links($arr=[], $selected=null)
     {
-        //dd($arr);
+        
         foreach($arr as $key =>$value) {
+            // Active 설정
             if($selected) {
                 if($key == $selected) {
                     $attrClass = "active";
@@ -118,11 +127,23 @@ class CTab
                 }
             }
 
-            $item = ['slot'=>$value, 'attrs'=>['href'=>"#".$key, 'class'=>$attrClass]  ];
-            array_push($this->headers, $item);
+            // 항목추가
+            $this->addItem(
+                $this->makeItem($value, ['href'=>"#".$key, 'class'=>$attrClass]  )
+            );
         }
     }
 
+    private function makeItem($slot, $attrs)
+    {
+        return ['slot'=>$slot, 'attrs'=>$attrs];
+    }
+
+    public function addItem($item)
+    {
+        array_push($this->headers, $item);
+        return $this;
+    }
 
 
 

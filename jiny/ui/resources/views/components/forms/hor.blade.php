@@ -11,4 +11,9 @@
     {{ BootFormItem()->clear() }}
 </div>
 --}}
-{!! BootFormItem()->hor($attributes->merge(['class' => 'mb-3'])) !!}
+
+
+{{-- BootFormItem()->hor($attributes->merge(['class' => 'mb-3'])) --}}
+
+{!! xFormItem()->setSlot($slot)
+    ->horizontal()->addClass('mb-3') !!}

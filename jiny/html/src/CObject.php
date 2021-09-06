@@ -34,24 +34,12 @@ class CObject extends Component
 
 	public function toString($destroy = true)
     {
-		/*
-        $res = <<<'blade'
-        <div>
-        blade;
-		*/
-
 		$res = "";
         $res .= implode('', $this->items);
 		if ($destroy) {
 			$this->destroy();
 		}
 
-		/*
-        $res .= <<<'blade'
-        </div>
-        blade;
-		*/
-		
 		return $res;
 	}
 
@@ -113,24 +101,6 @@ class CObject extends Component
     public function render()
     {
         return $this->toString();
-
-		/*
-        if($this->blade) {
-            // 'components.html.cdiv'
-            return view($this->blade);
-        }
-        else if ($this->items) {
-            return $this->toString();
-        }
-        else {
-            return <<<'blade'
-            <div>
-                {{$slot}}
-            </div>
-            blade;
-        }
-		*/
-
     }
 
 }

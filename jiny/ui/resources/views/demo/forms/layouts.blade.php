@@ -35,16 +35,16 @@
                 
                 <x-col class="col-md-12">
                     @include("jinyui::demo.forms.layouts.row")
-                    {{-- @include2("layouts.row") --}}
+                    
                 </x-col>
 
                 <x-col class="col-12 col-xl-6">
                     @include("jinyui::demo.forms.layouts.basic")
-                    {{-- @include2("layouts.basic") --}}
+                    
                 </x-col>
                 <x-col class="col-12 col-xl-6">
                     @include("jinyui::demo.forms.layouts.horizontal")
-                    {{-- @include2("layouts.horizontal") --}}
+                    
                 </x-col>
             </x-row>
 

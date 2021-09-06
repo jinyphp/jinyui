@@ -2,7 +2,7 @@
 <div {{ $attributes->merge(['class' => '']) }} role="tablist">
     {{$slot}}
 
-    @foreach (BootTab()->popHeaders() as $item)
+    @foreach (xTab()->popHeaders() as $item)
         {!! $item !!}
     @endforeach
 </div>
@@ -11,12 +11,12 @@
     {{$slot}}
 
     @php
-        $tab = BootTab();
+        $tab = xTab();
         $tab->tabStyle("list");
         $tab->setTabAttrs($attributes);
     @endphp
 
-    @foreach (BootTab()->popHeaders() as $item)
+    @foreach (xTab()->popHeaders() as $item)
         {!! $item !!}
     @endforeach
 </nav>

@@ -39,24 +39,29 @@
                                 <span class="input-group-text">@</span>
                                 <input type="text" class="form-control" placeholder="Username">
                             </div>
+
                             <div class="input-group mb-3">
                                 <input type="text" class="form-control" placeholder="Recipient's username">
                                 <span class="input-group-text">@example.com</span>
                             </div>
+
                             <div class="input-group mb-3">
                                 <span class="input-group-text">https://example.com/users/</span>
                                 <input type="text" class="form-control">
                             </div>
+
                             <div class="input-group mb-3">
                                 <span class="input-group-text">$</span>
                                 <input type="text" class="form-control">
                                 <span class="input-group-text">.00</span>
                             </div>
+
                             <div class="input-group">
                                 <span class="input-group-text">$</span>
                                 <span class="input-group-text">0.00</span>
                                 <input type="text" class="form-control">
                             </div>
+
                         </div>
                     </div>
         
@@ -95,6 +100,7 @@
                             <h5 class="card-title mb-0">Sizing</h5>
                         </div>
                         <div class="card-body">
+
                             <div class="input-group input-group-lg mb-3">
                                 <span class="input-group-text">@</span>
                                 <input type="text" class="form-control" placeholder="Username">
@@ -107,6 +113,7 @@
                                 <span class="input-group-text">@</span>
                                 <input type="text" class="form-control" placeholder="Username">
                             </div>
+                            
                         </div>
                     </div>
                 </div>

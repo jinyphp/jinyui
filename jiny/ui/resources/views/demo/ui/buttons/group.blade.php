@@ -37,26 +37,23 @@
 						</div>
 						<div class="card-body">
 							<h6 class="card-subtitle mb-2 text-muted">기본스타일</h6>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-primary">Left</button>
-								<button type="button" class="btn btn-primary">Middle</button>
-								<button type="button" class="btn btn-primary">Right</button>
-							</div>
 
-							<h6 class="card-subtitle mb-2 text-muted">링크</h6>
+							{!! xGroup()
+								->setButton()
+								->addItem( xButton("Left")->setColor('primary') )
+								->addItem( xButton("Middle")->setColor('primary') )
+								->addItem( xButton("Right")->setColor('primary') )
+								->setAriaLabel("Basic example")
+							!!}
+
+
+							<h6 class="card-subtitle my-2 text-muted">링크</h6>
 							<div class="btn-group">
-								<a href="#" class="btn btn-primary active" aria-current="page">Active link</a>
-								<a href="#" class="btn btn-primary">Link</a>
-								<a href="#" class="btn btn-primary">Link</a>
+								{!! xLink("Active link", '#')->setButton('primary')
+									->setActive()->setAriaCurrent("page") !!}
+								{!! xLink("link", '#')->setButton('primary') !!}
+								{!! xLink("link", '#')->setButton('primary') !!}
 							</div>
-
-
-
-
-
-
-							
-
 
 						</div>
 					</div>
@@ -70,31 +67,36 @@
 						</div>
 						<div class="card-body">
 
-
-
-
-
-
-
 							<h6 class="card-subtitle mb-2 text-muted">Horizontal button group</h6>
 
-							<div class="btn-group btn-group-lg mb-3" role="group" aria-label="Large button group">
-								<button type="button" class="btn btn-secondary">Left</button>
-								<button type="button" class="btn btn-secondary">Middle</button>
-								<button type="button" class="btn btn-secondary">Right</button>
-							</div>
-							<br>
-							<div class="btn-group mb-3" role="group" aria-label="Default button group">
-								<button type="button" class="btn btn-secondary">Left</button>
-								<button type="button" class="btn btn-secondary">Middle</button>
-								<button type="button" class="btn btn-secondary">Right</button>
-							</div>
-							<br>
-							<div class="btn-group btn-group-sm mb-4" role="group" aria-label="Small button group">
-								<button type="button" class="btn btn-secondary">Left</button>
-								<button type="button" class="btn btn-secondary">Middle</button>
-								<button type="button" class="btn btn-secondary">Right</button>
-							</div>
+							{!! xGroup()
+								->setButton()->setButtonSize('large')
+								->addItem( xButton("Left")->setColor('secondary') )
+								->addItem( xButton("Middle")->setColor('secondary') )
+								->addItem( xButton("Right")->setColor('secondary') )
+								->setAriaLabel("Large button group")
+							!!}
+
+							<br class="mb-3">
+
+							{!! xGroup()
+								->setButton()
+								->addItem( xButton("Left")->setColor('info') )
+								->addItem( xButton("Middle")->setColor('info') )
+								->addItem( xButton("Right")->setColor('info') )
+								->setAriaLabel("button group")
+							!!}
+
+							<br class="mb-3">
+
+							{!! xGroup()
+								->setButton()->setButtonSize('small')
+								->addItem( xButton("Left")->setColor('danger') )
+								->addItem( xButton("Middle")->setColor('danger') )
+								->addItem( xButton("Right")->setColor('danger') )
+								->setAriaLabel("Small button group")
+							!!}
+
 
 						</div>
 					</div>
@@ -108,9 +110,6 @@
 						</div>
 						<div class="card-body">
 
-				
-
-
 							<h6 class="card-subtitle mb-2 text-muted">Button toolbar</h6>
 							<div class="btn-toolbar mb-4" role="toolbar" aria-label="Toolbar with button groups">
 
@@ -120,19 +119,18 @@
 									<button type="button" class="btn btn-secondary">3</button>
 									<button type="button" class="btn btn-secondary">4</button>
 								</div>
+
 								<div class="btn-group me-2" role="group" aria-label="Second group">
 									<button type="button" class="btn btn-secondary">5</button>
 									<button type="button" class="btn btn-secondary">6</button>
 									<button type="button" class="btn btn-secondary">7</button>
 								</div>
+								
 								<div class="btn-group" role="group" aria-label="Third group">
 									<button type="button" class="btn btn-secondary">8</button>
 								</div>
 								
 							</div>
-
-
-	
 
 
 						</div>
@@ -149,26 +147,48 @@
 
 							<h6 class="card-subtitle mb-2 text-muted">Vertical button group</h6>
 							<div class="btn-toolbar">
-								<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-									<button type="button" class="btn btn-primary">Button</button>
-									<button type="button" class="btn btn-primary">Button</button>
-									<button type="button" class="btn btn-primary">Button</button>
-								</div>
-								<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-									<button type="button" class="btn btn-success">Button</button>
-									<button type="button" class="btn btn-success">Button</button>
-									<button type="button" class="btn btn-success">Button</button>
-								</div>
-								<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-									<button type="button" class="btn btn-warning">Button</button>
-									<button type="button" class="btn btn-warning">Button</button>
-									<button type="button" class="btn btn-warning">Button</button>
-								</div>
-								<div class="btn-group-vertical me-2" role="group" aria-label="Vertical button group">
-									<button type="button" class="btn btn-danger">Button</button>
-									<button type="button" class="btn btn-danger">Button</button>
-									<button type="button" class="btn btn-danger">Button</button>
-								</div>
+
+								{!! xGroup()
+									->setButton('vertical')
+									->addItem( xButton("Left")->setColor('primary') )
+									->addItem( xButton("Middle")->setColor('primary') )
+									->addItem( xButton("Right")->setColor('primary') )
+									->setAriaLabel("Vertical button group")
+
+									->addClass("me-2")
+								!!}
+
+								{!! xGroup()
+									->setButton('vertical')
+									->addItem( xButton("Left")->setColor('success') )
+									->addItem( xButton("Middle")->setColor('success') )
+									->addItem( xButton("Right")->setColor('success') )
+									->setAriaLabel("Vertical button group")
+
+									->addClass("me-2")
+								!!}
+
+								{!! xGroup()
+									->setButton('vertical')
+									->addItem( xButton("Left")->setColor('warning') )
+									->addItem( xButton("Middle")->setColor('warning') )
+									->addItem( xButton("Right")->setColor('warning') )
+									->setAriaLabel("Vertical button group")
+
+									->addClass("me-2")
+								!!}
+
+								{!! xGroup()
+									->setButton('vertical')
+									->addItem( xButton("Left")->setColor('danger') )
+									->addItem( xButton("Middle")->setColor('danger') )
+									->addItem( xButton("Right")->setColor('danger') )
+									->setAriaLabel("Vertical button group")
+
+									->addClass("me-2")
+								!!}
+
+
 							</div>
 
 

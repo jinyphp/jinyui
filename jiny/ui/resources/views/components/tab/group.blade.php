@@ -2,12 +2,12 @@
     {{$slot}}
 
     @php
-        $tab = BootTab();
+        $tab = xTab();
         $tab->tabStyle("group");
         $tab->setTabAttrs($attributes);
     @endphp
 
-    @foreach (BootTab()->popHeaders() as $item)
+    @foreach (xTab()->popHeaders() as $item)
         {!! $item !!}
     @endforeach
 </nav>

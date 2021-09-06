@@ -4,6 +4,20 @@
  * xtag function
  */
 
+function xDiv($items = null) {
+    return new \Jiny\Html\CDiv($items);	
+}
+
+function xForm()
+{
+    return \Jiny\UI\Html\XForm::instance();
+}
+
+function xFormItem()
+{
+    return \Jiny\UI\Html\XFormItem::instance();
+}
+
 function xInput($type = 'text', $name = null, $value = null){
     $input = new \Jiny\UI\Html\XInput($type, $name, $value);
     return $input;
@@ -112,14 +126,36 @@ function BootNav($ri=null)
     return \Jiny\UI\BootNav::instance($ri);
 }
 
-function BootTab()
+//
+function xTab()
 {
-    return \Jiny\UI\CTab::instance();
+    return \Jiny\UI\XTab::instance();
 }
 
-function BootButton($item=null)
+
+// Group 지정
+function xGroup($items=[])
 {
-    return new \Jiny\UI\BootButton($item);
+    return new \Jiny\UI\Html\XGroup($items);
+}
+
+// 링크생성
+function xLink($item = null, $url = null)
+{
+    return new \Jiny\UI\Html\XLink($item, $url);
+}
+
+function xLinks($args=[])
+{
+    return new \Jiny\UI\Html\XLinks($args);
+}
+
+
+
+
+function xButton($item=null)
+{
+    return new \Jiny\UI\Html\XButton($item);
 }
 
 function BootModal()

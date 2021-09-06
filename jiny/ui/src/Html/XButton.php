@@ -1,16 +1,17 @@
 <?php 
-namespace Jiny\UI;
+namespace Jiny\UI\Html;
 
 use Jiny\Html\CButton;
 
 /**
  * BootStrap Button
  */
-class BootButton extends CButton
+class xButton extends CButton
 {
     private $skin = "bootstrap";
     private $shape;
     //private $colorset = "primary";
+    private $color;
 
     public function __construct($item=null)
     {
@@ -19,8 +20,15 @@ class BootButton extends CButton
             $this->addItem($item);
         }
 
-        $this->addClass("btn");
+        $this->addClass("btn"); //bootstrap css
         $this->shape = "basic";
+    }
+
+    public function setColor($color)
+    {
+        $this->color = $color;
+        $this->addClass("btn-".$color);
+        return $this;
     }
 
 

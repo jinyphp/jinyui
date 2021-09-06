@@ -24,9 +24,11 @@ class Button extends Component
      */
     public function render()
     {
-        // return view('jinyui::components.button.button');
+        return view('jinyui::components.button.button');
+        /*
         return <<<'blade'
-        {!! BootButton($slot)->setAttrs($attributes) !!}
+        {!! xButton($slot)->setAttrs($attributes) !!}
     blade;
+        */
     }
 }

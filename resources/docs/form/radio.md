@@ -2,7 +2,7 @@
 지니UI는 라디오버튼을 출력하기 위한 xRadio() 헬퍼를 제공합니다.
 
 ```php
-!! xRadio("sex", "man") !!}
+!! xRadio(이름, 값) !!}
 ```
 
 ## 라디오 라벨
@@ -38,13 +38,13 @@ xRadioGroup() 헬퍼함수를 제공합니다.
 
 ```php
 {!! xRadioGroup("inline")
-                                    ->addRadio(
-                                        xRadio("customRadio1", "option1"), 
-                                        "Toggle this custom radio")   
-                                    ->addRadio(
-                                        xRadio("customRadio1", "option2")->setChecked(), 
-                                        "Or toggle this other custom radio")                               
-                                !!}
+    ->addRadio(
+        xRadio("customRadio1", "option1"), 
+        "Toggle this custom radio")   
+    ->addRadio(
+        xRadio("customRadio1", "option2")->setChecked(), 
+        "Or toggle this other custom radio")                               
+!!}
 ```
 
 ## 색상적용

@@ -89,7 +89,7 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
 
     Route::get('/tasks', function(){
         $res = view("jinyui::demo.pages.tasks");
-        file_put_contents(base_path()."/docs/pages/task.html", $res);
+        //file_put_contents(base_path()."/docs/pages/task.html", $res);
         return $res;
     });
 

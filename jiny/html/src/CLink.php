@@ -6,7 +6,7 @@ class CLink extends CTag
 
 	
 	private	$confirm_message = '';
-	private $url;
+	
 
 	public function __construct($item = null, $url = null) {
 		parent::__construct('a', true);

@@ -1,6 +1,6 @@
 <?php
 
-namespace Jiny\UI\View\Components;
+namespace Jiny\UI\View\Components\Forms;
 
 use Illuminate\View\Component;
 

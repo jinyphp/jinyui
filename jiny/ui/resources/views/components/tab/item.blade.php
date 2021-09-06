@@ -1,1 +1,1 @@
-{{ BootTab()->pushContent($slot, $attributes) }}
+{{ xTab()->pushContent($slot, $attributes) }}

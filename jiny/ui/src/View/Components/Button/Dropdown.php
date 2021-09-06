@@ -25,7 +25,7 @@ class Dropdown extends Component
     {
         // return view('jinyui::components.button.button');
         return <<<'blade'
-        {!! BootButton($slot)->setAttrs($attributes)->dropdown() !!}
+        {!! xButton($slot)->setAttrs($attributes)->dropdown() !!}
     blade;
     }
 }

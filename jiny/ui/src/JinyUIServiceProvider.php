@@ -148,10 +148,24 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'list.item', 'list-item');
 
 
-            Blade::component(\Jiny\UI\View\Components\FormRow::class, "form-row");
+            //Form
+            Blade::component(\Jiny\UI\View\Components\Forms\FormRow::class, "form-row");
+            Blade::component('jinyui::components.'.'forms.row', 'form-row');
             Blade::component(\Jiny\UI\View\Components\FormHor::class, "form-hor");
+            Blade::component('jinyui::components.'.'forms.inline', 'form-inline');
             Blade::component(\Jiny\UI\View\Components\FormLabel::class, "form-label");
-            Blade::component(\Jiny\UI\View\Components\FormItem::class, "form-item");
+            Blade::component(\Jiny\UI\View\Components\FormItem::class, "form-item");            
+            //Blade::component('jinyui::components.'.'forms.label', 'form-label');
+            //Blade::component('jinyui::components.'.'forms.item', 'form-item');
+            Blade::component('jinyui::components.'.'forms.input', 'form-input');
+            Blade::component('jinyui::components.'.'forms.text', 'form-text');
+            Blade::component('jinyui::components.'.'forms.email', 'form-email');
+            Blade::component('jinyui::components.'.'forms.number', 'form-number');
+            Blade::component('jinyui::components.'.'forms.radio', 'form-radio');
+            Blade::component('jinyui::components.'.'forms.checkbox', 'form-checkbox');
+
+
+
 
             Blade::component(\Jiny\UI\View\Components\Cards\Card::class, "card");
             Blade::component('jinyui::components.'.'card.body', 'card-body');
@@ -244,14 +258,7 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\Tab\HeaderJson::class, "tab-header-json"); // 템 목록을 json으로 변환하여 전달합니다.
 
 
-            //Form
-            Blade::component('jinyui::components.'.'forms.row', 'form-row');
-            Blade::component('jinyui::components.'.'forms.label', 'form-label');
-            Blade::component('jinyui::components.'.'forms.item', 'form-item');
-            Blade::component('jinyui::components.'.'forms.input', 'form-input');
-            Blade::component('jinyui::components.'.'forms.text', 'form-text');
-            Blade::component('jinyui::components.'.'forms.email', 'form-email');
-            Blade::component('jinyui::components.'.'forms.number', 'form-number');
+            
 
             
 

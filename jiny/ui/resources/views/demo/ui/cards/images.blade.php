@@ -30,7 +30,7 @@
 
             <x-row>
                 <x-col-4>
-                    <x-jinyui-card>
+                    <x-card>
                         <x-card-before>
                             <img class="card-img-top" src="/img/photos/unsplash-1.jpg" alt="Unsplash">
                         </x-card-before>
@@ -44,11 +44,11 @@
                             <a href="#" class="card-link">Card link</a>
                             <a href="#" class="card-link">Another link</a>
                         </x-card-body>
-                    </x-jinyui-card>
+                    </x-card>
                 </x-col-4>
                 
                 <x-col-4>
-                    <x-jinyui-card>
+                    <x-card>
                         <x-card-before>
                             <img class="card-img-top" src="/img/photos/unsplash-2.jpg" alt="Unsplash">
                         </x-card-before>
@@ -62,11 +62,11 @@
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                         </x-card-body>
                 
-                    </x-jinyui-card>
+                    </x-card>
                 </x-col-4>
                 
                 <x-col-4>
-                    <x-jinyui-card>
+                    <x-card>
                         <x-card-before>
                             <img class="card-img-top" src="/img/photos/unsplash-3.jpg" alt="Unsplash">
                         </x-card-before>
@@ -83,7 +83,7 @@
                             <x-list-item>Vestibulum at eros</x-list-item>
                         </x-list-group-flush>
                 
-                    </x-jinyui-card>
+                    </x-card>
                 </x-col-4>
             </x-row>
 

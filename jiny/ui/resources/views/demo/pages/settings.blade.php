@@ -50,28 +50,9 @@
                             <h5 class="card-title mb-0">Profile Settings</h5>
                         </x-card-header>
 
-                        <x-list-group-flush role="tablist">
-                        
-                            {{-- 
-                            {{ BootTab()->links(
-                                [
-                                    'account'=>"Account", 
-                                    'password'=>"password",
-                                    '#1'=>"Privacy and safety",
-                                    '#2'=>"Email notifications",
-                                    '#3'=>"Web notifications",
-                                    '#4'=>"Widgets",
-                                    '#5'=>"Your data",
-                                    '#6'=>"Delete account",
-                                ],
-                                "account") }}
-
-                        
-                            @foreach (BootTab()->popHeaders() as $item)
-                                {!! $item !!}
-                            @endforeach
-                            --}}
-
+                        {{--
+                        <div class="list-group" role="tablist">
+                            
                             <x-tab-header-json active="account">
                                 {
                                     "account":"Account", 
@@ -84,8 +65,26 @@
                                     "#6":"Delete account"
                                 }
                             </x-tab-header-json>
+                        </div>
+                        --}}
 
-                        </x-list-group-flush>
+                        {{-- 링크생성 --}}
+                        {!! xGroup()
+                            ->setItems(
+                                xLinks([
+                                    ['item'=>"Account", 'url'=>"#account"],
+                                    ['item'=>"Password", 'url'=>"#password"],
+                                    ['item'=>"Privacy and safety", 'url'=>"#2"],
+                                    ['item'=>"Email notifications", 'url'=>"#3"],
+                                    ['item'=>"Web notifications", 'url'=>"#4"],
+                                    ['item'=>"Widgets", 'url'=>"#5"],
+                                    ['item'=>"Your data", 'url'=>"#6"],
+                                    ['item'=>"Delete account", 'url'=>"#7"]                           
+                                ])
+                            )
+                            ->list()
+                            ->setActive(2)
+                            ->tabEnable() !!}
                     </x-card>
                 </div>
 
@@ -103,7 +102,7 @@
                             @include('jinyui::demo.pages.settings.tab-password')
                         </x-tab-item>
 
-                        @foreach (BootTab()->popContents() as $item)
+                        @foreach (xTab()->popContents() as $item)
                             {!! $item !!}
                         @endforeach
                     </div>

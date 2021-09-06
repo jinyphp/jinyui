@@ -1,4 +1,4 @@
-<x-jinyui-theme theme="adminkit" class="bootstrap">
+<x-theme theme="adminkit" class="bootstrap">
 	<x-main-content>
         <x-container>
             <!-- start page title -->
@@ -316,4 +316,4 @@
 
 		</x-container>
 	</x-main-content>
-</x-jinyui-theme>   
+</x-theme>   
