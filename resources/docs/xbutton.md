@@ -33,3 +33,5 @@ xButton은 부트스트랩의 'btn' 클래스를 부여합니다.
 ```php
 {!! xButton("Left")->setColor('primary') !!}
 ```
+
+## 속성적용하기

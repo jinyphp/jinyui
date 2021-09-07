@@ -191,7 +191,11 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'link.a', 'link');
             
 
-            
+            // Collapse
+            Blade::component('jinyui::components.'.'collapse.collapse', 'collapse');
+            Blade::component('jinyui::components.'.'collapse.button', 'collapse-button');
+            Blade::component('jinyui::components.'.'collapse.link', 'collapse-link');
+            Blade::component('jinyui::components.'.'collapse.body', 'collapse-body');
 
 
             Blade::component(\Jiny\UI\View\Components\Accordion::class, "dropdown");

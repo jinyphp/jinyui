@@ -1,4 +1,4 @@
-<div {{ $attributes->merge(['class' => 'accordion']) }} id="{{uiStack()->accordionId()}}">
+<div {{ $attributes->merge(['class' => 'accordion']) }} id="{{xAccordion()->accordionId()}}">
     {{$slot}}
 </div>
-{{uiStack()->clear()}} {{-- 아코디언 아이디 초기화--}}
+{{xAccordion()->clear()}} {{-- 아코디언 아이디 초기화--}}

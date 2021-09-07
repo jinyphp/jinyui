@@ -31,7 +31,9 @@
             <x-row>
                 <div class="col-12">
                     <div class="card-group mb-4">
-                        <div class="card"><img class="card-img-top" src="/img/mockup4.jpg" alt="Card image cap">
+                        
+                        <div class="card">
+                            <img class="card-img-top" src="/img/mockup4.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <div class="card-title h5">Card title</div>
                                 <p class="card-text">This is a longer card with supporting text below as a
@@ -41,7 +43,9 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="card"><img class="card-img-top" src="/img/mockup3.jpg" alt="Card image cap">
+
+                        <div class="card">
+                            <img class="card-img-top" src="/img/mockup3.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <div class="card-title h5">Card title</div>
                                 <p class="card-text">This card has supporting text below as a natural lead-in to
@@ -50,6 +54,7 @@
                                 </p>
                             </div>
                         </div>
+
                         <div class="card"><img class="card-img-top" src="/img/mockup1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <div class="card-title h5">Card title</div>
@@ -60,6 +65,7 @@
                                 </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </x-row>

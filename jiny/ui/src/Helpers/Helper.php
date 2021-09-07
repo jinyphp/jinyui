@@ -8,6 +8,10 @@ function xDiv($items = null) {
     return new \Jiny\Html\CDiv($items);	
 }
 
+
+/**
+ * form
+ */
 function xForm()
 {
     return \Jiny\UI\Html\XForm::instance();
@@ -76,8 +80,19 @@ function xRadioGroup($style=null){
 }
 
 
+/**
+ * component
+ */
 
+function xCollapse()
+{
+    return \Jiny\UI\Components\XCollapse::instance();
+}
 
+function xAccordion()
+{
+    return \Jiny\UI\Components\XAccordion::instance();
+}
 
 function xIcon($name) {
     return new \Jiny\UI\View\Components\Icon($name);

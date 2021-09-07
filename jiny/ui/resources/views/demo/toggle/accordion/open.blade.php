@@ -1,4 +1,5 @@
 <x-accordion>
+    
   <x-accordion-item-open>
       <x-slot name="title">Accordion Item #4</x-slot>
       <strong>This is the first item's accordion body.</strong> It is shown by default, until the

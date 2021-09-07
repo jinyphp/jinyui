@@ -1,3 +1,3 @@
-<div class="collapse" id="{{uistack()->collapseId()}}">
+<div class="collapse" id="{{xCollapse()->collapseId()}}">
     {{$slot}}
 </div>
