@@ -35,6 +35,7 @@
 							<h6 class="card-subtitle text-muted">다은은 부트스트랩의 기본 html 코드를 이용한 breadcrumb 구현입니다.</h6>
 						</x-card-header>
 						<x-card-body>
+
 							<nav aria-label="breadcrumb">
 								<ol class="breadcrumb">
 									<li class="breadcrumb-item active" aria-current="page">Home</li>
@@ -58,6 +59,37 @@
 						</x-card-body>
 					</x-card>
 				</x-col-6>
+
+		
+				<x-col-6>
+					<x-card>
+						<x-card-header>
+							<h5 class="card-title">Native PHP code</h5>
+							<h6 class="card-subtitle text-muted">다은은 부트스트랩의 기본 html 코드를 이용한 breadcrumb 구현입니다.</h6>
+						</x-card-header>
+						<x-card-body>
+
+							<nav aria-label="breadcrumb">
+								{{ xBreadCrumb()->addLink("home") }}
+								{!! xBreadCrumb()->show() !!}
+							</nav>
+	
+							<nav aria-label="breadcrumb">
+								{{ xBreadCrumb()->addLink("Home",'#') }}
+								{{ xBreadCrumb()->addLink("Library") }}
+								{!! xBreadCrumb()->show() !!}
+							</nav>
+	
+							<nav aria-label="breadcrumb">
+								{!! xBreadCrumb()->setLinks([
+									['title'=>"Home", 'href'=>"#"],
+									['title'=>"Library", 'href'=>"#"],
+									['title'=>"Data", 'href'=>""]
+								])->show() !!}
+							</nav>
+						</x-card-body>
+					</x-card>
+				</x-col-6>
 	
 				<x-col-6>
 					<x-card>
@@ -66,16 +98,13 @@
 							<h6 class="card-subtitle text-muted">jinyui 컴포넌트 테그를 이용하여 생성한 breadcrumb 입니다.</h6>
 						</x-card-header>
 						<x-card-body>
-							<x-jinyui::nav.breadcrumb>
-								<li class="breadcrumb-item active" aria-current="page">Home</li>
-							</x-jinyui::nav.breadcrumb>
-	
+
 							<x-breadcrumb>
-								<x-breadcrumb-item>
-									<a href="#">Home</a>
+								<x-breadcrumb-item href="#">
+									Home
 								</x-breadcrumb-item>
-								<x-breadcrumb-item class="active" aria-current="page">
-									<a href="#">Home</a>
+								<x-breadcrumb-item>
+									Data
 								</x-breadcrumb-item>
 							</x-breadcrumb>
 	

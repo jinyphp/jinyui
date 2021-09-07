@@ -22,13 +22,11 @@ class XForm
 
 
 
-    
+    public $form;
     public function __toString()
     {
+        return $this->form;
         $res = "";
         return $res;
 	}
-
-
-
 }

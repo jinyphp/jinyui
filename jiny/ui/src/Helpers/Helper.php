@@ -87,6 +87,11 @@ function xBadge($title, $attr=[]) {
     return (new \Jiny\UI\View\Components\Button\Badge($title, $attr));
 }
 
+function xBreadCrumb()
+{
+    return \Jiny\UI\Components\XBreadCrumb::instance();
+}
+
 
 function xList($attrs=[])
 {
