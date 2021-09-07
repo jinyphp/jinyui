@@ -35,21 +35,7 @@
 							<h6 class="card-subtitle text-muted"></h6>
 						</div>
 						<div class="card-body">
-							<ul class="nav">
-								<li class="nav-item">
-								  <a class="nav-link active" aria-current="page" href="#">Active</a>
-								</li>
-								<li class="nav-item">
-								  <a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item">
-								  <a class="nav-link" href="#">Link</a>
-								</li>
-								<li class="nav-item">
-								  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-								</li>
-							</ul>
-	
+							@include('jinyui::demo.nav.nav.basic')
 						</div>
 					</div>
 				</div>
@@ -61,20 +47,7 @@
 							<h6 class="card-subtitle text-muted"></h6>
 						</div>
 						<div class="card-body ">
-							<x-nav>
-								<x-nav-item>
-									<a class="nav-link active" aria-current="page" href="#">Active</a>
-								</x-nav-item>
-								<x-nav-item>
-									<a class="nav-link" href="#">Link</a>
-								</x-nav-item>
-								<x-nav-item>
-									<a class="nav-link" href="#">Link</a>
-								</x-nav-item>
-								<x-nav-item>
-									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-								</x-nav-item>
-							</x-nav>
+							@include('jinyui::demo.nav.nav.tag')
 						</div>
 					</div>
 				</div>
@@ -86,6 +59,7 @@
 							<h6 class="card-subtitle text-muted"></h6>
 						</div>
 						<div class="card-body ">
+
 							<x-nav class="justify-content-center">
 								<x-nav-item>
 									<a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -100,6 +74,7 @@
 									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 								</x-nav-item>
 							</x-nav>
+
 						</div>
 					</div>
 				</div>
@@ -111,6 +86,7 @@
 							<h6 class="card-subtitle text-muted"></h6>
 						</div>
 						<div class="card-body ">
+
 							<x-nav class="justify-content-end">
 								<x-nav-item>
 									<a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -125,6 +101,7 @@
 									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 								</x-nav-item>
 							</x-nav>
+
 						</div>
 					</div>
 				</div>
@@ -136,6 +113,7 @@
 							<h6 class="card-subtitle text-muted"></h6>
 						</div>
 						<div class="card-body ">
+
 							<x-nav class="flex-column">
 								<x-nav-item>
 									<a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -150,6 +128,7 @@
 									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 								</x-nav-item>
 							</x-nav>
+
 						</div>
 					</div>
 				</div>
@@ -161,6 +140,7 @@
 							<h6 class="card-subtitle text-muted"></h6>
 						</div>
 						<div class="card-body ">
+
 							<x-nav class="nav-tabs">
 								<x-nav-item>
 									<a class="nav-link active" aria-current="page" href="#">Active</a>
@@ -175,6 +155,7 @@
 									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 								</x-nav-item>
 							</x-nav>
+
 						</div>
 					</div>
 				</div>
@@ -225,7 +206,9 @@
 									<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 								</x-nav-item>
 							</x-nav>
-	
+							
+							<br>
+							
 							<x-nav class="nav-pills nav-justified">
 								<x-nav-item>
 									<a class="nav-link active" aria-current="page" href="#">Active</a>

@@ -137,6 +137,11 @@ function xTab()
     return \Jiny\UI\XTab::instance();
 }
 
+function xNav()
+{
+    return \Jiny\UI\Components\XNav::instance();
+}
+
 
 // Group 지정
 function xGroup($items=[])
