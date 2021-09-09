@@ -25,7 +25,7 @@ class XForm
     public $form;
     public function __toString()
     {
-        return $this->form;
+        return $this->form->toString();
         $res = "";
         return $res;
 	}

@@ -117,7 +117,7 @@ class XList
 		$this->setBootstrap();
 
 
-		return $this->list;
+		return $this->list->toString();
 	}
 
 

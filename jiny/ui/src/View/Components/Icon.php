@@ -25,12 +25,12 @@ class Icon extends Component
 
     public function toString()
     {
-        return $this->render();
+        return $this->render()->render();
     }
 
 	public function __toString()
     {
-        return $this->render();
+        return $this->toString();
 	}
 
 }
