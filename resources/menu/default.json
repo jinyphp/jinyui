@@ -799,22 +799,14 @@
                 "href": "\/jinyui\/forms\/groups",
                 "target": ""
             },
-            {
-                "_id": 41,
-                "_ref": 37,
-                "_level": 2,
-                "icon": "",
-                "title": "Advanced Inputs",
-                "href": "\/jinyui\/forms\/advanced",
-                "target": ""
-            },
+
             {
                 "_id": 42,
                 "_ref": 37,
                 "_level": 2,
                 "icon": "",
                 "title": "Editors",
-                "href": "\/jinyui\/forms\/editors",
+                "href": "/jinyui/forms/quill/snow",
                 "target": ""
             },
             {
@@ -860,8 +852,8 @@
                 "_ref": 44,
                 "_level": 2,
                 "icon": "",
-                "title": "Responsive Table",
-                "href": "\/jinyui\/tables\/responsive",
+                "title": "Response Table",
+                "href": "\/jinyui\/tables\/response",
                 "target": ""
             },
             {

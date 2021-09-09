@@ -370,13 +370,13 @@ Route::prefix('jinyui/forms')->group(function () {
         return view("jinyui::demo.forms.groups");
     });
 
+    /*
     Route::get('/advance', function(){
         return view("jinyui::demo.forms.advance");
     });
+    */
 
-    Route::get('/editors', function(){
-        return view("jinyui::demo.forms.editors");
-    });
+
 
     Route::get('/validation', function(){
         return view("jinyui::demo.forms.validation");
@@ -386,7 +386,9 @@ Route::prefix('jinyui/forms')->group(function () {
         return view("jinyui::demo.forms.wizard");
     });
 
-
+    Route::get('/editors', function(){
+        return view("jinyui::demo.forms.editors");
+    });
     // Editors
     Route::get('/quill/snow', function(){
         return view("jinyui::demo.forms.quill.snow");
@@ -427,8 +429,8 @@ Route::middleware(['web'])->prefix('jinyui/tables')->group(function () {
     Route::get('/response', function(){
         return view("jinyui::demo.tables.response");
     });
-    Route::get('/button', function(){
-        return view("jinyui::demo.tables.button");
+    Route::get('/buttons', function(){
+        return view("jinyui::demo.tables.buttons");
     });
     Route::get('/search', function(){
         return view("jinyui::demo.tables.search");
