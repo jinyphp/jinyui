@@ -47,14 +47,25 @@ class XBreadCrumb
         return $this;
     }
 
+    public $slot;
+    public function addHtml($slot)
+    {
+        $this->slot = $slot;
+        return $this;
+    }
+
     public function show()
     {
-        // dd($this->obj->items);
-        foreach($this->obj->items as &$item) {
-            $item->addClass("breadcrumb-item");
+        if (!empty($this->obj->items)) {
+            foreach($this->obj->items as &$item) {
+                $item->addClass("breadcrumb-item");
+            }
+    
+            $item->addClass("active"); // 마지막 항목에 active 추가
         }
-        $item->addClass("active"); // 마지막 항목에 active 추가
+        
         $res = $this->obj->addClass("breadcrumb");
+        $this->obj->addHtml($this->slot);
 
         $this->init();
         return $res;

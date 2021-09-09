@@ -4,5 +4,6 @@
         {{$slot}}
     </ol>
     --}}
-    {!! xBreadCrumb()->show() !!}
+    
+    {!! xBreadCrumb()->addHtml($slot)->show() !!}
 </nav>

@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Schema;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -26,7 +27,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
+        // MaridaDB Error 보정코드
+        Schema::defaultStringLength(191);
+
 
         // 블레이드 컴포넌트
         // 상대경로 include
@@ -45,9 +48,6 @@ class AppServiceProvider extends ServiceProvider
             $args = substr_replace($args, $viewBasePath.'.', 1, 0);
             return "<?php echo \$__env->make({$args}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
-
-
-        
 
     }
 }
