@@ -33,6 +33,14 @@ class Theme extends Component
      */
     public function render()
     {
-        return view('jinyui::components.theme.theme');
+        if (View::exists("theme.".$this->theme_name.'.app')) {
+            // 테마 리소스가 있는 경우
+            return view("theme.".$this->theme_name.'.app');
+        } else {
+            
+            return view('jinyui::components.theme.theme');
+        }
+
+        
     }
 }

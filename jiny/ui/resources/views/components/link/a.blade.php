@@ -4,4 +4,4 @@
 </a>
 --}}
 
-{!! xLink($slot)->setTagAttrs($attributes) !!}
+{!! xLink($slot)->setAttrs($attributes) !!}

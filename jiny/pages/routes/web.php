@@ -5,7 +5,9 @@ use Illuminate\Http\Request;
 /**
  * 마크다운 페이지
  */
-Route::get('/docs/{slug1?}/{slug2?}/{slug3?}/{slug4?}/{slug5?}/{slug6?}/{slug7?}',[\Jiny\Pages\Http\MarkdownController::class,"index"]);
+Route::get('/docs/{slug1?}/{slug2?}/{slug3?}/{slug4?}/{slug5?}/{slug6?}/{slug7?}',
+    [\Jiny\Pages\Http\MarkdownController::class,"index"]);
+    
 /*
 if($_SERVER['PATH_INFO']) {
     $file = $_SERVER['PATH_INFO'].".md";

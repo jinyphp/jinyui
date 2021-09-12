@@ -53,19 +53,19 @@ class XLink extends CTag
 		return $this;
 	}
 
-	public function setTagAttrs($attrs)
+	public function setAttrs($attrs)
     {
         if (is_object($attrs) || is_array($attrs)) {
             foreach($attrs as $name => $value) {
                 if ($name === "href") {
-                    $this->tag->setUrl($value);
+                    $this->setUrl($value);
                     continue;
                 } else if ($name === "class") {
 
-                    $this->tag->addClass($value);
+                    $this->addClass($value);
                     continue;
                 }
-                $this->tag->setAttribute($name, $value);
+                $this->setAttribute($name, $value);
             }
         }
         return $this;

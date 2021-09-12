@@ -427,6 +427,12 @@ class JinyUIServiceProvider extends ServiceProvider
         });
 
 
+        // 테마설정
+        Blade::directive('setTheme', function ($args) {
+            $expression = Blade::stripParentheses($args);
+            \Jiny\UI\Theme::instance()->setTheme($expression);
+        });
+
         // 테마안에 있는 리소스를 읽어 옵니다.
         Blade::directive('theme', function ($args) {
             $expression = Blade::stripParentheses($args);
@@ -447,6 +453,7 @@ class JinyUIServiceProvider extends ServiceProvider
             }
 
             $expression = '"'."theme.".$path.'"';
+            
             return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
 
