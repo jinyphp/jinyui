@@ -14,7 +14,7 @@
         				<div class="mb-3">
                         	<h1 class="h3 d-inline align-middle">DB Table DESC</h1>
                             <p>
-                               
+                            
                             </p>
                     	</div>
                 	</div>
@@ -26,7 +26,7 @@
                 <div class="absolute bottom-4 right-0">
                     <div class="btn-group">
                         <a href="#" class="btn btn-secondary">메뉴얼</a>
-                        <a href="#" class="btn btn-primary">추가</a>
+                        <a href="{{route('admin-db-desc.create', $table)}}" class="btn btn-primary">추가</a>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
             <x-row>
                 <x-col-12>
                     <x-card>
-                       
+                    
                         <div class="table-responsive" >
                             <x-table check class="mb-0">
                             
@@ -47,6 +47,7 @@
                                         <th>타입</th>
                                         <th>no</th>
                                         <th>Primary</th>
+                                        <th>default</th>
                                         <th>auto increament</th>
                                         <th></th>                           
                                     </tr>
@@ -59,11 +60,11 @@
                                                 <x-table-check :i="$i"/>
                                             </td>
                                 
-                                            @foreach ($row as $key =>$item)
-                                              
-                                                <td>{{$item}}</td>
-                                              
-                                            @endforeach
+                                            {!! $rowfunc($row) !!}
+
+                                            
+
+                                            <td><a href="#">Del</a></td>
                                         </tr>
                                     @endforeach
                                 </x-table-body>

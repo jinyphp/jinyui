@@ -4,4 +4,8 @@
     }        
 @endphp
 
+{!! xTableBody($slot)->setAttrs($attributes) !!}
+
+{{--
 {!! \Jiny\UI\Table::instance()->setDataBody( $rows, $attributes, $slot) !!}
+--}}

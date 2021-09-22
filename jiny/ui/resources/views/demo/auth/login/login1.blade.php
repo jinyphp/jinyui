@@ -1,6 +1,6 @@
 <x-theme-app>
     <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
-        <div class="container">
+        <div class="container-fluid">
 
             <x-box class="rounded-xl">
                 <x-row class="g-0">

@@ -126,7 +126,10 @@ class JinyUIServiceProvider extends ServiceProvider
             // 레이아웃
             Blade::component(\Jiny\UI\View\Components\Layouts\Layout::class, 'layout');
             Blade::component('jinyui::components.'.'layout.layout-item', 'layout-item');
+            Blade::component('jinyui::components.'.'layout.container-fluid', 'container-fluid');
+            Blade::component('jinyui::components.'.'layout.container-fluid', 'container-full');
             Blade::component('jinyui::components.'.'layout.container', 'container');
+
 
             // 메뉴
             Blade::component(\Jiny\UI\View\Components\Menu\Menu::class, "menu"); //메뉴 빌더를 호출
@@ -149,6 +152,7 @@ class JinyUIServiceProvider extends ServiceProvider
 
 
             //Form
+            Blade::component('jinyui::components.'.'forms.form', 'form');
             Blade::component(\Jiny\UI\View\Components\Forms\FormRow::class, "form-row");
             Blade::component('jinyui::components.'.'forms.row', 'form-row');
             Blade::component(\Jiny\UI\View\Components\FormHor::class, "form-hor");
@@ -163,6 +167,10 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'forms.number', 'form-number');
             Blade::component('jinyui::components.'.'forms.radio', 'form-radio');
             Blade::component('jinyui::components.'.'forms.checkbox', 'form-checkbox');
+            Blade::component('jinyui::components.'.'forms.checkbox', 'checkbox');
+            Blade::component('jinyui::components.'.'forms.input', 'input');
+            Blade::component('jinyui::components.'.'forms.select', 'select');
+            Blade::component('jinyui::components.'.'forms.option', 'option');
 
 
 
@@ -178,6 +186,7 @@ class JinyUIServiceProvider extends ServiceProvider
 
             // Box model
             Blade::component('jinyui::components.'.'box.box', 'box');
+            Blade::component('jinyui::components.'.'box.callout-info', 'callout-info');
 
 
             Blade::component(\Jiny\UI\View\Components\Button\Button::class, "button");
@@ -262,15 +271,16 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\Tab\HeaderJson::class, "tab-header-json"); // 템 목록을 json으로 변환하여 전달합니다.
 
 
-            
 
-            
 
             //Table
             Blade::component(\Jiny\UI\View\Components\Tables\Table::class, "table");
             Blade::component(\Jiny\UI\View\Components\Tables\TableHead::class, 'table-head');
+            Blade::component(\Jiny\UI\View\Components\Tables\TableHead::class, 'thead');
             Blade::component(\Jiny\UI\View\Components\Tables\TableBody::class, 'table-body');
+            Blade::component(\Jiny\UI\View\Components\Tables\TableBody::class, 'tbody');
             Blade::component('jinyui::components.'.'tables.check-all', 'table-check-all');
+            Blade::component('jinyui::components.'.'tables.check-all', 'table-allcheck');
             Blade::component('jinyui::components.'.'tables.check', 'table-check');
 
 

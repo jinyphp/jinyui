@@ -1,0 +1,139 @@
+{
+    "tablename":"actions",
+    "title":"Action Routes",
+    "subtitle":"라우트 동작을 지정합니다.",
+    "list":{
+        "view":"jinytheme::admin.routes.list"           
+    },
+    "edit":{
+        "view":"jinytheme::admin.routes.edit"
+    },
+    "fields":[
+        {
+            "title":"경로",            
+            "name":"uri",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":1,
+
+            "list":true,
+            "list_pos":1,
+            "filter":true,
+            "filter_pos":1
+        },
+        {
+            "title":"타입",            
+            "name":"type",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":2,
+
+            "list":true,
+            "list_sort":"desc",
+            "list_edit":true,
+            "list_pos":2,
+            "filter":true,
+            "filter_pos":2
+        },
+
+        {
+            "title":"타이틀",            
+            "name":"title",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":true,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        },
+        {
+            "title":"테이블명",            
+            "name":"tablename",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":false,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        },
+        {
+            "title":"보기화면",            
+            "name":"list_view",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":false,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        },
+        {
+            "title":"수정화면",            
+            "name":"edit_view",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":false,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        },
+        {
+            "title":"설명",            
+            "name":"description",
+
+            "form":true,
+            "input":"text",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":false,
+            "list_pos":3,
+            "filter":true,
+            "filter_pos":3
+        },
+        {
+            "title":"필드",            
+            "name":"",
+
+            "form":false,
+            "input":"link",
+            "link":"/admin/system/actionfield/{id}",
+            "value":"필드수정",
+            "placeholder":"",
+
+            "form_pos":3,
+
+            "list":true,
+            "list_pos":3,
+
+            "filter":false,
+            "filter_pos":3
+        }
+    ]
+}

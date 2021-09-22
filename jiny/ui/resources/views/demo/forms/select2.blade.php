@@ -7,7 +7,7 @@
     font-size: 13px;
 }
 
-.select2-container--default .select2-selection--single {
+.select2-container-fluid--default .select2-selection--single {
     background-color: #fff;
     border-color: #cdd4e0;
     border-radius: 3px;
@@ -16,7 +16,7 @@
     border-radius: 0;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
+.select2-container-fluid--default .select2-selection--single .select2-selection__rendered {
     color: #596882;
     line-height: calc(1.5em + 0.75rem + 2px)-0.1rem;
     padding-left: 0.75rem;
@@ -25,21 +25,21 @@
     align-items: center;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__placeholder {
+.select2-container-fluid--default .select2-selection--single .select2-selection__placeholder {
     color: #7987a1;
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-container-fluid--default .select2-selection--single .select2-selection__arrow {
     width: 30px;
     height: 38px;
     line-height: calc(1.5em + 0.75rem + 2px);
 }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
+.select2-container-fluid--default .select2-selection--single .select2-selection__arrow b {
     margin-top: -3px;
 }
 
-.select2-container--default .select2-selection--multiple {
+.select2-container-fluid--default .select2-selection--multiple {
     background-color: #fff;
     border-color: #cdd4e0;
     border-radius: 0;
@@ -47,11 +47,11 @@
     outline: none;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+.select2-container-fluid--default .select2-selection--multiple .select2-selection__rendered {
     padding: 0 4px;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice {
+.select2-container-fluid--default .select2-selection--multiple .select2-selection__choice {
     position: relative;
     margin-top: 5px;
     margin-right: 4px;
@@ -63,7 +63,7 @@
     line-height: 1.45;
 }
 
-.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+.select2-container-fluid--default .select2-selection--multiple .select2-selection__choice__remove {
     color: #fff;
     opacity: .5;
     font-size: 12px;
@@ -73,55 +73,55 @@
     left: 7px;
 }
 
-.select2-container--default.select2-container--focus .select2-selection--multiple {
+.select2-container-fluid--default.select2-container-fluid--focus .select2-selection--multiple {
     border-color: #cdd4e0;
 }
 
-.select2-container--default .select2-search--dropdown .select2-search__field {
+.select2-container-fluid--default .select2-search--dropdown .select2-search__field {
     border-color: #cdd4e0;
     border-radius: 0;
 }
 
-.select2-container--default .select2-results__option[aria-selected="true"] {
+.select2-container-fluid--default .select2-results__option[aria-selected="true"] {
     background-color: white;
 }
 
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
+.select2-container-fluid--default .select2-results__option--highlighted[aria-selected] {
     background-color: #5b47fb;
 }
 
-.select2-container--default .select2-results>.select2-results__options {
+.select2-container-fluid--default .select2-results>.select2-results__options {
     margin: 4px;
 }
 
-.select2-container--default .select2-search--inline .select2-search__field {
+.select2-container-fluid--default .select2-search--inline .select2-search__field {
     margin-top: 7px;
     line-height: 26px;
     padding-left: 7px;
     opacity: 1;
 }
 
-.select2-container--default.select2-container--disabled .select2-selection__choice {
+.select2-container-fluid--default.select2-container-fluid--disabled .select2-selection__choice {
     padding-left: 10px;
     background-color: #97a3b9;
 }
 
-.select2-container--default.select2-container--disabled .select2-selection__choice .select2-selection__choice__remove {
+.select2-container-fluid--default.select2-container-fluid--disabled .select2-selection__choice .select2-selection__choice__remove {
     display: none;
 }
 
-.select2-container--open .select2-selection--single,
-.select2-container--open .select2-selection--multiple {
+.select2-container-fluid--open .select2-selection--single,
+.select2-container-fluid--open .select2-selection--multiple {
     background-color: #fff;
     border-color: #cdd4e0;
 }
 
-.select2-container--open .select2-dropdown--above {
+.select2-container-fluid--open .select2-dropdown--above {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
-.select2-container--open .select2-dropdown--below {
+.select2-container-fluid--open .select2-dropdown--below {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     top: 0;
@@ -141,21 +141,21 @@
     font-size: 0.875rem;
 }
 
-.has-success .select2-container--default .select2-selection--single,
-.parsley-select.parsley-success .select2-container--default .select2-selection--single {
+.has-success .select2-container-fluid--default .select2-selection--single,
+.parsley-select.parsley-success .select2-container-fluid--default .select2-selection--single {
     border-color: #3bb001;
 }
 
-.has-warning .select2-container--default .select2-selection--single {
+.has-warning .select2-container-fluid--default .select2-selection--single {
     border-color: #ffc107;
 }
 
-.has-danger .select2-container--default .select2-selection--single,
-.parsley-select.parsley-error .select2-container--default .select2-selection--single {
+.has-danger .select2-container-fluid--default .select2-selection--single,
+.parsley-select.parsley-error .select2-container-fluid--default .select2-selection--single {
     border-color: #dc3545;
 }
 
-.select2-xs+.select2-container {
+.select2-xs+.select2-container-fluid {
     font-size: 12px;
 }
 
@@ -163,7 +163,7 @@
     font-size: 12px;
 }
 
-.select2-sm+.select2-container {
+.select2-sm+.select2-container-fluid {
     font-size: 14px;
 }
 
@@ -171,15 +171,15 @@
     font-size: 14px;
 }
 
-.select2-bd-0+.select2-container--default .select2-selection--single {
+.select2-bd-0+.select2-container-fluid--default .select2-selection--single {
     border-width: 0;
 }
 
-.bg-gray+.select2-container--default .select2-selection--single {
+.bg-gray+.select2-container-fluid--default .select2-selection--single {
     background-color: #455473;
 }
 
-.bg-gray+.select2-container--default .select2-selection--single .select2-selection__rendered {
+.bg-gray+.select2-container-fluid--default .select2-selection--single .select2-selection__rendered {
     color: #cdd4e0;
 }
 </style>
@@ -192,7 +192,7 @@
 
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <div class="az-content-label mg-b-5">Select<span class="tx-sserif">2</span> Box</div>
             <p class="mg-b-20">Select2 gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options.</p>
             <div class="row row-sm mg-b-20" data-select2-id="22">
@@ -205,7 +205,7 @@
                     <option value="Safari" data-select2-id="27">Safari</option>
                     <option value="Opera" data-select2-id="28">Opera</option>
                     <option value="Internet Explorer" data-select2-id="29">Internet Explorer</option>
-                  </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="14" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-2gkb-container"><span class="select2-selection__rendered" id="select2-2gkb-container" role="textbox" aria-readonly="true" title="Chrome">Chrome</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </select><span class="select2 select2-container-fluid select2-container-fluid--default select2-container-fluid--below" dir="ltr" data-select2-id="14" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-2gkb-container-fluid"><span class="select2-selection__rendered" id="select2-2gkb-container-fluid" role="textbox" aria-readonly="true" title="Chrome">Chrome</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                 </div><!-- col-4 -->
                 <div class="col-lg-4 mg-t-20 mg-lg-t-0" data-select2-id="39">
                   <p class="mg-b-10">Single Select with Search</p>
@@ -216,7 +216,7 @@
                     <option value="Safari" data-select2-id="42">Safari</option>
                     <option value="Opera" data-select2-id="43">Opera</option>
                     <option value="Internet Explorer" data-select2-id="44">Internet Explorer</option>
-                  </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="2" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-k7id-container"><span class="select2-selection__rendered" id="select2-k7id-container" role="textbox" aria-readonly="true" title="Chrome">Chrome</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </select><span class="select2 select2-container-fluid select2-container-fluid--default select2-container-fluid--below" dir="ltr" data-select2-id="2" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-k7id-container-fluid"><span class="select2-selection__rendered" id="select2-k7id-container-fluid" role="textbox" aria-readonly="true" title="Chrome">Chrome</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                 </div><!-- col-4 -->
                 <div class="col-lg-4 mg-t-20 mg-lg-t-0">
                   <p class="mg-b-10">Single Select (Disabled)</p>
@@ -227,7 +227,7 @@
                     <option value="Safari">Safari</option>
                     <option value="Opera">Opera</option>
                     <option value="Internet Explorer">Internet Explorer</option>
-                  </select><span class="select2 select2-container select2-container--default select2-container--disabled" dir="ltr" data-select2-id="5" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-labelledby="select2-4tng-container"><span class="select2-selection__rendered" id="select2-4tng-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Choose one</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </select><span class="select2 select2-container-fluid select2-container-fluid--default select2-container-fluid--disabled" dir="ltr" data-select2-id="5" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-labelledby="select2-4tng-container-fluid"><span class="select2-selection__rendered" id="select2-4tng-container-fluid" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Choose one</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                 </div><!-- col-4 -->
               </div>
 
@@ -240,7 +240,7 @@
                     <option value="Safari" data-select2-id="34">Safari</option>
                     <option value="Opera" data-select2-id="35">Opera</option>
                     <option value="Internet Explorer" data-select2-id="36">Internet Explorer</option>
-                  </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="8" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="Safari" data-select2-id="37"><span class="select2-selection__choice__remove" role="presentation">×</span>Safari</li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </select><span class="select2 select2-container-fluid select2-container-fluid--default select2-container-fluid--below" dir="ltr" data-select2-id="8" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="Safari" data-select2-id="37"><span class="select2-selection__choice__remove" role="presentation">×</span>Safari</li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                 </div><!-- col -->
 
                 <div class="col-lg-4">
@@ -251,7 +251,7 @@
                     <option value="Safari" data-select2-id="47">Safari</option>
                     <option value="Opera" data-select2-id="48">Opera</option>
                     <option value="Internet Explorer" data-select2-id="49">Internet Explorer</option>
-                  </select><span class="select2 select2-container select2-container--default select2-container--below" dir="ltr" data-select2-id="10" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="Opera" data-select2-id="52"><span class="select2-selection__choice__remove" role="presentation">×</span>Opera</li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </select><span class="select2 select2-container-fluid select2-container-fluid--default select2-container-fluid--below" dir="ltr" data-select2-id="10" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="Opera" data-select2-id="52"><span class="select2-selection__choice__remove" role="presentation">×</span>Opera</li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                 </div><!-- col -->
                 <div class="col-lg-4">
                   <p class="mg-b-10">Multiple Select (Disabled)</p>
@@ -261,10 +261,10 @@
                     <option value="Safari">Safari</option>
                     <option value="Opera">Opera</option>
                     <option value="Internet Explorer">Internet Explorer</option>
-                  </select><span class="select2 select2-container select2-container--default select2-container--disabled select2-container--focus" dir="ltr" data-select2-id="17" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="Firefox" data-select2-id="19"><span class="select2-selection__choice__remove" role="presentation">×</span>Firefox</li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" disabled="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </select><span class="select2 select2-container-fluid select2-container-fluid--default select2-container-fluid--disabled select2-container-fluid--focus" dir="ltr" data-select2-id="17" style="width: 286.656px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-selection__choice" title="Firefox" data-select2-id="19"><span class="select2-selection__choice__remove" role="presentation">×</span>Firefox</li><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="" disabled="" style="width: 0.75em;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
                 </div><!-- col -->
             </div>
 
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme> 

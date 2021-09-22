@@ -32,18 +32,8 @@ class TableBody extends Component
      */
     public function render()
     {
-        /*
-        if (!$this->rules) {
-            return <<<'blade'
-            <div>테이블 처리 규칙이 지정되어 있지 않습니다. <code> rule=코드명 </code> 를 추가해 주세요.</div>
-        blade; 
-        }
-        */
-
         return view('jinyui::components.tables.tbody');
     }
-
-
 
 
 }

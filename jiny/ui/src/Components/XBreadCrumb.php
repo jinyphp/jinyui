@@ -1,7 +1,7 @@
 <?php 
 namespace Jiny\UI\Components;
 
-use Jiny\Html\Ctag;
+use Jiny\Html\CTag;
 
 class XBreadCrumb
 {

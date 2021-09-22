@@ -1,12 +1,12 @@
 <?php
 
-namespace Jiny\Members\Http\Controllers;
+namespace Jiny\DB\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class DBTableDesc extends Controller
+class DBTables extends Controller
 {
     private $tablename;
 
@@ -26,11 +26,12 @@ class DBTableDesc extends Controller
         $query = "SHOW TABLES"; // 테이블 목록
         $stmt = $pdo->query($query); // 쿼리준비
 
+        $rows = [];
         while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
             $rows []= $row;
         }
 
-        return view("jinymem::database.tables",compact('rows'));
+        return view("jinydb::database.tables",compact('rows'));
     }
 
     /**
@@ -41,7 +42,7 @@ class DBTableDesc extends Controller
     public function create()
     {
 
-        return view("jinymem::members.edit");
+
     }
 
     /**
@@ -61,9 +62,19 @@ class DBTableDesc extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($name)
     {
-        //
+        /*
+        $pdo = DB::connection()->getPdo();
+        $query = "DESC ".$name; // 테이블 목록
+        $stmt = $pdo->query($query); // 쿼리준비
+
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            $rows []= $row;
+        }
+
+        return view("jinymem::database.tabledesc",compact('rows'));
+        */
     }
 
     /**

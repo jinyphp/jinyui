@@ -1,6 +1,6 @@
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <!-- start page title -->
             <x-row>
                 <x-col-12>
@@ -151,6 +151,6 @@
                 </div>
             </x-row>
             
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>   

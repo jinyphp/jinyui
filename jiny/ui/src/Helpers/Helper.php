@@ -22,7 +22,7 @@ function xFormItem()
     return \Jiny\UI\Html\XFormItem::instance();
 }
 
-function xInput($type = 'text', $name = null, $value = null){
+function xInput($type = 'text', $name = null, $value = null) {
     $input = new \Jiny\UI\Html\XInput($type, $name, $value);
     return $input;
 }
@@ -78,6 +78,27 @@ function xRadioGroup($style=null){
     $obj = new \Jiny\UI\Html\XRadioGroup($style);
     return $obj;
 }
+
+/**
+ * Table
+ */
+function xTable($slot=null){
+    return new \Jiny\UI\Html\XTable($slot);
+}
+function xTableHead($slot=null){
+    return new \Jiny\UI\Html\XTableHead($slot);
+}
+
+function xTableBody($slot=null){
+    return new \Jiny\UI\Html\XTableBody($slot);
+}
+function xTableCheckAll(){
+    return new \Jiny\UI\Html\XTableCheckAll();
+}
+function xTableCheckRow($i){
+    return new \Jiny\UI\Html\XTableCheckRow($i);
+}
+
 
 
 /**

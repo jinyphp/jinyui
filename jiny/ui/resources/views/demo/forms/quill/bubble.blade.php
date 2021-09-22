@@ -7,7 +7,7 @@
 
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
@@ -47,7 +47,7 @@
                             <h6 class="card-subtitle text-muted">Bubble is a simple tooltip based theme for Quill.</h6>
                         </div>
                         <div class="card-body">
-                            <div id="quill-bubble-editor" class="ql-container ql-bubble">
+                            <div id="quill-bubble-editor" class="ql-container-fluid ql-bubble">
                                     
                             </div>
                         </div>
@@ -55,12 +55,12 @@
                 </div>
                 <script>
                     document.addEventListener("DOMContentLoaded", function() {
-                        var container = document.getElementById('quill-bubble-editor');
-                        var editor = new Quill(container);
+                        var container-fluid = document.getElementById('quill-bubble-editor');
+                        var editor = new Quill(container-fluid);
                     });
                 </script>
             </div>
 
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>

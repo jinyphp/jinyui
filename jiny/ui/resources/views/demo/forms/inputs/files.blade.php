@@ -1,6 +1,6 @@
 <x-theme theme="adminkit">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <h1 class="h3 mb-3">Filr and Uploads</h1>
 
             <x-row>
@@ -75,6 +75,6 @@
                     </x-card>
                 </x-col-6>
             </x-row>
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>

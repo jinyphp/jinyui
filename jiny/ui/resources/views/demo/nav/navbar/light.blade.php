@@ -1,5 +1,5 @@
 <x-navbar class="navbar-light bg-light">
-    <div class="container-fluid">
+    <div class="container-fluid-fluid">
 
       <a class="navbar-brand" href="#">Navbar</a>
 

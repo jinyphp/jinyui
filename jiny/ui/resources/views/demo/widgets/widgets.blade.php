@@ -1,5 +1,5 @@
 <x-theme theme="adminkit">
-    <div class="container-fluid">
+    <div class="container-fluid-fluid">
                         
         <!-- start page title -->
         <div class="row">

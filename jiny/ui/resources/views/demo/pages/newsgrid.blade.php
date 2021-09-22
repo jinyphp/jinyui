@@ -3,10 +3,10 @@
 </style>
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
 
             <div class="az-content az-content-profile">
-                <div class="container mn-ht-100p">
+                <div class="container-fluid mn-ht-100p">
                   <div class="content-wrapper w-100">
                     <div class="page-header">
                       <h3 class="page-title">News Grid</h3>
@@ -77,9 +77,9 @@
                       </div>
                     </div>
                   </div>
-                </div><!-- container -->
+                </div><!-- container-fluid -->
               </div>
 
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme> 

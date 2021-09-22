@@ -19,7 +19,7 @@
 </style>
 
 <!-- Dropzone File Upload -->
-<form action="/" method="post" class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container="#file-previews"
+<form action="/" method="post" class="dropzone" id="myAwesomeDropzone" data-plugin="dropzone" data-previews-container-fluid="#file-previews"
     data-upload-preview-template="#uploadPreviewTemplate">
 
     <div class="fallback">

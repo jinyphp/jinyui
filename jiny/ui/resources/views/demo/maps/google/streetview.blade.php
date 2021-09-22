@@ -74,8 +74,8 @@
         </div>
         <div jstcache="0">
             <div dir="ltr" jstcache="0" style="z-index: 24601; position: absolute; display: none; left: 0px; top: 0px;">
-                <div jstcache="37" class="gm-iv-container gm-iv-small-container"
-                    jsan="t-_EPk2VOG1I0,7.gm-iv-container,7.gm-iv-small-container">
+                <div jstcache="37" class="gm-iv-container-fluid gm-iv-small-container-fluid"
+                    jsan="t-_EPk2VOG1I0,7.gm-iv-container-fluid,7.gm-iv-small-container-fluid">
                     <div jsaction="closeControl.click" class="gm-iv-close">
                         <div class="gm-iv-back">
                             <div jstcache="34" class="gm-iv-back-icon-background gm-iv-back-icon"

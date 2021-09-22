@@ -1,6 +1,6 @@
 <x-theme theme="adminkit">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
 basic
 <label for="customRange1" class="form-label">Example range</label>
 <input type="range" class="form-range" id="customRange1">
@@ -25,6 +25,6 @@ Steps
     <input class="form-range" id="example-range" type="range" name="range" min="0" max="100">
 </div>
 
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>

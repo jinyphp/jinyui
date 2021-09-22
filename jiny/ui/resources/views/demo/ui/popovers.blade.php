@@ -1,6 +1,6 @@
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
@@ -77,16 +77,16 @@
                                         미리보기
                                     </x-navtab-link>
                                     {{-- preview 코드를 삽입합니다. --}}
-                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
+                                    <button type="button" class="btn btn-secondary" data-bs-container-fluid="body" data-bs-toggle="popover" data-bs-placement="top" data-bs-content="Top popover">
                                         Popover on top
                                     </button>
-                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+                                    <button type="button" class="btn btn-secondary" data-bs-container-fluid="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
                                         Popover on right
                                     </button>
-                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                                    <button type="button" class="btn btn-secondary" data-bs-container-fluid="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
                                         Popover on bottom
                                     </button>
-                                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
+                                    <button type="button" class="btn btn-secondary" data-bs-container-fluid="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Left popover">
                                         Popover on left
                                     </button>								
                                     
@@ -178,7 +178,7 @@
 
             </x-row>
             
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>
 

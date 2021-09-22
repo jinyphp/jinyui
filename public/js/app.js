@@ -4949,8 +4949,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/bootstrap */ "./resources/js/modules/bootstrap.js");
 /* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/theme */ "./resources/js/modules/theme.js");
 /* harmony import */ var _modules_theme__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_theme__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/sidebar */ "./resources/js/modules/sidebar.js");
-/* harmony import */ var _modules_flatpickr__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/flatpickr */ "./resources/js/modules/flatpickr.js");
+/* harmony import */ var _jiny_tables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./jiny/tables */ "./resources/js/jiny/tables.js");
+/* harmony import */ var _jiny_tables__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_jiny_tables__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/sidebar */ "./resources/js/modules/sidebar.js");
+/* harmony import */ var _modules_flatpickr__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/flatpickr */ "./resources/js/modules/flatpickr.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //require('alpinejs');
 
 /**
@@ -4964,6 +4966,7 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //require
 //import "./modules/feather";
 //import "./jiny/sidebar";
 //import "./jiny/scroll";
+
 
 
 
@@ -4998,6 +5001,73 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/jiny/tables.js":
+/*!*************************************!*\
+  !*** ./resources/js/jiny/tables.js ***!
+  \*************************************/
+/***/ (() => {
+
+function selectTableRow() {
+  // 선택, 해제
+  var selected = 0;
+  var rowCheck = document.querySelectorAll('table tbody .rowCheckbox');
+  var allCheck = document.querySelector("table thead #all_checks");
+  var btnDelete = document.querySelector("#selected-delete");
+  allCheck.addEventListener("click", function (e) {
+    checkAll(e.target.checked);
+
+    if (e.target.checked) {
+      selected = rowCheck.length;
+      if (btnDelete) btnDelete.removeAttribute("disabled");
+    } else {
+      selected = 0;
+      if (btnDelete) btnDelete.setAttribute("disabled", true);
+    }
+  });
+  rowCheck.forEach(function (el) {
+    el.addEventListener("click", function (e) {
+      var Tr = el.parentElement.parentElement.parentElement;
+
+      if (e.target.checked) {
+        Tr.classList.add('row-selected');
+        selected++;
+      } else {
+        Tr.classList.remove('row-selected');
+        selected--;
+      }
+
+      if (selected == rowCheck.length) {
+        allCheck.checked = true;
+      } else {
+        allCheck.checked = false;
+      }
+
+      if (selected && btnDelete) {
+        btnDelete.removeAttribute("disabled");
+      } else {
+        btnDelete.setAttribute("disabled", true);
+      }
+    });
+  });
+
+  function checkAll(status) {
+    rowCheck.forEach(function (el) {
+      el.checked = status;
+      var Tr = el.parentElement.parentElement.parentElement;
+
+      if (status) {
+        Tr.classList.add('row-selected');
+      } else {
+        Tr.classList.remove('row-selected');
+      }
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", selectTableRow);
 
 /***/ }),
 

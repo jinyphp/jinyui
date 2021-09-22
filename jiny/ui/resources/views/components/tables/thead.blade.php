@@ -4,4 +4,12 @@
     }        
 @endphp
 
+{!! 
+    xTableHead($slot)
+    ->setAttrs($attributes) 
+!!}
+
+
+{{--
 {!! \Jiny\UI\Table::instance()->setDataHead( $rows, $attributes, $slot) !!}
+--}}

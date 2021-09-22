@@ -1,6 +1,6 @@
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
@@ -54,7 +54,7 @@
                                     <button class="btn btn-secondary" type="button" data-bs-toggle="tooltip" data-bs-placement="bottom" title="" data-bs-original-title="Tooltip on bottom">
                                         Tooltip on bottom
                                     </button>
-                                    <button class="btn btn-secondary" type="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-container="body" title="" data-bs-original-title="Tooltip on right">
+                                    <button class="btn btn-secondary" type="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-container-fluid="body" title="" data-bs-original-title="Tooltip on right">
                                         Tooltip on right
                                     </button>									
                                     
@@ -129,7 +129,7 @@
             </x-row>
 
             
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>
 <script>

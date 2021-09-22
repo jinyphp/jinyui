@@ -4,6 +4,9 @@ namespace Jiny\Table;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 
+/**
+ * 테이블 필드 외부 참조 조건을 검색합니다.
+ */
 class ForeinKey
 {
     public $forein=[];
@@ -13,9 +16,9 @@ class ForeinKey
         $this->table = $table;
     }
 
+
     public function relations($ids)
     {
-        
         return (new \Jiny\Table\Relation())
             ->getRelations($this->table, $ids); //n:m 관계조회
     }
@@ -23,10 +26,12 @@ class ForeinKey
     public function fieldParser($fields)
     {
         foreach($fields as $field) {
-            $key = explode(".",$field['name']);
-            if($key[0][0] == "_") continue; // _시작 필드는 저장하지 않음.
+            if (isset($field['name']) && $field['name']) {
+                $key = explode(".",$field['name']);
+                if($key[0][0] == "_") continue; // _시작 필드는 저장하지 않음.
 
-            $this->parser($key);
+                $this->parser($key);
+            }            
         }
         return $this;
     }

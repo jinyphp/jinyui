@@ -64,6 +64,7 @@ class Datatable
         return (clone $this->td)->addItem($html);
     }
 
+
     private function cellEdit($fieldname, $row)
     {
         $link = new \Jiny\Html\CTag("a",true, $this->isValue($fieldname, $row) );
@@ -85,28 +86,10 @@ class Datatable
         return (clone $this->td)->addItem($this->isValue($fieldname, $row) );
     }
 
-    public function tbodyCell($item, $row)
-    {
-        if(isset($item['list']) && $item['list']) {
-            // plan Text
-            if (isset($item['input']) && $item['input'] == "html") {
-                return $this->cellHtml($item['value']);
-            } else 
-            // 필드 출력
-            if (isset($item['name']) && $this->isValue($item['name'], $row)) {
-                if (isset($item['list_edit'])) {
-                    return $this->cellEdit($item['name'], $row);// 수정링크
+        
 
-                } else if (isset($item['view'])) {
-                    return $this->cellView($item['name'], $row);
 
-                } else {
-                    return $this->cellItem($item['name'], $row);
-                    
-                }
-            }
-        }            
-    }
+
 
     public function header($item)
     {
@@ -132,6 +115,81 @@ class Datatable
 
             return $head;
         }
+    }
+
+    private function isList($item)
+    {
+        if(isset($item['list']) && $item['list']) {
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * tbodyCell
+     *
+     * @param  mixed $item
+     * @param  mixed $row
+     * @return void
+     */
+    public function tbodyCell($item, $row)
+    {
+        if($this->isList($item)) {
+            // plan Text
+            if (isset($item['input']) && $item['input'] == "html") {
+                return $this->cellHtml($item['value']);
+
+            } else
+            // 링크
+            if (isset($item['input']) && $item['input'] == "link") {
+                if(isset($item['link']) && $item['link']) {
+                    // 링크코드 파싱
+                    $key = [];
+                    $code = false;
+                    for ($i=0, $j=0; $i<strlen($item['link']);$i++) {
+                        if($item['link'][$i] == "{") {
+                            $code = true;
+                            $key[$j] = "";
+                            continue;
+                        } else if($item['link'][$i] == "}") {
+                            $code = false;
+                            $j++;
+                            continue;
+                        }
+
+                        if ($code) {
+                            $key[$j] .= $item['link'][$i];
+                        }
+                    }
+
+                    
+                    foreach($key as $field) {
+                        $item['link'] = str_replace("{".$field."}", $row[$field], $item['link']);
+                    }
+
+                    $link = xLink($item['value'], $item['link']);
+                } else {
+                    
+                    $link = xLink($item['value']);
+                }
+                
+                return $this->cellHtml($link);
+
+            } else
+            // 필드 출력
+            if (isset($item['name']) && $this->isValue($item['name'], $row)) {
+                if (isset($item['list_edit'])) {
+                    return $this->cellEdit($item['name'], $row);// 수정링크
+
+                } else if (isset($item['view'])) {
+                    return $this->cellView($item['name'], $row);
+
+                } else {
+                    return $this->cellItem($item['name'], $row);
+                    
+                }
+            }
+        }            
     }
 
 }

@@ -1,6 +1,6 @@
 <x-theme theme="adminkit">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <!-- start page title -->
             <div class="row">
                 <div class="col-12">
@@ -85,6 +85,6 @@
                     </x-card>
                 </x-col-6>
             </x-row>
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>

@@ -59,7 +59,9 @@
                                             @foreach ($row as $schema =>$item)
                                                 <td>{{$schema}}</td>
                                                 <td>{{$item}}</td>
-                                                <td><a href="{{route('tables.show', $item)}}">{{$item}}</a></td>
+                                                <td>
+                                                    <a href="{{route('admin-db-desc.index', $item)}}">{{$item}}</a>
+                                                </td>
                                             @endforeach
                                         </tr>
                                     @endforeach

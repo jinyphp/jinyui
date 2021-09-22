@@ -1,1 +1,5 @@
-<input type="email" {{ $attributes->merge(['class' => 'form-control']) }}>
+{{--
+<input {{ $attributes->merge(['class' => 'form-control']) }}>
+--}}
+
+{!! xInput()->setAttrs($attributes)->setValue($slot) !!}

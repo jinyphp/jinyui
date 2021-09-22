@@ -91,7 +91,7 @@
 
 <x-theme-app>
     <div class="az-header">
-        <div class="container">
+        <div class="container-fluid">
 
 
             <div class="az-header-left">
@@ -177,6 +177,6 @@
             <!-- az-header-right -->
         
         </div>
-        <!-- container -->
+        <!-- container-fluid -->
     </div>
 </x-theme-app>

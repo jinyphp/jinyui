@@ -26,6 +26,12 @@ class XSelect extends CTag
         $this->addClass("form-control");
 	}
 
+    public function addSlot($slot)
+    {
+        $this->addItem($slot);
+        return $this;
+    }
+
     public function addOption($title, $value=null)
     {
         $option = new CTag("option",true,$title);
@@ -38,8 +44,32 @@ class XSelect extends CTag
 
     public function addOptions($args)
     {
-        foreach ($args as $option) {
-            $this->addOption($option['title'], $option['value']);
+        foreach ($args as $key => $option) {
+            if (is_array($option)) {
+                // ['title'=>"", 'value'=>""]
+                $this->addOption($option['title'], $option['value']);
+            } else {
+                $this->addOption($option, $key);
+            }
+            
+        }
+        return $this;
+    }
+
+    public function rangeOption(...$num)
+    {
+        if(count($num) == 1) {
+            foreach(range(1,$num[0]) as $i) {
+                $this->addOption($i, $i);
+            }
+        } else if(count($num) == 2) {
+            foreach(range($num[0],$num[1]) as $i) {
+                $this->addOption($i, $i);
+            }
+        } else {
+            foreach($num as $i) {
+                $this->addOption($i, $i);
+            }
         }
         return $this;
     }
@@ -66,8 +96,10 @@ class XSelect extends CTag
         return $this;
     }
 
+    public $default;
     public function setSelected($value)
     {
+        $this->default = $value;
         foreach($this->items as $item)
         {
             $key = explode(":", $item->_attributes['value']);
@@ -126,6 +158,40 @@ class XSelect extends CTag
         }
 
         return $this;
+    }
+
+    /**
+     * 속성을 부여합니다.
+     *
+     * @param  mixed $attrs
+     * @return void
+     */
+    public function setAttrs($attrs)
+    {
+        if (is_object($attrs) || is_array($attrs)) {
+            // 커스텀 속성을 분석합니다.     
+            $attrs = $this->attrParser($attrs);
+
+            foreach($attrs as $name => $value) {
+                if ($name === "class") {
+                    $this->addClass($value);
+                    continue;
+                }
+                $this->setAttribute($name, $value);
+            }
+        }
+        return $this;
+    }
+
+    private function attrParser($attrs)
+    {
+        
+        if (isset($attrs["width"])) {
+            $this->setWidth($attrs["width"]);
+            unset($attrs["width"]);
+        }
+
+        return $attrs;
     }
 
 

@@ -58,8 +58,8 @@
 }
 
 .az-signin-header .btn,
-.az-signin-header .sp-container button,
-.sp-container .az-signin-header button {
+.az-signin-header .sp-container-fluid button,
+.sp-container-fluid .az-signin-header button {
     margin-top: 25px;
 }
 

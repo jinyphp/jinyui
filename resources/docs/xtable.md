@@ -1,7 +1,31 @@
-# table 생성
-지니UI는 데이터 기반으로 자동으로 테이블을 생성할 수 있는 `<x-table>`을 지원합니다.
+# xTable 생성
+`지니UI`는 데이터 기반으로 자동으로 테이블을 생성할 수 있는 `<x-table>`을 지원합니다.
+
+## 테이블 생성
+
+지니ui는 x-table 테그를 지원합니다. 다음과 같이 사용 합니다.
+```php
+<x-table>
+내용...
+</x-table>
+```
+
+PHP 코드로 생성하기
+```php
+xTable()
+```
+
+## 테이블 스타일 지정하기
+지니ui 테이블은 부트스트랩 클래스를 지원합니다.
+
+* table-bordered
+* table-striped table-sm
+* table-striped table-hover
+* table-striped
+
 
 ## 테이블 해더
+테이블 해더 생성, 테그안에 내용을 작성합니다.
 
 ```php
 <x-table-head class="table-light">
@@ -14,6 +38,8 @@
 </x-table-head>
 ```
 
+json으로 테이블 헤더 생성하기
+
 ```php
 <x-table-head class="table-light">
     <x-slot name="json">
@@ -21,6 +47,9 @@
     </x-slot>
 </x-table-head>
 ```
+
+
+
 
 ## body 생성
 `<x-table-body>`는 테이블의 `<tbody>`테그와 데이터를 생성관리 합니다.

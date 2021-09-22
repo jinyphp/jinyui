@@ -1,10 +1,32 @@
 <style>
-.row-selected {
-    background-color: #fcf7c2;
-}
+    .row-selected {
+        background-color: #fcf7c2;
+    }
 </style>
+{!! xTable($slot)->setAttrs($attributes) !!}
+
+
+
+
+
+
+
+
+
+{{--
+
 
 {!! $tableBuild($slot, $attributes) !!}
+--}}
+
+
+
+
+
+
+
+
+
 
 
 {{--

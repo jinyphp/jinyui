@@ -30,6 +30,11 @@ class TableServiceProvider extends ServiceProvider
         Blade::component('jinytable::components.'.'data-select-delete', 'data-select-delete');
         Blade::component('jinytable::components.'.'data-filter', 'data-filter');
 
+
+        Blade::component('jinytable::components.'.'resource-create', 'resource-create');
+
+        
+
         //Blade::component(\Jiny\Table\View\Components\DataTableBody::class, "data-table-body");
 
     }

@@ -6,6 +6,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "doctrine/dbal": "^3.1",
         "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
@@ -36,7 +37,10 @@
         "psr-4": {
             "Tests\\": "tests/",
             "Jiny\\Html\\": "jiny/html/src",
+            "Jiny\\Theme\\": "jiny/theme/src",
+            "Jiny\\Action\\": "jiny/action/src",
             "Jiny\\UI\\": "jiny/ui/src",
+            "Jiny\\DB\\": "jiny/database/src",
             "Jiny\\Table\\": "jiny/table/src",
             "Jiny\\Site\\": "jiny/site/src",
             "Jiny\\Sales\\": "jiny/sales/src",
@@ -46,8 +50,10 @@
         "files" : [
             "jiny/html/src/Helpers/Helper.php",
             "jiny/html/src/Helpers/Factory.php",
-
+            "jiny/theme/src/Helpers/Helper.php",
+            "jiny/action/src/Helpers/Helper.php",
             "jiny/ui/src/Helpers/Helper.php",
+            "jiny/database/src/Helpers/Helper.php",
             "jiny/table/src/Helpers/Helper.php",
             "jiny/site/src/Helpers/Helper.php",
             "jiny/sales/src/Helpers/Helper.php",

@@ -6,12 +6,12 @@
 
 @media (max-width: 991.98px) {
 
-    .az-content-profile .container,
     .az-content-profile .container-fluid,
-    .az-content-profile .container-sm,
-    .az-content-profile .container-md,
-    .az-content-profile .container-lg,
-    .az-content-profile .container-xl {
+    .az-content-profile .container-fluid-fluid,
+    .az-content-profile .container-fluid-sm,
+    .az-content-profile .container-fluid-md,
+    .az-content-profile .container-fluid-lg,
+    .az-content-profile .container-fluid-xl {
         display: block;
     }
 }
@@ -52,8 +52,8 @@
 }
 
 .az-profile-overview .btn-icon-list .btn,
-.az-profile-overview .btn-icon-list .sp-container button,
-.sp-container .az-profile-overview .btn-icon-list button {
+.az-profile-overview .btn-icon-list .sp-container-fluid button,
+.sp-container-fluid .az-profile-overview .btn-icon-list button {
     border-radius: 100%;
 }
 
@@ -334,10 +334,10 @@
 </style>
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
 
             <div class="az-content az-content-profile">
-                <div class="container mn-ht-100p">
+                <div class="container-fluid mn-ht-100p">
                   <div class="az-content-left az-content-left-profile">
           
                     <div class="az-profile-overview">
@@ -517,11 +517,11 @@
           
                     </div><!-- az-profile-body -->
                   </div><!-- az-content-body -->
-                </div><!-- container -->
+                </div><!-- container-fluid -->
             </div>
 
 
 
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>  

@@ -4,7 +4,7 @@
 
 <x-theme theme="adminkit">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
 
             <!-- HTML -->
             <div id="snow-editor" style="height: 300px;">
@@ -26,7 +26,7 @@
                 </p>
             </div>
 
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>
 

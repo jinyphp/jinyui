@@ -1,6 +1,6 @@
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
           <!-- start page title -->
         	<x-row >
             <x-col class="col-8">
@@ -128,7 +128,7 @@
                     </div>
                     <div class="card-body text-center">
                     
-                        <div class="toast-container">
+                        <div class="toast-container-fluid">
                             <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
                               <div class="toast-header">
                                 <img src="..." class="rounded me-2" alt="...">
@@ -227,7 +227,7 @@
                             </div>
                           </form>
                           <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
-                            <div class="toast-container position-absolute p-3" id="toastPlacement">
+                            <div class="toast-container-fluid position-absolute p-3" id="toastPlacement">
                               <div class="toast">
                                 <div class="toast-header">
                                   <img src="..." class="rounded me-2" alt="...">
@@ -270,10 +270,10 @@
                     
                         <div aria-live="polite" aria-atomic="true" class="position-relative">
                             <!-- Position it: -->
-                            <!-- - `.toast-container` for spacing between toasts -->
+                            <!-- - `.toast-container-fluid` for spacing between toasts -->
                             <!-- - `.position-absolute`, `top-0` & `end-0` to position the toasts in the upper right corner -->
-                            <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container  -->
-                            <div class="toast-container position-absolute top-0 end-0 p-3">
+                            <!-- - `.p-3` to prevent the toasts from sticking to the edge of the container-fluid  -->
+                            <div class="toast-container-fluid position-absolute top-0 end-0 p-3">
                           
                               <!-- Then put toasts within -->
                               <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -314,7 +314,7 @@
                     </div>
                     <div class="card-body text-center">
                     
-                        <!-- Flexbox container for aligning the toasts -->
+                        <!-- Flexbox container-fluid for aligning the toasts -->
           <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
 
           <!-- Then put toasts within -->
@@ -339,7 +339,7 @@
         </x-row>
 
             
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 
 </x-theme>

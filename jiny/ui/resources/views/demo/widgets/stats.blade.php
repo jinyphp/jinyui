@@ -18,7 +18,7 @@
 
     https://themes.getbootstrap.com/preview/?theme_id=93418
 
-    <div class="px-lg-4 px-xl-5 container-fluid">
+    <div class="px-lg-4 px-xl-5 container-fluid-fluid">
         <div class="page-breadcrumb">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">

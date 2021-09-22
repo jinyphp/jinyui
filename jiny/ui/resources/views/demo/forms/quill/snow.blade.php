@@ -7,7 +7,7 @@
 
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             <!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
@@ -75,8 +75,8 @@
                                 ['clean']                                         // remove formatting button
                             ];
 
-                        var container = document.getElementById('quill-editor');
-                        var editor = new Quill(container,{
+                        var container-fluid = document.getElementById('quill-editor');
+                        var editor = new Quill(container-fluid,{
                             modules: {
                                 toolbar: toolbarOptions
                             },
@@ -133,6 +133,6 @@
 
             </div>
 
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>

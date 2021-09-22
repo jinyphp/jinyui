@@ -61,7 +61,10 @@ class CrudController extends Controller
      */
     public function index()
     {
-        return view("jinytable::datalist",['rules'=>$this->rules]);
+        if(isset($this->rules)) {
+            return view("jinytable::datalist",['rules'=>$this->rules]);
+        }
+        return "CRUD 설정값이 없습니다.";
     }
 
 

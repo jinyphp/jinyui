@@ -142,7 +142,7 @@
 
 <x-theme-app>
     <main>
-        <div class="container-fluid">
+        <div class="container-fluid-fluid">
             <div class="row ">
                 <div class="col-sm-6">
                     <div class="login-section-wrapper">

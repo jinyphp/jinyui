@@ -59,7 +59,7 @@ class Badge extends Component
             */
         }
 
-        return $obj;
+        return $obj->toString();
 	}
 
     private function setClass_primary($obj)

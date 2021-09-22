@@ -4,7 +4,7 @@
 
     <div class="main">
         <main class="content">
-            <div class="container-fluid p-0">
+            <div class="container-fluid-fluid p-0">
 
                 <h1 class="h3 mb-3">Bank Page</h1>
 

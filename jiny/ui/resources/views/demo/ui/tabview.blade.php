@@ -5,7 +5,7 @@
     <x-main>
         <x-main-content>
 
-            <div class="container-fluid p-0">
+            <div class="container-fluid-fluid p-0">
 
                 <div class="mb-3">
                     <h1 class="h3 d-inline align-middle">TabView</h1>

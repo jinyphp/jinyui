@@ -156,10 +156,10 @@
     padding: 0;
     border: 0; 
 }
-.az-menu-sub-mega .container {
+.az-menu-sub-mega .container-fluid {
     padding: 0; 
 }
-.az-menu-sub-mega .container > div + div {
+.az-menu-sub-mega .container-fluid > div + div {
     margin-top: 25px; 
 }
 .az-menu-sub-mega .nav {
@@ -205,19 +205,19 @@
 
 
 @media (max-width: 991.98px) {
-    .az-menu-sub-mega .container {
+    .az-menu-sub-mega .container-fluid {
         max-width: none; 
     } 
 }
 @media (min-width: 992px) {
-    .az-menu-sub-mega .container {
+    .az-menu-sub-mega .container-fluid {
         display: flex;
         background-color: #fff;
         border: 2px solid rgba(28, 39, 60, 0.12); 
     } 
 }
 @media (min-width: 992px) {
-    .az-menu-sub-mega .container > div {
+    .az-menu-sub-mega .container-fluid > div {
         display: flex;
         padding: 20px;
         flex: 1;
@@ -225,13 +225,13 @@
     } 
 }
 @media (min-width: 1200px) {
-    .az-menu-sub-mega .container > div {
+    .az-menu-sub-mega .container-fluid > div {
         padding: 20px 25px; 
     } 
 }
 
 @media (min-width: 992px) {
-    .az-menu-sub-mega .container > div + div {
+    .az-menu-sub-mega .container-fluid > div + div {
         margin-top: 0;
         border-left: 1px solid rgba(28, 39, 60, 0.05); 
     } 
@@ -527,7 +527,7 @@
         <li class="nav-item">
             <a href="" class="nav-link with-sub"><i class="typcn typcn-book"></i> Components</a>
             <div class="az-menu-sub az-menu-sub-mega">
-            <div class="container">
+            <div class="container-fluid">
                 <div>
                 <nav class="nav">
                     <span>UI Elements</span>
@@ -590,7 +590,7 @@
                     <a href="table-data.html" class="nav-link">Data Tables</a>
                 </nav>
                 </div>
-            </div><!-- container -->
+            </div><!-- container-fluid -->
             </div>
         </li>
         <li class="nav-item">

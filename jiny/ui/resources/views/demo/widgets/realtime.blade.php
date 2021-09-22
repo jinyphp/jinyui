@@ -23,7 +23,7 @@
         <h5 class="card-title mb-0">Real-Time</h5>
     </div>
     <div class="card-body px-4">
-        <div id="world_map" style="height:350px;" class="jvm-container"><svg width="684"
+        <div id="world_map" style="height:350px;" class="jvm-container-fluid"><svg width="684"
                 height="350">
                 <defs></defs>
                 <g id="jvm-regions-group" transform="scale(0.76) translate(0, 9.91000252267035)">

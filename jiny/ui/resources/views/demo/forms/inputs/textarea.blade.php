@@ -1,6 +1,6 @@
 <x-theme theme="adminkit">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
 
             <h1 class="h3 mb-3">TextArea</h1>
 
@@ -18,6 +18,6 @@
                 </x-col-6>
 
             </x-row>
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>

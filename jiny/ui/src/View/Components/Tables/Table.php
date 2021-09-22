@@ -6,13 +6,24 @@ use Illuminate\View\Component;
 
 class Table extends Component
 {
-    public $ui;
-    public $rules;
+
     /**
-     * Create a new component instance.
+     * Get the view / contents that represent the component.
      *
-     * @return void
+     * @return \Illuminate\Contracts\View\View|\Closure|string
      */
+    public function render()
+    {
+        return view('jinyui::components.tables.table' );
+    }
+
+
+
+
+    //public $ui;
+    //public $rules;
+
+    /*
     public function __construct($rule=null)
     {
         $this->ui = "basic";
@@ -120,14 +131,7 @@ class Table extends Component
         return $item;
     }
 
+    */
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
-    public function render()
-    {
-        return view('jinyui::components.tables.table' );
-    }
+
 }

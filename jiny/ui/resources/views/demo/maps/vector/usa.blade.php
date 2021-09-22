@@ -1,4 +1,4 @@
-<div id="usa_map" style="height:350px;" class="jvm-container"><svg width="302" height="350">
+<div id="usa_map" style="height:350px;" class="jvm-container-fluid"><svg width="302" height="350">
     <defs></defs>
     <g id="jvm-regions-group"
         transform="scale(0.33555555555555555) translate(0, 226.9945504179397)">

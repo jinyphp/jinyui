@@ -1,6 +1,6 @@
 <x-theme theme="adminkit" class="bootstrap">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
             @widget("jinyui::demo.widgets.pages.title",[
                 'title'=>"이미지 출력",
                 'subtitle'=>"x-img 테그는 이미지를 다양한 속성을 이용하여 출력할 수 있습니다."
@@ -238,6 +238,6 @@
 
             </x-row>
             
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>   

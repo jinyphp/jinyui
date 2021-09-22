@@ -19,9 +19,15 @@ class Field
 
     // 폼 입력을 허용합니다. true or flase
     public $form;
+
     // 입력받는 데이터 타입입니다.
     // text, radio, check, textarea
+    // html : 문자열을 출력합니다.
+    // link: 링크를 생성합니다.
     public $input;
+    public $link;
+    public $value;
+
     //
     public $placeholder;
     

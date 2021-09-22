@@ -94,6 +94,47 @@ define('ZBX_TEXTAREA_STANDARD_ROWS',			7);
         return $this;
     }
 
+    /**
+     * 속성을 부여합니다.
+     *
+     * @param  mixed $attrs
+     * @return void
+     */
+    public function setAttrs($attrs)
+    {
+        if (is_object($attrs) || is_array($attrs)) {
+            // 커스텀 속성을 분석합니다.     
+            $attrs = $this->attrParser($attrs);
+
+            foreach($attrs as $name => $value) {
+                if ($name === "class") {
+                    $this->addClass($value);
+                    continue;
+                }
+                $this->setAttribute($name, $value);
+            }
+        }
+        return $this;
+    }
+
+    private function attrParser($attrs)
+    {
+        
+        if (isset($attrs["width"])) {
+            $this->setWidth($attrs["width"]);
+            unset($attrs["width"]);
+        }
+
+        return $attrs;
+    }
+
+    public function setValue($slot)
+    {
+        if ($slot) {
+            $this->setAttribute('value', $slot);
+        }
+        return $this;
+    }
 
     /**
 	 * 라이브와이어 속성

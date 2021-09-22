@@ -1,3 +1,3 @@
-<div class="container-fluid p-0">
+<div class="container p-0">
 {{$slot}}
 </div>

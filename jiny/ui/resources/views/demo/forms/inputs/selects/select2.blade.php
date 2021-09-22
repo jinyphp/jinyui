@@ -10,7 +10,7 @@
 
 <x-theme theme="adminkit">
     <x-main-content>
-        <x-container>
+        <x-container-fluid>
 
             <x-row>
                 <x-col-6>
@@ -59,7 +59,7 @@
                     </div>
                 </x-col-6>
             </x-row>
-        </x-container>
+        </x-container-fluid>
     </x-main-content>
 </x-theme>
 

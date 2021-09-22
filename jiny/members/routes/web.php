@@ -2,11 +2,6 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-use Jiny\Members\Http\Controllers\DBTables;
-Route::resource('/admin/db/tables', DBTables::class)->names([
-    'create' => "db.tables.new"
-]);
-
 
 
 use Jiny\Members\Http\Controllers\Members;

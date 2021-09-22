@@ -24,6 +24,7 @@ class MarkdownController extends Controller
         if (empty($slug)) {
             // 루트접속
             $string = "index";
+            $path = resource_path($this->rootpath.DIRECTORY_SEPARATOR.$string);
         } else {
             $string = implode(DIRECTORY_SEPARATOR,$slug);
             $path = resource_path($this->rootpath.DIRECTORY_SEPARATOR.$string);
