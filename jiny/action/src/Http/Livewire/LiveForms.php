@@ -6,21 +6,41 @@ use Illuminate\Support\Facades\Blade;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 
-class LiveActionCreate extends Component
+class LiveForms extends Component
 {
     public $rules;
     public $nested;
     public $_data = [];
 
-    
-
     public function mount()
     {
-        // 전달받은 데이터를 입력폼데이터로 재설정
-        if (isset($this->rules['data'])) {            
-            $this->_data = $this->rules['data'];
-        }        
+        // Controller View에서 전달받은  
+        if (isset($this->rules['data'])) {
+            // 데이터를 입력폼데이터로 재설정
+            $this->setData($this->rules['data']);
+        } else {
+            // 데이터 없음, 기본값 설정
+            foreach($this->rules['fields'] as $field) {
+                $this->setDefaultData($field);
+            }
+        }
     }
+
+    private function setData($data)
+    {
+        $this->_data = $data;
+    }
+
+    private function setDefaultData($field)
+    {
+        if($field['form'] && $field['input_default']) {
+            if($name = $field['name']){ //필드명
+                $this->_data[$name] = $field['input_default'];
+            }                    
+        }
+    }
+
+
 
     public function render()
     {
@@ -28,7 +48,10 @@ class LiveActionCreate extends Component
             $this->nested =  $this->rules['nested_id'];
         }
 
-        return view("jinyaction::livewire.liveActionCreate");
+        return view("jinyaction::livewire.liveForms",[
+            'ActionForms'=> new \Jiny\Action\ActionForms($this->rules, $this->_data),
+            'fields'=>$this->rules['fields']
+        ]);
     }
 
     public function store()

@@ -31,6 +31,9 @@ class JinyActionServiceProvider extends ServiceProvider
 
             Livewire::component('LiveField', \Jiny\Action\Http\Livewire\LiveField::class);
             Livewire::component('LiveFieldCreate', \Jiny\Action\Http\Livewire\LiveFieldCreate::class);
+
+            Livewire::component('LiveTable', \Jiny\Action\Http\Livewire\LiveTable::class);
+            Livewire::component('LiveForms', \Jiny\Action\Http\Livewire\LiveForms::class);
         });
     }
 

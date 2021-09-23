@@ -14,23 +14,39 @@ class Actions
     {
         $this->rules = new \Jiny\Action\Rules();
     }
-
+    
+    /**
+     * Action 정보에 맞는 목록을 출력합니다.
+     *
+     * @param  mixed $id
+     * @return void
+     */
     public function index(...$id)
     {
-        if ($id) {
-            $this->rules->attrs['nested_id'] = $id[0];
-            $createLink = route(currentRouteName().'.create', $id[0]);
-        } else {
-            $createLink = route(currentRouteName().'.create');
-        }
-
-        // "jinyaction::actions.action_list"
         return view($this->rules->listView(),[
-            'createLink' => $createLink,
+            'createLink' => $this->createLink($id),
             'rules'=>$this->rules->get()
         ]);
     }
 
+    private function createLink($id)
+    {
+        if ($id) {
+            $this->rules->attrs['nested_id'] = $id[0];
+            return route(currentRouteName().'.create', $id[0]);
+        } else {
+            return route(currentRouteName().'.create');
+        }
+    }
+
+    
+    
+    /**
+     * 신규 데이터 삽입
+     *
+     * @param  mixed $id
+     * @return void
+     */
     public function create(...$id)
     {
         if ($id) {
@@ -42,6 +58,8 @@ class Actions
         ]);
     }
 
+
+    
     private function findDataRow($id)
     {
         $_data=[];
@@ -52,6 +70,7 @@ class Actions
         }
         return $_data;
     }
+
 
     public function edit(...$id)
     {

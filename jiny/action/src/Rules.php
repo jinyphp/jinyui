@@ -28,11 +28,13 @@ class Rules
 
         // livewire 호출동작에서는 rule을 읽지 않습니다.
         if($name && $name != "livewire") {    
-            $row = $this->getInfo($name);
+            $rule = $this->getInfo($name);
             
+            /*
             foreach ($row as $key => $value) {
                 $rule[$key] = $value;
             }
+            */
 
             if($pos = strrpos($name,".")){
                 $nested = $this->routeTable(substr($name, 0, $pos)); //재귀호출
@@ -47,7 +49,21 @@ class Rules
     {
         // DB에서 라우트 정보를 읽어옵니다.
         if($row = DB::table(self::TABLE)->where("name", $name)->first()) {
-            return $row;
+            $rule = [];
+            foreach ($row as $key => $value) {
+                $rule[$key] = $value;
+            }
+
+            //Fields
+            if($fields = DB::table("action_field")->where("actions_id", $row->id)->get()){
+                foreach ($fields as $i => $field) {
+                    foreach($field as $key => $value) {
+                        $rule['fields'][$i][$key] = $value;
+                    }
+                }
+            }
+
+            return $rule;
         } else {
             // 라우트 파일에서 정보를 읽어 옵니다.
             $path = resource_path('route');
@@ -63,6 +79,10 @@ class Rules
         return [];
     }
 
+    public function set($key, $value){
+        $this->attrs[$key] = $value;
+        return $this;
+    }
 
     public function get()
     {
@@ -80,13 +100,20 @@ class Rules
 
     public function listView()
     {
-
-        return $this->attrs['list_view'];
+        if (isset($this->attrs['list_view'])) {
+            return $this->attrs['list_view'];
+        } else {
+            return "jinyaction::list";
+        }
     }
 
     public function editView()
     {
-        return $this->attrs['edit_view'];
+        if (isset($this->attrs['edit_view'])) {
+            return $this->attrs['edit_view'];
+        } else {
+            return "jinyaction::form";
+        }
     }
 
     public function getFields()

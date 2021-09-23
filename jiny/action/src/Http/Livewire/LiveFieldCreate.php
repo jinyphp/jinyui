@@ -99,4 +99,9 @@ class LiveFieldCreate extends Component
         return redirect()
             ->to( route($this->rules['routename'].'.index') ); 
     }
+
+    public function clear()
+    {
+        $this->_data = [];
+    }
 }

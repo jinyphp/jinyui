@@ -19,6 +19,27 @@ class LiveTable extends Component
         }
     }
 
+    /**
+     * 출력할 목록 데이터를 읽어 옵니다.
+     *
+     * @return void
+     */
+    protected function selectDataRows()
+    {
+        // DB 데이터를 읽기 위한 객체 생성
+        $liveData = new LiveData($this->rules);
+        
+        if ($tablename = $liveData->isRuleTable()) {
+            $datas = $liveData->dbTable($tablename)
+                ->orderBy('id',"desc")
+                ->paginate(10);
+            
+            return $datas;
+        }
+    
+        return [];
+    }
+
     public function render()
     {
         $this->nested = $this->isNested();
@@ -74,7 +95,6 @@ class LiveTable extends Component
             $this->_fields[$key]['list'] = $row->list;
         }
     }
-
 
 
     public function ListFieldAdd()

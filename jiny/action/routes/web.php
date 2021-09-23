@@ -6,42 +6,41 @@ use Illuminate\Http\Request;
 /**
  * 테이터베이스 리소스 라우터 설정
  */
-
-
 use Illuminate\Support\Facades\DB;
-$server = explode('/', $_SERVER['PATH_INFO']);
-$pdo = DB::connection()->getPdo();
-$query = "SELECT * from actions"; // 테이블 목록
-$stmt = $pdo->query($query); // 쿼리준비
-
 use Jiny\Action\Http\Controllers\Actions;
-while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
-    // prefix가 존재하는 경우, 우선적으로 검사
-  
-    if($row['prefix'] && $server[1] != "livewire") { //livewire 통신은 제외
-        if(!checkPrefix($row['prefix'], $server)) {
-            continue;
-        }
-    }
 
-    
-    
+if(isset($_SERVER['PATH_INFO'])) {
+    $server = explode('/', $_SERVER['PATH_INFO']);
+        
+    $pdo = DB::connection()->getPdo();
+    $query = "SELECT * from actions"; // 테이블 목록
+    $stmt = $pdo->query($query); // 쿼리준비
 
-    $name = ltrim(str_replace("/","-",$row['prefix']),'-');
-    Route::middleware(['web'])
-        ->prefix($row['prefix'])
-        ->name($name."-")
-        ->group(function () use ($row){
-            
-            if($row['class']) {
-                Route::resource($row['uri'], $row['class']);
-            } else {
-                Route::resource($row['uri'], Actions::class);
+    while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+        // prefix가 존재하는 경우, 우선적으로 검사    
+        if($row['prefix'] && $server[1] != "livewire") { //livewire 통신은 제외
+            if(!checkPrefix($row['prefix'], $server)) {
+                continue;
             }
-            
-            //Route::resource($row['uri'], Actions::class);         
-        });
+        }
+
+        $name = ltrim(str_replace("/","-",$row['prefix']),'-');
+        Route::middleware(['web'])
+            ->prefix($row['prefix'])
+            ->name($name."-")
+            ->group(function () use ($row){
+                
+                if($row['class']) {
+                    Route::resource($row['uri'], $row['class']);
+                } else {
+                    Route::resource($row['uri'], Actions::class);
+                }
+                
+                //Route::resource($row['uri'], Actions::class);         
+            });
+    }
 }
+
 
 function checkPrefix($prefix, $server)
 {
@@ -55,6 +54,7 @@ function checkPrefix($prefix, $server)
     }
     return true;
 }
+
 
 
 

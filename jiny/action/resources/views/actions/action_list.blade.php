@@ -21,7 +21,6 @@
                 <x-col>
                     <x-card>
                         <x-card-body>
-
                             @livewire('LiveAction',
                                 [
                                     'viewfile'=>"jinyaction::livewire.liveAction",
@@ -31,9 +30,6 @@
                     </x-card>
                 </x-col>
             </x-row>
-
-
-            
 
         </x-container>
 	</x-main-content>

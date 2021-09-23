@@ -112,7 +112,13 @@
                 </x-col-6>
             </x-row>
             
-
+            <x-form-row>
+                <x-form-label>목록 스타일</x-form-label>
+                <x-form-item>
+                    <x-input type="text" name="list_style" wire:model="_data.list_style"/>
+                    <div class="form-text">테이블 td셀에 적용할 CSS를 지정합니다.</div>
+                </x-form-item>
+            </x-form-row>
 
 
             <x-form-row>
@@ -244,19 +250,21 @@
             <x-form-row>
                 <x-form-label>description</x-form-label>
                 <x-form-item>
-                    <x-input type="text" name="description" wire:model="_data.description"/>
+                    {!! 
+                        xTextarea("description")
+                        ->setAttribute('wire:model.deafer',"_data.description")
+                    !!}
                 </x-form-item>
             </x-form-row>
         </x-col-12>
     </x-row>
 
 
-
     @if (isset($rules['edit_id']))
         <x-button danger wire:click="delete">삭제(F4)</x-button>
         <x-button info wire:click="update">수정(F3)</x-button>
-        
     @else
+        <x-button secondary wire:click="clear">취소</x-button>
         <x-button primary wire:click="store">등록(F2)</x-button>
     @endif
 

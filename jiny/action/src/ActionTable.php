@@ -16,6 +16,8 @@ class ActionTable
     public function __construct($rules, $data)
     {
         $this->rules = $rules;
+
+        
         $this->fields = DB::table("action_field")
             ->where('actions_id', $rules['id'])
             ->orderBy('list_pos',"asc")
@@ -99,6 +101,7 @@ class ActionTable
         $_td = (new \Jiny\Html\CTag("td",true));
         $_tr = new \Jiny\Html\CTag("tr",true);
 
+        
         foreach ($this->rows as $row) {
             $tr = clone $_tr;
 
@@ -106,6 +109,7 @@ class ActionTable
                 ->addStyle("width: 20px;")
                 ->addItem(xTableCheckRow($row->id)); 
             $tr->addItem($td);
+
 
             foreach($this->fields as $item) {
                 if ($item->list) { //리스트 출력모드
@@ -147,6 +151,11 @@ class ActionTable
             $cell = "";
         }
 
+        // TD 셀에 css 스타일을 지정합니다.
+        if ($item->list_style) {
+            $td->addStyle($item->list_style);
+        }
+
         return $td->addItem($cell);
 
     }
@@ -162,8 +171,10 @@ class ActionTable
      */
     private function displayField($item, $row)
     {
-        if($item->list_value) { // 필드명이 존재하는지 검사...
-            $name = $item->name;                 
+        if($name = $item->list_value) { // 필드명이 존재하는지 검사...
+            //$name = $item->list_value;   
+            
+            //dd($name);
 
             if(isset($row->{$name})) { //필드명과 일치하는 데이터 있는지 검사...
                 return $row->{$name};
