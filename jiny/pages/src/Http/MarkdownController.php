@@ -19,6 +19,43 @@ class MarkdownController extends Controller
         }        
     }
 
+
+    public function index(...$slug)
+    {
+        // 경로분석
+        $path = $this->path($slug);
+
+        // 파일읽기
+        if (file_exists($path)) {
+            $text = file_get_contents($path);
+
+            // frontmatter ---
+            list($data, $content) = $this->frontMatter($text);
+            $data['content'] = $content;
+
+            $resource = $this->resource($data);
+            return view($resource, $data);
+        }
+    }
+
+    private function resource($data)
+    {
+        if (isset($data['layout'])) {
+            // forntmatter 설정된 resource layout을 이용
+            if (isset($data['theme'])) {
+                $resource = "theme.".$data['theme'].".".$data['layout'];                
+            } else {
+                $resource = $data['layout'];                
+            }                
+        } else {
+            $resource = "jinypage::markdown";            
+        }
+
+        return $resource;
+    }
+
+    
+
     private function path($slug)
     {
         if (empty($slug)) {
@@ -47,39 +84,4 @@ class MarkdownController extends Controller
         return [$data, $content];
     }
 
-    public function index(...$slug)
-    {
-        // 경로분석
-        $path = $this->path($slug);
-
-        // 파일읽기
-        if (file_exists($path)) {
-            $text = file_get_contents($path);
-
-            // frontmatter ---
-            list($data, $content) = $this->frontMatter($text);
-
-            // 마크다운 변환
-            $markdown = (new Parsedown())->dom($content);
-            $data['content'] = $markdown['markup'];
-            $data['hash'] = $markdown['hash'];
-
-            return $this->render($data);          
-        }        
-    }
-
-    private function render($data)
-    {
-        if (isset($data['layout'])) {
-            // forntmatter 설정된 resource layout을 이용
-            if (isset($data['theme'])) {
-                return view("theme.".$data['theme'].".".$data['layout'], $data);
-            } else {
-                return view($data['layout'], $data);
-            }                
-        } else {
-            return view("jinypage::markdown", $data);
-        }
-    }
-    
 }

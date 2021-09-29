@@ -16,10 +16,35 @@ class LiveActionCreate extends Component
 
     public function mount()
     {
+        // Controller View에서 전달받은  
+        if (isset($this->rules['data'])) {
+            // 데이터를 입력폼데이터로 재설정
+            $this->setData($this->rules['data']);
+        } else {
+            // 데이터 없음, 기본값 설정
+            foreach($this->rules['fields'] as $field) {
+                $this->setDefaultData($field);
+            }
+        }
+
         // 전달받은 데이터를 입력폼데이터로 재설정
-        if (isset($this->rules['data'])) {            
-            $this->_data = $this->rules['data'];
-        }        
+        // if (isset($this->rules['data'])) {            
+        //     $this->_data = $this->rules['data'];
+        // }        
+    }
+
+    private function setData($data)
+    {
+        $this->_data = $data;
+    }
+
+    private function setDefaultData($field)
+    {
+        if($field['form'] && $field['default']) {
+            if($name = $field['name']){ //필드명
+                $this->_data[$name] = $field['default'];
+            }                    
+        }
     }
 
     public function render()
@@ -27,6 +52,8 @@ class LiveActionCreate extends Component
         if(isset($this->rules['nested_id'])) {
             $this->nested =  $this->rules['nested_id'];
         }
+        //dd($this->rules);
+        //dd($this->_data);
 
         return view("jinyaction::livewire.liveActionCreate");
     }

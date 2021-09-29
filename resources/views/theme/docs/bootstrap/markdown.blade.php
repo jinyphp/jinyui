@@ -54,7 +54,8 @@
 
     {{-- 내용 --}}
     <div class="bd-content ps-lg-4">
-        {!! $content !!}
+        @livewire('LiveMarkdown',['content'=>$content ])
+        {{-- $content --}}
     </div>
 
     

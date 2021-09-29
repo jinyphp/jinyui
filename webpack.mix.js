@@ -11,6 +11,9 @@ const tailwindcss = require('tailwindcss'); /* Add this line at the top */
  | file for the application as well as bundling up all the JS files.
  |
  */
+
+ //mix.sass('resources/sass/jiny.scss', 'public/css');
+
  mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .options({

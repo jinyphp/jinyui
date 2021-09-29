@@ -6,6 +6,23 @@ namespace Jiny\Pages\Http;
 
 class Parsedown
 {
+
+    public $trans;
+    public function __construct()
+    {
+        $this->trans = new \Jiny\Polyglot\Message();
+
+        /*
+            $msg = _msg_init();
+$msg->enableTrans("transkey.php");
+
+$str = "오류가 발생하였습니다.";
+echo $msg->echo($str,"en");
+        */
+
+    }
+
+
     # ~
 
     const version = '1.7.4';
@@ -305,6 +322,7 @@ class Parsedown
         return $markup;
     }
 
+
     protected function isBlockContinuable($Type)
     {
         return method_exists($this, 'block'.$Type.'Continue');
@@ -503,7 +521,6 @@ class Parsedown
 
     #
     # Header
-
     protected function blockHeader($Line)
     {
         //dd($Line);
@@ -521,8 +538,15 @@ class Parsedown
                 return; // 6개 이상은 오류
             }
 
-            $text = trim($Line['text'], '# '); // 문장에서 # 제거
+            $text_src = trim($Line['text'], '# '); // 문장에서 # 제거
+            $this->titles []= $text_src; // 해쉬목록에 추가
 
+            // 어드민 번역수정모드
+            $text_dst = $this->trans->echo($text_src,"ko");
+
+            $text = CDiv($text_dst)->setAttribute('wire:click',"popupTransOpen('$text_src')")->toString();
+
+            
             // 요소 생성
             $Block = array(
                 'element' => array(
@@ -532,7 +556,8 @@ class Parsedown
                 ),
             );
 
-            $this->titles []= $text;
+            
+            
 
             return $Block;
         }
@@ -1014,14 +1039,19 @@ class Parsedown
 
     #
     # ~
-    #
+    # p 문단
 
     protected function paragraph($Line)
     {
+        $text_src = $Line['text'];
+        //$text_dst = $Line['text'];
+        $text_dst = xe_echo($text_src, $lang='ko');
+        $text = CDiv($text_dst)->setAttribute('wire:click',"popupTransOpen('$text_src')")->toString();
+
         $Block = array(
             'element' => array(
                 'name' => 'p',
-                'text' => $Line['text'],
+                'text' => $text,
                 'handler' => 'line',
             ),
         );

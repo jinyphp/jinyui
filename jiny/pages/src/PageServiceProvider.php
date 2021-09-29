@@ -26,7 +26,7 @@ class PageServiceProvider extends ServiceProvider
     {
         /* 라이브와이어 컴포넌트 등록 */
         $this->app->afterResolving(BladeCompiler::class, function () {
-
+            Livewire::component('LiveMarkdown', \Jiny\Pages\Http\Livewire\LiveMarkdown::class);
         });
     }
 

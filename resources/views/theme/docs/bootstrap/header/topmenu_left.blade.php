@@ -7,6 +7,15 @@
             href="/docs/">Docs</a>
     </li>
     <li class="nav-item col-6 col-md-auto">
+        <a class="nav-link p-2" href="/docs/utility">Bootstrap</a>
+    </li>
+    <li class="nav-item col-6 col-md-auto">
+        <a class="nav-link p-2" href="/docs/tail">Tailwind</a>
+    </li>
+    <li class="nav-item col-6 col-md-auto">
+        <a class="nav-link p-2" href="#">Sample</a>
+    </li>
+    <li class="nav-item col-6 col-md-auto">
         <a class="nav-link p-2" href="/jinyui/" target="_blank">Demo</a>
     </li>
     <li class="nav-item col-6 col-md-auto">

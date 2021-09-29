@@ -33,9 +33,9 @@ class LiveForms extends Component
 
     private function setDefaultData($field)
     {
-        if($field['form'] && $field['input_default']) {
+        if($field['form'] && $field['default']) {
             if($name = $field['name']){ //필드명
-                $this->_data[$name] = $field['input_default'];
+                $this->_data[$name] = $field['default'];
             }                    
         }
     }

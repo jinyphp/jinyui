@@ -10,14 +10,12 @@
                 </a>
 
                 <ul class="list-unstyled small text-muted">
-                    <li class="mb-2">Designed and built with all the love in the world by the <a
-                            href="/docs/5.1/about/team/">Bootstrap team</a> with the help of <a
-                            href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</li>
+                    
                     <li class="mb-2">Code licensed <a href="https://github.com/twbs/bootstrap/blob/main/LICENSE"
                             target="_blank" rel="license noopener">MIT</a>, docs <a
                             href="https://creativecommons.org/licenses/by/3.0/" target="_blank"
                             rel="license noopener">CC BY 3.0</a>.</li>
-                    <li class="mb-2">Currently v5.1.1.</li>
+                    
                 </ul>
             </div>
 

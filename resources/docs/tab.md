@@ -1,11 +1,24 @@
 ---
-theme: "adminkit"
+theme: "docs.bootstrap"
 layout: "markdown"
-title: "..."
+title: "Tab"
 breadcrumb:
     - "Docs"
 ---
 
+텝은 여러개의 화면을 텝을 이용하여 분리합니다. 지니UI는 다양한 형태의 텝을 생성 관리할 수 있습니다. 
+
+* 가로 선택형
+* 세로 선택형
+* 분리형
+
+## 탭의 구성
+텝은 항목을 선택할 수 있는 링크와 내용을 담고 있는 content 박스로 나누어 집니다.
+
+
+
+## 탭 링크
+지니UI는 텝의 링크를 생성할 수 있는 테그를 제공합니다.
 
 ```php
 <x-jinyui::tab.link class="active" href="#account">Account</x-jinyui::tab.link>
@@ -18,7 +31,8 @@ breadcrumb:
 <x-jinyui::tab.link href="#">Delete account</x-jinyui::tab.link>
 ```
 
-인스턴스를 이용한 설정
+
+## 인스턴스를 이용한 설정
 ```php
 <x-jinyui::tab.header class="list-group list-group-flush">
                             {{ \Jiny\UI\CTab::instance()->links(
@@ -37,21 +51,21 @@ breadcrumb:
 ```
 
 
-텝 내용출력
+## 텝 내용출력
 
 ```php
 {{-- 텝출력--}}
-                    <x-jinyui::tab.content>
-                        {{-- 텝 컨덴츠 생성--}}
-                        <x-jinyui::tab.item class="active show" id="account">
-                            @include('jinyui::demo.pages.page.settings.tab-account')                            
-                        </x-jinyui::tab.item>
+<x-jinyui::tab.content>
+    {{-- 텝 컨덴츠 생성--}}
+    <x-jinyui::tab.item class="active show" id="account">
+        @include('jinyui::demo.pages.page.settings.tab-account')                            
+    </x-jinyui::tab.item>
 
-                        {{-- 텝 컨덴츠 생성--}}
-                        <x-jinyui::tab.item id="password">                        
-                            @include('jinyui::demo.pages.page.settings.tab-password')
-                        </x-jinyui::tab.item>
-                    </x-jinyui::tab.content>
+    {{-- 텝 컨덴츠 생성--}}
+    <x-jinyui::tab.item id="password">                        
+        @include('jinyui::demo.pages.page.settings.tab-password')
+    </x-jinyui::tab.item>
+</x-jinyui::tab.content>
 
 ```
 

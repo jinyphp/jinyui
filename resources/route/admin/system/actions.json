@@ -50,7 +50,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "",
+            "list_style": ""
         },
         {
             "id": 5,
@@ -80,7 +82,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "",
+            "list_style": ""
         },
         {
             "id": 6,
@@ -110,7 +114,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": "1"
+            "list_edit": "1",
+            "list_link_text": "",
+            "list_style": ""
         },
         {
             "id": 7,
@@ -140,7 +146,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "",
+            "list_style": ""
         },
         {
             "id": 8,
@@ -170,7 +178,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "",
+            "list_style": ""
         },
         {
             "id": 9,
@@ -200,7 +210,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "",
+            "list_style": ""
         },
         {
             "id": 10,
@@ -226,11 +238,13 @@
             "list_sort": null,
             "list_type": "link",
             "list_value": "\/admin\/system\/actions\/{id}\/fields",
-            "input_default": "필드수정",
+            "input_default": "필드설정",
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "필드설정",
+            "list_style": ""
         },
         {
             "id": 11,
@@ -250,7 +264,7 @@
             "list_pos": "8",
             "filter": null,
             "filter_pos": null,
-            "description": null,
+            "description": "중첩 여부를 체크합니다.",
             "filters": null,
             "nested_id": "1",
             "list_sort": null,
@@ -260,7 +274,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "",
+            "list_style": ""
         },
         {
             "id": 12,
@@ -280,7 +296,7 @@
             "list_pos": "9",
             "filter": null,
             "filter_pos": null,
-            "description": null,
+            "description": "타이틀 명을 출력합니다.",
             "filters": null,
             "nested_id": "1",
             "list_sort": null,
@@ -290,7 +306,9 @@
             "select_type": null,
             "select_value": null,
             "actions_id": 1,
-            "list_edit": ""
+            "list_edit": "",
+            "list_link_text": "",
+            "list_style": ""
         }
     ]
 }

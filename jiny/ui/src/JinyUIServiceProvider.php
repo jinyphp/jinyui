@@ -369,6 +369,8 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component('jinyui::components.'.'layout.col-12', 'col-12');
         Blade::component('jinyui::components.'.'layout.col-6', 'col-6');
         Blade::component('jinyui::components.'.'layout.col-4', 'col-4');
+        Blade::component('jinyui::components.'.'layout.col-3', 'col-3');
+
 
         Blade::component('jinyui::components.'.'flex.row', 'flex-row');
         Blade::component('jinyui::components.'.'flex.col', 'flex-col');

@@ -13,7 +13,7 @@ if(isset($_SERVER['PATH_INFO'])) {
     $server = explode('/', $_SERVER['PATH_INFO']);
         
     $pdo = DB::connection()->getPdo();
-    $query = "SELECT * from actions"; // 테이블 목록
+    $query = "SELECT * from actions where enable=1"; // 테이블 목록
     $stmt = $pdo->query($query); // 쿼리준비
 
     while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {

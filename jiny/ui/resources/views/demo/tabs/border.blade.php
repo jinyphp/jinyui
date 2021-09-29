@@ -40,6 +40,7 @@
                             </p>
                         </x-card-header>
                         <x-card-body>
+
                             <x-nav class="nav-pills bg-nav-pills mb-3">
                                 <x-nav-item>
                                     <a href="#bordered-tabs-preview" 
@@ -65,6 +66,7 @@
                                     code...
                                 </div> <!-- end preview code-->
                             </div> <!-- end tab-content-->
+                            
                         </x-card-body>
                     </x-card>
                 </x-col-6>
