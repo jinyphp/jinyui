@@ -117,3 +117,12 @@
 @import "jiny/components/badge";
 @import "jiny/components/forms";
 @import "jiny/pages";
+
+/* 번역관리*/
+.polyglot {
+    @apply bg-yellow-50;
+}
+
+.polyglot:hover {
+    @apply bg-yellow-200;
+}

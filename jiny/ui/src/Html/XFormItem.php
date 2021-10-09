@@ -55,8 +55,6 @@ class XFormItem
     }
 
 
-
-
     public function setItem($item, $attrs=null)
     {
         $item = CDiv($item);

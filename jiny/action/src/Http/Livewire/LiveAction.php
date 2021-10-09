@@ -26,14 +26,13 @@ class LiveAction extends LiveTable
         $liveData = new LiveData($this->rules);
         if ($tablename = $liveData->isRuleTable()) {
             $datas = $liveData->dbTable($tablename)
-                ->orderBy('id',"desc")
+                ->orderBy('prefix',"desc")
                 ->paginate(10);            
             return $datas;
         }
     
         return [];
     }
-
 
 
     public function makejson()

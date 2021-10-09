@@ -30,6 +30,7 @@ class Rules
         if($name && $name != "livewire") {    
             $rule = $this->getInfo($name);
             
+            //dd($rule);
             /*
             foreach ($row as $key => $value) {
                 $rule[$key] = $value;
@@ -54,8 +55,10 @@ class Rules
                 $rule[$key] = $value;
             }
 
+            
             //Fields
             if($fields = DB::table("action_field")->where("actions_id", $row->id)->get()){
+                //dd($fields);
                 foreach ($fields as $i => $field) {
                     foreach($field as $key => $value) {
                         $rule['fields'][$i][$key] = $value;

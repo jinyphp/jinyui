@@ -15,8 +15,8 @@ use Jiny\Members\Http\Controllers\Team;
 use Jiny\Members\Http\Controllers\Roles;
 Route::middleware(['web'])->prefix('/admin/members')->name("admin-members")->group(function () {
     // 회원목록    
-    ## Route::resource('/list', Members::class);
-    Route::resource('/users', Users::class);
+
+    ### 액션라우트... Route::resource('/users', Users::class);
     Route::resource('/roles', Roles::class);
 
 

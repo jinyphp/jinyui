@@ -5,7 +5,7 @@ namespace Jiny\Theme;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\View\Compilers\BladeCompiler;
-
+use Livewire\Livewire;
 
 class JinyThemeServiceProvider extends ServiceProvider
 {
@@ -16,8 +16,19 @@ class JinyThemeServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadViewsFrom(__DIR__.'/../resources/views', $this->package);
 
-        $this->configureComponents();
-        //$this->Directive();
+        ## 테마를 선택하고 app과 컨덴츠를 결합합니다.
+        Blade::component(\Jiny\Theme\View\Components\Theme\Theme::class, "theme");
+
+        ## css, javascript등 페이지의 골격 뼈대를 읽어 옵니다.
+        Blade::component(\Jiny\Theme\View\Components\Theme\App::class, "theme-app");
+        
+        ## app에 테마의 레이아웃을 결합합니다.
+        Blade::component(\Jiny\Theme\View\Components\ThemeLayout::class, "theme-layout");
+
+        Blade::component(\Jiny\Theme\View\Components\ThemeSidebar::class, "theme-sidebar");
+        Blade::component(\Jiny\Theme\View\Components\ThemeMain::class, "theme-main");
+
+        $this->Directive();
 
     }
 
@@ -25,21 +36,10 @@ class JinyThemeServiceProvider extends ServiceProvider
     {
         /* 라이브와이어 컴포넌트 등록 */
         $this->app->afterResolving(BladeCompiler::class, function () {
-            // Livewire::component('data-field', DataField::class);
+            Livewire::component('LiveTreeJson', \Jiny\Theme\Http\Livewire\LiveTreeJson::class);
         });
     }
 
-    protected function configureComponents()
-    {
-        /* 컴포넌트 클래스 등록 */
-        $this->loadViewComponentsAs('jinytheme', [
-            //\Jiny\UI\View\Components\Theme\App::class, 
-        ]);
-
-        $this->callAfterResolving(BladeCompiler::class, function () {
-            
-        });        
-    }
 
     private function Directive()
     {

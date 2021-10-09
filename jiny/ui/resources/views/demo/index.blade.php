@@ -1,4 +1,5 @@
 <x-theme theme="adminkit">
+
     <x-main-content>
         <x-container-fluid>
             <!-- start page title -->

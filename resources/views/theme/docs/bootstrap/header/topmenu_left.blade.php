@@ -1,6 +1,6 @@
 <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav pt-2 py-md-0">
     <li class="nav-item col-6 col-md-auto">
-        <a class="nav-link p-2" href="/">Home</a>
+        <a class="nav-link p-2" href="/docs/">Home</a>
     </li>
     <li class="nav-item col-6 col-md-auto">
         <a class="nav-link p-2 active" aria-current="true"
@@ -11,9 +11,6 @@
     </li>
     <li class="nav-item col-6 col-md-auto">
         <a class="nav-link p-2" href="/docs/tail">Tailwind</a>
-    </li>
-    <li class="nav-item col-6 col-md-auto">
-        <a class="nav-link p-2" href="#">Sample</a>
     </li>
     <li class="nav-item col-6 col-md-auto">
         <a class="nav-link p-2" href="/jinyui/" target="_blank">Demo</a>

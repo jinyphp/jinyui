@@ -1,26 +1,20 @@
 <div class="markdown">
+    @if ($admin)
+        <div class="flex flex-row justify-end">
+            <div class="pr-4">
+                전체: {{$transTotal}} / 번역완료 {{$transCount}}
+            </div>            
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" wire:model="transMode">
+                <label class="form-check-label" for="flexSwitchCheckChecked">관리자 번역</label>
+            </div>
+        </div>
+    @endif      
 
-    {!! $content !!}
+    {!! $markdown !!}
 
-
-    <x-jet-dialog-modal wire:model="popupTransEnable">
-        <x-slot name="title">
-            {{ __('문자열 번역') }}
-        </x-slot>
-
-        <x-slot name="content">
-            {{$transText}}
-        </x-slot>
-
-        <x-slot name="footer">
-            <x-jet-secondary-button wire:click="$toggle('popupTransEnable')" wire:loading.attr="disabled">
-                {{ __('취소') }}
-            </x-jet-secondary-button>
-
-            <x-jet-danger-button class="ml-2" wire:click="trans" wire:loading.attr="disabled">
-                {{ __('수정') }}
-            </x-jet-danger-button>
-        </x-slot>
-    </x-jet-dialog-modal>
-
+    {{-- 팝업 번역관리 --}}
+    @if ($trans)
+        @livewire('LiveTrans',['content'=>$content])
+    @endif    
 </div>

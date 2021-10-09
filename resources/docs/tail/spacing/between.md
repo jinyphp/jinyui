@@ -10,12 +10,15 @@ breadcrumb:
 
 
 
-# Space Between1
+# Space Between
 
 Utilities for controlling the space between child elements.
-자식 요소 사이의 공간을 제어하기 위한 유틸리티입니다.
+
 
 ## Default class reference
+
+
+
 
 | Class                   | Properties                                                   |
 | ----------------------- | ------------------------------------------------------------ |
@@ -162,10 +165,13 @@ Utilities for controlling the space between child elements.
 | -space-x-96 > * + *     | --tw-space-x-reverse: 0; margin-right: calc(-24rem * var(--tw-space-x-reverse)); margin-left: calc(-24rem * calc(1 - var(--tw-space-x-reverse))); |
 | -space-x-px > * + *     | --tw-space-x-reverse: 0; margin-right: calc(-1px * var(--tw-space-x-reverse)); margin-left: calc(-1px * calc(1 - var(--tw-space-x-reverse))); |
 
+
+
+
 ## Add horizontal space between children
 
 Control the horizontal space between elements using the `space-x-{amount}` utilities.
-`space-x-{amount}` 유틸리티를 사용하여 요소 사이의 수평 공간을 제어합니다
+
 <div class="preview">
     <div class="flex space-x-4 ">
         <div>1</div>

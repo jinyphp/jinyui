@@ -64,7 +64,7 @@ class JinyUIServiceProvider extends ServiceProvider
             \Jiny\UI\View\Components\Theme::class, // 테마 레이아웃을 읽어 옵니다.
             \Jiny\UI\View\Components\ThemeMain::class, // 메인 레이아웃을 읽어 옵니다.
             \Jiny\UI\View\Components\MainContent::class, // 메인 레이아웃의 컨덴츠를 배치합니다.<main>테그
-            \Jiny\UI\View\Components\ThemeLayout::class,
+            //\Jiny\UI\View\Components\ThemeLayout::class,
             \Jiny\UI\View\Components\ThemeSidebar::class, // 테마 sidebar.blade.php 로드
             \Jiny\UI\View\Components\Icon::class, //svg아이콘 생성
             
@@ -116,11 +116,6 @@ class JinyUIServiceProvider extends ServiceProvider
         
         $shot = true;
         if($shot) {
-            // 테마
-            Blade::component(\Jiny\UI\View\Components\Theme\App::class, "theme-app");
-            Blade::component(\Jiny\UI\View\Components\Theme\Theme::class, "theme");
-            Blade::component(\Jiny\UI\View\Components\ThemeSidebar::class, "theme-sidebar");
-            Blade::component(\Jiny\UI\View\Components\ThemeMain::class, "theme-main");
             Blade::component(\Jiny\UI\View\Components\MainContent::class, "main-content");
 
             // 레이아웃
@@ -375,6 +370,7 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component('jinyui::components.'.'flex.row', 'flex-row');
         Blade::component('jinyui::components.'.'flex.col', 'flex-col');
         Blade::component('jinyui::components.'.'flex.center', 'flex-center');
+        Blade::component('jinyui::components.'.'flex.between', 'flex-between');
 
 
         

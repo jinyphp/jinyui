@@ -1,0 +1,14 @@
+{
+    "jiny.admin":{
+        "name":"jiny_admin"
+    },
+    "docs.bootstrap":{
+        "name":"docs_bootstrap"
+    },
+    "docs.tailwind":{
+        "name":"docs_tailwind"
+    },
+    "zabbix.basic":{
+        "name":"docs_tailwind"
+    }
+}

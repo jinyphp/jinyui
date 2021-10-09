@@ -17,6 +17,7 @@ class Fields
     public function __construct()
     {
         $this->rules = new \Jiny\Action\Rules();
+        // dd($this->rules);
     }
 
     

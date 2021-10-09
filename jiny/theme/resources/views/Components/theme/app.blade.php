@@ -23,9 +23,7 @@
     </head>
 
     <body>
-        <div {{ $attributes->merge(['class' => 'app']) }}>
-            {{$slot}}
-        </div>
+        {{$slot}}
 
         <script src="{{ asset('js/app.js') }}" defer></script>
         @stack('scripts')

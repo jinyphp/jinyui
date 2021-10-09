@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use Webuni\FrontMatter\FrontMatter;
 use Jiny\Pages\Http\Parsedown;
+use Illuminate\Support\Facades\View;
 
 class MarkdownController extends Controller
 {
@@ -19,42 +20,54 @@ class MarkdownController extends Controller
         }        
     }
 
-
     public function index(...$slug)
     {
-        // 경로분석
+        //dd("aaa");
+        // 경로분석, 파일읽기
         $path = $this->path($slug);
-
-        // 파일읽기
         if (file_exists($path)) {
             $text = file_get_contents($path);
 
             // frontmatter ---
             list($data, $content) = $this->frontMatter($text);
-            $data['content'] = $content;
+            $data['slot'] = $content;
 
             $resource = $this->resource($data);
+            //dd($resource);
             return view($resource, $data);
         }
+
+        return "can not find markdown file";
     }
+
 
     private function resource($data)
     {
-        if (isset($data['layout'])) {
-            // forntmatter 설정된 resource layout을 이용
+        // 테마 페키지가 설치되어 있는 경우
+        if(function_exists('theme')) {
+            // forntmatter 설정된 
+            // resource layout을 이용
             if (isset($data['theme'])) {
-                $resource = "theme.".$data['theme'].".".$data['layout'];                
-            } else {
-                $resource = $data['layout'];                
-            }                
-        } else {
-            $resource = "jinypage::markdown";            
+
+                theme()->setTheme($data['theme']);
+
+                // 사용자 레이아웃 지정확인
+                if (isset($data['layout'])) {
+                    $layout = $data['layout'];
+                } else {
+                    $layout = "markdown";
+                }
+    
+                $resource = "theme.".$data['theme'].".".$layout;
+                if (View::exists($resource)) {
+                    return $resource;
+                }
+            }
         }
 
-        return $resource;
+        return "jinypage::markdown";
     }
 
-    
 
     private function path($slug)
     {

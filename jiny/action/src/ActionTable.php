@@ -204,12 +204,22 @@ class ActionTable
     private function displayLink($item, $row)
     {
         if($item->list_value) {
-            $link = $this->linkParser($item->list_value, $row);
-            return xLink("필드수정",$link);
+            // {필드명} 대체
+            $link = $this->tagReplaceField($item->list_value, $row);
+            
+            ## 링크 타이틀
+            if($item->list_link_text) {
+                // {필드명} 대체
+                $title = $this->tagReplaceField($item->list_link_text, $row);
+            } else {
+                $title = "";
+            }
+
+            return xLink($title,$link);
         }
     }
 
-    private function linkParser($url, $row)
+    private function tagReplaceField($url, $row)
     {
         // 링크코드 파싱
         $key = [];

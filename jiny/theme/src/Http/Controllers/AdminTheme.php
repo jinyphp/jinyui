@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 
 use Jiny\Members\Http\Controllers\CrudController;
 
-class Theme extends CrudController
+class AdminTheme extends CrudController
 {
     public function __construct()
     {
@@ -21,6 +21,7 @@ class Theme extends CrudController
 
         // 테이블 확인
         //Schema::dropIfExists("theme");
+        /*
         if (!$this->isTable("theme")) {
             Schema::create("theme", function (Blueprint $table) {
                 $table->id();
@@ -36,8 +37,16 @@ class Theme extends CrudController
                 $table->string('description')->nullable();
             });
         }
+        */
 
+    }
+
+    public function index()
+    {
         
+
+        //dd($themeList);
+        return view("jinytheme::admin.themelist");
     }
 
 

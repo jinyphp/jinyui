@@ -111,43 +111,66 @@
             </div>
 
         </li>
+        --}}
         <li class="mb-1">
 
             <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
                 data-bs-target="#forms-collapse" aria-expanded="false">
-                Forms
+                유틸리티
             </button>
 
             <div class="collapse" id="forms-collapse">
                 <ul class="list-unstyled fw-normal pb-1 small">
-                    <li><a href="/docs/5.1/forms/overview/"
-                            class="d-inline-flex align-items-center rounded">Overview</a></li>
-                    <li><a href="/docs/5.1/forms/form-control/"
-                            class="d-inline-flex align-items-center rounded">Form control</a></li>
-                    <li><a href="/docs/5.1/forms/select/"
-                            class="d-inline-flex align-items-center rounded">Select</a></li>
-                    <li><a href="/docs/5.1/forms/checks-radios/"
-                            class="d-inline-flex align-items-center rounded">Checks &amp; radios</a></li>
-                    <li><a href="/docs/5.1/forms/range/"
-                            class="d-inline-flex align-items-center rounded">Range</a></li>
-                    <li><a href="/docs/5.1/forms/input-group/"
-                            class="d-inline-flex align-items-center rounded">Input group</a></li>
-                    <li><a href="/docs/5.1/forms/floating-labels/"
-                            class="d-inline-flex align-items-center rounded">Floating labels</a></li>
-                    <li><a href="/docs/5.1/forms/layout/"
-                            class="d-inline-flex align-items-center rounded">Layout</a></li>
-                    <li><a href="/docs/5.1/forms/validation/"
-                            class="d-inline-flex align-items-center rounded">Validation</a></li>
+					<li><a href="/docs/utility/background"
+							class="d-inline-flex align-items-center rounded">background</a></li>
+					<li><a href="/docs/utility/borders"
+							class="d-inline-flex align-items-center rounded">borders</a></li>
+					<li><a href="/docs/utility/colors"
+							class="d-inline-flex align-items-center rounded">colors</a></li>
+					<li><a href="/docs/utility/display"
+							class="d-inline-flex align-items-center rounded">display</a></li>
+					<li><a href="/docs/utility/flex"
+							class="d-inline-flex align-items-center rounded">flex</a></li>
+					<li><a href="/docs/utility/float"
+							class="d-inline-flex align-items-center rounded">float</a></li>
+					<li><a href="/docs/utility/interactions"
+							class="d-inline-flex align-items-center rounded">interactions</a></li>
+					<li><a href="/docs/utility/opacity"
+							class="d-inline-flex align-items-center rounded">opacity</a></li>
+
+
+                    <li><a href="/docs/utility/overflow"
+                            class="d-inline-flex align-items-center rounded">overflow</a></li>
+                    <li><a href="/docs/utility/position"
+                            class="d-inline-flex align-items-center rounded">position</a></li>
+                    <li><a href="/docs/utility/position"
+                            class="d-inline-flex align-items-center rounded">position</a></li>
+                    <li><a href="/docs/utility/shadows"
+                            class="d-inline-flex align-items-center rounded">shadows</a></li>
+                    <li><a href="/docs/utility/sizing"
+                            class="d-inline-flex align-items-center rounded">sizing</a></li>
+                    <li><a href="/docs/utility/spacing"
+                            class="d-inline-flex align-items-center rounded">spacing</a></li>
+                    <li><a href="/docs/utility/text"
+                            class="d-inline-flex align-items-center rounded">text</a></li>
+                    <li><a href="/docs/utility/vertical_align"
+                            class="d-inline-flex align-items-center rounded">vertical_align</a></li>
+                    <li><a href="/docs/utility/visibility"
+                            class="d-inline-flex align-items-center rounded">visibility</a></li>
                 </ul>
             </div>
 
         </li>
-        --}}
+        
+
+
+
+
         <li class="mb-1">
             
             <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
                 data-bs-target="#components-collapse" aria-expanded="false">
-                Components
+                컴포넌트
             </button>
 
             <div class="collapse" id="components-collapse">
@@ -319,11 +342,13 @@
         </li>
         --}}
         
+        {{--
         <li class="my-3 mx-4 border-top"></li>
         <li>
             <a href="/docs/5.1/migration/" class="d-inline-flex align-items-center rounded">
                 Migration
             </a>
         </li>
+        --}}
     </ul>
 </nav>

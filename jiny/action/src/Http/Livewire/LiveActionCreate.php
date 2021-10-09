@@ -22,9 +22,11 @@ class LiveActionCreate extends Component
             $this->setData($this->rules['data']);
         } else {
             // 데이터 없음, 기본값 설정
-            foreach($this->rules['fields'] as $field) {
-                $this->setDefaultData($field);
-            }
+            if(isset($this->rules['fields']) && is_array($this->rules['fields'])) {
+                foreach($this->rules['fields'] as $field) {
+                    $this->setDefaultData($field);
+                }
+            }            
         }
 
         // 전달받은 데이터를 입력폼데이터로 재설정
