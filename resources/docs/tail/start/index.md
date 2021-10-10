@@ -1,5 +1,5 @@
 ---
-theme: "docs.bootstrap"
+theme: "docs.tail"
 layout: "markdown"
 title: "Tailwind Installation"
 subtitle: ""

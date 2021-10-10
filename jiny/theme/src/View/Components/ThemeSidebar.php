@@ -34,7 +34,7 @@ class ThemeSidebar extends Component
         }
         
         // 컴포넌트 리소스로 대체하여 출력함
-        return view('jinytheme::components.sidebar.layout');
+        return view('jinytheme::components.layouts.sidebar');
     }
 
 }

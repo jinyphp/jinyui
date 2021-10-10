@@ -5,8 +5,8 @@
 <link href="//cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 @endpush
 
-<x-theme theme="adminkit" class="bootstrap">
-    <x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
         <x-container-fluid>
             <!-- start page title -->
         	<x-row >
@@ -134,5 +134,5 @@
             </div>
 
         </x-container-fluid>
-    </x-main-content>
+    </x-theme-layout>
 </x-theme>

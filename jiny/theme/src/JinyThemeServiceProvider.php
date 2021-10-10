@@ -22,6 +22,7 @@ class JinyThemeServiceProvider extends ServiceProvider
         ## css, javascript등 페이지의 골격 뼈대를 읽어 옵니다.
         Blade::component(\Jiny\Theme\View\Components\Theme\App::class, "theme-app");
         
+
         ## app에 테마의 레이아웃을 결합합니다.
         Blade::component(\Jiny\Theme\View\Components\ThemeLayout::class, "theme-layout");
 

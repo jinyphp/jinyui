@@ -1,5 +1,5 @@
-<x-theme theme="adminkit" class="bootstrap">
-    <x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
         <x-container-fluid>
             <!-- start page title -->
         	<x-row >
@@ -523,5 +523,5 @@ Sun</span><span class="flatpickr-weekday">Mon</span><span class="flatpickr-weekd
             </div>
         
         </x-container-fluid>
-    </x-main-content>
+    </x-theme-layout>
 </x-theme>

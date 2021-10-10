@@ -32,8 +32,6 @@ class ThemeLayout extends Component
             }
         }
 
-        
-
         $layout = 'jinytheme::components.theme.layout';
         //dd($layout);
         return view($layout);

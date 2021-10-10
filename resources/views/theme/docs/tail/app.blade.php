@@ -13,6 +13,8 @@
 
     @stack('css')
     
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/github.min.css">
+
     <script src="//unpkg.com/alpinejs" defer></script>
     
     @livewireStyles
@@ -29,6 +31,9 @@
     
     @stack('scripts')
     
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     @livewireScripts
 
 </body>

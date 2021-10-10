@@ -1,8 +1,8 @@
 <style>
 
 </style>
-<x-theme theme="adminkit" class="bootstrap">
-    <x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
         <x-container-fluid>
 
             <div class="az-content az-content-profile">
@@ -81,5 +81,5 @@
               </div>
 
         </x-container-fluid>
-    </x-main-content>
+    </x-theme-layout>
 </x-theme> 

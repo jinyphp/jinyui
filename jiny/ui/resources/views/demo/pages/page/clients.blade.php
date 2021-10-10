@@ -1,5 +1,5 @@
-<x-theme theme="adminkit" class="bootstrap">
-    <x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
         <x-container-fluid>
             <div class="mb-3">
                 <h1 class="h3 d-inline align-middle">Clients</h1>

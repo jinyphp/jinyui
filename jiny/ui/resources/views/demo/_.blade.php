@@ -1,5 +1,5 @@
-<x-theme theme="adminkit" class="bootstrap">
-    <x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
         <x-container-fluid>
             <h1 class="h3">Border Style Tab</h1>
 
@@ -13,5 +13,5 @@
                 </x-col-6>
             </x-row>
         </x-container-fluid>
-    </x-main-content>
+    </x-theme-layout>
 </x-theme>

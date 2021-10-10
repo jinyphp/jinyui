@@ -8,8 +8,8 @@
 }
 </style>
 
-<x-theme theme="adminkit" class="bootstrap">
-    <x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
         <x-container-fluid>
             <!-- start page title -->
         	<x-row >

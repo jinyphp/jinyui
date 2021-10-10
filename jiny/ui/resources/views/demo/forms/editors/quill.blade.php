@@ -27,7 +27,7 @@
             </div>
 
         </x-container-fluid>
-    </x-main-content>
+    </x-theme-layout>
 </x-theme>
 
 <!-- quill js -->

@@ -190,8 +190,8 @@
 @endpush
 
 
-<x-theme theme="adminkit" class="bootstrap">
-    <x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
         <x-container-fluid>
             <div class="az-content-label mg-b-5">Select<span class="tx-sserif">2</span> Box</div>
             <p class="mg-b-20">Select2 gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options.</p>
@@ -266,5 +266,5 @@
             </div>
 
         </x-container-fluid>
-    </x-main-content>
+    </x-theme-layout>
 </x-theme> 

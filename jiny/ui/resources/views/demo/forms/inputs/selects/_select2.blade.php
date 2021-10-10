@@ -930,6 +930,6 @@
                 </x-col-6>
             </x-row>
         </x-container-fluid>
-    </x-main-content>
+    </x-theme-layout>
 </x-theme>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
