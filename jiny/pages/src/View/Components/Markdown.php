@@ -11,8 +11,5 @@ class Markdown extends Component
         return <<<'blade'
         @livewire('LiveMarkdown',['content'=>$slot->toHtml()])
     blade;
-
-        //$app = 'jinypage::components.markdown';
-        //return view($app);
     }
 }

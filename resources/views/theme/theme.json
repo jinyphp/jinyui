@@ -10,5 +10,13 @@
     },
     "zabbix.basic":{
         "name":"docs_tailwind"
+    },
+    "sample.robust":{
+        "name":"sample_robust",
+        "url":"https://robust.bootlab.io/"
+    },
+    "sample.purpose":{
+        "name":"sample_purpose",
+        "url":"https://preview.webpixels.io/purpose-website-ui-kit/"
     }
 }

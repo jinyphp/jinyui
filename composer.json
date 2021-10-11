@@ -13,11 +13,13 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "jiny/polyglot": "^0.0.3",
         "jinyxe/ex-echo": "^0.0.2",
+        "kub-at/php-simple-html-dom-parser": "^1.9",
         "laravel/framework": "^8.40",
         "laravel/jetstream": "^2.3",
         "laravel/sanctum": "^2.6",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.0",
+        "sunra/php-simple-html-dom-parser": "^1.5",
         "webuni/front-matter": "^1.3"
     },
     "require-dev": {
