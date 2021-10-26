@@ -132,6 +132,7 @@
     </div>
 
         </x-container-fluid>
+        
     </x-theme-layout>
 </x-theme>
 

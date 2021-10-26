@@ -1,6 +1,8 @@
-<x-theme theme="adminkit" class="bootstrap">
-	<x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
+
 		<x-container-fluid>
+			
 			<!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
@@ -19,6 +21,7 @@
             	</x-col>
         	</x-row>  
         	<!-- end page title -->
+
 
 			<div class="relative">
                 <div class="absolute bottom-4 right-0">
@@ -45,24 +48,23 @@
 									</x-navtab-link>
 									{{-- preview 코드를 삽입합니다. --}}
 
-									<div class="mb-3">
-
+									<x-block class="mb-3">
 										<x-button primary>Primary</x-button>
 										<x-button secondary>Secondary</x-button>
 										<x-button success>Success</x-button>
 										<x-button danger>Danger</x-button>
 										<x-button warning>Warning</x-button>
 										<x-button info>Info</x-button>									
-									</div>
+									</x-block>
 			
-									<div>
+									<x-block>
 										<x-button primary disabled>Primary</x-button>
 										<x-button secondary disabled>Secondary</x-button>
 										<x-button success disabled>Success</x-button>
 										<x-button danger disabled>Danger</x-button>
 										<x-button warning disabled>Warning</x-button>
 										<x-button info disabled>Info</x-button>
-									</div>
+									</x-block>
 									
 								</x-navtab-item>
 							
@@ -91,23 +93,23 @@
 							<h6 class="card-subtitle text-muted">Rounded Bootstrap buttons.</h6>
 						</div>
 						<div class="card-body text-center">
-							<div class="mb-3">
+							<x-block class="mb-3">
 								<x-button primary round>Primary</x-button>
 								<x-button secondary round>Secondary</x-button>
 								<x-button success round>Success</x-button>
 								<x-button danger round>Danger</x-button>
 								<x-button warning round>Warning</x-button>
 								<x-button info round>Info</x-button>						
-							</div>
+							</x-block>
 	
-							<div>
+							<x-block>
 								<x-button primary round disabled>Primary</x-button>
 								<x-button secondary round disabled>Secondary</x-button>
 								<x-button success round disabled>Success</x-button>
 								<x-button danger round disabled>Danger</x-button>
 								<x-button warning round disabled>Warning</x-button>
 								<x-button info round disabled>Info</x-button>
-							</div>
+							</x-block>
 						</div>
 					</div>
 				</div>

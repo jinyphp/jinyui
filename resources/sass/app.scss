@@ -118,6 +118,8 @@
 @import "jiny/components/forms";
 @import "jiny/pages";
 
+@import "jiny/button";
+
 /* 번역관리*/
 .polyglot {
     @apply bg-yellow-50;
@@ -125,4 +127,10 @@
 
 .polyglot:hover {
     @apply bg-yellow-200;
+}
+
+
+.heading1 {
+    @extend %heading ;
+    @include font-size($h1-font-size * 2.2);
 }

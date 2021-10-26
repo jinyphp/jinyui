@@ -1,3 +1,3 @@
 <div class="bd-callout bd-callout-info">
-{{$slot}}
+    {{$slot}}
 </div>

@@ -15,7 +15,9 @@ Route::middleware(['web'])
  * 관리자 페이지
  */
 use Jiny\Pages\Http\Controllers\AdminPages;
+use Jiny\Pages\Http\Controllers\AdminPageTrans;
 Route::middleware(['web'])
     ->prefix('/admin/pages')->name("admin-pages")->group(function () {
         Route::resource('/list', AdminPages::class);
+        Route::resource('/trans', AdminPageTrans::class);
     });

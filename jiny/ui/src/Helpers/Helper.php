@@ -79,6 +79,14 @@ function xRadioGroup($style=null){
     return $obj;
 }
 
+
+if (!function_exists("xProgress")) {
+    function xProgress($now=0, $max=100, $min=0)
+    {
+        return new \Jiny\UI\Html\XProgress($now, $max, $min);
+    }
+}
+
 /**
  * Table
  */
@@ -198,11 +206,16 @@ function xLinks($args=[])
 
 
 
-
-function xButton($item=null)
-{
-    return new \Jiny\UI\Html\XButton($item);
+/**
+ * 컴포넌트 : 버튼
+ */
+if (!function_exists("xButton")) {
+    function xButton($item=null)
+    {
+        return new \Jiny\UI\Html\XButton($item);
+    }
 }
+
 
 function BootModal()
 {

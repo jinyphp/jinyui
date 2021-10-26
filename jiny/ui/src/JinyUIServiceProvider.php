@@ -147,6 +147,9 @@ class JinyUIServiceProvider extends ServiceProvider
 
 
             //Form
+            /**
+             * 폼 요소
+             */
             Blade::component('jinyui::components.'.'forms.form', 'form');
             Blade::component(\Jiny\UI\View\Components\Forms\FormRow::class, "form-row");
             Blade::component('jinyui::components.'.'forms.row', 'form-row');
@@ -166,8 +169,11 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'forms.input', 'input');
             Blade::component('jinyui::components.'.'forms.select', 'select');
             Blade::component('jinyui::components.'.'forms.option', 'option');
+            Blade::component('jinyui::components.'.'forms.textarea', 'textarea');
 
+            Blade::component('jinyui::components.'.'forms.progress', 'progress');
 
+            $this->block();
 
 
             Blade::component(\Jiny\UI\View\Components\Cards\Card::class, "card");
@@ -179,16 +185,11 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'card.before', 'card-before');
 
 
-            // Box model
-            Blade::component('jinyui::components.'.'box.box', 'box');
-            Blade::component('jinyui::components.'.'box.callout-info', 'callout-info');
+            
+            $this->button();
 
 
-            Blade::component(\Jiny\UI\View\Components\Button\Button::class, "button");
-            Blade::component(\Jiny\UI\View\Components\Button\Dropdown::class, "button-dropdown");
-            Blade::component(\Jiny\UI\View\Components\Button\Group::class, "button-group");
-            Blade::component('jinyui::components.'.'button.close', 'close');
-            Blade::component(\Jiny\UI\View\Components\Button\Badge::class, 'badge');
+            
             Blade::component('jinyui::components.'.'button.indicator', 'indicator');
 
             // 링크
@@ -351,7 +352,37 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component('jinyui::components.alert.info-none', 'alert-info-none');
 
         // Utility
-        // 레이아웃
+
+        
+        $this->layout(); // 레이아웃
+        
+
+
+    }
+
+    protected function button()
+    {
+        Blade::component(\Jiny\UI\View\Components\Button\Button::class, "button");
+        Blade::component('jinyui::components.'.'button.button-outline', 'button-outline');
+        Blade::component('jinyui::components.'.'button.button-square', 'button-square');
+        
+
+        Blade::component(\Jiny\UI\View\Components\Button\Dropdown::class, "button-dropdown");
+        Blade::component(\Jiny\UI\View\Components\Button\Group::class, "button-group");
+        Blade::component('jinyui::components.'.'button.close', 'close');
+        Blade::component(\Jiny\UI\View\Components\Button\Badge::class, 'badge');
+    }
+
+    protected function block()
+    {
+        // Box model
+        Blade::component('jinyui::components.'.'box.box', 'box');
+        Blade::component('jinyui::components.'.'box.block', 'block');
+        Blade::component('jinyui::components.'.'box.callout-info', 'callout-info');
+    }
+
+    protected function layout()
+    {
         //Blade::component('jinyui::components.'.'app', 'app');
         //Blade::component('jinyui::components.'.'layout', 'layout');
         //Blade::component('jinyui::components.'.'theme', 'theme');
@@ -367,15 +398,25 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component('jinyui::components.'.'layout.col-3', 'col-3');
 
 
+        ## flex 박스
         Blade::component('jinyui::components.'.'flex.row', 'flex-row');
-        Blade::component('jinyui::components.'.'flex.col', 'flex-col');
-        Blade::component('jinyui::components.'.'flex.center', 'flex-center');
-        Blade::component('jinyui::components.'.'flex.between', 'flex-between');
+        Blade::component('jinyui::components.'.'flex.col', 'flex-col'); // 세로배치
+        Blade::component('jinyui::components.'.'flex.center', 'flex-center'); //가운데
+        Blade::component('jinyui::components.'.'flex.between', 'flex-between'); //양쪽
+        Blade::component('jinyui::components.'.'flex.end', 'flex-end'); //양쪽
+        Blade::component('jinyui::components.'.'flex.item', 'flex-item');
 
+        ## divide by flex
+        Blade::component('jinyui::components.'.'flex.divide', 'divide');
+        Blade::component('jinyui::components.'.'flex.divide-y', 'divide-y');
+        Blade::component('jinyui::components.'.'flex.divide-item', 'divide-item');
 
-        
-
+        ## grid
+        Blade::component('jinyui::components.'.'flex.grid', 'grid');
     }
+
+
+    
 
     protected function registerComponent(string $component)
     {

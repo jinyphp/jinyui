@@ -1,8 +1,9 @@
-<x-theme theme="adminkit" class="bootstrap">
-	<x-main-content>
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
+
 		<x-container-fluid>
 			<!-- start page title -->
-        	<x-row >
+        	<x-row>
             	<x-col class="col-8">
                 	<div class="page-title-box">
 						<x-breadcrumb class="m-0">
@@ -226,6 +227,7 @@
 				</x-col-6>
 
 			</x-row>
+			
 		</x-container-fluid>
 	</x-main-content>
-</x-theme>   
+</x-theme>  

@@ -4,13 +4,12 @@ namespace Jiny\UI\Html;
 use Jiny\Html\CButton;
 
 /**
- * BootStrap Button
+ * Button
  */
 class xButton extends CButton
 {
     private $skin = "bootstrap";
     private $shape;
-    //private $colorset = "primary";
     private $color;
 
     public function skin($theme)
@@ -26,11 +25,7 @@ class xButton extends CButton
         }
 
         $this->addClass("btn"); //bootstrap css
-        // $this->shape = "basic";
     }
-
-        
-
 
     
     /**
@@ -45,6 +40,7 @@ class xButton extends CButton
             // 커스텀 속성을 분석합니다.     
             $attrs = $this->attrParser($attrs);
 
+            // 속성을 부여합니다.
             foreach($attrs as $name => $value) {
                 if ($name === "class") {
                     $this->addClass($value);
@@ -52,34 +48,46 @@ class xButton extends CButton
                 }
                 $this->setAttribute($name, $value);
             }
+
         }
         return $this;
     }
 
+
+    /**
+     * 사용자 속성 분석
+     */
     private function attrParser($attrs)
     {
-        //버튼 타입 parsing
-        foreach(["primary", "secondary", "success", "danger", "warning", "info"] as $key) {
-            if (isset($attrs[$key])) {     
-                if (isset($attrs["outline"])) {
-                    $this->addClass("btn-outline-".$key);
-                    unset($attrs["btn-outline-".$key]);
-                } else {
-                    $this->addClass("btn-".$key);
-                }
-                unset($attrs[$key]);
-            }
-        }    
+        if (isset($attrs["color"])) {
+            $this->setColor($attrs["color"]);
+            unset($attrs["color"]);        
+        } else {
+            // 컬러명과 동일한 속성값이 있는 경우
+            $attrs = $this->detectColor($attrs);
+        }
 
-        // 버튼 모양
+
+        if ($this->color) {
+            if (isset($attrs["outline"])) {
+                $this->addClass("btn-outline-".$this->color);
+                unset($attrs["btn-outline-".$this->color]);
+            } else {
+                $this->addClass("btn-".$this->color);
+            }
+        }
+
+
+        ## 라운드 속성이 있는 경우
         if (isset($attrs["round"])) {
             $this->setRound();
             unset($attrs["round"]);
         }
 
-        if (isset($attrs["squre"])) {
-            $this->setSqure();            
-            unset($attrs["squre"]);
+        ## 정사각 속성이 있는 경우
+        if (isset($attrs["square"])) {
+            $this->setSquare();            
+            unset($attrs["square"]);
         }
 
         // 버튼 사이즈
@@ -121,13 +129,43 @@ class xButton extends CButton
         return $this;
     }
 
+    private function detectColor($attrs)
+    {
+        $colors = ["primary", "secondary", "success", "danger", "warning", "info"];
+        foreach($colors as $key) {
+            if (isset($attrs[$key])) {  
+                $this->color = $key;                  
+                unset($attrs[$key]);
+            }
+        }
+
+        return $attrs;
+    }
+
+    public function setOutline($color=null)
+    {
+        if ($color) {
+            $this->addClass("btn-outline-".$color);
+        } else
+        if ($this->color) {
+            $this->addClass("btn-outline-".$this->color);
+        }
+        
+        return $this;
+    }
+        
+    /**
+     * 라운드 속성을 추가합니다.
+     *
+     * @return void
+     */
     public function setRound()
     {
         $this->addClass("btn-pill");
         return $this;
     }
 
-    public function setSqure()
+    public function setSquare()
     {
         $this->addClass("btn-square");
         return $this;
@@ -135,7 +173,7 @@ class xButton extends CButton
 
     public function setHref($url)
     {
-        $this->setAttribute("onclick","location.href='".$url."'");
+        $this->setAttribute("onclick", "location.href='".$url."'");
         $this->addStyle("cursor: pointer;"); // 마우스 포인터 
         return $this;
     }

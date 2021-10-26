@@ -21,6 +21,7 @@
         	</x-row>  
         	<!-- end page title -->
 
+
             <div class="relative">
                 <div class="absolute bottom-4 right-0">
                     <div class="btn-group">
@@ -28,6 +29,7 @@
                     </div>
                 </div>
             </div>
+
 
             <x-row>
                 <x-col-6>
@@ -43,21 +45,25 @@
                                     <x-navtab-link class="rounded-0 active">
                                         미리보기
                                     </x-navtab-link>
+
                                     {{-- preview 코드를 삽입합니다. --}}
+
                                     <div class="progress mb-3">
-                                        <div class="progress-bar " role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+
                                     <div class="progress mb-3">
-                                        <div class="progress-bar " role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+
+                                    {!! xProgress(50) !!}
+
                                     <div class="progress mb-3">
-                                        <div class="progress-bar " role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+
                                     <div class="progress mb-3">
-                                        <div class="progress-bar " role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <div class="progress mb-3">
-                                        <div class="progress-bar " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>									
                                     
                                 </x-navtab-item>
@@ -91,7 +97,13 @@
                                     {{-- preview 코드를 삽입합니다. --}}
                                     <div class="progress mb-3">
                                         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                                    </div>								
+                                    </div>
+                                    
+                                    <div class="progress mb-3">
+                                        <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                                    </div>
+
+                                    {!! xProgress(75)->setLabel() !!}
                                     
                                 </x-navtab-item>
                             
@@ -125,9 +137,12 @@
                                     <div class="progress mb-3" style="height: 5px;">
                                         <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+
                                     <div class="progress mb-3" style="height: 20px;">
                                         <div class="progress-bar" role="progressbar" style="width: 30%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>								
+                                    </div>	
+                                    
+                                    {!! xProgress(60)->setHeight(15) !!}
                                     
                                 </x-navtab-item>
                             
@@ -161,9 +176,13 @@
                                     <div class="progress mb-3 ">
                                         <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+
+                                    {!! xProgress(60)->setColor("bg-success") !!}
+
                                     <div class="progress mb-3">
                                         <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
+
                                     <div class="progress mb-3">
                                         <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
