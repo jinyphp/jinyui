@@ -4,24 +4,24 @@
             <!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
-                	<div class="page-title-box">                        
-                    	<ol class="breadcrumb m-0">
+                	<div class="page-title-box">
+                    	<ol class="m-0 breadcrumb">
                         	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
                         	<li class="breadcrumb-item"><a href="javascript: void(0);">UI</a></li>
                         	<li class="breadcrumb-item active">Card</li>
-                    	</ol>                        
-                    
+                    	</ol>
+
         				<div class="mb-3">
-                        	<h1 class="h3 d-inline align-middle">Groups</h1>
-                            <p></p>
+                        	<h1 class="align-middle h3 d-inline">Groups</h1>
+                            <p>카드박스를 그룹으로 묽어서 출력을 합니다.</p>
                     	</div>
                 	</div>
             	</x-col>
-        	</x-row>  
+        	</x-row>
         	<!-- end page title -->
 
             <div class="relative">
-                <div class="absolute bottom-4 right-0">
+                <div class="absolute right-0 bottom-4">
                     <div class="btn-group">
                         <a href="#" class="btn btn-secondary">메뉴얼</a>
                     </div>
@@ -29,22 +29,24 @@
             </div>
 
             <x-row>
-                <div class="col-12">
-                    <div class="card-group mb-4">
-                        
-                        <div class="card">
-                            <img class="card-img-top" src="/img/mockup4.jpg" alt="Card image cap">
-                            <div class="card-body">
+                <x-col-12>
+                    <x-card-group class="mb-4">
+                        <x-card>
+                            <x-card-before>
+                                <img class="card-img-top" src="/img/mockup4.jpg" alt="Card image cap">
+                            </x-card-before>
+
+                            <x-card-body>
                                 <div class="card-title h5">Card title</div>
                                 <p class="card-text">This is a longer card with supporting text below as a
                                     natural lead-in to additional content. This content is a little bit longer.
                                 </p>
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
                                 </p>
-                            </div>
-                        </div>
+                            </x-card-body>
+                        </x-card>
 
-                        <div class="card">
+                        <x-card>
                             <img class="card-img-top" src="/img/mockup3.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <div class="card-title h5">Card title</div>
@@ -53,9 +55,10 @@
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
                                 </p>
                             </div>
-                        </div>
+                        </x-card>
 
-                        <div class="card"><img class="card-img-top" src="/img/mockup1.jpg" alt="Card image cap">
+                        <x-card>
+                            <img class="card-img-top" src="/img/mockup1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <div class="card-title h5">Card title</div>
                                 <p class="card-text">This is a wider card with supporting text below as a
@@ -64,13 +67,12 @@
                                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
                                 </p>
                             </div>
-                        </div>
-
-                    </div>
-                </div>
+                        </x-card>
+                    </x-card-group>
+                </x-col-12>
             </x-row>
 
-            <h1 class="h3 mb-3">Layout Grid</h1>
+            <h1 class="mb-3 h3">Layout Grid</h1>
             <p>card 박스를 균일한 격자형태로 배치를 합니다.</p>
             <x-row>
                 <x-col-4 class="mb-4">
@@ -114,7 +116,6 @@
                         G
                     </x-card>
                 </x-col-4>
-
             </x-row>
 
 

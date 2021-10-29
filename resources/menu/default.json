@@ -108,7 +108,7 @@
                 "title": "Pricing3",
                 "href": "\/jinyui\/pages\/pricing3",
                 "target": ""
-            }            
+            }
         ]
 
     },
@@ -194,7 +194,7 @@
         "icon": "",
         "header": "Theme",
         "title": "Theme"
-    },    
+    },
     {
         "_id": 18,
         "_ref": 14,
@@ -247,7 +247,7 @@
                 "title": "Collapse",
                 "href": "\/jinyui\/toggle\/collapse",
                 "target": ""
-                
+
             },
             {
                 "_id": 21,
@@ -257,7 +257,7 @@
                 "title": "Accordion",
                 "href": "\/jinyui\/toggle\/accordion",
                 "target": ""
-                
+
             },
             {
                 "_id": 21,
@@ -267,10 +267,10 @@
                 "title": "Dropdown",
                 "href": "\/jinyui\/toggle\/dropdown",
                 "target": ""
-                
+
             }
         ]
-        
+
     },
     {
         "_id": 22,
@@ -424,7 +424,7 @@
 
         ]
 
-        
+
     },
     {
         "_id": 20,
@@ -473,7 +473,7 @@
                 "href": "\/jinyui\/ui\/alerts",
                 "target": ""
             },
-            
+
             {
                 "_id": 24,
                 "_ref": 20,
@@ -501,7 +501,7 @@
                 "href": "\/jinyui\/ui\/grid",
                 "target": ""
             },
-            
+
             {
                 "_id": 27,
                 "_ref": 20,
@@ -547,15 +547,7 @@
                 "href": "\/jinyui\/ui\/popovers",
                 "target": ""
             },
-            {
-                "_id": 29,
-                "_ref": 20,
-                "_level": 2,
-                "icon": "",
-                "title": "toasts",
-                "href": "\/jinyui\/ui\/toasts",
-                "target": ""
-            },
+
             {
                 "_id": 29,
                 "_ref": 20,
@@ -838,15 +830,7 @@
         "href": "",
         "target": "",
         "submenu": [
-            {
-                "_id": 45,
-                "_ref": 44,
-                "_level": 2,
-                "icon": "",
-                "title": "Basic",
-                "href": "\/jinyui\/tables\/bootstrap",
-                "target": ""
-            },
+
             {
                 "_id": 46,
                 "_ref": 44,
@@ -890,15 +874,6 @@
                 "icon": "",
                 "title": "Multi Selection ",
                 "href": "\/jinyui\/tables\/multi",
-                "target": ""
-            },
-            {
-                "_id": 51,
-                "_ref": 44,
-                "_level": 2,
-                "icon": "",
-                "title": "Ajax Sourced Data",
-                "href": "\/jinyui\/tables\/ajax",
                 "target": ""
             }
         ]

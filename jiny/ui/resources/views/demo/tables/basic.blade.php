@@ -1,35 +1,36 @@
 <x-theme theme="admin.sidebar">
     <x-theme-layout>
-        <x-container-fluid>
+
             <!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
-                	<div class="page-title-box">                        
-                    	<ol class="breadcrumb m-0">
+                	<div class="page-title-box">
+                    	<ol class="m-0 breadcrumb">
                         	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
                         	<li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
                         	<li class="breadcrumb-item active">Basics</li>
-                    	</ol>                        
-                    
+                    	</ol>
+
         				<div class="mb-3">
-                        	<h1 class="h3 d-inline align-middle">Basics</h1>
+                        	<h1 class="align-middle h3 d-inline">Basics</h1>
                             <p>
-                             
+
                             </p>
                     	</div>
                 	</div>
             	</x-col>
-        	</x-row>  
+        	</x-row>
         	<!-- end page title -->
 
             <div class="relative">
-                <div class="absolute bottom-4 right-0">
+                <div class="absolute right-0 bottom-4">
                     <div class="btn-group">
                         <a href="#" class="btn btn-secondary">메뉴얼</a>
                     </div>
                 </div>
             </div>
 
+            {{--
             <div class="row">
                 <div class="col-12 col-xl-6">
                     <x-card>
@@ -62,10 +63,10 @@
                                 <x-table-body></x-table-body>
                             </x-table>
                         </x-card-body>
-    
-                    </x-card>                       
+
+                    </x-card>
                 </div>
-    
+
                 <div class="col-12 col-xl-6">
                     <x-card>
                         <div class="card-header">
@@ -82,9 +83,9 @@
                             </x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-card>  
+                    </x-card>
                 </div>
-    
+
                 <div class="col-12 col-xl-6">
                     <x-card>
                         <div class="card-header">
@@ -96,9 +97,9 @@
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-card> 
+                    </x-card>
                 </div>
-    
+
                 <div class="col-12 col-xl-6">
                     <x-card>
                         <div class="card-header">
@@ -106,15 +107,15 @@
                             <h6 class="card-subtitle text-muted">Add <code>.table-hover</code> to enable a hover state on table rows within a
                                 <code>&lt;tbody&gt;</code>.</h6>
                         </div>
-                    
-                        
+
+
                         <x-table hoverable>
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-card> 
+                    </x-card>
                 </div>
-    
+
                 <div class="col-12 col-xl-6">
                     <x-card>
                         <div class="card-header">
@@ -125,9 +126,9 @@
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-card> 
+                    </x-card>
                 </div>
-    
+
                 <div class="col-12 col-xl-6">
                     <x-card>
                         <div class="card-header">
@@ -138,9 +139,9 @@
                             <x-table-head></x-table-head>
                             <x-table-body></x-table-body>
                         </x-table>
-                    </x-card>                       
+                    </x-card>
                 </div>
-    
+
                 <div class="col-12">
                     <x-card>
                         <div class="card-header">
@@ -154,11 +155,12 @@
                                 <x-table-body></x-table-body>
                             </x-table>
                         </div>
-                    </x-card> 
+                    </x-card>
                 </div>
-    
-            </div>
 
-        </x-container-fluid>
+            </div>
+            --}}
+
+
     </x-theme-layout>
-</x-theme>   
+</x-theme>

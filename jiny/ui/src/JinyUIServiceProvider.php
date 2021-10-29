@@ -31,7 +31,7 @@ class JinyUIServiceProvider extends ServiceProvider
         $this->configureComponents();
         $this->Directive();
 
-        
+
 
     }
 
@@ -58,7 +58,7 @@ class JinyUIServiceProvider extends ServiceProvider
 
         /* 컴포넌트 클래스 등록 */
         $this->loadViewComponentsAs('jinyui', [
-            //\Jiny\UI\View\Components\Theme\App::class, 
+            //\Jiny\UI\View\Components\Theme\App::class,
 
             // 테마관련 컴포넌트 클래스
             \Jiny\UI\View\Components\Theme::class, // 테마 레이아웃을 읽어 옵니다.
@@ -67,7 +67,7 @@ class JinyUIServiceProvider extends ServiceProvider
             //\Jiny\UI\View\Components\ThemeLayout::class,
             \Jiny\UI\View\Components\ThemeSidebar::class, // 테마 sidebar.blade.php 로드
             \Jiny\UI\View\Components\Icon::class, //svg아이콘 생성
-            
+
 
 
             \Jiny\UI\View\Components\LayoutTile::class, // 타일 격자 배치
@@ -85,7 +85,7 @@ class JinyUIServiceProvider extends ServiceProvider
             \Jiny\UI\View\Components\SidebarLink::class,
             \Jiny\UI\View\Components\SidebarBadge::class,
 
-            
+
 
             \Jiny\UI\View\Components\Card::class,
 
@@ -113,7 +113,7 @@ class JinyUIServiceProvider extends ServiceProvider
          * 클래스 Alias
          */
 
-        
+
         $shot = true;
         if($shot) {
             Blade::component(\Jiny\UI\View\Components\MainContent::class, "main-content");
@@ -133,7 +133,7 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'sidebar.link', 'sidebar-link');
             Blade::component('jinyui::components.'.'sidebar.nav', 'sidebar-nav');
             Blade::component('jinyui::components.'.'sidebar.sub', 'sidebar-sub');
-            
+
             //Icon
             Blade::component(\Jiny\UI\View\Components\Icon::class, "icon");
 
@@ -156,7 +156,7 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component(\Jiny\UI\View\Components\FormHor::class, "form-hor");
             Blade::component('jinyui::components.'.'forms.inline', 'form-inline');
             Blade::component(\Jiny\UI\View\Components\FormLabel::class, "form-label");
-            Blade::component(\Jiny\UI\View\Components\FormItem::class, "form-item");            
+            Blade::component(\Jiny\UI\View\Components\FormItem::class, "form-item");
             //Blade::component('jinyui::components.'.'forms.label', 'form-label');
             //Blade::component('jinyui::components.'.'forms.item', 'form-item');
             Blade::component('jinyui::components.'.'forms.input', 'form-input');
@@ -183,18 +183,19 @@ class JinyUIServiceProvider extends ServiceProvider
             Blade::component('jinyui::components.'.'card.title', 'card-title');
             Blade::component('jinyui::components.'.'card.subtitle', 'card-subtitle');
             Blade::component('jinyui::components.'.'card.before', 'card-before');
+            Blade::component('jinyui::components.'.'card.group', 'card-group');
 
 
-            
+
             $this->button();
 
 
-            
+
             Blade::component('jinyui::components.'.'button.indicator', 'indicator');
 
             // 링크
             Blade::component('jinyui::components.'.'link.a', 'link');
-            
+
 
             // Collapse
             Blade::component('jinyui::components.'.'collapse.collapse', 'collapse');
@@ -309,25 +310,25 @@ class JinyUIServiceProvider extends ServiceProvider
             $this->registerComponent('layout');
 
             // 사이드바
-            
-            
+
+
 
             $this->registerComponent('select-box');
 
-            
+
         });
 
 
 
-        
 
 
 
 
 
-        
 
-        
+
+
+
 
         // Alert ShortCut
         Blade::component('jinyui::components.alert.primary', 'alert-primary');
@@ -343,7 +344,7 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component('jinyui::components.alert.danger-outline', 'alert-danger-outline');
         Blade::component('jinyui::components.alert.warning-outline', 'alert-warning-outline');
         Blade::component('jinyui::components.alert.info-outline', 'alert-info-outline');
-        
+
         Blade::component('jinyui::components.alert.primary-none', 'alert-primary-none');
         Blade::component('jinyui::components.alert.secondary-none', 'alert-secondary-none');
         Blade::component('jinyui::components.alert.success-none', 'alert-success-none');
@@ -353,9 +354,9 @@ class JinyUIServiceProvider extends ServiceProvider
 
         // Utility
 
-        
+
         $this->layout(); // 레이아웃
-        
+
 
 
     }
@@ -365,7 +366,7 @@ class JinyUIServiceProvider extends ServiceProvider
         Blade::component(\Jiny\UI\View\Components\Button\Button::class, "button");
         Blade::component('jinyui::components.'.'button.button-outline', 'button-outline');
         Blade::component('jinyui::components.'.'button.button-square', 'button-square');
-        
+
 
         Blade::component(\Jiny\UI\View\Components\Button\Dropdown::class, "button-dropdown");
         Blade::component(\Jiny\UI\View\Components\Button\Group::class, "button-group");
@@ -416,7 +417,7 @@ class JinyUIServiceProvider extends ServiceProvider
     }
 
 
-    
+
 
     protected function registerComponent(string $component)
     {
@@ -440,7 +441,7 @@ class JinyUIServiceProvider extends ServiceProvider
                 $path = str_replace(".", DIRECTORY_SEPARATOR, $args).".md";
                 $realPath = dirname(Blade::getPath()).$path;
             }
-            
+
             if (file_exists($realPath)) {
                 $body = file_get_contents($realPath);
                 return (new \Parsedown())->text($body);
@@ -466,7 +467,7 @@ class JinyUIServiceProvider extends ServiceProvider
                 }
             }
             */
-            
+
             return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
 
@@ -498,11 +499,11 @@ class JinyUIServiceProvider extends ServiceProvider
                 for($i=0; $i<count($base);$i++) {
                     if($base[$i] == "theme") break;
                     $path = $base[$i].".".$path;
-                }              
+                }
             }
 
             $expression = '"'."theme.".$path.'"';
-            
+
             return "<?php echo \$__env->make({$expression}, \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>";
         });
 

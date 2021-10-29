@@ -1,30 +1,29 @@
-<x-theme theme="adminkit" class="bootstrap">
+<x-theme theme="admin.sidebar">
+    <x-theme-layout>
 
-    <x-main-content>
-        <x-container-fluid>
             <!-- start page title -->
         	<x-row >
             	<x-col class="col-8">
-                	<div class="page-title-box">                        
-                    	<ol class="breadcrumb m-0">
+                	<div class="page-title-box">
+                    	<ol class="m-0 breadcrumb">
                         	<li class="breadcrumb-item"><a href="javascript: void(0);">Home</a></li>
                         	<li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
                         	<li class="breadcrumb-item active">Fix</li>
-                    	</ol>                        
-                    
+                    	</ol>
+
         				<div class="mb-3">
-                        	<h1 class="h3 d-inline align-middle">Fixed Header</h1>
+                        	<h1 class="align-middle h3 d-inline">Fixed Header</h1>
                             <p>
-                             
+
                             </p>
                     	</div>
                 	</div>
             	</x-col>
-        	</x-row>  
+        	</x-row>
         	<!-- end page title -->
 
             <div class="relative">
-                <div class="absolute bottom-4 right-0">
+                <div class="absolute right-0 bottom-4">
                     <div class="btn-group">
                         <a href="#" class="btn btn-secondary">메뉴얼</a>
                     </div>
@@ -33,7 +32,7 @@
 
             <div class="row">
                 <div class="col-12">
-                    
+
                     <div class="alert alert-warning alert-dismissible" role="alert">
                         <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
                         <div class="alert-message">
@@ -43,7 +42,7 @@
                                 DataTables in your application, add the following script element to your HTML code. The file includes both jQuery and
                                 DataTables.
                             </p>
-                            <pre class="h6 text-danger mb-0">&lt;script src="js/datatables.js"&gt;&lt;/script&gt;</pre>
+                            <pre class="mb-0 h6 text-danger">&lt;script src="js/datatables.js"&gt;&lt;/script&gt;</pre>
                         </div>
                     </div>
 
@@ -57,65 +56,65 @@
                             <div id="datatables-fixed-header_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="datatables-fixed-header_length"><label>Show <select name="datatables-fixed-header_length" aria-controls="datatables-fixed-header" class="custom-select custom-select-sm form-control form-control-sm"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div></div><div class="col-sm-12 col-md-6"><div id="datatables-fixed-header_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatables-fixed-header"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="datatables-fixed-header" class="table table-striped dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="datatables-fixed-header_info"><thead>
                                     <tr role="row"><th class="sorting sorting_asc" tabindex="0" aria-controls="datatables-fixed-header" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 84px;">Name</th><th class="sorting" tabindex="0" aria-controls="datatables-fixed-header" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 121px;">Position</th><th class="sorting" tabindex="0" aria-controls="datatables-fixed-header" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 62px;">Office</th><th class="sorting" tabindex="0" aria-controls="datatables-fixed-header" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 27px;">Age</th><th class="sorting" tabindex="0" aria-controls="datatables-fixed-header" rowspan="1" colspan="1" aria-label="Start date: activate to sort column ascending" style="width: 63px;">Start date</th><th class="sorting" tabindex="0" aria-controls="datatables-fixed-header" rowspan="1" colspan="1" aria-label="Salary: activate to sort column ascending" style="width: 57px;">Salary</th></tr>
                                 </thead>
-                                
+
                                 <tbody>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                 <tr class="odd">
                                         <td class="sorting_1">Airi Satou</td>
                                         <td>Accountant</td>
@@ -298,6 +297,5 @@
                 </div>
             </div>
 
-        </x-container-fluid>
     </x-theme-layout>
 </x-theme>

@@ -79,7 +79,7 @@ Route::middleware(['web'])->prefix('jinyui/pages')->group(function () {
         return view("jinyui::demo.pages.profile");
     });
     Route::get('/profile2', function(){
-        //https://bootstrapdash.com/demo/azia/v1.0.0/template/page-profile.html 
+        //https://bootstrapdash.com/demo/azia/v1.0.0/template/page-profile.html
         return view("jinyui::demo.pages.profile2");
     });
 
@@ -166,9 +166,9 @@ Route::middleware(['web'])->prefix('jinyui/toggle')->group(function () {
 
 // UI
 Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
-    
-    
-    
+
+
+
 
     Route::get('/alerts', function(){
         return view("jinyui::demo.ui.alerts");
@@ -193,13 +193,13 @@ Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
     });
 
 
-    
+
 
     Route::get('/grid', function(){
         return view("jinyui::demo.ui.grid");
     });
 
-    
+
 
     Route::get('/buttons', function(){
         return view("jinyui::demo.ui.buttons");
@@ -267,7 +267,7 @@ Route::middleware(['web'])->prefix('jinyui/ui')->group(function () {
         return view("jinyui::demo.ui.cards.portlets");
     });
 
-    
+
 
 
 });
@@ -332,7 +332,7 @@ Route::prefix('jinyui/forms')->group(function () {
     Route::get('/', function(){
         return view("jinyui::demo.forms.index");
     });
-    
+
     Route::get('/inputs', function(){
         return view("jinyui::demo.forms.inputs");
     });
@@ -412,8 +412,8 @@ Route::middleware(['web'])->prefix('jinyui/tables')->group(function () {
     });
 
 
-    Route::get('/bootstrap', function(){
-        return view("jinyui::demo.tables.bootstrap");
+    Route::get('/basic', function(){
+        return view("jinyui::demo.tables.basic");
     });
 
     Route::get('/ctable', function(){
@@ -425,7 +425,7 @@ Route::middleware(['web'])->prefix('jinyui/tables')->group(function () {
     });
 
 
-    // DATATABLE    
+    // DATATABLE
     Route::get('/response', function(){
         return view("jinyui::demo.tables.response");
     });
@@ -525,10 +525,10 @@ Route::get('boot/docs', function(){
 
 
 Route::group(['middleware' => 'web'], function () {
-    
 
 
-    
+
+
 
     Route::get('jinyui/layouts', function(){
         return view("jinyui::demo.layouts.index");
